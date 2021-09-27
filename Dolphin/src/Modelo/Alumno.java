@@ -1,7 +1,5 @@
 package Modelo;
 
-//Conectado al repositorio
-
 import Modelo.Persona;
 import java.sql.Date;
 
