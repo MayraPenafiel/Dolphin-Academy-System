@@ -5,6 +5,12 @@
  */
 package Vista;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author HP
@@ -296,39 +302,153 @@ public class VistaSede extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaSede.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaSede.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaSede.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaSede.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(VistaSede.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(VistaSede.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(VistaSede.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(VistaSede.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new VistaSede().setVisible(true);
+//            }
+//        });
+//    }
+    
+    //GETTERS Y SETTERS
+    
+    public JButton getBtnCrearJFSede() {
+        return BtnCrearJFSede;
+    }
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VistaSede().setVisible(true);
-            }
-        });
+    public void setBtnCrearJFSede(JButton BtnCrearJFSede) {
+        this.BtnCrearJFSede = BtnCrearJFSede;
+    }
+
+    public JButton getBtnCrearSede1() {
+        return BtnCrearSede1;
+    }
+
+    public void setBtnCrearSede1(JButton BtnCrearSede1) {
+        this.BtnCrearSede1 = BtnCrearSede1;
+    }
+
+    public JButton getBtnEditarJFSede() {
+        return BtnEditarJFSede;
+    }
+
+    public void setBtnEditarJFSede(JButton BtnEditarJFSede) {
+        this.BtnEditarJFSede = BtnEditarJFSede;
+    }
+
+    public JButton getBtnEliminarJFSede() {
+        return BtnEliminarJFSede;
+    }
+
+    public void setBtnEliminarJFSede(JButton BtnEliminarJFSede) {
+        this.BtnEliminarJFSede = BtnEliminarJFSede;
+    }
+
+    public JButton getBtnGuardarSede1() {
+        return BtnGuardarSede1;
+    }
+
+    public void setBtnGuardarSede1(JButton BtnGuardarSede1) {
+        this.BtnGuardarSede1 = BtnGuardarSede1;
+    }
+
+    public JButton getBtnListarJFSede() {
+        return BtnListarJFSede;
+    }
+
+    public void setBtnListarJFSede(JButton BtnListarJFSede) {
+        this.BtnListarJFSede = BtnListarJFSede;
+    }
+
+    public JComboBox<String> getCbxDirectorSede() {
+        return CbxDirectorSede;
+    }
+
+    public void setCbxDirectorSede(JComboBox<String> CbxDirectorSede) {
+        this.CbxDirectorSede = CbxDirectorSede;
+    }
+
+    public JDialog getDgSede() {
+        return DgSede;
+    }
+
+    public void setDgSede(JDialog DgSede) {
+        this.DgSede = DgSede;
+    }
+
+    public JTable getTdSede() {
+        return TdSede;
+    }
+
+    public void setTdSede(JTable TdSede) {
+        this.TdSede = TdSede;
+    }
+
+    public JTextField getTxtBuscarSede() {
+        return TxtBuscarSede;
+    }
+
+    public void setTxtBuscarSede(JTextField TxtBuscarSede) {
+        this.TxtBuscarSede = TxtBuscarSede;
+    }
+
+    public JTextField getTxtCodSede1() {
+        return TxtCodSede1;
+    }
+
+    public void setTxtCodSede1(JTextField TxtCodSede1) {
+        this.TxtCodSede1 = TxtCodSede1;
+    }
+
+    public JTextField getTxtDirecSede1() {
+        return TxtDirecSede1;
+    }
+
+    public void setTxtDirecSede1(JTextField TxtDirecSede1) {
+        this.TxtDirecSede1 = TxtDirecSede1;
+    }
+
+    public JTextField getTxtNombreSede1() {
+        return TxtNombreSede1;
+    }
+
+    public void setTxtNombreSede1(JTextField TxtNombreSede1) {
+        this.TxtNombreSede1 = TxtNombreSede1;
+    }
+
+    public JTextField getTxtTelfSede1() {
+        return TxtTelfSede1;
+    }
+
+    public void setTxtTelfSede1(JTextField TxtTelfSede1) {
+        this.TxtTelfSede1 = TxtTelfSede1;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

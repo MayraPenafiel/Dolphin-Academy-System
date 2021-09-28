@@ -5,6 +5,13 @@
  */
 package Vista;
 
+import com.toedter.calendar.JDateChooser;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author HP
@@ -329,39 +336,179 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaEntrenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaEntrenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaEntrenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaEntrenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    
+    
+    
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(VistaEntrenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(VistaEntrenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(VistaEntrenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(VistaEntrenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new VistaEntrenamiento().setVisible(true);
+//            }
+//        });
+//    }
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VistaEntrenamiento().setVisible(true);
-            }
-        });
+    // GETTER Y SETTERS
+    public JButton getBtnCrearEnt() {
+        return BtnCrearEnt;
+    }
+
+    public void setBtnCrearEnt(JButton BtnCrearEnt) {
+        this.BtnCrearEnt = BtnCrearEnt;
+    }
+
+    public JButton getBtnCrearJFEnt() {
+        return BtnCrearJFEnt;
+    }
+
+    public void setBtnCrearJFEnt(JButton BtnCrearJFEnt) {
+        this.BtnCrearJFEnt = BtnCrearJFEnt;
+    }
+
+    public JButton getBtnEditarJFEnt() {
+        return BtnEditarJFEnt;
+    }
+
+    public void setBtnEditarJFEnt(JButton BtnEditarJFEnt) {
+        this.BtnEditarJFEnt = BtnEditarJFEnt;
+    }
+
+    public JButton getBtnEliminarJFEnt() {
+        return BtnEliminarJFEnt;
+    }
+
+    public void setBtnEliminarJFEnt(JButton BtnEliminarJFEnt) {
+        this.BtnEliminarJFEnt = BtnEliminarJFEnt;
+    }
+
+    public JButton getBtnGuardarEnt() {
+        return BtnGuardarEnt;
+    }
+
+    public void setBtnGuardarEnt(JButton BtnGuardarEnt) {
+        this.BtnGuardarEnt = BtnGuardarEnt;
+    }
+
+    public JButton getBtnListarJFEnt() {
+        return BtnListarJFEnt;
+    }
+
+    public void setBtnListarJFEnt(JButton BtnListarJFEnt) {
+        this.BtnListarJFEnt = BtnListarJFEnt;
+    }
+
+    public JDateChooser getDCFechaFinEnt() {
+        return DCFechaFinEnt;
+    }
+
+    public void setDCFechaFinEnt(JDateChooser DCFechaFinEnt) {
+        this.DCFechaFinEnt = DCFechaFinEnt;
+    }
+
+    public JDateChooser getDCFechaIniEnt() {
+        return DCFechaIniEnt;
+    }
+
+    public void setDCFechaIniEnt(JDateChooser DCFechaIniEnt) {
+        this.DCFechaIniEnt = DCFechaIniEnt;
+    }
+
+    public JDialog getDgEntrenamientp() {
+        return DgEntrenamientp;
+    }
+
+    public void setDgEntrenamientp(JDialog DgEntrenamientp) {
+        this.DgEntrenamientp = DgEntrenamientp;
+    }
+
+    public JPanel getPnEntrenamiento1() {
+        return PnEntrenamiento1;
+    }
+
+    public void setPnEntrenamiento1(JPanel PnEntrenamiento1) {
+        this.PnEntrenamiento1 = PnEntrenamiento1;
+    }
+
+    public JTable getTbEntrenamiento() {
+        return TbEntrenamiento;
+    }
+
+    public void setTbEntrenamiento(JTable TbEntrenamiento) {
+        this.TbEntrenamiento = TbEntrenamiento;
+    }
+
+    public JTextField getTxtBuscarEnt() {
+        return TxtBuscarEnt;
+    }
+
+    public void setTxtBuscarEnt(JTextField TxtBuscarEnt) {
+        this.TxtBuscarEnt = TxtBuscarEnt;
+    }
+
+    public JTextField getTxtCodEnt() {
+        return TxtCodEnt;
+    }
+
+    public void setTxtCodEnt(JTextField TxtCodEnt) {
+        this.TxtCodEnt = TxtCodEnt;
+    }
+
+    public JTextField getTxtDescEnt() {
+        return TxtDescEnt;
+    }
+
+    public void setTxtDescEnt(JTextField TxtDescEnt) {
+        this.TxtDescEnt = TxtDescEnt;
+    }
+
+    public JTextField getTxtDiscEnt() {
+        return TxtDiscEnt;
+    }
+
+    public void setTxtDiscEnt(JTextField TxtDiscEnt) {
+        this.TxtDiscEnt = TxtDiscEnt;
+    }
+
+    public JTextField getTxtObsEnt() {
+        return TxtObsEnt;
+    }
+
+    public void setTxtObsEnt(JTextField TxtObsEnt) {
+        this.TxtObsEnt = TxtObsEnt;
+    }
+
+    public JTextField getTxtProfEnt() {
+        return TxtProfEnt;
+    }
+
+    public void setTxtProfEnt(JTextField TxtProfEnt) {
+        this.TxtProfEnt = TxtProfEnt;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

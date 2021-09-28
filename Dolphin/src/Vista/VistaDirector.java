@@ -5,6 +5,12 @@
  */
 package Vista;
 
+import com.toedter.calendar.JDateChooser;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author HP
@@ -365,39 +371,187 @@ public class VistaDirector extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtApeDirecActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaDirector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaDirector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaDirector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaDirector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    
+    
+    
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(VistaDirector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(VistaDirector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(VistaDirector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(VistaDirector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new VistaDirector().setVisible(true);
+//            }
+//        });
+//    }
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VistaDirector().setVisible(true);
-            }
-        });
+    // GETTER Y SETTERS
+    public JButton getBtnCrearDirec() {
+        return BtnCrearDirec;
+    }
+
+    public void setBtnCrearDirec(JButton BtnCrearDirec) {
+        this.BtnCrearDirec = BtnCrearDirec;
+    }
+
+    public JButton getBtnCrearJFDirec() {
+        return BtnCrearJFDirec;
+    }
+
+    public void setBtnCrearJFDirec(JButton BtnCrearJFDirec) {
+        this.BtnCrearJFDirec = BtnCrearJFDirec;
+    }
+
+    public JButton getBtnEditarJFDirec() {
+        return BtnEditarJFDirec;
+    }
+
+    public void setBtnEditarJFDirec(JButton BtnEditarJFDirec) {
+        this.BtnEditarJFDirec = BtnEditarJFDirec;
+    }
+
+    public JButton getBtnEliminarJFDirec() {
+        return BtnEliminarJFDirec;
+    }
+
+    public void setBtnEliminarJFDirec(JButton BtnEliminarJFDirec) {
+        this.BtnEliminarJFDirec = BtnEliminarJFDirec;
+    }
+
+    public JButton getBtnGuardarDirec() {
+        return BtnGuardarDirec;
+    }
+
+    public void setBtnGuardarDirec(JButton BtnGuardarDirec) {
+        this.BtnGuardarDirec = BtnGuardarDirec;
+    }
+
+    public JButton getBtnListarJFDirec() {
+        return BtnListarJFDirec;
+    }
+
+    public void setBtnListarJFDirec(JButton BtnListarJFDirec) {
+        this.BtnListarJFDirec = BtnListarJFDirec;
+    }
+
+    public JDateChooser getDCDirec() {
+        return DCDirec;
+    }
+
+    public void setDCDirec(JDateChooser DCDirec) {
+        this.DCDirec = DCDirec;
+    }
+
+    public JDialog getDgDirector() {
+        return DgDirector;
+    }
+
+    public void setDgDirector(JDialog DgDirector) {
+        this.DgDirector = DgDirector;
+    }
+
+    public JTable getTbDirector() {
+        return TbDirector;
+    }
+
+    public void setTbDirector(JTable TbDirector) {
+        this.TbDirector = TbDirector;
+    }
+
+    public JTextField getTxtApeDirec() {
+        return TxtApeDirec;
+    }
+
+    public void setTxtApeDirec(JTextField TxtApeDirec) {
+        this.TxtApeDirec = TxtApeDirec;
+    }
+
+    public JTextField getTxtBuscarDirec() {
+        return TxtBuscarDirec;
+    }
+
+    public void setTxtBuscarDirec(JTextField TxtBuscarDirec) {
+        this.TxtBuscarDirec = TxtBuscarDirec;
+    }
+
+    public JTextField getTxtCedulaDirec() {
+        return TxtCedulaDirec;
+    }
+
+    public void setTxtCedulaDirec(JTextField TxtCedulaDirec) {
+        this.TxtCedulaDirec = TxtCedulaDirec;
+    }
+
+    public JTextField getTxtCelularDirec() {
+        return TxtCelularDirec;
+    }
+
+    public void setTxtCelularDirec(JTextField TxtCelularDirec) {
+        this.TxtCelularDirec = TxtCelularDirec;
+    }
+
+    public JTextField getTxtCodDirec() {
+        return TxtCodDirec;
+    }
+
+    public void setTxtCodDirec(JTextField TxtCodDirec) {
+        this.TxtCodDirec = TxtCodDirec;
+    }
+
+    public JTextField getTxtDireccionDirec() {
+        return TxtDireccionDirec;
+    }
+
+    public void setTxtDireccionDirec(JTextField TxtDireccionDirec) {
+        this.TxtDireccionDirec = TxtDireccionDirec;
+    }
+
+    public JTextField getTxtEmailDirec() {
+        return TxtEmailDirec;
+    }
+
+    public void setTxtEmailDirec(JTextField TxtEmailDirec) {
+        this.TxtEmailDirec = TxtEmailDirec;
+    }
+
+    public JTextField getTxtNombreDirec() {
+        return TxtNombreDirec;
+    }
+
+    public void setTxtNombreDirec(JTextField TxtNombreDirec) {
+        this.TxtNombreDirec = TxtNombreDirec;
+    }
+
+    public JTextField getTxtTelfDirec() {
+        return TxtTelfDirec;
+    }
+
+    public void setTxtTelfDirec(JTextField TxtTelfDirec) {
+        this.TxtTelfDirec = TxtTelfDirec;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

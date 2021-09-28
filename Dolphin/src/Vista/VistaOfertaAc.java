@@ -5,6 +5,11 @@
  */
 package Vista;
 
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author HP
@@ -280,40 +285,147 @@ public class VistaOfertaAc extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaOfertaAc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaOfertaAc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaOfertaAc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaOfertaAc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VistaOfertaAc().setVisible(true);
-            }
-        });
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(VistaOfertaAc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(VistaOfertaAc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(VistaOfertaAc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(VistaOfertaAc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new VistaOfertaAc().setVisible(true);
+//            }
+//        });
+//    }
+    
+    //GETTERS Y SETTERS
+    
+    public JButton getBtnCrearJFOA() {
+        return BtnCrearJFOA;
     }
+
+    public void setBtnCrearJFOA(JButton BtnCrearJFOA) {
+        this.BtnCrearJFOA = BtnCrearJFOA;
+    }
+
+    public JButton getBtnCrearOA() {
+        return BtnCrearOA;
+    }
+
+    public void setBtnCrearOA(JButton BtnCrearOA) {
+        this.BtnCrearOA = BtnCrearOA;
+    }
+
+    public JButton getBtnEditarJFOA() {
+        return BtnEditarJFOA;
+    }
+
+    public void setBtnEditarJFOA(JButton BtnEditarJFOA) {
+        this.BtnEditarJFOA = BtnEditarJFOA;
+    }
+
+    public JButton getBtnEliminarJFOA() {
+        return BtnEliminarJFOA;
+    }
+
+    public void setBtnEliminarJFOA(JButton BtnEliminarJFOA) {
+        this.BtnEliminarJFOA = BtnEliminarJFOA;
+    }
+
+    public JButton getBtnGuardarOA() {
+        return BtnGuardarOA;
+    }
+
+    public void setBtnGuardarOA(JButton BtnGuardarOA) {
+        this.BtnGuardarOA = BtnGuardarOA;
+    }
+
+    public JButton getBtnListarJFOA() {
+        return BtnListarJFOA;
+    }
+
+    public void setBtnListarJFOA(JButton BtnListarJFOA) {
+        this.BtnListarJFOA = BtnListarJFOA;
+    }
+
+    public JDialog getDgOfertaAcd() {
+        return DgOfertaAcd;
+    }
+
+    public void setDgOfertaAcd(JDialog DgOfertaAcd) {
+        this.DgOfertaAcd = DgOfertaAcd;
+    }
+
+    public JTable getTbOA() {
+        return TbOA;
+    }
+
+    public void setTbOA(JTable TbOA) {
+        this.TbOA = TbOA;
+    }
+
+    public JTextField getTxtBuscarOA() {
+        return TxtBuscarOA;
+    }
+
+    public void setTxtBuscarOA(JTextField TxtBuscarOA) {
+        this.TxtBuscarOA = TxtBuscarOA;
+    }
+
+    public JTextField getTxtCapOA1() {
+        return TxtCapOA1;
+    }
+
+    public void setTxtCapOA1(JTextField TxtCapOA1) {
+        this.TxtCapOA1 = TxtCapOA1;
+    }
+
+    public JTextField getTxtCodOA1() {
+        return TxtCodOA1;
+    }
+
+    public void setTxtCodOA1(JTextField TxtCodOA1) {
+        this.TxtCodOA1 = TxtCodOA1;
+    }
+
+    public JTextField getTxtDiscOA1() {
+        return TxtDiscOA1;
+    }
+
+    public void setTxtDiscOA1(JTextField TxtDiscOA1) {
+        this.TxtDiscOA1 = TxtDiscOA1;
+    }
+
+    public JTextField getTxtNombreOA1() {
+        return TxtNombreOA1;
+    }
+
+    public void setTxtNombreOA1(JTextField TxtNombreOA1) {
+        this.TxtNombreOA1 = TxtNombreOA1;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCrearJFOA;

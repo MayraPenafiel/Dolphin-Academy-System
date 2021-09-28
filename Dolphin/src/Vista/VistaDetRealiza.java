@@ -5,6 +5,13 @@
  */
 package Vista;
 
+import com.toedter.calendar.JDateChooser;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author HP
@@ -27,7 +34,7 @@ public class VistaDetRealiza extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDialog1 = new javax.swing.JDialog();
+        DgDetalleRealiza = new javax.swing.JDialog();
         PNOA1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -177,14 +184,14 @@ public class VistaDetRealiza extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout DgDetalleRealizaLayout = new javax.swing.GroupLayout(DgDetalleRealiza.getContentPane());
+        DgDetalleRealiza.getContentPane().setLayout(DgDetalleRealizaLayout);
+        DgDetalleRealizaLayout.setHorizontalGroup(
+            DgDetalleRealizaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PNOA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        DgDetalleRealizaLayout.setVerticalGroup(
+            DgDetalleRealizaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PNOA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -298,39 +305,154 @@ public class VistaDetRealiza extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaDetRealiza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaDetRealiza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaDetRealiza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaDetRealiza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    
+    
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(VistaDetRealiza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(VistaDetRealiza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(VistaDetRealiza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(VistaDetRealiza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new VistaDetRealiza().setVisible(true);
+//            }
+//        });
+//    }
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VistaDetRealiza().setVisible(true);
-            }
-        });
+    //GETTER Y SETTERS
+    public JButton getBtnCrearDetR() {
+        return BtnCrearDetR;
+    }
+
+    public void setBtnCrearDetR(JButton BtnCrearDetR) {
+        this.BtnCrearDetR = BtnCrearDetR;
+    }
+
+    public JButton getBtnCrearJDetR() {
+        return BtnCrearJDetR;
+    }
+
+    public void setBtnCrearJDetR(JButton BtnCrearJDetR) {
+        this.BtnCrearJDetR = BtnCrearJDetR;
+    }
+
+    public JButton getBtnEditarJFDetR() {
+        return BtnEditarJFDetR;
+    }
+
+    public void setBtnEditarJFDetR(JButton BtnEditarJFDetR) {
+        this.BtnEditarJFDetR = BtnEditarJFDetR;
+    }
+
+    public JButton getBtnEliminarJFDetR() {
+        return BtnEliminarJFDetR;
+    }
+
+    public void setBtnEliminarJFDetR(JButton BtnEliminarJFDetR) {
+        this.BtnEliminarJFDetR = BtnEliminarJFDetR;
+    }
+
+    public JButton getBtnGuardarDetR() {
+        return BtnGuardarDetR;
+    }
+
+    public void setBtnGuardarDetR(JButton BtnGuardarDetR) {
+        this.BtnGuardarDetR = BtnGuardarDetR;
+    }
+
+    public JButton getBtnListarJFDetR() {
+        return BtnListarJFDetR;
+    }
+
+    public void setBtnListarJFDetR(JButton BtnListarJFDetR) {
+        this.BtnListarJFDetR = BtnListarJFDetR;
+    }
+
+    public JComboBox<String> getCbxERenDetR() {
+        return CbxERenDetR;
+    }
+
+    public void setCbxERenDetR(JComboBox<String> CbxERenDetR) {
+        this.CbxERenDetR = CbxERenDetR;
+    }
+
+    public JDateChooser getDCFechaAsis() {
+        return DCFechaAsis;
+    }
+
+    public void setDCFechaAsis(JDateChooser DCFechaAsis) {
+        this.DCFechaAsis = DCFechaAsis;
+    }
+
+    public JDialog getDgDetalleRealiza() {
+        return DgDetalleRealiza;
+    }
+
+    public void setDgDetalleRealiza(JDialog DgDetalleRealiza) {
+        this.DgDetalleRealiza = DgDetalleRealiza;
+    }
+
+    public JTable getTbDetalleR() {
+        return TbDetalleR;
+    }
+
+    public void setTbDetalleR(JTable TbDetalleR) {
+        this.TbDetalleR = TbDetalleR;
+    }
+
+    public JTextField getTxtAsisDetR() {
+        return TxtAsisDetR;
+    }
+
+    public void setTxtAsisDetR(JTextField TxtAsisDetR) {
+        this.TxtAsisDetR = TxtAsisDetR;
+    }
+
+    public JTextField getTxtAvanzeDetR() {
+        return TxtAvanzeDetR;
+    }
+
+    public void setTxtAvanzeDetR(JTextField TxtAvanzeDetR) {
+        this.TxtAvanzeDetR = TxtAvanzeDetR;
+    }
+
+    public JTextField getTxtBuscarDetR() {
+        return TxtBuscarDetR;
+    }
+
+    public void setTxtBuscarDetR(JTextField TxtBuscarDetR) {
+        this.TxtBuscarDetR = TxtBuscarDetR;
+    }
+
+    public JTextField getTxtCodDetR() {
+        return TxtCodDetR;
+    }
+
+    public void setTxtCodDetR(JTextField TxtCodDetR) {
+        this.TxtCodDetR = TxtCodDetR;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -342,6 +464,7 @@ public class VistaDetRealiza extends javax.swing.JFrame {
     private javax.swing.JButton BtnListarJFDetR;
     private javax.swing.JComboBox<String> CbxERenDetR;
     private com.toedter.calendar.JDateChooser DCFechaAsis;
+    private javax.swing.JDialog DgDetalleRealiza;
     private javax.swing.JPanel PNOA;
     private javax.swing.JPanel PNOA1;
     private javax.swing.JTable TbDetalleR;
@@ -349,7 +472,6 @@ public class VistaDetRealiza extends javax.swing.JFrame {
     private javax.swing.JTextField TxtAvanzeDetR;
     private javax.swing.JTextField TxtBuscarDetR;
     private javax.swing.JTextField TxtCodDetR;
-    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

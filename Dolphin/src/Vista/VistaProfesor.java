@@ -5,6 +5,13 @@
  */
 package Vista;
 
+import com.toedter.calendar.JDateChooser;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author HP
@@ -355,39 +362,193 @@ public class VistaProfesor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtCodProfActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaProfesor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaProfesor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaProfesor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaProfesor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(VistaProfesor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(VistaProfesor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(VistaProfesor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(VistaProfesor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new VistaProfesor().setVisible(true);
+//            }
+//        });
+//    }
+    
+    //GETTERS Y SETTERS
+    
+    public JButton getBtnCrearJFProf() {
+        return BtnCrearJFProf;
+    }
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VistaProfesor().setVisible(true);
-            }
-        });
+    public void setBtnCrearJFProf(JButton BtnCrearJFProf) {
+        this.BtnCrearJFProf = BtnCrearJFProf;
+    }
+
+    public JButton getBtnCrearProf() {
+        return BtnCrearProf;
+    }
+
+    public void setBtnCrearProf(JButton BtnCrearProf) {
+        this.BtnCrearProf = BtnCrearProf;
+    }
+
+    public JButton getBtnEditarJFProf() {
+        return BtnEditarJFProf;
+    }
+
+    public void setBtnEditarJFProf(JButton BtnEditarJFProf) {
+        this.BtnEditarJFProf = BtnEditarJFProf;
+    }
+
+    public JButton getBtnEliminarJFProf() {
+        return BtnEliminarJFProf;
+    }
+
+    public void setBtnEliminarJFProf(JButton BtnEliminarJFProf) {
+        this.BtnEliminarJFProf = BtnEliminarJFProf;
+    }
+
+    public JButton getBtnGuardarProf() {
+        return BtnGuardarProf;
+    }
+
+    public void setBtnGuardarProf(JButton BtnGuardarProf) {
+        this.BtnGuardarProf = BtnGuardarProf;
+    }
+
+    public JButton getBtnListarJFProf() {
+        return BtnListarJFProf;
+    }
+
+    public void setBtnListarJFProf(JButton BtnListarJFProf) {
+        this.BtnListarJFProf = BtnListarJFProf;
+    }
+
+    public JDateChooser getDCProf() {
+        return DCProf;
+    }
+
+    public void setDCProf(JDateChooser DCProf) {
+        this.DCProf = DCProf;
+    }
+
+    public JDialog getDgProfesor() {
+        return DgProfesor;
+    }
+
+    public void setDgProfesor(JDialog DgProfesor) {
+        this.DgProfesor = DgProfesor;
+    }
+
+    public JTable getTbProfesor() {
+        return TbProfesor;
+    }
+
+    public void setTbProfesor(JTable TbProfesor) {
+        this.TbProfesor = TbProfesor;
+    }
+
+    public JTextField getTxtApeProf() {
+        return TxtApeProf;
+    }
+
+    public void setTxtApeProf(JTextField TxtApeProf) {
+        this.TxtApeProf = TxtApeProf;
+    }
+
+    public JTextField getTxtBuscarProf() {
+        return TxtBuscarProf;
+    }
+
+    public void setTxtBuscarProf(JTextField TxtBuscarProf) {
+        this.TxtBuscarProf = TxtBuscarProf;
+    }
+
+    public JTextField getTxtCedulaProf() {
+        return TxtCedulaProf;
+    }
+
+    public void setTxtCedulaProf(JTextField TxtCedulaProf) {
+        this.TxtCedulaProf = TxtCedulaProf;
+    }
+
+    public JTextField getTxtCelularProf() {
+        return TxtCelularProf;
+    }
+
+    public void setTxtCelularProf(JTextField TxtCelularProf) {
+        this.TxtCelularProf = TxtCelularProf;
+    }
+
+    public JTextField getTxtCodProf() {
+        return TxtCodProf;
+    }
+
+    public void setTxtCodProf(JTextField TxtCodProf) {
+        this.TxtCodProf = TxtCodProf;
+    }
+
+    public JTextField getTxtDireccionProf() {
+        return TxtDireccionProf;
+    }
+
+    public void setTxtDireccionProf(JTextField TxtDireccionProf) {
+        this.TxtDireccionProf = TxtDireccionProf;
+    }
+
+    public JTextField getTxtEmailProf() {
+        return TxtEmailProf;
+    }
+
+    public void setTxtEmailProf(JTextField TxtEmailProf) {
+        this.TxtEmailProf = TxtEmailProf;
+    }
+
+    public JTextField getTxtNombreProf() {
+        return TxtNombreProf;
+    }
+
+    public void setTxtNombreProf(JTextField TxtNombreProf) {
+        this.TxtNombreProf = TxtNombreProf;
+    }
+
+    public JTextField getTxtTelfProf() {
+        return TxtTelfProf;
+    }
+
+    public void setTxtTelfProf(JTextField TxtTelfProf) {
+        this.TxtTelfProf = TxtTelfProf;
+    }
+
+    public JLabel getjLabel18() {
+        return jLabel18;
+    }
+
+    public void setjLabel18(JLabel jLabel18) {
+        this.jLabel18 = jLabel18;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

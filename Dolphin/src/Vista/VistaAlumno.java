@@ -5,6 +5,13 @@
  */
 package Vista;
 
+import com.toedter.calendar.JDateChooser;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author HP
@@ -27,7 +34,7 @@ public class VistaAlumno extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDialog1 = new javax.swing.JDialog();
+        DgAlumno = new javax.swing.JDialog();
         PNOA1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -102,7 +109,6 @@ public class VistaAlumno extends javax.swing.JFrame {
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel15.setText("Nombres:");
 
-        TxtCodAlmn.setText("Generacion Aut.");
         TxtCodAlmn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtCodAlmnActionPerformed(evt);
@@ -247,14 +253,14 @@ public class VistaAlumno extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout DgAlumnoLayout = new javax.swing.GroupLayout(DgAlumno.getContentPane());
+        DgAlumno.getContentPane().setLayout(DgAlumnoLayout);
+        DgAlumnoLayout.setHorizontalGroup(
+            DgAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PNOA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        DgAlumnoLayout.setVerticalGroup(
+            DgAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PNOA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -373,41 +379,201 @@ public class VistaAlumno extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtCodAlmnActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VistaAlumno().setVisible(true);
-            }
-        });
+    public JDialog getDgAlumno() {
+        return DgAlumno;
     }
+
+    public void setDgAlumno(JDialog DgAlumno) {
+        this.DgAlumno = DgAlumno;
+    }
+
+    public JButton getBtnCrearAlmn() {
+        return BtnCrearAlmn;
+    }
+
+    public void setBtnCrearAlmn(JButton BtnCrearAlmn) {
+        this.BtnCrearAlmn = BtnCrearAlmn;
+    }
+
+    public JButton getBtnCrearJFAlmn() {
+        return BtnCrearJFAlmn;
+    }
+
+    public void setBtnCrearJFAlmn(JButton BtnCrearJFAlmn) {
+        this.BtnCrearJFAlmn = BtnCrearJFAlmn;
+    }
+
+    public JButton getBtnEditarJFAlmn() {
+        return BtnEditarJFAlmn;
+    }
+
+    public void setBtnEditarJFAlmn(JButton BtnEditarJFAlmn) {
+        this.BtnEditarJFAlmn = BtnEditarJFAlmn;
+    }
+
+    public JButton getBtnEliminarJFAlmn() {
+        return BtnEliminarJFAlmn;
+    }
+
+    public void setBtnEliminarJFAlmn(JButton BtnEliminarJFAlmn) {
+        this.BtnEliminarJFAlmn = BtnEliminarJFAlmn;
+    }
+
+    public JButton getBtnGuardarAlmn() {
+        return BtnGuardarAlmn;
+    }
+
+    public void setBtnGuardarAlmn(JButton BtnGuardarAlmn) {
+        this.BtnGuardarAlmn = BtnGuardarAlmn;
+    }
+
+    public JButton getBtnListarJFAlmn() {
+        return BtnListarJFAlmn;
+    }
+
+    public void setBtnListarJFAlmn(JButton BtnListarJFAlmn) {
+        this.BtnListarJFAlmn = BtnListarJFAlmn;
+    }
+
+    public JComboBox<String> getCbxCategoriaAlmn() {
+        return CbxCategoriaAlmn;
+    }
+
+    public void setCbxCategoriaAlmn(JComboBox<String> CbxCategoriaAlmn) {
+        this.CbxCategoriaAlmn = CbxCategoriaAlmn;
+    }
+
+    public JDateChooser getDCAlumn() {
+        return DCAlumn;
+    }
+
+    public void setDCAlumn(JDateChooser DCAlumn) {
+        this.DCAlumn = DCAlumn;
+    }
+
+    public JTable getTbAlumno() {
+        return TbAlumno;
+    }
+
+    public void setTbAlumno(JTable TbAlumno) {
+        this.TbAlumno = TbAlumno;
+    }
+
+    public JTextField getTxtApeAlmn() {
+        return TxtApeAlmn;
+    }
+
+    public void setTxtApeAlmn(JTextField TxtApeAlmn) {
+        this.TxtApeAlmn = TxtApeAlmn;
+    }
+
+    public JTextField getTxtBuscarAlmn() {
+        return TxtBuscarAlmn;
+    }
+
+    public void setTxtBuscarAlmn(JTextField TxtBuscarAlmn) {
+        this.TxtBuscarAlmn = TxtBuscarAlmn;
+    }
+
+    public JTextField getTxtCedulaAlmn() {
+        return TxtCedulaAlmn;
+    }
+
+    public void setTxtCedulaAlmn(JTextField TxtCedulaAlmn) {
+        this.TxtCedulaAlmn = TxtCedulaAlmn;
+    }
+
+    public JTextField getTxtCelularAlmn() {
+        return TxtCelularAlmn;
+    }
+
+    public void setTxtCelularAlmn(JTextField TxtCelularAlmn) {
+        this.TxtCelularAlmn = TxtCelularAlmn;
+    }
+
+    public JTextField getTxtCodAlmn() {
+        return TxtCodAlmn;
+    }
+
+    public void setTxtCodAlmn(JTextField TxtCodAlmn) {
+        this.TxtCodAlmn = TxtCodAlmn;
+    }
+
+    public JTextField getTxtDireccionAlmn() {
+        return TxtDireccionAlmn;
+    }
+
+    public void setTxtDireccionAlmn(JTextField TxtDireccionAlmn) {
+        this.TxtDireccionAlmn = TxtDireccionAlmn;
+    }
+
+    public JTextField getTxtEmailAlmn() {
+        return TxtEmailAlmn;
+    }
+
+    public void setTxtEmailAlmn(JTextField TxtEmailAlmn) {
+        this.TxtEmailAlmn = TxtEmailAlmn;
+    }
+
+    public JTextField getTxtNombreAlumn() {
+        return TxtNombreAlumn;
+    }
+
+    public void setTxtNombreAlumn(JTextField TxtNombreAlumn) {
+        this.TxtNombreAlumn = TxtNombreAlumn;
+    }
+
+    public JTextField getTxtTelfAlmn() {
+        return TxtTelfAlmn;
+    }
+
+    public void setTxtTelfAlmn(JTextField TxtTelfAlmn) {
+        this.TxtTelfAlmn = TxtTelfAlmn;
+    }
+
+    public JDialog getjDialog1() {
+        return DgAlumno;
+    }
+
+    public void setjDialog1(JDialog jDialog1) {
+        this.DgAlumno = jDialog1;
+    }
+    
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new VistaAlumno().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCrearAlmn;
@@ -418,6 +584,7 @@ public class VistaAlumno extends javax.swing.JFrame {
     private javax.swing.JButton BtnListarJFAlmn;
     private javax.swing.JComboBox<String> CbxCategoriaAlmn;
     private com.toedter.calendar.JDateChooser DCAlumn;
+    private javax.swing.JDialog DgAlumno;
     private javax.swing.JPanel PNOA;
     private javax.swing.JPanel PNOA1;
     private javax.swing.JTable TbAlumno;
@@ -430,7 +597,6 @@ public class VistaAlumno extends javax.swing.JFrame {
     private javax.swing.JTextField TxtEmailAlmn;
     private javax.swing.JTextField TxtNombreAlumn;
     private javax.swing.JTextField TxtTelfAlmn;
-    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;

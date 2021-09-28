@@ -5,6 +5,10 @@
  */
 package Vista;
 
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JTextField;
+
 /**
  *
  * @author HP
@@ -282,41 +286,139 @@ public class VistaDisciplina extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaDisciplina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaDisciplina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaDisciplina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaDisciplina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VistaDisciplina().setVisible(true);
-            }
-        });
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(VistaDisciplina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(VistaDisciplina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(VistaDisciplina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(VistaDisciplina.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new VistaDisciplina().setVisible(true);
+//            }
+//        });
+//    }
+    
+    //GETTERS Y SETTERS
+    public JButton getBtnCrearDisc1() {
+        return BtnCrearDisc1;
     }
 
+    public void setBtnCrearDisc1(JButton BtnCrearDisc1) {
+        this.BtnCrearDisc1 = BtnCrearDisc1;
+    }
+
+    public JButton getBtnCrearJFDisc() {
+        return BtnCrearJFDisc;
+    }
+
+    public void setBtnCrearJFDisc(JButton BtnCrearJFDisc) {
+        this.BtnCrearJFDisc = BtnCrearJFDisc;
+    }
+
+    public JButton getBtnEditarJFDisc() {
+        return BtnEditarJFDisc;
+    }
+
+    public void setBtnEditarJFDisc(JButton BtnEditarJFDisc) {
+        this.BtnEditarJFDisc = BtnEditarJFDisc;
+    }
+
+    public JButton getBtnEliminarJFDisc() {
+        return BtnEliminarJFDisc;
+    }
+
+    public void setBtnEliminarJFDisc(JButton BtnEliminarJFDisc) {
+        this.BtnEliminarJFDisc = BtnEliminarJFDisc;
+    }
+
+    public JButton getBtnGuardarDisc1() {
+        return BtnGuardarDisc1;
+    }
+
+    public void setBtnGuardarDisc1(JButton BtnGuardarDisc1) {
+        this.BtnGuardarDisc1 = BtnGuardarDisc1;
+    }
+
+    public JButton getBtnListarJFDisc() {
+        return BtnListarJFDisc;
+    }
+
+    public void setBtnListarJFDisc(JButton BtnListarJFDisc) {
+        this.BtnListarJFDisc = BtnListarJFDisc;
+    }
+
+    public JDialog getDgDisciplina() {
+        return DgDisciplina;
+    }
+
+    public void setDgDisciplina(JDialog DgDisciplina) {
+        this.DgDisciplina = DgDisciplina;
+    }
+
+    public JTextField getTxtBuscarDisc() {
+        return TxtBuscarDisc;
+    }
+
+    public void setTxtBuscarDisc(JTextField TxtBuscarDisc) {
+        this.TxtBuscarDisc = TxtBuscarDisc;
+    }
+
+    public JTextField getTxtCodDisc1() {
+        return TxtCodDisc1;
+    }
+
+    public void setTxtCodDisc1(JTextField TxtCodDisc1) {
+        this.TxtCodDisc1 = TxtCodDisc1;
+    }
+
+    public JTextField getTxtDescDisc1() {
+        return TxtDescDisc1;
+    }
+
+    public void setTxtDescDisc1(JTextField TxtDescDisc1) {
+        this.TxtDescDisc1 = TxtDescDisc1;
+    }
+
+    public JTextField getTxtNombreDisc1() {
+        return TxtNombreDisc1;
+    }
+
+    public void setTxtNombreDisc1(JTextField TxtNombreDisc1) {
+        this.TxtNombreDisc1 = TxtNombreDisc1;
+    }
+
+    public JTextField getTxtObsDisc1() {
+        return TxtObsDisc1;
+    }
+
+    public void setTxtObsDisc1(JTextField TxtObsDisc1) {
+        this.TxtObsDisc1 = TxtObsDisc1;
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCrearDisc1;
     private javax.swing.JButton BtnCrearJFDisc;
