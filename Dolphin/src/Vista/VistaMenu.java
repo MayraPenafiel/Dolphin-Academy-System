@@ -43,6 +43,12 @@ public class VistaMenu extends javax.swing.JFrame {
         MIAlumno = new javax.swing.JMenuItem();
         MIProfesor = new javax.swing.JMenuItem();
         MIAdm = new javax.swing.JMenuItem();
+        MIDetRealiza = new javax.swing.JMenuItem();
+        MIDisciplina = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        MIEnt = new javax.swing.JMenuItem();
+        MIOA = new javax.swing.JMenuItem();
+        MISede = new javax.swing.JMenuItem();
         MnMenu = new javax.swing.JMenu();
 
         jMenu1.setText("jMenu1");
@@ -83,6 +89,24 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         MenuP.add(MIAdm);
 
+        MIDetRealiza.setText("Det. Realiza");
+        MenuP.add(MIDetRealiza);
+
+        MIDisciplina.setText("Disciplina");
+        MenuP.add(MIDisciplina);
+
+        jMenuItem1.setText("Enc.Realiza");
+        MenuP.add(jMenuItem1);
+
+        MIEnt.setText("Entrenamiento");
+        MenuP.add(MIEnt);
+
+        MIOA.setText("Oferta Academica");
+        MenuP.add(MIOA);
+
+        MISede.setText("Sede");
+        MenuP.add(MISede);
+
         jMenuBar1.add(MenuP);
 
         MnMenu.setText("Edit");
@@ -113,46 +137,49 @@ public class VistaMenu extends javax.swing.JFrame {
     private void MIAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIAdmActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MIAdmActionPerformed
-
-//    /**
-//     * @param args the command line arguments
-//     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(VistaMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(VistaMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(VistaMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(VistaMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new VistaMenu().setVisible(true);
-//            }
-//        });
-//    }
     
     
     //GETTERS Y SETTERS
-    
+    public JMenuItem getMIDetRealiza() {
+        return MIDetRealiza;
+    }
+
+    public void setMIDetRealiza(JMenuItem MIDetRealiza) {
+        this.MIDetRealiza = MIDetRealiza;
+    }
+
+    public JMenuItem getMIDisciplina() {
+        return MIDisciplina;
+    }
+
+    public void setMIDisciplina(JMenuItem MIDisciplina) {
+        this.MIDisciplina = MIDisciplina;
+    }
+
+    public JMenuItem getMIEnt() {
+        return MIEnt;
+    }
+
+    public void setMIEnt(JMenuItem MIEnt) {
+        this.MIEnt = MIEnt;
+    }
+
+    public JMenuItem getMIOA() {
+        return MIOA;
+    }
+
+    public void setMIOA(JMenuItem MIOA) {
+        this.MIOA = MIOA;
+    }
+
+    public JMenuItem getMISede() {
+        return MISede;
+    }
+
+    public void setMISede(JMenuItem MISede) {
+        this.MISede = MISede;
+    }
+
     public JDesktopPane getDskMenu() {
         return DskMenu;
     }
@@ -238,13 +265,19 @@ public class VistaMenu extends javax.swing.JFrame {
     private javax.swing.JDesktopPane DskMenu;
     private javax.swing.JMenuItem MIAdm;
     private javax.swing.JMenuItem MIAlumno;
+    private javax.swing.JMenuItem MIDetRealiza;
+    private javax.swing.JMenuItem MIDisciplina;
+    private javax.swing.JMenuItem MIEnt;
+    private javax.swing.JMenuItem MIOA;
     private javax.swing.JMenuItem MIProfesor;
+    private javax.swing.JMenuItem MISede;
     private javax.swing.JMenu MenuP;
     private javax.swing.JMenu MnMenu;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables
 }
