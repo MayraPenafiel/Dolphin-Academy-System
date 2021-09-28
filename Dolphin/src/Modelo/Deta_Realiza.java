@@ -1,5 +1,5 @@
 package Modelo;
-
+//Comentario de prueba
 import java.sql.Date;
 
 public class Deta_Realiza {
