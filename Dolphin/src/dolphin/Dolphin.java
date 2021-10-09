@@ -5,6 +5,10 @@
  */
 package dolphin;
 
+import Vista.VistaDisciplina;
+import controlador.Control_Disciplina;
+import modelo.Modelo_Disciplina;
+
 /**
  *
  * @author User
@@ -16,6 +20,10 @@ public class Dolphin {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Modelo_Disciplina modelo= new Modelo_Disciplina();
+        VistaDisciplina vista =new VistaDisciplina();
+        Control_Disciplina control= new Control_Disciplina(modelo, vista);
+        control.iniciaControl();
     }
     
 }

@@ -1,5 +1,6 @@
 
 package mvc.modelo;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -8,20 +9,16 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 public class ConexionPG {
     private Connection con;
     private Statement st;
     private ResultSet rs;
     //Datos de su conexion local:
+  
     private String cadenaConexion="jdbc:postgresql://localhost:5432/Dolphin";
     private String usuarioPG="postgres";
     private String contrasPG="0511";
-    //conexion datos
-    //dolphin
-    //proyecto progra
-    //comentario de prueb
-    
-
 
     public ConexionPG() {
         try {
@@ -56,7 +53,7 @@ public class ConexionPG {
             st=con.createStatement();
             boolean rb=st.execute(sqla);
             st.close();
-            return true;//rb;
+            return true; //rb;
         } catch (SQLException ex) {
             Logger.getLogger(ConexionPG.class.getName()).log(Level.SEVERE, null, ex);
             return false;
@@ -70,4 +67,7 @@ public class ConexionPG {
     public void setCon(Connection con) {
         this.con = con;
     }
+    
+    
+    
 }

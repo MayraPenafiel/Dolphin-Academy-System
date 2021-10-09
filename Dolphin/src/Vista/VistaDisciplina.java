@@ -7,6 +7,11 @@ package Vista;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
@@ -38,26 +43,28 @@ public class VistaDisciplina extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        TxtCodDisc1 = new javax.swing.JTextField();
-        TxtNombreDisc1 = new javax.swing.JTextField();
+        txtcodigo = new javax.swing.JTextField();
+        txtnombred = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        TxtDescDisc1 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        TxtObsDisc1 = new javax.swing.JTextField();
-        BtnCrearDisc1 = new javax.swing.JButton();
-        BtnGuardarDisc1 = new javax.swing.JButton();
+        btnaceptar = new javax.swing.JButton();
+        btncancelar = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtdescripciond = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        txtobservacionesd = new javax.swing.JTextArea();
         PNOA = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        TbDisciplina = new javax.swing.JTable();
+        tbldisciplina = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
-        TxtBuscarDisc = new javax.swing.JTextField();
-        BtnCrearJFDisc = new javax.swing.JButton();
-        BtnEditarJFDisc = new javax.swing.JButton();
-        BtnListarJFDisc = new javax.swing.JButton();
-        BtnEliminarJFDisc = new javax.swing.JButton();
+        txtbuscard = new javax.swing.JTextField();
+        btncrear = new javax.swing.JButton();
+        btneditar = new javax.swing.JButton();
+        btnlistar = new javax.swing.JButton();
+        btneliminar = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -78,7 +85,8 @@ public class VistaDisciplina extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,9 +110,17 @@ public class VistaDisciplina extends javax.swing.JFrame {
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel12.setText("Observaciones:");
 
-        BtnCrearDisc1.setText("Crear");
+        btnaceptar.setText("Crear");
 
-        BtnGuardarDisc1.setText("Guardar");
+        btncancelar.setText("Cancelar");
+
+        txtdescripciond.setColumns(20);
+        txtdescripciond.setRows(5);
+        jScrollPane2.setViewportView(txtdescripciond);
+
+        txtobservacionesd.setColumns(20);
+        txtobservacionesd.setRows(5);
+        jScrollPane3.setViewportView(txtobservacionesd);
 
         javax.swing.GroupLayout PNOA1Layout = new javax.swing.GroupLayout(PNOA1);
         PNOA1.setLayout(PNOA1Layout);
@@ -118,25 +134,27 @@ public class VistaDisciplina extends javax.swing.JFrame {
                         .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGap(40, 40, 40)
+                        .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnaceptar)
+                            .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(txtcodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)))
+                        .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PNOA1Layout.createSequentialGroup()
-                                .addComponent(TxtCodDisc1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PNOA1Layout.createSequentialGroup()
-                                .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(BtnCrearDisc1)
-                                    .addComponent(TxtDescDisc1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BtnGuardarDisc1))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TxtNombreDisc1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TxtObsDisc1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(22, 22, 22))
+                            .addGroup(PNOA1Layout.createSequentialGroup()
+                                .addGap(92, 92, 92)
+                                .addComponent(btncancelar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtnombred, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addGap(36, 36, 36)))
                 .addContainerGap())
         );
         PNOA1Layout.setVerticalGroup(
@@ -145,22 +163,27 @@ public class VistaDisciplina extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel11)
+                        .addComponent(txtnombred, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PNOA1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel10)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addGroup(PNOA1Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel12)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(TxtCodDisc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11)
-                    .addComponent(TxtNombreDisc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(TxtObsDisc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(TxtDescDisc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnCrearDisc1)
-                    .addComponent(BtnGuardarDisc1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnaceptar)
+                    .addComponent(btncancelar))
+                .addGap(26, 26, 26))
         );
 
         javax.swing.GroupLayout DgDisciplinaLayout = new javax.swing.GroupLayout(DgDisciplina.getContentPane());
@@ -171,9 +194,7 @@ public class VistaDisciplina extends javax.swing.JFrame {
         );
         DgDisciplinaLayout.setVerticalGroup(
             DgDisciplinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DgDisciplinaLayout.createSequentialGroup()
-                .addComponent(PNOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(PNOA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -205,30 +226,30 @@ public class VistaDisciplina extends javax.swing.JFrame {
             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        TbDisciplina.setModel(new javax.swing.table.DefaultTableModel(
+        tbldisciplina.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "ID", "Cedula", "Nombre", "Descripcion", "Observacion"
+                "ID", "Nombre", "Descripcion", "Observacion"
             }
         ));
-        jScrollPane1.setViewportView(TbDisciplina);
+        jScrollPane1.setViewportView(tbldisciplina);
 
         jLabel3.setText("BUSCAR");
 
-        BtnCrearJFDisc.setText("Crear");
+        btncrear.setText("Crear");
 
-        BtnEditarJFDisc.setText("Editar");
+        btneditar.setText("Editar");
 
-        BtnListarJFDisc.setText("Listar");
+        btnlistar.setText("Listar");
 
-        BtnEliminarJFDisc.setText("Eliminar");
-        BtnEliminarJFDisc.setMaximumSize(new java.awt.Dimension(59, 23));
-        BtnEliminarJFDisc.setMinimumSize(new java.awt.Dimension(59, 23));
+        btneliminar.setText("Eliminar");
+        btneliminar.setMaximumSize(new java.awt.Dimension(59, 23));
+        btneliminar.setMinimumSize(new java.awt.Dimension(59, 23));
 
         javax.swing.GroupLayout PNOALayout = new javax.swing.GroupLayout(PNOA);
         PNOA.setLayout(PNOALayout);
@@ -242,15 +263,15 @@ public class VistaDisciplina extends javax.swing.JFrame {
                     .addGroup(PNOALayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TxtBuscarDisc)
+                        .addComponent(txtbuscard)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnCrearJFDisc, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btncrear, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BtnEditarJFDisc, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btneditar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnListarJFDisc)
+                        .addComponent(btnlistar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnEliminarJFDisc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btneliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(89, 89, 89)))
                 .addContainerGap())
         );
@@ -261,12 +282,12 @@ public class VistaDisciplina extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnEditarJFDisc)
-                    .addComponent(BtnCrearJFDisc)
-                    .addComponent(TxtBuscarDisc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btneditar)
+                    .addComponent(btncrear)
+                    .addComponent(txtbuscard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(BtnListarJFDisc)
-                    .addComponent(BtnEliminarJFDisc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnlistar)
+                    .addComponent(btneliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -322,54 +343,7 @@ public class VistaDisciplina extends javax.swing.JFrame {
 //    }
     
     //GETTERS Y SETTERS
-    public JButton getBtnCrearDisc1() {
-        return BtnCrearDisc1;
-    }
-
-    public void setBtnCrearDisc1(JButton BtnCrearDisc1) {
-        this.BtnCrearDisc1 = BtnCrearDisc1;
-    }
-
-    public JButton getBtnCrearJFDisc() {
-        return BtnCrearJFDisc;
-    }
-
-    public void setBtnCrearJFDisc(JButton BtnCrearJFDisc) {
-        this.BtnCrearJFDisc = BtnCrearJFDisc;
-    }
-
-    public JButton getBtnEditarJFDisc() {
-        return BtnEditarJFDisc;
-    }
-
-    public void setBtnEditarJFDisc(JButton BtnEditarJFDisc) {
-        this.BtnEditarJFDisc = BtnEditarJFDisc;
-    }
-
-    public JButton getBtnEliminarJFDisc() {
-        return BtnEliminarJFDisc;
-    }
-
-    public void setBtnEliminarJFDisc(JButton BtnEliminarJFDisc) {
-        this.BtnEliminarJFDisc = BtnEliminarJFDisc;
-    }
-
-    public JButton getBtnGuardarDisc1() {
-        return BtnGuardarDisc1;
-    }
-
-    public void setBtnGuardarDisc1(JButton BtnGuardarDisc1) {
-        this.BtnGuardarDisc1 = BtnGuardarDisc1;
-    }
-
-    public JButton getBtnListarJFDisc() {
-        return BtnListarJFDisc;
-    }
-
-    public void setBtnListarJFDisc(JButton BtnListarJFDisc) {
-        this.BtnListarJFDisc = BtnListarJFDisc;
-    }
-
+ 
     public JDialog getDgDisciplina() {
         return DgDisciplina;
     }
@@ -378,63 +352,241 @@ public class VistaDisciplina extends javax.swing.JFrame {
         this.DgDisciplina = DgDisciplina;
     }
 
-    public JTextField getTxtBuscarDisc() {
-        return TxtBuscarDisc;
+    public JPanel getPNOA() {
+        return PNOA;
     }
 
-    public void setTxtBuscarDisc(JTextField TxtBuscarDisc) {
-        this.TxtBuscarDisc = TxtBuscarDisc;
+    public void setPNOA(JPanel PNOA) {
+        this.PNOA = PNOA;
     }
 
-    public JTextField getTxtCodDisc1() {
-        return TxtCodDisc1;
+    public JPanel getPNOA1() {
+        return PNOA1;
     }
 
-    public void setTxtCodDisc1(JTextField TxtCodDisc1) {
-        this.TxtCodDisc1 = TxtCodDisc1;
+    public void setPNOA1(JPanel PNOA1) {
+        this.PNOA1 = PNOA1;
     }
 
-    public JTextField getTxtDescDisc1() {
-        return TxtDescDisc1;
+    public JButton getBtnaceptar() {
+        return btnaceptar;
     }
 
-    public void setTxtDescDisc1(JTextField TxtDescDisc1) {
-        this.TxtDescDisc1 = TxtDescDisc1;
+    public void setBtnaceptar(JButton btnaceptar) {
+        this.btnaceptar = btnaceptar;
     }
 
-    public JTextField getTxtNombreDisc1() {
-        return TxtNombreDisc1;
+    public JButton getBtncancelar() {
+        return btncancelar;
     }
 
-    public void setTxtNombreDisc1(JTextField TxtNombreDisc1) {
-        this.TxtNombreDisc1 = TxtNombreDisc1;
+    public void setBtncancelar(JButton btncancelar) {
+        this.btncancelar = btncancelar;
     }
 
-    public JTextField getTxtObsDisc1() {
-        return TxtObsDisc1;
+    public JButton getBtncrear() {
+        return btncrear;
     }
 
-    public void setTxtObsDisc1(JTextField TxtObsDisc1) {
-        this.TxtObsDisc1 = TxtObsDisc1;
+    public void setBtncrear(JButton btncrear) {
+        this.btncrear = btncrear;
+    }
+
+    public JButton getBtneditar() {
+        return btneditar;
+    }
+
+    public void setBtneditar(JButton btneditar) {
+        this.btneditar = btneditar;
+    }
+
+    public JButton getBtneliminar() {
+        return btneliminar;
+    }
+
+    public void setBtneliminar(JButton btneliminar) {
+        this.btneliminar = btneliminar;
+    }
+
+    public JButton getBtnlistar() {
+        return btnlistar;
+    }
+
+    public void setBtnlistar(JButton btnlistar) {
+        this.btnlistar = btnlistar;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public void setjLabel10(JLabel jLabel10) {
+        this.jLabel10 = jLabel10;
+    }
+
+    public JLabel getjLabel11() {
+        return jLabel11;
+    }
+
+    public void setjLabel11(JLabel jLabel11) {
+        this.jLabel11 = jLabel11;
+    }
+
+    public JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public void setjLabel12(JLabel jLabel12) {
+        this.jLabel12 = jLabel12;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JPanel getjPanel2() {
+        return jPanel2;
+    }
+
+    public void setjPanel2(JPanel jPanel2) {
+        this.jPanel2 = jPanel2;
+    }
+
+    public JPanel getjPanel3() {
+        return jPanel3;
+    }
+
+    public void setjPanel3(JPanel jPanel3) {
+        this.jPanel3 = jPanel3;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+
+    public JScrollPane getjScrollPane3() {
+        return jScrollPane3;
+    }
+
+    public void setjScrollPane3(JScrollPane jScrollPane3) {
+        this.jScrollPane3 = jScrollPane3;
+    }
+
+    public JTable getTbldisciplina() {
+        return tbldisciplina;
+    }
+
+    public void setTbldisciplina(JTable tbldisciplina) {
+        this.tbldisciplina = tbldisciplina;
+    }
+
+    public JTextField getTxtbuscard() {
+        return txtbuscard;
+    }
+
+    public void setTxtbuscard(JTextField txtbuscard) {
+        this.txtbuscard = txtbuscard;
+    }
+
+    public JTextField getTxtcodigo() {
+        return txtcodigo;
+    }
+
+    public void setTxtcodigo(JTextField txtcodigo) {
+        this.txtcodigo = txtcodigo;
+    }
+
+    public JTextArea getTxtdescripciond() {
+        return txtdescripciond;
+    }
+
+    public void setTxtdescripciond(JTextArea txtdescripciond) {
+        this.txtdescripciond = txtdescripciond;
+    }
+
+    public JTextField getTxtnombred() {
+        return txtnombred;
+    }
+
+    public void setTxtnombred(JTextField txtnombred) {
+        this.txtnombred = txtnombred;
+    }
+
+    public JTextArea getTxtobservacionesd() {
+        return txtobservacionesd;
+    }
+
+    public void setTxtobservacionesd(JTextArea txtobservacionesd) {
+        this.txtobservacionesd = txtobservacionesd;
     }
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnCrearDisc1;
-    private javax.swing.JButton BtnCrearJFDisc;
-    private javax.swing.JButton BtnEditarJFDisc;
-    private javax.swing.JButton BtnEliminarJFDisc;
-    private javax.swing.JButton BtnGuardarDisc1;
-    private javax.swing.JButton BtnListarJFDisc;
     private javax.swing.JDialog DgDisciplina;
     private javax.swing.JPanel PNOA;
     private javax.swing.JPanel PNOA1;
-    private javax.swing.JTable TbDisciplina;
-    private javax.swing.JTextField TxtBuscarDisc;
-    private javax.swing.JTextField TxtCodDisc1;
-    private javax.swing.JTextField TxtDescDisc1;
-    private javax.swing.JTextField TxtNombreDisc1;
-    private javax.swing.JTextField TxtObsDisc1;
+    private javax.swing.JButton btnaceptar;
+    private javax.swing.JButton btncancelar;
+    private javax.swing.JButton btncrear;
+    private javax.swing.JButton btneditar;
+    private javax.swing.JButton btneliminar;
+    private javax.swing.JButton btnlistar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -447,5 +599,13 @@ public class VistaDisciplina extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable tbldisciplina;
+    private javax.swing.JTextField txtbuscard;
+    private javax.swing.JTextField txtcodigo;
+    private javax.swing.JTextArea txtdescripciond;
+    private javax.swing.JTextField txtnombred;
+    private javax.swing.JTextArea txtobservacionesd;
     // End of variables declaration//GEN-END:variables
 }
