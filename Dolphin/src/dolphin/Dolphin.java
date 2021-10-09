@@ -5,9 +5,7 @@
  */
 package dolphin;
 
-import Vista.VistaDisciplina;
-import controlador.Control_Disciplina;
-import modelo.Modelo_Disciplina;
+
 
 /**
  *
