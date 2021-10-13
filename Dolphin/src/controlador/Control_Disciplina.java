@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
-import Modelo.Disciplina;
+import Modelo.clases_base.Disciplina;
 import modelo.Modelo_Disciplina;
 import Vista.VistaDisciplina;
 

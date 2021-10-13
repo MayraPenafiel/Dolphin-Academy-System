@@ -1,9 +1,9 @@
 
 package controlador;
 
-import Modelo.Director;
+import Modelo.clases_base.Director;
 import Modelo.Modelo_Profesor;
-import Modelo.Profesor;
+import Modelo.clases_base.Profesor;
 import Vista.VistaProfesor;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -17,7 +17,7 @@ import java.time.ZonedDateTime;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import mvc.modelo.ConexionPG;
+import conexion.ConexionPG;
 
 
 public class Control_Profesor{

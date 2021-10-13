@@ -1,6 +1,5 @@
-package Modelo;
+package Modelo.clases_base;
 
-import Modelo.Persona;
 import java.sql.Date;
 
 public class Alumno extends Persona{

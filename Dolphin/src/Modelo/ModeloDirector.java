@@ -1,12 +1,13 @@
 
 package Modelo;
 
+import Modelo.clases_base.Director;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import mvc.modelo.ConexionPG;
+import conexion.ConexionPG;
 
 /**
  *

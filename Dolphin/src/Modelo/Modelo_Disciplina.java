@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import mvc.modelo.ConexionPG;
-import Modelo.Disciplina;
+import conexion.ConexionPG;
+import Modelo.clases_base.Disciplina;
 
 public class Modelo_Disciplina extends Disciplina {
     ConexionPG con=new ConexionPG();

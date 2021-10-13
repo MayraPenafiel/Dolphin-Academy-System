@@ -1,8 +1,7 @@
-package Modelo;
+package Modelo.clases_base;
 
 
 
-import Modelo.Personal_administrativo;
 import java.sql.Date;
 
 public class Director extends Personal_administrativo{

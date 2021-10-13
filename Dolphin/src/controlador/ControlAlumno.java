@@ -1,6 +1,6 @@
 package controlador;
 
-import Modelo.Alumno;
+import Modelo.clases_base.Alumno;
 import Modelo.ModeloAlumno;
 import Vista.VistaAlumno;
 import java.awt.event.KeyEvent;
@@ -15,7 +15,7 @@ import java.time.ZonedDateTime;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import mvc.modelo.ConexionPG;
+import conexion.ConexionPG;
 
 /**
  *
