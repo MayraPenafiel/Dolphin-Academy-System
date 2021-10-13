@@ -56,9 +56,21 @@ public class VistaProfesor extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         TxtTelfProf = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
-        TxtEmailProf = new javax.swing.JTextField();
+        TxtFormacionProf = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        TxtCelularProf = new javax.swing.JTextField();
+        TxtContraseñaProf = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        TxtEmailProf1 = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        TxtCelularProf1 = new javax.swing.JTextField();
+        DlgEliminar = new javax.swing.JDialog();
+        jLabel13 = new javax.swing.JLabel();
+        lbtitutolo1 = new javax.swing.JLabel();
+        txteliminarnombre = new javax.swing.JTextField();
+        btnconfirmareliminar = new javax.swing.JButton();
+        btncancelareliminar = new javax.swing.JButton();
+        txteliminarid = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
         PNOA = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -146,6 +158,14 @@ public class VistaProfesor extends javax.swing.JFrame {
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel22.setText("Celular:");
 
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel23.setText("Formacion:");
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel24.setText("Contraseña:");
+
         javax.swing.GroupLayout PNOA1Layout = new javax.swing.GroupLayout(PNOA1);
         PNOA1.setLayout(PNOA1Layout);
         PNOA1Layout.setHorizontalGroup(
@@ -163,7 +183,8 @@ public class VistaProfesor extends javax.swing.JFrame {
                                 .addGroup(PNOA1Layout.createSequentialGroup()
                                     .addGap(8, 8, 8)
                                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PNOA1Layout.createSequentialGroup()
@@ -175,13 +196,19 @@ public class VistaProfesor extends javax.swing.JFrame {
                                     .addGroup(PNOA1Layout.createSequentialGroup()
                                         .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addComponent(DCProf, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(BtnCrearProf)
-                                            .addComponent(TxtNombreProf, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(TxtNombreProf, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                                            .addGroup(PNOA1Layout.createSequentialGroup()
+                                                .addComponent(BtnCrearProf)
+                                                .addGap(22, 22, 22)))
                                         .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BtnGuardarProf)
-                                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addGroup(PNOA1Layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(PNOA1Layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addComponent(BtnGuardarProf)))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(TxtCedulaProf, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -192,9 +219,15 @@ public class VistaProfesor extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(TxtEmailProf, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(TxtCelularProf, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addComponent(TxtEmailProf1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(PNOA1Layout.createSequentialGroup()
+                                .addComponent(TxtCelularProf1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(TxtFormacionProf, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(TxtContraseñaProf, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 28, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         PNOA1Layout.setVerticalGroup(
@@ -226,16 +259,23 @@ public class VistaProfesor extends javax.swing.JFrame {
                     .addComponent(jLabel20)
                     .addComponent(TxtTelfProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21)
-                    .addComponent(TxtEmailProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TxtEmailProf1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel22)
-                    .addComponent(TxtCelularProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel23)
+                        .addComponent(TxtFormacionProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TxtCelularProf1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
+                .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(TxtContraseñaProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnCrearProf)
                     .addComponent(BtnGuardarProf))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(32, 32, 32))
         );
 
         javax.swing.GroupLayout DgProfesorLayout = new javax.swing.GroupLayout(DgProfesor.getContentPane());
@@ -247,6 +287,66 @@ public class VistaProfesor extends javax.swing.JFrame {
         DgProfesorLayout.setVerticalGroup(
             DgProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PNOA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jLabel13.setText("Nombre:");
+
+        lbtitutolo1.setText("¿Seguro que desea Eliminar a la persona Seleccionada?");
+
+        txteliminarnombre.setEditable(false);
+        txteliminarnombre.setBackground(new java.awt.Color(255, 255, 255));
+        txteliminarnombre.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        btnconfirmareliminar.setText("ACEPTAR");
+
+        btncancelareliminar.setText("CANCELAR");
+
+        txteliminarid.setEditable(false);
+        txteliminarid.setBackground(new java.awt.Color(255, 255, 255));
+        txteliminarid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jLabel12.setText("ID:");
+
+        javax.swing.GroupLayout DlgEliminarLayout = new javax.swing.GroupLayout(DlgEliminar.getContentPane());
+        DlgEliminar.getContentPane().setLayout(DlgEliminarLayout);
+        DlgEliminarLayout.setHorizontalGroup(
+            DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DlgEliminarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(DlgEliminarLayout.createSequentialGroup()
+                        .addComponent(btnconfirmareliminar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btncancelareliminar))
+                    .addComponent(lbtitutolo1)
+                    .addGroup(DlgEliminarLayout.createSequentialGroup()
+                        .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel12))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txteliminarid, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txteliminarnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(120, 120, 120))
+        );
+        DlgEliminarLayout.setVerticalGroup(
+            DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DlgEliminarLayout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addComponent(lbtitutolo1)
+                .addGap(18, 18, 18)
+                .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txteliminarid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addGap(26, 26, 26)
+                .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txteliminarnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13))
+                .addGap(58, 58, 58)
+                .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnconfirmareliminar)
+                    .addComponent(btncancelareliminar))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -280,13 +380,13 @@ public class VistaProfesor extends javax.swing.JFrame {
 
         TbProfesor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Cedula", "Nombres", "Apellido", "Direccion", "Telefono", "Correo", "Fecha Nac", "Celukar"
+                "ID", "Cedula", "Nombres", "Apellido", "Direccion", "Telefono", "Correo", "Fecha Nac", "Celular", "Formacion"
             }
         ));
         jScrollPane1.setViewportView(TbProfesor);
@@ -311,7 +411,6 @@ public class VistaProfesor extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1)
                     .addGroup(PNOALayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -326,6 +425,7 @@ public class VistaProfesor extends javax.swing.JFrame {
                         .addComponent(BtnEliminarJFProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(89, 89, 89)))
                 .addContainerGap())
+            .addComponent(jScrollPane1)
         );
         PNOALayout.setVerticalGroup(
             PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,7 +441,8 @@ public class VistaProfesor extends javax.swing.JFrame {
                     .addComponent(BtnListarJFProf)
                     .addComponent(BtnEliminarJFProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -361,6 +462,80 @@ public class VistaProfesor extends javax.swing.JFrame {
     private void TxtCodProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCodProfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtCodProfActionPerformed
+
+    public JTextField getTxtFormacionProf() {
+        return TxtFormacionProf;
+    }
+
+    public void setTxtFormacionProf(JTextField TxtFormacionProf) {
+        this.TxtFormacionProf = TxtFormacionProf;
+    }
+
+    public JDialog getDlgEliminar() {
+        return DlgEliminar;
+    }
+
+    public void setDlgEliminar(JDialog DlgEliminar) {
+        this.DlgEliminar = DlgEliminar;
+    }
+
+    public JTextField getTxtEmailProf1() {
+        return TxtEmailProf1;
+    }
+
+    public void setTxtEmailProf1(JTextField TxtEmailProf1) {
+        this.TxtEmailProf1 = TxtEmailProf1;
+    }
+
+    public JButton getBtncancelareliminar() {
+        return btncancelareliminar;
+    }
+
+    public void setBtncancelareliminar(JButton btncancelareliminar) {
+        this.btncancelareliminar = btncancelareliminar;
+    }
+
+    public JButton getBtnconfirmareliminar() {
+        return btnconfirmareliminar;
+    }
+
+    public void setBtnconfirmareliminar(JButton btnconfirmareliminar) {
+        this.btnconfirmareliminar = btnconfirmareliminar;
+    }
+
+    public JTextField getTxteliminarid() {
+        return txteliminarid;
+    }
+
+    public void setTxteliminarid(JTextField txteliminarid) {
+        this.txteliminarid = txteliminarid;
+    }
+
+    public JTextField getTxteliminarnombre() {
+        return txteliminarnombre;
+    }
+
+    public void setTxteliminarnombre(JTextField txteliminarnombre) {
+        this.txteliminarnombre = txteliminarnombre;
+    }
+
+    public JTextField getTxtCelularProf1() {
+        return TxtCelularProf1;
+    }
+
+    public void setTxtCelularProf1(JTextField TxtCelularProf1) {
+        this.TxtCelularProf1 = TxtCelularProf1;
+    }
+
+    public JTextField getTxtContraseñaProf() {
+        return TxtContraseñaProf;
+    }
+
+    public void setTxtContraseñaProf(JTextField TxtContraseñaProf) {
+        this.TxtContraseñaProf = TxtContraseñaProf;
+    }
+    
+    
 
 //    /**
 //     * @param args the command line arguments
@@ -397,7 +572,9 @@ public class VistaProfesor extends javax.swing.JFrame {
 //        });
 //    }
     
-    //GETTERS Y SETTERS
+    //GETTERS Y SETTER
+    
+    
     
     public JButton getBtnCrearJFProf() {
         return BtnCrearJFProf;
@@ -496,11 +673,11 @@ public class VistaProfesor extends javax.swing.JFrame {
     }
 
     public JTextField getTxtCelularProf() {
-        return TxtCelularProf;
+        return TxtContraseñaProf;
     }
 
     public void setTxtCelularProf(JTextField TxtCelularProf) {
-        this.TxtCelularProf = TxtCelularProf;
+        this.TxtContraseñaProf = TxtCelularProf;
     }
 
     public JTextField getTxtCodProf() {
@@ -520,11 +697,11 @@ public class VistaProfesor extends javax.swing.JFrame {
     }
 
     public JTextField getTxtEmailProf() {
-        return TxtEmailProf;
+        return TxtFormacionProf;
     }
 
     public void setTxtEmailProf(JTextField TxtEmailProf) {
-        this.TxtEmailProf = TxtEmailProf;
+        this.TxtFormacionProf = TxtEmailProf;
     }
 
     public JTextField getTxtNombreProf() {
@@ -560,19 +737,26 @@ public class VistaProfesor extends javax.swing.JFrame {
     private javax.swing.JButton BtnListarJFProf;
     private com.toedter.calendar.JDateChooser DCProf;
     private javax.swing.JDialog DgProfesor;
+    private javax.swing.JDialog DlgEliminar;
     private javax.swing.JPanel PNOA;
     private javax.swing.JPanel PNOA1;
     private javax.swing.JTable TbProfesor;
     private javax.swing.JTextField TxtApeProf;
     private javax.swing.JTextField TxtBuscarProf;
     private javax.swing.JTextField TxtCedulaProf;
-    private javax.swing.JTextField TxtCelularProf;
+    private javax.swing.JTextField TxtCelularProf1;
     private javax.swing.JTextField TxtCodProf;
+    private javax.swing.JTextField TxtContraseñaProf;
     private javax.swing.JTextField TxtDireccionProf;
-    private javax.swing.JTextField TxtEmailProf;
+    private javax.swing.JTextField TxtEmailProf1;
+    private javax.swing.JTextField TxtFormacionProf;
     private javax.swing.JTextField TxtNombreProf;
     private javax.swing.JTextField TxtTelfProf;
+    private javax.swing.JButton btncancelareliminar;
+    private javax.swing.JButton btnconfirmareliminar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -583,11 +767,16 @@ public class VistaProfesor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbtitutolo1;
+    private javax.swing.JTextField txteliminarid;
+    private javax.swing.JTextField txteliminarnombre;
     // End of variables declaration//GEN-END:variables
 }
