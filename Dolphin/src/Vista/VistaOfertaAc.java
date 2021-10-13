@@ -47,6 +47,12 @@ public class VistaOfertaAc extends javax.swing.JFrame {
         TxtNombreOA1 = new javax.swing.JTextField();
         BtnCrearOA = new javax.swing.JButton();
         BtnGuardarOA = new javax.swing.JButton();
+        DgElimOfertaAcd = new javax.swing.JDialog();
+        lbtitutolo1 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        txteliminarcod_OA = new javax.swing.JTextField();
+        btnconfirmareliminar_OA = new javax.swing.JButton();
+        btncancelareliminar_OA = new javax.swing.JButton();
         PNOA = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -173,6 +179,56 @@ public class VistaOfertaAc extends javax.swing.JFrame {
         DgOfertaAcdLayout.setVerticalGroup(
             DgOfertaAcdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PNOA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        lbtitutolo1.setText("¿Seguro que desea Eliminar la sedeSeleccionada?");
+
+        jLabel16.setText("ID:");
+
+        txteliminarcod_OA.setEditable(false);
+        txteliminarcod_OA.setBackground(new java.awt.Color(255, 255, 255));
+        txteliminarcod_OA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        btnconfirmareliminar_OA.setText("ACEPTAR");
+
+        btncancelareliminar_OA.setText("CANCELAR");
+
+        javax.swing.GroupLayout DgElimOfertaAcdLayout = new javax.swing.GroupLayout(DgElimOfertaAcd.getContentPane());
+        DgElimOfertaAcd.getContentPane().setLayout(DgElimOfertaAcdLayout);
+        DgElimOfertaAcdLayout.setHorizontalGroup(
+            DgElimOfertaAcdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(DgElimOfertaAcdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(DgElimOfertaAcdLayout.createSequentialGroup()
+                    .addGap(82, 82, 82)
+                    .addGroup(DgElimOfertaAcdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(DgElimOfertaAcdLayout.createSequentialGroup()
+                            .addComponent(btnconfirmareliminar_OA)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btncancelareliminar_OA))
+                        .addComponent(lbtitutolo1)
+                        .addGroup(DgElimOfertaAcdLayout.createSequentialGroup()
+                            .addComponent(jLabel16)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txteliminarcod_OA, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(83, Short.MAX_VALUE)))
+        );
+        DgElimOfertaAcdLayout.setVerticalGroup(
+            DgElimOfertaAcdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(DgElimOfertaAcdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(DgElimOfertaAcdLayout.createSequentialGroup()
+                    .addGap(60, 60, 60)
+                    .addComponent(lbtitutolo1)
+                    .addGap(18, 18, 18)
+                    .addGroup(DgElimOfertaAcdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txteliminarcod_OA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel16))
+                    .addGap(104, 104, 104)
+                    .addGroup(DgElimOfertaAcdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnconfirmareliminar_OA)
+                        .addComponent(btncancelareliminar_OA))
+                    .addContainerGap(61, Short.MAX_VALUE)))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -425,6 +481,39 @@ public class VistaOfertaAc extends javax.swing.JFrame {
     public void setTxtNombreOA1(JTextField TxtNombreOA1) {
         this.TxtNombreOA1 = TxtNombreOA1;
     }
+
+    public JDialog getDgElimOfertaAcd() {
+        return DgElimOfertaAcd;
+    }
+
+    public void setDgElimOfertaAcd(JDialog DgElimOfertaAcd) {
+        this.DgElimOfertaAcd = DgElimOfertaAcd;
+    }
+
+    public JButton getBtncancelareliminar_OA() {
+        return btncancelareliminar_OA;
+    }
+
+    public void setBtncancelareliminar_OA(JButton btncancelareliminar_OA) {
+        this.btncancelareliminar_OA = btncancelareliminar_OA;
+    }
+
+    public JButton getBtnconfirmareliminar_OA() {
+        return btnconfirmareliminar_OA;
+    }
+
+    public void setBtnconfirmareliminar_OA(JButton btnconfirmareliminar_OA) {
+        this.btnconfirmareliminar_OA = btnconfirmareliminar_OA;
+    }
+
+    public JTextField getTxteliminarcod_OA() {
+        return txteliminarcod_OA;
+    }
+
+    public void setTxteliminarcod_OA(JTextField txteliminarcod_OA) {
+        this.txteliminarcod_OA = txteliminarcod_OA;
+    }
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -434,6 +523,7 @@ public class VistaOfertaAc extends javax.swing.JFrame {
     private javax.swing.JButton BtnEliminarJFOA;
     private javax.swing.JButton BtnGuardarOA;
     private javax.swing.JButton BtnListarJFOA;
+    private javax.swing.JDialog DgElimOfertaAcd;
     private javax.swing.JDialog DgOfertaAcd;
     private javax.swing.JPanel PNOA;
     private javax.swing.JPanel PNOA1;
@@ -443,10 +533,13 @@ public class VistaOfertaAc extends javax.swing.JFrame {
     private javax.swing.JTextField TxtCodOA1;
     private javax.swing.JTextField TxtDiscOA1;
     private javax.swing.JTextField TxtNombreOA1;
+    private javax.swing.JButton btncancelareliminar_OA;
+    private javax.swing.JButton btnconfirmareliminar_OA;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -455,5 +548,7 @@ public class VistaOfertaAc extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbtitutolo1;
+    private javax.swing.JTextField txteliminarcod_OA;
     // End of variables declaration//GEN-END:variables
 }

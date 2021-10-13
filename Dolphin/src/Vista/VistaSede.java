@@ -50,6 +50,16 @@ public class VistaSede extends javax.swing.JFrame {
         BtnGuardarSede1 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         CbxDirectorSede = new javax.swing.JComboBox<>();
+        jLabel15 = new javax.swing.JLabel();
+        TxtCorreoS1 = new javax.swing.JTextField();
+        DgEliminarSede = new javax.swing.JDialog();
+        lbtitutolo1 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        txteliminarcodSede = new javax.swing.JTextField();
+        txteliminarnombre_s = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        btnconfirmareliminar_s = new javax.swing.JButton();
+        btncancelareliminar_s = new javax.swing.JButton();
         PNOA = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -116,6 +126,10 @@ public class VistaSede extends javax.swing.JFrame {
 
         CbxDirectorSede.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel15.setText("Correo");
+
         javax.swing.GroupLayout PNOA1Layout = new javax.swing.GroupLayout(PNOA1);
         PNOA1.setLayout(PNOA1Layout);
         PNOA1Layout.setHorizontalGroup(
@@ -145,11 +159,13 @@ public class VistaSede extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BtnGuardarSede1))))
+                                    .addComponent(BtnGuardarSede1)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(TxtNombreSede1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TxtTelfSede1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(TxtTelfSede1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TxtCorreoS1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -173,7 +189,9 @@ public class VistaSede extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(CbxDirectorSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CbxDirectorSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15)
+                    .addComponent(TxtCorreoS1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnCrearSede1)
@@ -190,6 +208,66 @@ public class VistaSede extends javax.swing.JFrame {
         DgSedeLayout.setVerticalGroup(
             DgSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PNOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        lbtitutolo1.setText("¿Seguro que desea Eliminar la sedeSeleccionada?");
+
+        jLabel16.setText("ID:");
+
+        txteliminarcodSede.setEditable(false);
+        txteliminarcodSede.setBackground(new java.awt.Color(255, 255, 255));
+        txteliminarcodSede.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        txteliminarnombre_s.setEditable(false);
+        txteliminarnombre_s.setBackground(new java.awt.Color(255, 255, 255));
+        txteliminarnombre_s.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jLabel17.setText("Nombre:");
+
+        btnconfirmareliminar_s.setText("ACEPTAR");
+
+        btncancelareliminar_s.setText("CANCELAR");
+
+        javax.swing.GroupLayout DgEliminarSedeLayout = new javax.swing.GroupLayout(DgEliminarSede.getContentPane());
+        DgEliminarSede.getContentPane().setLayout(DgEliminarSedeLayout);
+        DgEliminarSedeLayout.setHorizontalGroup(
+            DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DgEliminarSedeLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(DgEliminarSedeLayout.createSequentialGroup()
+                        .addComponent(btnconfirmareliminar_s)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btncancelareliminar_s))
+                    .addComponent(lbtitutolo1)
+                    .addGroup(DgEliminarSedeLayout.createSequentialGroup()
+                        .addComponent(jLabel17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txteliminarnombre_s))
+                    .addGroup(DgEliminarSedeLayout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txteliminarcodSede, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(120, 120, 120))
+        );
+        DgEliminarSedeLayout.setVerticalGroup(
+            DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DgEliminarSedeLayout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addComponent(lbtitutolo1)
+                .addGap(18, 18, 18)
+                .addGroup(DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txteliminarcodSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16))
+                .addGap(26, 26, 26)
+                .addGroup(DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txteliminarnombre_s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17))
+                .addGap(58, 58, 58)
+                .addGroup(DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnconfirmareliminar_s)
+                    .addComponent(btncancelareliminar_s))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -451,6 +529,56 @@ public class VistaSede extends javax.swing.JFrame {
         this.TxtTelfSede1 = TxtTelfSede1;
     }
 
+    public JTextField getTxtCorreoS1() {
+        return TxtCorreoS1;
+    }
+
+    public void setTxtCorreoS1(JTextField TxtCorreoS1) {
+        this.TxtCorreoS1 = TxtCorreoS1;
+    }
+
+    public JButton getBtncancelareliminar_s() {
+        return btncancelareliminar_s;
+    }
+
+    public void setBtncancelareliminar_s(JButton btncancelareliminar_s) {
+        this.btncancelareliminar_s = btncancelareliminar_s;
+    }
+
+    public JButton getBtnconfirmareliminar_s() {
+        return btnconfirmareliminar_s;
+    }
+
+    public void setBtnconfirmareliminar_s(JButton btnconfirmareliminar_s) {
+        this.btnconfirmareliminar_s = btnconfirmareliminar_s;
+    }
+
+    public JTextField getTxteliminarcodSede() {
+        return txteliminarcodSede;
+    }
+
+    public void setTxteliminarcodSede(JTextField txteliminarcodSede) {
+        this.txteliminarcodSede = txteliminarcodSede;
+    }
+
+    public JTextField getTxteliminarnombre_s() {
+        return txteliminarnombre_s;
+    }
+
+    public void setTxteliminarnombre_s(JTextField txteliminarnombre_s) {
+        this.txteliminarnombre_s = txteliminarnombre_s;
+    }
+
+    public JDialog getDgEliminarSede() {
+        return DgEliminarSede;
+    }
+
+    public void setDgEliminarSede(JDialog DgEliminarSede) {
+        this.DgEliminarSede = DgEliminarSede;
+    }
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCrearJFSede;
     private javax.swing.JButton BtnCrearSede1;
@@ -459,21 +587,28 @@ public class VistaSede extends javax.swing.JFrame {
     private javax.swing.JButton BtnGuardarSede1;
     private javax.swing.JButton BtnListarJFSede;
     private javax.swing.JComboBox<String> CbxDirectorSede;
+    private javax.swing.JDialog DgEliminarSede;
     private javax.swing.JDialog DgSede;
     private javax.swing.JPanel PNOA;
     private javax.swing.JPanel PNOA1;
     private javax.swing.JTable TdSede;
     private javax.swing.JTextField TxtBuscarSede;
     private javax.swing.JTextField TxtCodSede1;
+    private javax.swing.JTextField TxtCorreoS1;
     private javax.swing.JTextField TxtDirecSede1;
     private javax.swing.JTextField TxtNombreSede1;
     private javax.swing.JTextField TxtTelfSede1;
+    private javax.swing.JButton btncancelareliminar_s;
+    private javax.swing.JButton btnconfirmareliminar_s;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -481,5 +616,8 @@ public class VistaSede extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbtitutolo1;
+    private javax.swing.JTextField txteliminarcodSede;
+    private javax.swing.JTextField txteliminarnombre_s;
     // End of variables declaration//GEN-END:variables
 }
