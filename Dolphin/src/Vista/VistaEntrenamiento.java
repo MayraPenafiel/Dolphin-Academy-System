@@ -7,6 +7,7 @@ package Vista;
 
 import com.toedter.calendar.JDateChooser;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -46,15 +47,15 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         DCFechaFinEnt = new com.toedter.calendar.JDateChooser();
         DCFechaIniEnt = new com.toedter.calendar.JDateChooser();
         TxtCodEnt = new javax.swing.JTextField();
-        TxtDiscEnt = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        TxtProfEnt = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         TxtDescEnt = new javax.swing.JTextField();
         TxtObsEnt = new javax.swing.JTextField();
-        BtnCrearEnt = new javax.swing.JButton();
+        BtnCancelarEnt = new javax.swing.JButton();
         BtnGuardarEnt = new javax.swing.JButton();
+        jcbdiscent = new javax.swing.JComboBox<>();
+        jcbproent = new javax.swing.JComboBox<>();
         PNOA = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -123,9 +124,13 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel18.setText("Observacion:");
 
-        BtnCrearEnt.setText("Crear");
+        BtnCancelarEnt.setText("Cancelar");
 
         BtnGuardarEnt.setText("Guardar");
+
+        jcbdiscent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----------", " " }));
+
+        jcbproent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--------------" }));
 
         javax.swing.GroupLayout PnEntrenamiento1Layout = new javax.swing.GroupLayout(PnEntrenamiento1);
         PnEntrenamiento1.setLayout(PnEntrenamiento1Layout);
@@ -135,45 +140,44 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnEntrenamiento1Layout.createSequentialGroup()
+                        .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PnEntrenamiento1Layout.createSequentialGroup()
-                                .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(TxtCodEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(PnEntrenamiento1Layout.createSequentialGroup()
+                                        .addGap(31, 31, 31)
+                                        .addComponent(BtnGuardarEnt)))
                                 .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PnEntrenamiento1Layout.createSequentialGroup()
-                                        .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addGroup(PnEntrenamiento1Layout.createSequentialGroup()
-                                                    .addComponent(DCFechaIniEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PnEntrenamiento1Layout.createSequentialGroup()
-                                                    .addComponent(TxtCodEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(TxtDiscEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(TxtDescEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(TxtObsEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(PnEntrenamiento1Layout.createSequentialGroup()
-                                        .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(PnEntrenamiento1Layout.createSequentialGroup()
-                                                .addComponent(TxtProfEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(43, 43, 43))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnEntrenamiento1Layout.createSequentialGroup()
-                                                .addComponent(BtnCrearEnt)
-                                                .addGap(18, 18, 18)))
-                                        .addComponent(BtnGuardarEnt))))
+                                        .addGap(58, 58, 58)
+                                        .addComponent(BtnCancelarEnt))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnEntrenamiento1Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel16)
+                                        .addGap(17, 17, 17))))
                             .addGroup(PnEntrenamiento1Layout.createSequentialGroup()
-                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(DCFechaFinEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                                .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(DCFechaFinEnt, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(DCFechaIniEnt, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jcbproent, javax.swing.GroupLayout.Alignment.LEADING, 0, 119, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jcbdiscent, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(PnEntrenamiento1Layout.createSequentialGroup()
+                                .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(TxtDescEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TxtObsEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -189,7 +193,7 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
                             .addComponent(jLabel12)
                             .addComponent(TxtCodEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16)
-                            .addComponent(TxtDiscEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jcbdiscent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
@@ -198,19 +202,19 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
                                 .addComponent(jLabel17)
                                 .addComponent(TxtDescEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel14)
-                            .addComponent(DCFechaFinEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel18)
-                        .addComponent(TxtObsEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel14)
+                                .addComponent(DCFechaFinEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel18)))
+                    .addComponent(TxtObsEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
-                    .addComponent(TxtProfEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcbproent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PnEntrenamiento1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnCrearEnt)
+                    .addComponent(BtnCancelarEnt)
                     .addComponent(BtnGuardarEnt))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -238,7 +242,7 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Entrenamient0");
+        jLabel2.setText("Entrenamiento");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -335,9 +339,6 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    
-    
     
 //    /**
 //     * @param args the command line arguments
@@ -374,145 +375,122 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
 //        });
 //    }
 
-    // GETTER Y SETTERS
-    public JButton getBtnCrearEnt() {
-        return BtnCrearEnt;
-    }
-
-    public void setBtnCrearEnt(JButton BtnCrearEnt) {
-        this.BtnCrearEnt = BtnCrearEnt;
-    }
-
+    // Metodos GETTERS Y SETTERS
+    
+    //Vista Principal
     public JButton getBtnCrearJFEnt() {
         return BtnCrearJFEnt;
     }
-
     public void setBtnCrearJFEnt(JButton BtnCrearJFEnt) {
         this.BtnCrearJFEnt = BtnCrearJFEnt;
     }
-
     public JButton getBtnEditarJFEnt() {
         return BtnEditarJFEnt;
     }
-
     public void setBtnEditarJFEnt(JButton BtnEditarJFEnt) {
         this.BtnEditarJFEnt = BtnEditarJFEnt;
     }
-
     public JButton getBtnEliminarJFEnt() {
         return BtnEliminarJFEnt;
     }
-
     public void setBtnEliminarJFEnt(JButton BtnEliminarJFEnt) {
         this.BtnEliminarJFEnt = BtnEliminarJFEnt;
     }
-
-    public JButton getBtnGuardarEnt() {
-        return BtnGuardarEnt;
-    }
-
-    public void setBtnGuardarEnt(JButton BtnGuardarEnt) {
-        this.BtnGuardarEnt = BtnGuardarEnt;
-    }
-
     public JButton getBtnListarJFEnt() {
         return BtnListarJFEnt;
     }
-
     public void setBtnListarJFEnt(JButton BtnListarJFEnt) {
         this.BtnListarJFEnt = BtnListarJFEnt;
     }
-
-    public JDateChooser getDCFechaFinEnt() {
-        return DCFechaFinEnt;
+    public JPanel getPNOA() {
+        return PNOA;
     }
-
-    public void setDCFechaFinEnt(JDateChooser DCFechaFinEnt) {
-        this.DCFechaFinEnt = DCFechaFinEnt;
+    public void setPNOA(JPanel PNOA) {
+        this.PNOA = PNOA;
     }
-
-    public JDateChooser getDCFechaIniEnt() {
-        return DCFechaIniEnt;
-    }
-
-    public void setDCFechaIniEnt(JDateChooser DCFechaIniEnt) {
-        this.DCFechaIniEnt = DCFechaIniEnt;
-    }
-
-    public JDialog getDgEntrenamientp() {
-        return DgEntrenamientp;
-    }
-
-    public void setDgEntrenamientp(JDialog DgEntrenamientp) {
-        this.DgEntrenamientp = DgEntrenamientp;
-    }
-
-    public JPanel getPnEntrenamiento1() {
-        return PnEntrenamiento1;
-    }
-
-    public void setPnEntrenamiento1(JPanel PnEntrenamiento1) {
-        this.PnEntrenamiento1 = PnEntrenamiento1;
-    }
-
     public JTable getTbEntrenamiento() {
         return TbEntrenamiento;
     }
-
     public void setTbEntrenamiento(JTable TbEntrenamiento) {
         this.TbEntrenamiento = TbEntrenamiento;
     }
-
     public JTextField getTxtBuscarEnt() {
         return TxtBuscarEnt;
     }
-
     public void setTxtBuscarEnt(JTextField TxtBuscarEnt) {
         this.TxtBuscarEnt = TxtBuscarEnt;
     }
-
+    
+    //Diagolo Ingresar/Modificar
+    public JButton getBtnCancelarEnt() {
+        return BtnCancelarEnt;
+    }
+    public void setBtnCancelarEnt(JButton BtnCancelarEnt) {
+        this.BtnCancelarEnt = BtnCancelarEnt;
+    }
+    public JButton getBtnGuardarEnt() {
+        return BtnGuardarEnt;
+    }
+    public void setBtnGuardarEnt(JButton BtnGuardarEnt) {
+        this.BtnGuardarEnt = BtnGuardarEnt;
+    }
+    public JDateChooser getDCFechaFinEnt() {
+        return DCFechaFinEnt;
+    }
+    public void setDCFechaFinEnt(JDateChooser DCFechaFinEnt) {
+        this.DCFechaFinEnt = DCFechaFinEnt;
+    }
+    public JDateChooser getDCFechaIniEnt() {
+        return DCFechaIniEnt;
+    }
+    public void setDCFechaIniEnt(JDateChooser DCFechaIniEnt) {
+        this.DCFechaIniEnt = DCFechaIniEnt;
+    }
+    public JDialog getDgEntrenamientp() {
+        return DgEntrenamientp;
+    }
+    public void setDgEntrenamientp(JDialog DgEntrenamientp) {
+        this.DgEntrenamientp = DgEntrenamientp;
+    }
+    public JPanel getPnEntrenamiento1() {
+        return PnEntrenamiento1;
+    }
+    public void setPnEntrenamiento1(JPanel PnEntrenamiento1) {
+        this.PnEntrenamiento1 = PnEntrenamiento1;
+    }
     public JTextField getTxtCodEnt() {
         return TxtCodEnt;
     }
-
     public void setTxtCodEnt(JTextField TxtCodEnt) {
         this.TxtCodEnt = TxtCodEnt;
     }
-
     public JTextField getTxtDescEnt() {
         return TxtDescEnt;
     }
-
     public void setTxtDescEnt(JTextField TxtDescEnt) {
         this.TxtDescEnt = TxtDescEnt;
     }
-
-    public JTextField getTxtDiscEnt() {
-        return TxtDiscEnt;
-    }
-
-    public void setTxtDiscEnt(JTextField TxtDiscEnt) {
-        this.TxtDiscEnt = TxtDiscEnt;
-    }
-
     public JTextField getTxtObsEnt() {
         return TxtObsEnt;
     }
-
     public void setTxtObsEnt(JTextField TxtObsEnt) {
         this.TxtObsEnt = TxtObsEnt;
     }
-
-    public JTextField getTxtProfEnt() {
-        return TxtProfEnt;
+    public JComboBox<String> getJcbdiscent() {
+        return jcbdiscent;
     }
-
-    public void setTxtProfEnt(JTextField TxtProfEnt) {
-        this.TxtProfEnt = TxtProfEnt;
+    public void setJcbdiscent(JComboBox<String> jcbdiscent) {
+        this.jcbdiscent = jcbdiscent;
     }
-
+    public JComboBox<String> getJcbproent() {
+        return jcbproent;
+    }
+    public void setJcbproent(JComboBox<String> jcbproent) {
+        this.jcbproent = jcbproent;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnCrearEnt;
+    private javax.swing.JButton BtnCancelarEnt;
     private javax.swing.JButton BtnCrearJFEnt;
     private javax.swing.JButton BtnEditarJFEnt;
     private javax.swing.JButton BtnEliminarJFEnt;
@@ -527,9 +505,7 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
     private javax.swing.JTextField TxtBuscarEnt;
     private javax.swing.JTextField TxtCodEnt;
     private javax.swing.JTextField TxtDescEnt;
-    private javax.swing.JTextField TxtDiscEnt;
     private javax.swing.JTextField TxtObsEnt;
-    private javax.swing.JTextField TxtProfEnt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -545,5 +521,7 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JComboBox<String> jcbdiscent;
+    private javax.swing.JComboBox<String> jcbproent;
     // End of variables declaration//GEN-END:variables
 }
