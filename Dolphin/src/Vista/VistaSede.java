@@ -210,13 +210,18 @@ public class VistaSede extends javax.swing.JFrame {
             .addComponent(PNOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        lbtitutolo1.setText("¿Seguro que desea Eliminar la sedeSeleccionada?");
+        lbtitutolo1.setText("¿Seguro que desea Eliminar la Sede Seleccionada?");
 
         jLabel16.setText("ID:");
 
         txteliminarcodSede.setEditable(false);
         txteliminarcodSede.setBackground(new java.awt.Color(255, 255, 255));
         txteliminarcodSede.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txteliminarcodSede.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txteliminarcodSedeActionPerformed(evt);
+            }
+        });
 
         txteliminarnombre_s.setEditable(false);
         txteliminarnombre_s.setBackground(new java.awt.Color(255, 255, 255));
@@ -233,7 +238,7 @@ public class VistaSede extends javax.swing.JFrame {
         DgEliminarSedeLayout.setHorizontalGroup(
             DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DgEliminarSedeLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(57, Short.MAX_VALUE)
                 .addGroup(DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(DgEliminarSedeLayout.createSequentialGroup()
                         .addComponent(btnconfirmareliminar_s)
@@ -246,14 +251,14 @@ public class VistaSede extends javax.swing.JFrame {
                         .addComponent(txteliminarnombre_s))
                     .addGroup(DgEliminarSedeLayout.createSequentialGroup()
                         .addComponent(jLabel16)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(txteliminarcodSede, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(120, 120, 120))
+                .addGap(93, 93, 93))
         );
         DgEliminarSedeLayout.setVerticalGroup(
             DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DgEliminarSedeLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(31, 31, 31)
                 .addComponent(lbtitutolo1)
                 .addGap(18, 18, 18)
                 .addGroup(DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -263,11 +268,11 @@ public class VistaSede extends javax.swing.JFrame {
                 .addGroup(DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txteliminarnombre_s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17))
-                .addGap(58, 58, 58)
+                .addGap(43, 43, 43)
                 .addGroup(DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnconfirmareliminar_s)
                     .addComponent(btncancelareliminar_s))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -332,7 +337,7 @@ public class VistaSede extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 551, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 617, Short.MAX_VALUE)
                     .addGroup(PNOALayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -370,7 +375,9 @@ public class VistaSede extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(PNOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -379,6 +386,10 @@ public class VistaSede extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txteliminarcodSedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txteliminarcodSedeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txteliminarcodSedeActionPerformed
 
 //    /**
 //     * @param args the command line arguments
