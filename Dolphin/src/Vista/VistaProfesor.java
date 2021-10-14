@@ -83,6 +83,7 @@ public class VistaProfesor extends javax.swing.JFrame {
         BtnEditarJFProf = new javax.swing.JButton();
         BtnListarJFProf = new javax.swing.JButton();
         BtnEliminarJFProf = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -352,6 +353,7 @@ public class VistaProfesor extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PNOA.setBackground(new java.awt.Color(204, 255, 255));
+        PNOA.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -378,6 +380,8 @@ public class VistaProfesor extends javax.swing.JFrame {
             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        PNOA.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
+
         TbProfesor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
@@ -391,59 +395,36 @@ public class VistaProfesor extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TbProfesor);
 
+        PNOA.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 600, 96));
+
         jLabel3.setText("BUSCAR");
+        PNOA.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 69, -1, -1));
+        PNOA.add(TxtBuscarProf, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 66, 128, -1));
 
         BtnCrearJFProf.setText("Crear");
+        PNOA.add(BtnCrearJFProf, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 65, -1, -1));
 
         BtnEditarJFProf.setText("Editar");
+        PNOA.add(BtnEditarJFProf, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 65, -1, -1));
 
         BtnListarJFProf.setText("Listar");
+        PNOA.add(BtnListarJFProf, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 65, -1, -1));
 
         BtnEliminarJFProf.setText("Eliminar");
         BtnEliminarJFProf.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFProf.setMinimumSize(new java.awt.Dimension(59, 23));
+        PNOA.add(BtnEliminarJFProf, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 65, -1, -1));
 
-        javax.swing.GroupLayout PNOALayout = new javax.swing.GroupLayout(PNOA);
-        PNOA.setLayout(PNOALayout);
-        PNOALayout.setHorizontalGroup(
-            PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PNOALayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(PNOALayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TxtBuscarProf, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnCrearJFProf, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BtnEditarJFProf, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnListarJFProf)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnEliminarJFProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(89, 89, 89)))
-                .addContainerGap())
-            .addComponent(jScrollPane1)
-        );
-        PNOALayout.setVerticalGroup(
-            PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PNOALayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnEditarJFProf)
-                    .addComponent(BtnCrearJFProf)
-                    .addComponent(TxtBuscarProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(BtnListarJFProf)
-                    .addComponent(BtnEliminarJFProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48))
-        );
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        PNOA.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -453,7 +434,7 @@ public class VistaProfesor extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
         );
 
         pack();
@@ -462,6 +443,13 @@ public class VistaProfesor extends javax.swing.JFrame {
     private void TxtCodProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCodProfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtCodProfActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        VistaMenu vm = new VistaMenu();
+        vm.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public JTextField getTxtFormacionProf() {
         return TxtFormacionProf;
@@ -754,6 +742,7 @@ public class VistaProfesor extends javax.swing.JFrame {
     private javax.swing.JTextField TxtTelfProf;
     private javax.swing.JButton btncancelareliminar;
     private javax.swing.JButton btnconfirmareliminar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;

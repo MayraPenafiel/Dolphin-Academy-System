@@ -85,6 +85,7 @@ public class VistaDirector extends javax.swing.JFrame {
         BtnEditarJFDirec = new javax.swing.JButton();
         BtnListarJFDirec = new javax.swing.JButton();
         BtnEliminarJFDirec = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -425,6 +426,16 @@ public class VistaDirector extends javax.swing.JFrame {
         BtnEliminarJFDirec.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFDirec.setMinimumSize(new java.awt.Dimension(59, 23));
 
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
+        jButton4.setBorder(null);
+        jButton4.setBorderPainted(false);
+        jButton4.setContentAreaFilled(false);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PNOALayout = new javax.swing.GroupLayout(PNOA);
         PNOA.setLayout(PNOALayout);
         PNOALayout.setHorizontalGroup(
@@ -433,7 +444,7 @@ public class VistaDirector extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
                     .addGroup(PNOALayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -448,6 +459,10 @@ public class VistaDirector extends javax.swing.JFrame {
                         .addComponent(BtnEliminarJFDirec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(89, 89, 89)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(18, 18, 18))
         );
         PNOALayout.setVerticalGroup(
             PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -464,6 +479,8 @@ public class VistaDirector extends javax.swing.JFrame {
                     .addComponent(BtnEliminarJFDirec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -488,6 +505,13 @@ public class VistaDirector extends javax.swing.JFrame {
     private void TxtApeDirecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtApeDirecActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtApeDirecActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        VistaMenu vm = new VistaMenu();
+        vm.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
     
     public JPasswordField getTxtcontraseña() {
         return txtcontraseña;
@@ -762,6 +786,7 @@ public class VistaDirector extends javax.swing.JFrame {
     private javax.swing.JTextField TxtTelfDirec;
     private javax.swing.JButton btncancelareliminar;
     private javax.swing.JButton btnconfirmareliminar;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;

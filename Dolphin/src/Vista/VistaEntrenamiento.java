@@ -79,6 +79,7 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         BtnEditarJFEnt = new javax.swing.JButton();
         BtnListarJFEnt = new javax.swing.JButton();
         BtnEliminarJFEnt = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         PnEntrenamiento1.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -383,6 +384,16 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         BtnEliminarJFEnt.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFEnt.setMinimumSize(new java.awt.Dimension(59, 23));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PNOALayout = new javax.swing.GroupLayout(PNOA);
         PNOA.setLayout(PNOALayout);
         PNOALayout.setHorizontalGroup(
@@ -406,6 +417,10 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
                         .addComponent(BtnEliminarJFEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(89, 89, 89)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(20, 20, 20))
         );
         PNOALayout.setVerticalGroup(
             PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -421,8 +436,10 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
                     .addComponent(BtnListarJFEnt)
                     .addComponent(BtnEliminarJFEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -433,11 +450,18 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        VistaMenu vm = new VistaMenu();
+        vm.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     // Metodos GETTERS Y SETTERS
     
@@ -610,6 +634,7 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
     private javax.swing.JTextField TxtObsEnt;
     private javax.swing.JTextField Txtidel2;
     private javax.swing.JDialog dgdelent2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

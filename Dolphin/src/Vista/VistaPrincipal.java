@@ -65,6 +65,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
         jLabel3.setText("PROFESOR");
 
         BtnAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/User(2).png"))); // NOI18N
+        BtnAdm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAdmActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("ALUMNO");
 
@@ -148,11 +153,25 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
     private void BtnProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnProfActionPerformed
         // TODO add your handling code here:
+        this.dispose();
+        VistaMenu vm = new VistaMenu();
+        vm.setVisible(true);
     }//GEN-LAST:event_BtnProfActionPerformed
 
     private void BtnAlumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAlumActionPerformed
         // TODO add your handling code here:
+        this.dispose();
+        VistaMenu vm = new VistaMenu();
+        vm.setVisible(true);
     }//GEN-LAST:event_BtnAlumActionPerformed
+
+    private void BtnAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAdmActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        VistaMenu vm = new VistaMenu();
+        vm.setVisible(true);
+        
+    }//GEN-LAST:event_BtnAdmActionPerformed
 
     //GETTERS Y SETTERS
     public JButton getBtnAdm() {

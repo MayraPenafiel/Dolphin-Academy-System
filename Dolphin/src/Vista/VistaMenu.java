@@ -45,6 +45,7 @@ public class VistaMenu extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         MenuP = new javax.swing.JMenu();
@@ -105,8 +106,19 @@ public class VistaMenu extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/Logo(1).png"))); // NOI18N
 
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-salida-48.png"))); // NOI18N
+        jButton6.setBorder(null);
+        jButton6.setBorderPainted(false);
+        jButton6.setContentAreaFilled(false);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         DskMenu.setLayer(jToolBar1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         DskMenu.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        DskMenu.setLayer(jButton6, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout DskMenuLayout = new javax.swing.GroupLayout(DskMenu);
         DskMenu.setLayout(DskMenuLayout);
@@ -116,27 +128,48 @@ public class VistaMenu extends javax.swing.JFrame {
             .addGroup(DskMenuLayout.createSequentialGroup()
                 .addGap(173, 173, 173)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton6)
+                .addGap(24, 24, 24))
         );
         DskMenuLayout.setVerticalGroup(
             DskMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DskMenuLayout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
-                .addGap(16, 16, 16))
+                .addGroup(DskMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DskMenuLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
+                        .addGap(16, 16, 16))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DskMenuLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton6)
+                        .addContainerGap())))
         );
 
         jLabel1.setText("Dolphin Academy System");
 
         MenuP.setText("Menu");
 
+        MIAlumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-classmates-standing-20.png"))); // NOI18N
         MIAlumno.setText("Alumno");
+        MIAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIAlumnoActionPerformed(evt);
+            }
+        });
         MenuP.add(MIAlumno);
 
+        MIProfesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-profesor-20.png"))); // NOI18N
         MIProfesor.setText("Profesor");
+        MIProfesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIProfesorActionPerformed(evt);
+            }
+        });
         MenuP.add(MIProfesor);
 
+        MIAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-director-de-escuela-20.png"))); // NOI18N
         MIAdm.setText("Administradores");
         MIAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,22 +178,58 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         MenuP.add(MIAdm);
 
+        MIDetRealiza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-lista-20.png"))); // NOI18N
         MIDetRealiza.setText("Det. Realiza");
+        MIDetRealiza.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIDetRealizaActionPerformed(evt);
+            }
+        });
         MenuP.add(MIDetRealiza);
 
+        MIDisciplina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-boxeo-20.png"))); // NOI18N
         MIDisciplina.setText("Disciplina");
+        MIDisciplina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIDisciplinaActionPerformed(evt);
+            }
+        });
         MenuP.add(MIDisciplina);
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-añadir-lista-20.png"))); // NOI18N
         jMenuItem1.setText("Enc.Realiza");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         MenuP.add(jMenuItem1);
 
+        MIEnt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-coach-20.png"))); // NOI18N
         MIEnt.setText("Entrenamiento");
+        MIEnt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIEntActionPerformed(evt);
+            }
+        });
         MenuP.add(MIEnt);
 
+        MIOA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-venta-20.png"))); // NOI18N
         MIOA.setText("Oferta Academica");
+        MIOA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIOAActionPerformed(evt);
+            }
+        });
         MenuP.add(MIOA);
 
+        MISede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-embajada-20.png"))); // NOI18N
         MISede.setText("Sede");
+        MISede.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MISedeActionPerformed(evt);
+            }
+        });
         MenuP.add(MISede);
 
         jMenuBar1.add(MenuP);
@@ -192,7 +261,62 @@ public class VistaMenu extends javax.swing.JFrame {
 
     private void MIAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIAdmActionPerformed
         // TODO add your handling code here:
+        setVisible(false);
+        new VistaDirector().setVisible(true);
     }//GEN-LAST:event_MIAdmActionPerformed
+
+    private void MIAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIAlumnoActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new VistaAlumno().setVisible(true);
+    }//GEN-LAST:event_MIAlumnoActionPerformed
+
+    private void MIProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIProfesorActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new VistaProfesor().setVisible(true);
+    }//GEN-LAST:event_MIProfesorActionPerformed
+
+    private void MIDetRealizaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIDetRealizaActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new VistaDetRealiza().setVisible(true);
+    }//GEN-LAST:event_MIDetRealizaActionPerformed
+
+    private void MIDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIDisciplinaActionPerformed
+        // TODO add your handling code here:
+         setVisible(false);
+        new VistaDisciplina().setVisible(true);
+    }//GEN-LAST:event_MIDisciplinaActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+         setVisible(false);
+        new VistaEncaRealiza().setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void MIEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIEntActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new VistaEntrenamiento().setVisible(true);
+    }//GEN-LAST:event_MIEntActionPerformed
+
+    private void MIOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIOAActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new VistaOfertaAc().setVisible(true);
+    }//GEN-LAST:event_MIOAActionPerformed
+
+    private void MISedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MISedeActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new VistaSede().setVisible(true);
+    }//GEN-LAST:event_MISedeActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton6ActionPerformed
     
     
     //GETTERS Y SETTERS
@@ -334,6 +458,7 @@ public class VistaMenu extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

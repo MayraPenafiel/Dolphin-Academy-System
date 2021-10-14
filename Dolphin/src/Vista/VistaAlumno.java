@@ -85,6 +85,7 @@ public class VistaAlumno extends javax.swing.JFrame {
         BtnEditarJFAlmn = new javax.swing.JButton();
         BtnListarJFAlmn = new javax.swing.JButton();
         BtnEliminarJFAlmn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -369,6 +370,7 @@ public class VistaAlumno extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PNOA.setBackground(new java.awt.Color(204, 255, 255));
+        PNOA.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -395,6 +397,8 @@ public class VistaAlumno extends javax.swing.JFrame {
             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        PNOA.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 920, -1));
+
         TbAlumno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null},
@@ -408,59 +412,36 @@ public class VistaAlumno extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TbAlumno);
 
+        PNOA.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 106, 920, 104));
+
         jLabel3.setText("BUSCAR");
+        PNOA.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 69, -1, -1));
+        PNOA.add(TxtBuscarAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 66, 497, -1));
 
         BtnCrearJFAlmn.setText("Crear");
+        PNOA.add(BtnCrearJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(567, 65, -1, -1));
 
         BtnEditarJFAlmn.setText("Editar");
+        PNOA.add(BtnEditarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(632, 65, -1, -1));
 
         BtnListarJFAlmn.setText("Listar");
+        PNOA.add(BtnListarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(703, 65, -1, -1));
 
         BtnEliminarJFAlmn.setText("Eliminar");
         BtnEliminarJFAlmn.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFAlmn.setMinimumSize(new java.awt.Dimension(59, 23));
+        PNOA.add(BtnEliminarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 65, -1, -1));
 
-        javax.swing.GroupLayout PNOALayout = new javax.swing.GroupLayout(PNOA);
-        PNOA.setLayout(PNOALayout);
-        PNOALayout.setHorizontalGroup(
-            PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PNOALayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(PNOALayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TxtBuscarAlmn, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnCrearJFAlmn, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BtnEditarJFAlmn, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnListarJFAlmn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnEliminarJFAlmn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(89, 89, 89))
-                    .addComponent(jScrollPane1))
-                .addContainerGap())
-        );
-        PNOALayout.setVerticalGroup(
-            PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PNOALayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnEditarJFAlmn)
-                    .addComponent(BtnCrearJFAlmn)
-                    .addComponent(TxtBuscarAlmn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(BtnListarJFAlmn)
-                    .addComponent(BtnEliminarJFAlmn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
-        );
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        PNOA.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 230, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -470,7 +451,7 @@ public class VistaAlumno extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
         );
 
         pack();
@@ -483,6 +464,13 @@ public class VistaAlumno extends javax.swing.JFrame {
     private void BtnCrearAlmnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCrearAlmnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnCrearAlmnActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+         this.dispose();
+        VistaMenu vm = new VistaMenu();
+        vm.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public JButton getBtncancelareliminar() {
         return btncancelareliminar;
@@ -766,6 +754,7 @@ public class VistaAlumno extends javax.swing.JFrame {
     private javax.swing.JButton btnconfirmareliminar;
     private javax.swing.JComboBox<String> cbxdisciplina;
     private javax.swing.JComboBox<String> cbxentrenamiento;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;

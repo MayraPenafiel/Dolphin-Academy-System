@@ -58,6 +58,7 @@ public class VistaEncaRealiza extends javax.swing.JFrame {
         BtnEditarJFER = new javax.swing.JButton();
         BtnListarJFER = new javax.swing.JButton();
         BtnEliminarJFER = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -173,6 +174,7 @@ public class VistaEncaRealiza extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PNOA.setBackground(new java.awt.Color(204, 255, 255));
+        PNOA.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -199,6 +201,8 @@ public class VistaEncaRealiza extends javax.swing.JFrame {
             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        PNOA.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 546, -1));
+
         TbDisciplina.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -212,59 +216,36 @@ public class VistaEncaRealiza extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TbDisciplina);
 
+        PNOA.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 117, 556, 97));
+
         jLabel3.setText("BUSCAR");
+        PNOA.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 69, -1, -1));
+        PNOA.add(TxtBuscarEncRealiza, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 66, 123, -1));
 
         BtnCrearJFER.setText("Crear");
+        PNOA.add(BtnCrearJFER, new org.netbeans.lib.awtextra.AbsoluteConstraints(193, 65, -1, -1));
 
         BtnEditarJFER.setText("Editar");
+        PNOA.add(BtnEditarJFER, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 65, -1, -1));
 
         BtnListarJFER.setText("Listar");
+        PNOA.add(BtnListarJFER, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 65, -1, -1));
 
         BtnEliminarJFER.setText("Eliminar");
         BtnEliminarJFER.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFER.setMinimumSize(new java.awt.Dimension(59, 23));
+        PNOA.add(BtnEliminarJFER, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 65, -1, -1));
 
-        javax.swing.GroupLayout PNOALayout = new javax.swing.GroupLayout(PNOA);
-        PNOA.setLayout(PNOALayout);
-        PNOALayout.setHorizontalGroup(
-            PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PNOALayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 537, Short.MAX_VALUE)
-                    .addGroup(PNOALayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TxtBuscarEncRealiza)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnCrearJFER, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BtnEditarJFER, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnListarJFER)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnEliminarJFER, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(89, 89, 89)))
-                .addContainerGap())
-        );
-        PNOALayout.setVerticalGroup(
-            PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PNOALayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnEditarJFER)
-                    .addComponent(BtnCrearJFER)
-                    .addComponent(TxtBuscarEncRealiza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(BtnListarJFER)
-                    .addComponent(BtnEliminarJFER, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        PNOA.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -274,11 +255,18 @@ public class VistaEncaRealiza extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        VistaMenu vm = new VistaMenu();
+        vm.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -464,6 +452,7 @@ public class VistaEncaRealiza extends javax.swing.JFrame {
     private javax.swing.JTable TbDisciplina;
     private javax.swing.JTextField TxtBuscarEncRealiza;
     private javax.swing.JTextField TxtCodDisc1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

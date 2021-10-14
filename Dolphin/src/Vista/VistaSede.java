@@ -72,6 +72,7 @@ public class VistaSede extends javax.swing.JFrame {
         BtnEditarJFSede = new javax.swing.JButton();
         BtnListarJFSede = new javax.swing.JButton();
         BtnEliminarJFSede = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -329,6 +330,16 @@ public class VistaSede extends javax.swing.JFrame {
         BtnEliminarJFSede.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFSede.setMinimumSize(new java.awt.Dimension(59, 23));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PNOALayout = new javax.swing.GroupLayout(PNOA);
         PNOA.setLayout(PNOALayout);
         PNOALayout.setHorizontalGroup(
@@ -352,6 +363,10 @@ public class VistaSede extends javax.swing.JFrame {
                         .addComponent(BtnEliminarJFSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(89, 89, 89)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(37, 37, 37))
         );
         PNOALayout.setVerticalGroup(
             PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -366,8 +381,10 @@ public class VistaSede extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(BtnListarJFSede)
                     .addComponent(BtnEliminarJFSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -381,7 +398,7 @@ public class VistaSede extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -390,6 +407,13 @@ public class VistaSede extends javax.swing.JFrame {
     private void txteliminarcodSedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txteliminarcodSedeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txteliminarcodSedeActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        VistaMenu vm = new VistaMenu();
+        vm.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 //    /**
 //     * @param args the command line arguments
@@ -611,6 +635,7 @@ public class VistaSede extends javax.swing.JFrame {
     private javax.swing.JTextField TxtTelfSede1;
     private javax.swing.JButton btncancelareliminar_s;
     private javax.swing.JButton btnconfirmareliminar_s;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
