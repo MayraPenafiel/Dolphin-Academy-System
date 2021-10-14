@@ -27,6 +27,7 @@ public class Control_InicioSesion{
    private ModeloAlumno modal;
    private Modelo_Profesor modpro;
    private ModeloDirector moddir;
+   private Control_Principal cp;
    private VistaInicioSesion vista;
    private VistaPrincipal vp;
 
@@ -38,7 +39,7 @@ public class Control_InicioSesion{
         this.vista = vista;
         this.vp=vp;
         //INICIALIZAR ELEMENTOS.
-        vista.setTitle("Iniciar Sesion");
+        //vista.setTitle("Iniciar Sesion");
         vista.setVisible(true);
         if(vp.getBtnAlum().isSelected()){
             vista.getJlbpass().setEnabled(false);
@@ -48,17 +49,20 @@ public class Control_InicioSesion{
             vista.getPwfcontraseña().setVisible(false);
         }
     }
-    public Control_InicioSesion() {
+    public Control_InicioSesion(VistaInicioSesion vis) {
+        this.vista=vis;
+        vista.setVisible(true);
     }
     
     //Controlar Eventos de la Vista IiciarSesion
     public void iniciaControl(){
-        vista.getBtnIngresar().addActionListener(l->llamar_comp());
+        vista.getBtnIngresar().addActionListener(l->llamar_boton());
         vista.getJbcancelar().addActionListener(l->vista.dispose());
      }
-    private void llamar_comp(){
+    
+    private void llamar_boton(){
         if(vp.getBtnProf().isSelected()){
-           comp_pro();
+            comp_pro();
         }
         if(vp.getBtnAdm().isSelected()){ 
             comp_dir();
@@ -67,13 +71,15 @@ public class Control_InicioSesion{
             comp_al();
         }
     }
+     
     //metodos para comparar datos ingresados
+    
     //Profesor
     public void comp_pro(){
         String usuario=vista.getTxtNombreUser().getText();
         List<Profesor> lpro=modpro.listaProfesores();
          for (int i = 0; i <lpro.size(); i++) {
-            if(vista.getTxtNombreUser().getText()==usuario){
+            if(lpro.get(i).getId_Profesor()==usuario){
                 char ty[]=lpro.get(i).getContraseña().toCharArray();;
                 if(vista.getPwfcontraseña().getPassword()==ty){
                     JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
@@ -87,7 +93,7 @@ public class Control_InicioSesion{
         String usuario=vista.getTxtNombreUser().getText();
         List<Director> ldir=moddir.listaDirectores();
          for (int i = 0; i <ldir.size(); i++) {
-            if(vista.getTxtNombreUser().getText()==usuario){
+            if(ldir.get(i).getId_director()==usuario){
                 char ty[]=ldir.get(i).getContraseña().toCharArray();;
                 if(vista.getPwfcontraseña().getPassword()==ty){
                     JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
@@ -103,7 +109,7 @@ public class Control_InicioSesion{
         String usuario=vista.getTxtNombreUser().getText();
         List<Alumno> lal=modal.listaAlumnos();
          for (int i = 0; i <lal.size(); i++) {
-            if(vista.getTxtNombreUser().getText()==usuario){
+            if(lal.get(i).getId_alumno()==usuario){
                     JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
                     VistaMenu menu=new VistaMenu();
                     menu.setVisible(true);

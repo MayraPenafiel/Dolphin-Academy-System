@@ -18,7 +18,7 @@ public class ConexionPG {
   
     private String cadenaConexion="jdbc:postgresql://localhost:5432/Dolphin";
     private String usuarioPG="postgres";
-    private String contrasPG="0511";
+    private String contrasPG="1234x";
 
     public ConexionPG() {
         try {

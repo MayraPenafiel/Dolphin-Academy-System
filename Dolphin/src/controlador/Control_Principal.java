@@ -5,23 +5,18 @@
  */
 package controlador;
 
-import Modelo.ModeloAlumno;
-import Modelo.ModeloDirector;
-import Modelo.Modelo_Profesor;
 import Vista.VistaInicioSesion;
 import Vista.VistaPrincipal;
-import java.awt.event.ActionListener;
 
 /**
  *
  * @author MayraPeñafiel
  */
 
-public class Control_Principal {
+public class Control_Principal { 
  
     //Atributos
     private VistaPrincipal vp;
-    private VistaInicioSesion vis;
     
     //Constructores
     public Control_Principal() {
@@ -40,11 +35,11 @@ public class Control_Principal {
     
     private void Iniciar_sesion(){
         vp.setVisible(true);
-        ModeloAlumno mal= new ModeloAlumno();
-        Modelo_Profesor mpro= new Modelo_Profesor();
-        ModeloDirector mdir = new ModeloDirector();
-        Control_InicioSesion c= new Control_InicioSesion(mal,mpro,mdir,vis,vp);
+        VistaInicioSesion vis =new VistaInicioSesion();
+        //vis.setVisible(true);
+        Control_InicioSesion c= new Control_InicioSesion (vis);
         c.iniciaControl();
     }
+
     
 }
