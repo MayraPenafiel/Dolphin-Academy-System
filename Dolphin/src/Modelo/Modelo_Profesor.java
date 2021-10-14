@@ -20,8 +20,8 @@ public class Modelo_Profesor extends Profesor {
         super(Id_Profesor, formacion, contraseña);
     }
 
-    public Modelo_Profesor(String Id_Profesor, String formacion, String contraseña, String cedula, String nombre, String apellido, String telefono, String direccion, String correo, Date fechanacimiento, String cedular, int edad, String tipo_p) {
-        super(Id_Profesor,formacion, contraseña, cedula, nombre, apellido, telefono, direccion, correo, fechanacimiento, cedular, edad, tipo_p);
+    public Modelo_Profesor(String Id_Profesor, String formacion, String contraseña, String cedula, String nombre, String apellido, String telefono, String direccion, String correo, Date fechanacimiento, String celular, int edad, String tipo_p) {
+        super(Id_Profesor,formacion, contraseña, cedula, nombre, apellido, telefono, direccion, correo, fechanacimiento, celular, edad, tipo_p);
     }
     
     public java.util.List<Profesor> listaProfesores(){
@@ -41,10 +41,8 @@ public class Modelo_Profesor extends Profesor {
              p.setTelefono(rs.getString("Telefono"));
              p.setCorreo(rs.getString("Correo"));
              p.setFechanacimiento(rs.getDate("F_nacimiento"));
-             p.setCedular(rs.getString("Celular"));
-           
+             p.setCelular(rs.getString("Celular"));
              p.setFormacion(rs.getString("Formacion"));
-             
              
             listap.add(p);
             }
@@ -59,8 +57,6 @@ public class Modelo_Profesor extends Profesor {
     
     
      public java.util.List<Profesor> listaProfesores(String aguja){
-    
-        
             String sql = "select * from prfesor WHERE ";
             sql += "UPPER(Id_Profesor) like UPPER('%" +aguja+ "%') OR ";
             sql += "UPPER(Nombre) like UPPER('%" +aguja+ "%') OR ";
@@ -78,7 +74,7 @@ public class Modelo_Profesor extends Profesor {
              p.setTelefono(rs.getString("Telefono"));
              p.setCorreo(rs.getString("Correo"));
              p.setFechanacimiento(rs.getDate("F_nacimiento"));
-             p.setCedular(rs.getString("Celular"));
+             p.setCelular(rs.getString("Celular"));
              //a.setEdad(Integer.parseInt(rs.getString("Edad")));
              p.setFormacion(rs.getString("Formacion"));
             
@@ -98,7 +94,7 @@ public class Modelo_Profesor extends Profesor {
         String sql;
         sql="INSERT INTO director(Id_Profesor,Cedula, Nombre,Apellido, Direccion, Telefono, Correo, F_Nacimiento,Celular,Formacion)";
         sql+="VALUES('"+getId_Profesor()+"','"+getCedula()+"','"+getNombre()+"','"+getApellido()+"','"+getDireccion()+"','"+getTelefono()+"','"+getCorreo()+"','"
-                +getFechanacimiento()+"','"+getCedular()+"','"+getFormacion()+"',)";
+                +getFechanacimiento()+"','"+getCelular()+"','"+getFormacion()+"',)";
         return con.accion(sql);
         }  
         
@@ -113,13 +109,9 @@ public class Modelo_Profesor extends Profesor {
                 + ", Telefono = '" + getTelefono()+"'"
                 + ", Correo = '" + getCorreo()+"'"
                 + ", F_Nacimiento = '" + getFechanacimiento()+ "'"
-                + ", Celular = '" + getCedular()+"'"
+                + ", Celular = '" + getCelular()+"'"
                 + ", Formacion = '" + getFormacion()+"'"
-            
-                
-                
                 ;
-                
         sql += " WHERE id= '" + getId_Profesor()+"' ";
     return con.accion(sql);
     }

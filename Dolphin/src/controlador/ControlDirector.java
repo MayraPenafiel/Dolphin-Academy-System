@@ -70,7 +70,7 @@ public class ControlDirector {
         lista.stream().forEach(d ->{
         
             tableModel.addRow(new Object[]{ d.getId_director(),d.getCedula(),d.getNombre(),d.getApellido(),d.getDireccion(),d.getTelefono(),d.getCorreo(),
-            d.getFechanacimiento(),d.getCedular(),d.getFormacion(),d.getDireccion_sede()});
+            d.getFechanacimiento(),d.getCelular(),d.getFormacion(),d.getDireccion_sede()});
                     
         
         });
@@ -103,7 +103,7 @@ public class ControlDirector {
     director.setDireccion(direccion);
     director.setTelefono(telefono);
     director.setCorreo(correo);
-    director.setCedular(celular);
+    director.setCelular(celular);
     director.setContraseña(contrasenia);
     
         if (director.grabar()) {
@@ -191,7 +191,7 @@ public class ControlDirector {
                     String tel=lista.get(i).getTelefono()+"";
                     String co=lista.get(i).getCorreo()+"";
                     Date f=lista.get(i).getFechanacimiento();
-                    String cel=lista.get(i).getCedular()+"";
+                    String cel=lista.get(i).getCelular()+"";
                     String con=lista.get(i).getContraseña()+"";
                     String fo = lista.get(i).getFormacion()+"";
                     String sede = lista.get(i).getDireccion_sede()+"";

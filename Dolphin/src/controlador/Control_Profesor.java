@@ -67,13 +67,11 @@ public class Control_Profesor{
         lista.stream().forEach(p ->{
         
             tableModel.addRow(new Object[]{ p.getId_Profesor(),p.getCedula(),p.getNombre(),p.getApellido(),p.getDireccion(),p.getTelefono(),p.getCorreo(),
-            p.getFechanacimiento(),p.getCedular(),p.getFormacion()});
-                    
-        
+            p.getFechanacimiento(),p.getCelular(),p.getFormacion()});
         });
     }
     
-    private void grabaDirector(){
+    private void grabaProfesor(){
     String idprofesor = vista.getTxtCodProf().getText();
     String cedula = vista.getTxtCedulaProf().getText();
     String nombre = vista.getTxtNombreProf().getText();
@@ -98,7 +96,7 @@ public class Control_Profesor{
     profesor.setDireccion(direccion);
     profesor.setTelefono(telefono);
     profesor.setCorreo(correo);
-    profesor.setCedular(celular);
+    profesor.setCelular(celular);
     profesor.setContraseña("");
     
         if (profesor.grabar()) {
@@ -185,7 +183,7 @@ public class Control_Profesor{
                     String tel=lista.get(i).getTelefono()+"";
                     String co=lista.get(i).getCorreo()+"";
                     Date f=lista.get(i).getFechanacimiento();
-                    String cel=lista.get(i).getCedular()+"";
+                    String cel=lista.get(i).getCelular()+"";
                     String con=lista.get(i).getContraseña()+"";
                     String fo = lista.get(i).getFormacion()+"";
 

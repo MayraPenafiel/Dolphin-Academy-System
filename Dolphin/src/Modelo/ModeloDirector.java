@@ -23,8 +23,8 @@ public class ModeloDirector extends Director{
         super(id_director, direccion_sede, contrasenia, formacion);
     }
 
-    public ModeloDirector(String id_director, String direccion_sede, String formacion, String contraseña, String cedula, String nombre, String apellido, String telefono, String direccion, String correo, Date fechanacimiento, String cedular, int edad, String tipo_p) {
-        super(id_director, direccion_sede, formacion, contraseña, cedula, nombre, apellido, telefono, direccion, correo, fechanacimiento, cedular, edad, tipo_p);
+    public ModeloDirector(String id_director, String direccion_sede, String formacion, String contraseña, String cedula, String nombre, String apellido, String telefono, String direccion, String correo, Date fechanacimiento, String celular, int edad, String tipo_p) {
+        super(id_director, direccion_sede, formacion, contraseña, cedula, nombre, apellido, telefono, direccion, correo, fechanacimiento, celular, edad, tipo_p);
     }
     
     
@@ -45,7 +45,7 @@ public class ModeloDirector extends Director{
              d.setTelefono(rs.getString("Telefono"));
              d.setCorreo(rs.getString("Correo"));
              d.setFechanacimiento(rs.getDate("F_nacimiento"));
-             d.setCedular(rs.getString("Celular"));
+             d.setCelular(rs.getString("Celular"));
              
              //d.setContraseña(rs.getString("Contraseña"));
              d.setFormacion(rs.getString("Formacion"));
@@ -61,9 +61,8 @@ public class ModeloDirector extends Director{
             return null;
         }
     }
-        public java.util.List<Director> listaDirectores(String aguja){
     
-        
+    public java.util.List<Director> listaDirectores(String aguja){
             String sql = "select * from director WHERE ";
             sql += "UPPER(iddirector) like UPPER('%" +aguja+ "%') OR ";
             sql += "UPPER(nombre) like UPPER('%" +aguja+ "%') OR ";
@@ -81,7 +80,7 @@ public class ModeloDirector extends Director{
              d.setTelefono(rs.getString("Telefono"));
              d.setCorreo(rs.getString("Correo"));
              d.setFechanacimiento(rs.getDate("F_nacimiento"));
-             d.setCedular(rs.getString("Celular"));
+             d.setCelular(rs.getString("Celular"));
              //a.setEdad(Integer.parseInt(rs.getString("Edad")));
              d.setFormacion(rs.getString("Formacion"));
              d.setDireccion_sede(rs.getString("Nombre_sede"));
@@ -92,7 +91,6 @@ public class ModeloDirector extends Director{
         } catch (Exception e) {
             Logger.getLogger(ModeloAlumno.class.getName()).log(Level.SEVERE, null, e);
            return null;
-            
         }
         
     }
@@ -101,7 +99,7 @@ public class ModeloDirector extends Director{
         String sql;
         sql="INSERT INTO director(id,cedula, nombre,apellido, direccion, telefono, correo, fecha_nacimiento,celular,contraseña,formacion,sede)";
         sql+="VALUES('"+getId_director()+"','"+getCedula()+"','"+getNombre()+"','"+getApellido()+"','"+getDireccion()+"','"+getTelefono()+"','"+getCorreo()+"','"
-                +getFechanacimiento()+"','"+getCedular()+"','"+getContraseña()+"','"+getFormacion()+"','"+getDireccion_sede()+"',)";
+                +getFechanacimiento()+"','"+getCelular()+"','"+getContraseña()+"','"+getFormacion()+"','"+getDireccion_sede()+"',)";
         return con.accion(sql);
         }  
         
@@ -116,7 +114,7 @@ public class ModeloDirector extends Director{
                 + ", telefono = '" + getTelefono()+"'"
                 + ", correo = '" + getCorreo()+"'"
                 + ", fechanacimiento = '" + getFechanacimiento()+ "'"
-                + ", celular = '" + getCedular()+"'"
+                + ", celular = '" + getCelular()+"'"
                 + ", ccontraseña = '" + getContraseña()+"'"
                 + ", formacion = '" + getFormacion()+"'"
                 + ", direccion_sede = '" + getDireccion_sede()+"'"
@@ -128,16 +126,14 @@ public class ModeloDirector extends Director{
     return con.accion(sql);
     }
 
-       public boolean eliminar() {
+    public boolean eliminar() {
         String sql;
         sql = "DELETE FROM director ";
         sql += " WHERE iddirector = '" + getId_director()+ "' ";
         return con.accion(sql);
     }
-     
         
-        
-    }
+}
     
     
     

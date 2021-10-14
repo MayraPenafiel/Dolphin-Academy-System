@@ -6,6 +6,7 @@
 package Vista;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -36,10 +37,10 @@ public class VistaInicioSesion extends javax.swing.JFrame {
         PnInicioSesion = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jlbuser = new javax.swing.JLabel();
+        jlbpass = new javax.swing.JLabel();
         TxtNombreUser = new javax.swing.JTextField();
-        BtnRegistrar = new javax.swing.JButton();
+        jbcancelar = new javax.swing.JButton();
         BtnIngresar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         pwfcontraseña = new javax.swing.JPasswordField();
@@ -60,15 +61,15 @@ public class VistaInicioSesion extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("INICIO DE SESION");
 
-        jLabel4.setFont(new java.awt.Font("Andalus", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel4.setText("NOMBRE DE USUARIO");
+        jlbuser.setFont(new java.awt.Font("Andalus", 1, 14)); // NOI18N
+        jlbuser.setForeground(new java.awt.Color(255, 255, 255));
+        jlbuser.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jlbuser.setText("NOMBRE DE USUARIO");
 
-        jLabel5.setFont(new java.awt.Font("Andalus", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel5.setText("CONTRASEÑA");
+        jlbpass.setFont(new java.awt.Font("Andalus", 1, 14)); // NOI18N
+        jlbpass.setForeground(new java.awt.Color(255, 255, 255));
+        jlbpass.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jlbpass.setText("CONTRASEÑA");
 
         TxtNombreUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +77,7 @@ public class VistaInicioSesion extends javax.swing.JFrame {
             }
         });
 
-        BtnRegistrar.setText("Cancelar");
+        jbcancelar.setText("Cancelar");
 
         BtnIngresar.setText("Ingresar");
 
@@ -93,7 +94,7 @@ public class VistaInicioSesion extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(BtnIngresar)
                         .addGap(95, 95, 95)
-                        .addComponent(BtnRegistrar)
+                        .addComponent(jbcancelar)
                         .addGap(115, 115, 115))
                     .addGroup(PnInicioSesionLayout.createSequentialGroup()
                         .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,10 +111,10 @@ public class VistaInicioSesion extends javax.swing.JFrame {
                 .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnInicioSesionLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jlbuser, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnInicioSesionLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jlbpass, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(TxtNombreUser, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
@@ -134,16 +135,16 @@ public class VistaInicioSesion extends javax.swing.JFrame {
                         .addComponent(jLabel3)))
                 .addGap(36, 36, 36)
                 .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(jlbuser)
                     .addComponent(TxtNombreUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(jlbpass)
                     .addComponent(pwfcontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnIngresar)
-                    .addComponent(BtnRegistrar))
+                    .addComponent(jbcancelar))
                 .addGap(19, 19, 19))
         );
 
@@ -165,7 +166,6 @@ public class VistaInicioSesion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtNombreUserActionPerformed
 
-
     // GETTER Y SETTERS
     public JButton getBtnIngresar() {
         return BtnIngresar;
@@ -173,11 +173,11 @@ public class VistaInicioSesion extends javax.swing.JFrame {
     public void setBtnIngresar(JButton BtnIngresar) {
         this.BtnIngresar = BtnIngresar;
     }
-    public JButton getBtnRegistrar() {
-        return BtnRegistrar;
+    public JButton getJbcancelar() {
+        return jbcancelar;
     }
-    public void setBtnRegistrar(JButton BtnRegistrar) {
-        this.BtnRegistrar = BtnRegistrar;
+    public void setJbcancelar(JButton jbcancelar) {
+        this.jbcancelar = jbcancelar;
     }
     public JPanel getPnInicioSesion() {
         return PnInicioSesion;
@@ -197,18 +197,30 @@ public class VistaInicioSesion extends javax.swing.JFrame {
     public void setTxtNombreUser(JTextField TxtNombreUser) {
         this.TxtNombreUser = TxtNombreUser;
     }
+    public JLabel getJlbpass() {
+        return jlbpass;
+    }
+    public void setJlbpass(JLabel jlbpass) {
+        this.jlbpass = jlbpass;
+    }
+    public JLabel getJlbuser() {
+        return jlbuser;
+    }
+    public void setJlbuser(JLabel jlbuser) {
+        this.jlbuser = jlbuser;
+    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnIngresar;
-    private javax.swing.JButton BtnRegistrar;
     private javax.swing.JPanel PnInicioSesion;
     private javax.swing.JTextField TxtNombreUser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JButton jbcancelar;
+    private javax.swing.JLabel jlbpass;
+    private javax.swing.JLabel jlbuser;
     private javax.swing.JPasswordField pwfcontraseña;
     // End of variables declaration//GEN-END:variables
 }

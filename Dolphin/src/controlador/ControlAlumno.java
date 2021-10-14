@@ -59,7 +59,7 @@ public class ControlAlumno {
         };
 
         vista.getBtnListarJFAlmn().addActionListener(l -> cargaLista(""));
-
+        
     }
 
     private void cargaLista(String aguja) {
@@ -72,7 +72,7 @@ public class ControlAlumno {
         lista.stream().forEach(a -> {
 
             String[] alumno = {a.getId_alumno(), a.getCedula(), a.getNombre(), a.getApellido(),
-                a.getDireccion(), a.getTelefono(), a.getCedular(), a.getCategoria(), a.getDisciplina(), a.getEntrenamiento()};
+                a.getDireccion(), a.getTelefono(), a.getCelular(), a.getCategoria(), a.getDisciplina(), a.getEntrenamiento()};
 
         });
     }
@@ -100,7 +100,7 @@ public class ControlAlumno {
         alumno.setNombre(nombre);
         alumno.setApellido(apellido);
         alumno.setCedula(cedula);
-        alumno.setCedular(celular);
+        alumno.setCelular(celular);
         alumno.setDireccion(direccion);
         alumno.setTelefono(telefono);
         alumno.setCorreo(correo);
@@ -189,7 +189,7 @@ public class ControlAlumno {
                     String tel=lista.get(i).getTelefono()+"";
                     String co=lista.get(i).getCorreo()+"";
                     Date f=lista.get(i).getFechanacimiento();
-                    String cel=lista.get(i).getCedular()+"";
+                    String cel=lista.get(i).getCelular()+"";
                     String dis=lista.get(i).getDisciplina()+"";
                     String en=lista.get(i).getEntrenamiento()+"";
                     
@@ -205,8 +205,6 @@ public class ControlAlumno {
                     vista.getTxtCelularAlmn().setText(cel);
                     vista.getCbxdisciplina().setSelectedItem(dis);
                     vista.getCbxentrenamiento().setSelectedItem(en);
-                    
-                    
                  }
             }
          }else{
@@ -215,7 +213,4 @@ public class ControlAlumno {
         }
     }
  
-    
-    
-    
 }

@@ -14,6 +14,7 @@ import conexion.ConexionPG;
  *
  * @author THALY
  */
+
 public class ModeloAlumno extends Alumno{
     
     private ConexionPG con = new ConexionPG();
@@ -26,14 +27,10 @@ public class ModeloAlumno extends Alumno{
         super(id_alumno, categoria, tipo, disciplina, entrenamiento);
     }
 
-    public ModeloAlumno(String id_alumno, String categoria, String tipo, String disciplina, String entrenamiento, String cedula, String nombre, String apellido, String telefono, String direccion, String correo, Date fechanacimiento, String cedular, int edad, String tipo_p) {
-        super(id_alumno, categoria, tipo, disciplina, entrenamiento, cedula, nombre, apellido, telefono, direccion, correo, fechanacimiento, cedular, edad, tipo_p);
+    public ModeloAlumno(String id_alumno, String categoria, String tipo, String disciplina, String entrenamiento, String cedula, String nombre, String apellido, String telefono, String direccion, String correo, Date fechanacimiento, String celular, int edad, String tipo_p) {
+        super(id_alumno, categoria, tipo, disciplina, entrenamiento, cedula, nombre, apellido, telefono, direccion, correo, fechanacimiento, celular, edad, tipo_p);
     }
 
-    
-    
-    
-    
     public java.util.List<Alumno> listaAlumnos(){
     
         try {
@@ -51,13 +48,12 @@ public class ModeloAlumno extends Alumno{
              a.setTelefono(rs.getString("Telefono"));
              a.setCorreo(rs.getString("Correo"));
              a.setFechanacimiento(rs.getDate("F_nacimiento"));
-             a.setCedular(rs.getString("Celular"));
+             a.setCelular(rs.getString("Celular"));
              //a.setEdad(Integer.parseInt(rs.getString("Edad")));
              a.setDisciplina(rs.getString("Disciplina"));
              a.setEntrenamiento(rs.getString("Entrenamiento"));
             lista.add(a);
             }
-             
             rs.close();
             return lista;
         } catch (Exception e) {
@@ -87,7 +83,7 @@ public class ModeloAlumno extends Alumno{
              a.setTelefono(rs.getString("Telefono"));
              a.setCorreo(rs.getString("Correo"));
              a.setFechanacimiento(rs.getDate("F_nacimiento"));
-             a.setCedular(rs.getString("Celular"));
+             a.setCelular(rs.getString("Celular"));
              a.setEntrenamiento(rs.getString("Entrenamiento"));
              a.setDisciplina(rs.getString("Disciplina"));
             lista.add(a);
@@ -105,7 +101,7 @@ public class ModeloAlumno extends Alumno{
         String sql;
         sql="INSERT INTO alumno(idalumno,categoria,cedula, nombre,apellido, direccion, telefono, correo, fecha_nacimiento,celular,disciplina,entrenamiento)";
         sql+="VALUES('"+getId_alumno()+"','"+getCategoria()+ "','"+getCategoria()+"','"+getCedula()+"','"+getNombre()+"','"+getApellido()+"','"+getDireccion()+"','"+getTelefono()+"','"+getCorreo()+"','"
-                +getFechanacimiento()+"','"+getCedular()+"','"+getDisciplina()+"','"+getEntrenamiento()+"')";
+                +getFechanacimiento()+"','"+getCelular()+"','"+getDisciplina()+"','"+getEntrenamiento()+"')";
         return con.accion(sql);
         }
     
@@ -121,16 +117,14 @@ public class ModeloAlumno extends Alumno{
                 + ", telefono = '" + getTelefono()+"'"
                 + ", correo = '" + getCorreo()+"'"
                 + ", fechanacimiento = '" + getFechanacimiento()+ "'"
-                + ", celular = '" + getCedular()+"'"
+                + ", celular = '" + getCelular()+"'"
                 + ", entrenamiento = '" + getEntrenamiento()+"'"
                 + ", disciplina = '" + getDisciplina()+"'"
-                
                 ;
                 
         sql += " WHERE id= '" + getId_alumno() +"' ";
     return con.accion(sql);
     }
-    
     
     public boolean eliminar() {
         String sql;

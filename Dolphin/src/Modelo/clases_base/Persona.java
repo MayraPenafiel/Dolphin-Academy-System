@@ -15,14 +15,14 @@ public class Persona {
     private String direccion;
     private String correo;
     private Date fechanacimiento;
-    private String cedular;
+    private String celular;
     private int edad;
     private String tipo_p;
 
     //Constructores
     public Persona() {
     }
-    public Persona(String cedula, String nombre, String apellido, String telefono, String direccion, String correo, Date fechanacimiento, String cedular, int edad, String tipo_p) {
+    public Persona(String cedula, String nombre, String apellido, String telefono, String direccion, String correo, Date fechanacimiento, String celular, int edad, String tipo_p) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -30,7 +30,7 @@ public class Persona {
         this.direccion = direccion;
         this.correo = correo;
         this.fechanacimiento = fechanacimiento;
-        this.cedular = cedular;
+        this.celular = celular;
         this.edad = edad;
         this.tipo_p = tipo_p;
     }
@@ -78,11 +78,11 @@ public class Persona {
     public void setFechanacimiento(Date fechanacimiento) {
         this.fechanacimiento = fechanacimiento;
     }
-    public String getCedular() {
-        return cedular;
+    public String getCelular() {
+        return celular;
     }
-    public void setCedular(String cedular) {
-        this.cedular = cedular;
+    public void setCelular(String cedular) {
+        this.celular = cedular;
     }
     public int getEdad() {
         return edad;
@@ -100,7 +100,10 @@ public class Persona {
     //Metodo toString
     @Override
     public String toString() {
-        return "Persona{" + "cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + ", direccion=" + direccion + ", correo=" + correo + ", fechanacimiento=" + fechanacimiento + ", cedular=" + cedular + ", edad=" + edad + ", tipo_p=" + tipo_p + '}';
+        return "Persona{" + "cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido 
+                + ", telefono=" + telefono + ", direccion=" + direccion + ", correo=" + correo 
+                + ", fechanacimiento=" + fechanacimiento + ", celular=" + celular + ", edad=" + edad + 
+                ", tipo_p=" + tipo_p + '}';
     }
     
 }
