@@ -72,7 +72,7 @@
                               </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel3" max="32767" attributes="0"/>
+                          <Component id="jLabel3" pref="263" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -89,11 +89,11 @@
                       </Group>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="TxtContraseña" min="-2" pref="115" max="-2" attributes="0"/>
-                      <Component id="TxtNombreUser" min="-2" pref="115" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="TxtNombreUser" pref="115" max="32767" attributes="0"/>
+                      <Component id="pwfcontraseña" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -119,8 +119,8 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="TxtContraseña" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="pwfcontraseña" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="35" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -188,8 +188,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtNombreUserActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="TxtContrase&#xf1;a">
-        </Component>
         <Component class="javax.swing.JButton" name="BtnRegistrar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancelar"/>
@@ -206,6 +204,8 @@
               <Image iconType="3" name="/Vista/iconos/LogoCab.png"/>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="pwfcontrase&#xf1;a">
         </Component>
       </SubComponents>
     </Container>

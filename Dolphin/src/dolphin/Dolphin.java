@@ -11,6 +11,7 @@ package dolphin;
  *
  * @author User
  */
+
 public class Dolphin {
 
     /**
