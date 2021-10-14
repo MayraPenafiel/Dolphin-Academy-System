@@ -58,7 +58,43 @@ public class ControlDirector {
             }
         };
         vista.getBtnListarJFDirec().addActionListener(l -> cargaLista(""));
+         vista.getBtnCrearDirec().addActionListener(l->abrir_dialogo(1));
+        vista.getBtnEditarJFDirec().addActionListener(l->abrir_dialogo(2));
+        vista.getBtnEliminarJFDirec().addActionListener(l->abrir_dialogo(3));
+        
+        
+        vista.getBtnGuardarDirec().addActionListener(l->grabaDirector());
+        vista.getBtnCrearDirec().addActionListener(l->vista.getDgDirector().dispose());
+        vista.getBtnconfirmareliminar().addActionListener(l-> confirmar());
+        vista.getBtncancelareliminar().addActionListener(l-> vista.getDlgEliminar().dispose());
+        
+        vista.getTxtBuscarDirec().addKeyListener(kl);
     }
+    
+    private void abrir_dialogo(int origen){
+        vista.getDgDirector().setSize(600,400); 
+        vista.getDgDirector().setLocationRelativeTo(vista); 
+        if(origen==1){
+           vista.getDgDirector().setTitle("Nuevo Registro"); 
+           limpiar();
+           vista.getDgDirector().setVisible(true);
+        }
+        if(origen==2){ 
+            vista.getDgDirector().setTitle("Editar Registro");
+            limpiar();
+            vista.getDgDirector().setVisible(true);
+            modificar();
+        }
+        vista.getDlgEliminar().setSize(450,300); 
+        vista.getDlgEliminar().setLocationRelativeTo(vista); 
+        if (origen==3){
+            vista.getDlgEliminar().setTitle("Eliminar Registro");
+            vista.getDlgEliminar().setVisible(true);
+            eliminar();
+        }
+    }
+    
+    
     
     private void cargaLista(String aguja){
         

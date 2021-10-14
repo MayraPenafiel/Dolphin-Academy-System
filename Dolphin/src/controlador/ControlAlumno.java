@@ -60,8 +60,44 @@ public class ControlAlumno {
 
         vista.getBtnListarJFAlmn().addActionListener(l -> cargaLista(""));
         
+        
+        vista.getBtnCrearAlmn().addActionListener(l->abrir_dialogo(1));
+        vista.getBtnEditarJFAlmn().addActionListener(l->abrir_dialogo(2));
+        vista.getBtnEliminarJFAlmn().addActionListener(l->abrir_dialogo(3));
+        
+        
+        vista.getBtnGuardarAlmn().addActionListener(l->grabaAlumno());
+        vista.getBtnCrearAlmn().addActionListener(l->vista.getDgAlumno().dispose());
+        vista.getBtnconfirmareliminar().addActionListener(l-> confirmar());
+        vista.getBtncancelareliminar().addActionListener(l-> vista.getDlgEliminar().dispose());
+        //Control Buscar
+        vista.getTxtBuscarAlmn().addKeyListener(kl);
     }
 
+    private void abrir_dialogo(int origen){
+        vista.getDgAlumno().setSize(600,400); 
+        vista.getDgAlumno().setLocationRelativeTo(vista); 
+        if(origen==1){
+           vista.getDgAlumno().setTitle("Nuevo Registro"); 
+           limpiar();
+           vista.getDgAlumno().setVisible(true);
+        }
+        if(origen==2){ 
+            vista.getDgAlumno().setTitle("Editar Registro");
+            limpiar();
+            vista.getDgAlumno().setVisible(true);
+            modificar();
+        }
+        vista.getDlgEliminar().setSize(450,300); 
+        vista.getDlgEliminar().setLocationRelativeTo(vista); 
+        if (origen==3){
+            vista.getDlgEliminar().setTitle("Eliminar Registro");
+            vista.getDlgEliminar().setVisible(true);
+            eliminar();
+        }
+    }
+    
+    
     private void cargaLista(String aguja) {
 
         DefaultTableCellRenderer r = new DefaultTableCellRenderer();
