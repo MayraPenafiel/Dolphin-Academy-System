@@ -7,6 +7,7 @@ package Vista;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 /**
@@ -38,10 +39,10 @@ public class VistaInicioSesion extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         TxtNombreUser = new javax.swing.JTextField();
-        TxtContraseña = new javax.swing.JTextField();
         BtnRegistrar = new javax.swing.JButton();
         BtnIngresar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
+        pwfcontraseña = new javax.swing.JPasswordField();
 
         jLabel1.setText("jLabel1");
 
@@ -103,7 +104,7 @@ public class VistaInicioSesion extends javax.swing.JFrame {
                                 .addGap(11, 11, 11)
                                 .addComponent(jLabel2)))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
                         .addGap(48, 48, 48))))
             .addGroup(PnInicioSesionLayout.createSequentialGroup()
                 .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,10 +115,10 @@ public class VistaInicioSesion extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TxtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TxtNombreUser, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 100, Short.MAX_VALUE))
+                .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(TxtNombreUser, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                    .addComponent(pwfcontraseña))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         PnInicioSesionLayout.setVerticalGroup(
             PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,8 +138,8 @@ public class VistaInicioSesion extends javax.swing.JFrame {
                     .addComponent(TxtNombreUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TxtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
+                    .addComponent(jLabel5)
+                    .addComponent(pwfcontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnIngresar)
@@ -164,91 +165,43 @@ public class VistaInicioSesion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtNombreUserActionPerformed
 
-//    /**
-//     * @param args the command line arguments
-//     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(VistaInicioSesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(VistaInicioSesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(VistaInicioSesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(VistaInicioSesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new VistaInicioSesion().setVisible(true);
-//            }
-//        });
-//    }
-
-    
 
     // GETTER Y SETTERS
     public JButton getBtnIngresar() {
         return BtnIngresar;
     }
-
     public void setBtnIngresar(JButton BtnIngresar) {
         this.BtnIngresar = BtnIngresar;
     }
-
     public JButton getBtnRegistrar() {
         return BtnRegistrar;
     }
-
     public void setBtnRegistrar(JButton BtnRegistrar) {
         this.BtnRegistrar = BtnRegistrar;
     }
-
     public JPanel getPnInicioSesion() {
         return PnInicioSesion;
     }
-
     public void setPnInicioSesion(JPanel PnInicioSesion) {
         this.PnInicioSesion = PnInicioSesion;
     }
-
-    public JTextField getTxtContraseña() {
-        return TxtContraseña;
+    public JPasswordField getPwfcontraseña() {
+        return pwfcontraseña;
     }
-
-    public void setTxtContraseña(JTextField TxtContraseña) {
-        this.TxtContraseña = TxtContraseña;
+    public void setPwfcontraseña(JPasswordField pwfcontraseña) {
+        this.pwfcontraseña = pwfcontraseña;
     }
-
     public JTextField getTxtNombreUser() {
         return TxtNombreUser;
     }
-
     public void setTxtNombreUser(JTextField TxtNombreUser) {
         this.TxtNombreUser = TxtNombreUser;
     }
-    
-    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnIngresar;
     private javax.swing.JButton BtnRegistrar;
     private javax.swing.JPanel PnInicioSesion;
-    private javax.swing.JTextField TxtContraseña;
     private javax.swing.JTextField TxtNombreUser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -256,5 +209,6 @@ public class VistaInicioSesion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPasswordField pwfcontraseña;
     // End of variables declaration//GEN-END:variables
 }

@@ -64,9 +64,9 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         txtdescdel2 = new javax.swing.JTextField();
         jbconfirmar2 = new javax.swing.JButton();
         Txtidel2 = new javax.swing.JTextField();
-        jbcancelardl2 = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
+        jbcancelardel = new javax.swing.JButton();
         PNOA = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -258,11 +258,6 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         Txtidel2.setBackground(new java.awt.Color(255, 255, 255));
         Txtidel2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jbcancelardl2.setBackground(new java.awt.Color(255, 255, 255));
-        jbcancelardl2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jbcancelardl2.setForeground(new java.awt.Color(0, 153, 153));
-        jbcancelardl2.setText("Cancelar");
-
         jLabel22.setForeground(new java.awt.Color(204, 204, 255));
         jLabel22.setText("ID:");
 
@@ -270,23 +265,29 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         jLabel23.setForeground(new java.awt.Color(204, 204, 255));
         jLabel23.setText("Descripcion: ");
 
+        jbcancelardel.setBackground(new java.awt.Color(255, 255, 255));
+        jbcancelardel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jbcancelardel.setForeground(new java.awt.Color(0, 153, 153));
+        jbcancelardel.setText("Cancelar");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jbconfirmar2)
-                                .addGap(92, 92, 92)
-                                .addComponent(jbcancelardl2))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jLabel23)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jbconfirmar2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbcancelardel)
+                                .addGap(43, 43, 43))))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(88, 88, 88)
                         .addComponent(jLabel22)
@@ -313,7 +314,7 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jbconfirmar2)
-                    .addComponent(jbcancelardl2))
+                    .addComponent(jbcancelardel))
                 .addGap(31, 31, 31))
         );
 
@@ -437,41 +438,6 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-//    /**
-//     * @param args the command line arguments
-//     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(VistaEntrenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(VistaEntrenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(VistaEntrenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(VistaEntrenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new VistaEntrenamiento().setVisible(true);
-//            }
-//        });
-//    }
 
     // Metodos GETTERS Y SETTERS
     
@@ -618,6 +584,12 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
     public void setTxtdescdel2(JTextField txtdescdel2) {
         this.txtdescdel2 = txtdescdel2;
     }
+    public JButton getJbcancelardel() {
+        return jbcancelardel;
+    }
+    public void setJbcancelardel(JButton jbcancelardel) {
+        this.jbcancelardel = jbcancelardel;
+    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCancelarEnt;
@@ -636,14 +608,9 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
     private javax.swing.JTextField TxtCodEnt;
     private javax.swing.JTextField TxtDescEnt;
     private javax.swing.JTextField TxtObsEnt;
-    private javax.swing.JTextField Txtidel;
-    private javax.swing.JTextField Txtidel1;
     private javax.swing.JTextField Txtidel2;
-    private javax.swing.JDialog dgdelent;
-    private javax.swing.JDialog dgdelent1;
     private javax.swing.JDialog dgdelent2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -652,36 +619,21 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JButton jbcancelardl;
-    private javax.swing.JButton jbcancelardl1;
-    private javax.swing.JButton jbcancelardl2;
-    private javax.swing.JButton jbconfirmar;
-    private javax.swing.JButton jbconfirmar1;
+    private javax.swing.JButton jbcancelardel;
     private javax.swing.JButton jbconfirmar2;
     private javax.swing.JComboBox<String> jcbdiscent;
     private javax.swing.JComboBox<String> jcbproent;
-    private javax.swing.JLabel lbtitutolo;
-    private javax.swing.JLabel lbtitutolo1;
     private javax.swing.JLabel lbtitutolo2;
-    private javax.swing.JTextField txtdescdel;
-    private javax.swing.JTextField txtdescdel1;
     private javax.swing.JTextField txtdescdel2;
     // End of variables declaration//GEN-END:variables
 }

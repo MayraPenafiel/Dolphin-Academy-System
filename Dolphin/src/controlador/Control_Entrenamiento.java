@@ -20,7 +20,6 @@ import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.List;
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.Modelo_Disciplina;
@@ -69,18 +68,22 @@ public class Control_Entrenamiento {
             }
         };
      
-        //Controlar Eventos de la Visa Persona
+        //Controlar Eventos de la Vista Entrenamiento
         vista.getBtnListarJFEnt().addActionListener(l->cargarLista(""));
         vista.getBtnCrearJFEnt().addActionListener(l->abrir_dialogo(1));
         vista.getBtnEditarJFEnt().addActionListener(l->abrir_dialogo(2));
         vista.getBtnEliminarJFEnt().addActionListener(l->abrir_dialogo(3));
         
-        //Controlar Eventos Vista Dialogo Ingreso/modificar info
+        //Controlar Eventos Dialogo Ingreso/modificar info
         vista.getBtnGuardarEnt().addActionListener(l->guardar_ent());
         vista.getBtnCancelarEnt().addActionListener(l->vista.getDgEntrenamientp().dispose());
        
         //Control Buscar
         vista.getTxtBuscarEnt().addKeyListener(kl);
+        
+        //Control eventos Dialogo Eliminar
+        vista.getJbconfirmar2().addActionListener(l->confirmar());
+        vista.getJbcancelardel().addActionListener(l->vista.getDgdelent2().dispose());
      }
      
      private void abrir_dialogo(int origen){
@@ -88,7 +91,7 @@ public class Control_Entrenamiento {
         vista.getDgEntrenamientp().setLocationRelativeTo(vista); 
         if(origen==1){
            vista.getDgEntrenamientp().setTitle("Nuevo Registro"); 
-           limpiar();
+           limpiar();cargar_combo_box();
            vista.getDgEntrenamientp().setVisible(true);
         }
         if(origen==2){ 
@@ -119,6 +122,28 @@ public class Control_Entrenamiento {
         });
     }
     
+    //Metodo para llenar los combobox
+    private void cargar_combo_box(){
+        //Profesor
+        DefaultComboBoxModel <String> jbpro = new DefaultComboBoxModel();
+        List<Profesor> lpro=m_pro.listaProfesores();
+        lpro.stream().forEach(d->{
+            String[] profesor={d.getNombre()+" ",d.getApellido()};
+            String[] pdis={d.getFormacion()};
+            if(vista.getJcbdiscent().getSelectedItem().toString()==pdis.toString()){
+                jbpro.addElement(profesor.toString());
+            }
+        });
+        
+        //Disciplina
+        DefaultComboBoxModel <String> jbdis = new DefaultComboBoxModel();
+        List<Disciplina> lista=m_dis.listaDisciplinas();
+            lista.stream().forEach(d->{
+            String[] disciplina={d.getId_disciplina()+" ",d.getNombre_d()};
+            jbdis.addElement(disciplina.toString());
+        });
+    }
+    
     //Metodo Guardar Entrenamiento
     private void guardar_ent(){
         String id=vista.getTxtCodEnt().getText();
@@ -140,12 +165,6 @@ public class Control_Entrenamiento {
         //Obtener Datos desde un combobox
         
         //Disciplina
-        DefaultComboBoxModel <String> jbdis = new DefaultComboBoxModel();
-        List<Disciplina> lista=m_dis.listaDisciplinas();
-        lista.stream().forEach(d->{
-        String[] disciplina={d.getId_disciplina()+" ",d.getNombre_d()};
-        jbdis.addElement(disciplina.toString());
-        });
         String entd="";
         String dis=vista.getJcbdiscent().getSelectedItem().toString();
         List<Disciplina> comp=m_dis.listaDisciplinas();
@@ -158,15 +177,6 @@ public class Control_Entrenamiento {
         }
         
         //Profesor
-        DefaultComboBoxModel <String> jbpro = new DefaultComboBoxModel();
-        List<Profesor> lpro=m_pro.listaProfesores();
-        lpro.stream().forEach(d->{
-            String[] profesor={d.getNombre()+" ",d.getApellido()};
-            String[] pdis={d.getFormacion()};
-            if(vista.getJcbdiscent().getSelectedItem().toString()==pdis.toString()){
-                jbpro.addElement(profesor.toString());
-            }
-        });
         String pro=vista.getJcbproent().getSelectedItem().toString();
         String entp="";
         List<Profesor> cop=m_pro.listaProfesores();
@@ -232,6 +242,23 @@ public class Control_Entrenamiento {
                     vista.getDCFechaFinEnt().setDate(fn);
                     vista.getTxtDescEnt().setText(des);
                     vista.getTxtObsEnt().setText(obs);
+                    
+                    //Llenar Combobox de Profesor
+                    DefaultComboBoxModel <String> jbpro = new DefaultComboBoxModel();
+                    List<Profesor> mpro=m_pro.listaProfesores();
+                    mpro.stream().forEach(d->{
+                        String[] profesor={d.getId_Profesor()+""};
+                        String[] n_p={d.getNombre()};
+                        if(profesor.toString()==pro){
+                            jbpro.addElement(n_p.toString());
+                            vista.getJcbproent().setSelectedItem(n_p);
+                        }else{
+                            vista.getJcbproent().setSelectedItem(null);
+                            System.out.println("Profesor Inexistente");
+                        }
+                    });
+                    
+                    //Llenar Combobox de Diciplina
                     DefaultComboBoxModel <String> jbdis = new DefaultComboBoxModel();
                     List<Disciplina> mdis=m_dis.listaDisciplinas();
                     mdis.stream().forEach(d->{
