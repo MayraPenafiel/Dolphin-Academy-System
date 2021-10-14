@@ -28,6 +28,7 @@ public class Control_Principal {
     }
     public Control_Principal(VistaPrincipal vp) {
         this.vp = vp;
+        vp.setVisible(true);
     }
     
     //Controlar Eventos de la Vista PRincipal
