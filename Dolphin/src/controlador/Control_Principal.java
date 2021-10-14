@@ -32,11 +32,12 @@ public class Control_Principal {
     
     //Controlar Eventos de la Vista PRincipal
     public void inicia_control() {
-        vp.getBtnAdm().addActionListener(l->vp.setVisible(true));
-        vp.getBtnAdm().addActionListener(l->vp.setVisible(true));
-        
+        vp.getBtnAdm().addActionListener(l->Iniciar_sesion());
+        vp.getBtnAlum().addActionListener(l->Iniciar_sesion());
+        vp.getBtnProf().addActionListener(l->Iniciar_sesion());
     }
-    private void crudPersonas(){
+    
+    private void Iniciar_sesion(){
         vp.setVisible(true);
         ModeloAlumno mal= new ModeloAlumno();
         Modelo_Profesor mpro= new Modelo_Profesor();

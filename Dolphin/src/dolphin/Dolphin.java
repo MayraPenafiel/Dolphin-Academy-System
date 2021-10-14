@@ -1,22 +1,23 @@
 
 package dolphin;
 
-import Vista.VistaInicio;
-
-
+import Vista.VistaPrincipal;
+import controlador.Control_Principal;
 
 /**
  *
- * @author User
+ * @author MayraPeñafiel
  */
 public class Dolphin {
 
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) {
-        
-       
+        VistaPrincipal prin=new VistaPrincipal();
+        Control_Principal control = new Control_Principal(prin);
+        control.inicia_control();
     }
     
 }
