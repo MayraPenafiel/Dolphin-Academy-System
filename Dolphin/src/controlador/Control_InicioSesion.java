@@ -41,13 +41,14 @@ public class Control_InicioSesion{
         //INICIALIZAR ELEMENTOS.
         //vista.setTitle("Iniciar Sesion");
         vista.setVisible(true);
-        if(vp.getBtnAlum().isSelected()){
-            vista.getJlbpass().setEnabled(false);
-            vista.getJlbpass().setVisible(false);
-            vista.getJlbuser().setText("Clave de Acceso");
-            vista.getPwfcontraseña().setEnabled(false);
-            vista.getPwfcontraseña().setVisible(false);
-        }
+        
+//        if(vp.getBtnAlum().isSelected()){
+//            vista.getJlbpass().setEnabled(false);
+//            vista.getJlbpass().setVisible(false);
+//            vista.getJlbuser().setText("Clave de Acceso");
+//            vista.getPwfcontraseña().setEnabled(false);
+//            vista.getPwfcontraseña().setVisible(false);
+//        }
     }
     public Control_InicioSesion(VistaInicioSesion vis) {
         this.vista=vis;
@@ -63,6 +64,7 @@ public class Control_InicioSesion{
     private void llamar_boton(){
         if(vp.getBtnProf().isSelected()){
             comp_pro();
+            
         }
         if(vp.getBtnAdm().isSelected()){ 
             comp_dir();
@@ -115,7 +117,17 @@ public class Control_InicioSesion{
                     menu.setVisible(true);
             }
          }
-    } 
+    }
+    
+    public void botonalumo() {
+        if (vp.getBtnAlum().isSelected()) {
+            vista.getJlbpass().setEnabled(false);
+            vista.getJlbpass().setVisible(false);
+            vista.getJlbuser().setText("Clave de Acceso");
+            vista.getPwfcontraseña().setEnabled(false);
+            vista.getPwfcontraseña().setVisible(false);
+        }
+    }
     
  }
     
