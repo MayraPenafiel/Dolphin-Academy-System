@@ -15,7 +15,6 @@ import Vista.VistaInicioSesion;
 import Vista.VistaMenu;
 import Vista.VistaPrincipal;
 import java.util.List;
-import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 
 /**

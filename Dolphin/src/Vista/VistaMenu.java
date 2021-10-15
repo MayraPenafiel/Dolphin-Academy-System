@@ -48,7 +48,7 @@ public class VistaMenu extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        MenuP = new javax.swing.JMenu();
+        MenuAl = new javax.swing.JMenu();
         MIAlumno = new javax.swing.JMenuItem();
         MIProfesor = new javax.swing.JMenuItem();
         MIAdm = new javax.swing.JMenuItem();
@@ -58,6 +58,7 @@ public class VistaMenu extends javax.swing.JFrame {
         MIEnt = new javax.swing.JMenuItem();
         MIOA = new javax.swing.JMenuItem();
         MISede = new javax.swing.JMenuItem();
+        jmisalir = new javax.swing.JMenuItem();
         MnMenu = new javax.swing.JMenu();
 
         jMenu1.setText("jMenu1");
@@ -149,7 +150,7 @@ public class VistaMenu extends javax.swing.JFrame {
 
         jLabel1.setText("Dolphin Academy System");
 
-        MenuP.setText("Menu");
+        MenuAl.setText("Menu");
 
         MIAlumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-classmates-standing-20.png"))); // NOI18N
         MIAlumno.setText("Alumno");
@@ -158,7 +159,7 @@ public class VistaMenu extends javax.swing.JFrame {
                 MIAlumnoActionPerformed(evt);
             }
         });
-        MenuP.add(MIAlumno);
+        MenuAl.add(MIAlumno);
 
         MIProfesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-profesor-20.png"))); // NOI18N
         MIProfesor.setText("Profesor");
@@ -167,7 +168,7 @@ public class VistaMenu extends javax.swing.JFrame {
                 MIProfesorActionPerformed(evt);
             }
         });
-        MenuP.add(MIProfesor);
+        MenuAl.add(MIProfesor);
 
         MIAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-director-de-escuela-20.png"))); // NOI18N
         MIAdm.setText("Administradores");
@@ -176,7 +177,7 @@ public class VistaMenu extends javax.swing.JFrame {
                 MIAdmActionPerformed(evt);
             }
         });
-        MenuP.add(MIAdm);
+        MenuAl.add(MIAdm);
 
         MIDetRealiza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-lista-20.png"))); // NOI18N
         MIDetRealiza.setText("Det. Realiza");
@@ -185,7 +186,7 @@ public class VistaMenu extends javax.swing.JFrame {
                 MIDetRealizaActionPerformed(evt);
             }
         });
-        MenuP.add(MIDetRealiza);
+        MenuAl.add(MIDetRealiza);
 
         MIDisciplina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-boxeo-20.png"))); // NOI18N
         MIDisciplina.setText("Disciplina");
@@ -194,7 +195,7 @@ public class VistaMenu extends javax.swing.JFrame {
                 MIDisciplinaActionPerformed(evt);
             }
         });
-        MenuP.add(MIDisciplina);
+        MenuAl.add(MIDisciplina);
 
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-añadir-lista-20.png"))); // NOI18N
         jMenuItem1.setText("Enc.Realiza");
@@ -203,7 +204,7 @@ public class VistaMenu extends javax.swing.JFrame {
                 jMenuItem1ActionPerformed(evt);
             }
         });
-        MenuP.add(jMenuItem1);
+        MenuAl.add(jMenuItem1);
 
         MIEnt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-coach-20.png"))); // NOI18N
         MIEnt.setText("Entrenamiento");
@@ -212,7 +213,7 @@ public class VistaMenu extends javax.swing.JFrame {
                 MIEntActionPerformed(evt);
             }
         });
-        MenuP.add(MIEnt);
+        MenuAl.add(MIEnt);
 
         MIOA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-venta-20.png"))); // NOI18N
         MIOA.setText("Oferta Academica");
@@ -221,7 +222,7 @@ public class VistaMenu extends javax.swing.JFrame {
                 MIOAActionPerformed(evt);
             }
         });
-        MenuP.add(MIOA);
+        MenuAl.add(MIOA);
 
         MISede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-embajada-20.png"))); // NOI18N
         MISede.setText("Sede");
@@ -230,9 +231,12 @@ public class VistaMenu extends javax.swing.JFrame {
                 MISedeActionPerformed(evt);
             }
         });
-        MenuP.add(MISede);
+        MenuAl.add(MISede);
 
-        jMenuBar1.add(MenuP);
+        jmisalir.setText("Salir");
+        MenuAl.add(jmisalir);
+
+        jMenuBar1.add(MenuAl);
 
         MnMenu.setText("Edit");
         jMenuBar1.add(MnMenu);
@@ -393,11 +397,11 @@ public class VistaMenu extends javax.swing.JFrame {
     }
 
     public JMenu getMenuP() {
-        return MenuP;
+        return MenuAl;
     }
 
     public void setMenuP(JMenu MenuP) {
-        this.MenuP = MenuP;
+        this.MenuAl = MenuP;
     }
 
     public JMenu getMnMenu() {
@@ -451,7 +455,7 @@ public class VistaMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem MIOA;
     private javax.swing.JMenuItem MIProfesor;
     private javax.swing.JMenuItem MISede;
-    private javax.swing.JMenu MenuP;
+    private javax.swing.JMenu MenuAl;
     private javax.swing.JMenu MnMenu;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -468,5 +472,6 @@ public class VistaMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JMenuItem jmisalir;
     // End of variables declaration//GEN-END:variables
 }
