@@ -9,6 +9,7 @@ import javax.swing.table.DefaultTableModel;
 import Modelo.clases_base.Disciplina;
 import modelo.Modelo_Disciplina;
 import Vista.VistaDisciplina;
+import Vista.VistaMenu;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -45,10 +46,15 @@ public class Control_Disciplina {
         };
         
     //Controlar los eventos de la vista
-    vista.getBtnlistar().addActionListener(l->cargaLista());
+    vista.getBtnlistar().addActionListener(l->cargaLista(""));
     vista.getBtncrear().addActionListener(l->cargarDialogo(1));
     vista.getBtneditar().addActionListener(l->cargarDialogo(2));
+    vista.getBtnaceptar().addActionListener(l->grabarDisciplina());
     vista.getBtneliminar().addActionListener(l->eliminarDisciplina());
+    vista.getBtncancelar().addActionListener(l->regresar());
+    vista.getBtnregresarmenu().addActionListener(l->regresarMenu());
+    
+    
     
     //controlador buscar
     vista.getTxtbuscard().addKeyListener(kl);
@@ -60,7 +66,7 @@ public class Control_Disciplina {
         if(origen==1){
             vista.getDgDisciplina().setTitle("Crear Disciplina");
             vista.getBtnaceptar().addActionListener(l->grabarDisciplina());
-             vista.getDgDisciplina().setVisible(true);
+            vista.getDgDisciplina().setVisible(true);
         }else{
              if(vista.getTbldisciplina().getSelectedRow()==-1){
             JOptionPane.showMessageDialog(vista,"Debe seleccionar una fila,Intente de nuevo");
@@ -118,8 +124,8 @@ public class Control_Disciplina {
        if(disciplina.grabar()){
            JOptionPane.showMessageDialog(vista, "Disciplina Creada Satisfactoriamente");
            vista.getDgDisciplina().setVisible(false);
-            limpiar();
-            cargaLista();
+           limpiar();
+           cargaLista();
        }else{
            JOptionPane.showMessageDialog(vista, "Error");
        }
@@ -167,5 +173,19 @@ public class Control_Disciplina {
        }else{
            JOptionPane.showMessageDialog(vista, "Error");
        }
+    }
+    
+     public void regresar(){
+        Modelo_Disciplina mo=new Modelo_Disciplina();
+        VistaDisciplina vd = new VistaDisciplina();
+        Control_Disciplina control = new Control_Disciplina(mo,vd);
+        control.iniciaControl();
+        vista.dispose();
+    }
+     public void regresarMenu(){
+        VistaMenu vm = new VistaMenu();
+        Control_Menu control = new Control_Menu(vm);
+        control.inicia_control();
+        vista.dispose();
     }
 }
