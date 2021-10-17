@@ -2,7 +2,7 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Container class="javax.swing.JDialog" name="DgAlumno">
+    <Container class="javax.swing.JDialog" name="DgAlumnoinmod">
 
       <Layout>
         <DimensionLayout dim="0">

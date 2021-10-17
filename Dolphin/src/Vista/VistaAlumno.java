@@ -16,11 +16,13 @@ import javax.swing.JTextField;
  *
  * @author HP
  */
-public class VistaAlumno extends javax.swing.JFrame {
+
+public class VistaAlumno extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form VistaPersona
      */
+    
     public VistaAlumno() {
         initComponents();
     }
@@ -34,7 +36,7 @@ public class VistaAlumno extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        DgAlumno = new javax.swing.JDialog();
+        DgAlumnoinmod = new javax.swing.JDialog();
         PNOA1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -296,14 +298,14 @@ public class VistaAlumno extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout DgAlumnoLayout = new javax.swing.GroupLayout(DgAlumno.getContentPane());
-        DgAlumno.getContentPane().setLayout(DgAlumnoLayout);
-        DgAlumnoLayout.setHorizontalGroup(
-            DgAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout DgAlumnoinmodLayout = new javax.swing.GroupLayout(DgAlumnoinmod.getContentPane());
+        DgAlumnoinmod.getContentPane().setLayout(DgAlumnoinmodLayout);
+        DgAlumnoinmodLayout.setHorizontalGroup(
+            DgAlumnoinmodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PNOA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        DgAlumnoLayout.setVerticalGroup(
-            DgAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        DgAlumnoinmodLayout.setVerticalGroup(
+            DgAlumnoinmodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PNOA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -458,271 +460,176 @@ public class VistaAlumno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void TxtCodAlmnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCodAlmnActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_TxtCodAlmnActionPerformed
 
     private void BtnCrearAlmnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCrearAlmnActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_BtnCrearAlmnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-         this.dispose();
-        VistaMenu vm = new VistaMenu();
-        vm.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    //Metodos getter y setter Vista Alumno
     public JButton getBtncancelareliminar() {
         return btncancelareliminar;
     }
-
     public void setBtncancelareliminar(JButton btncancelareliminar) {
         this.btncancelareliminar = btncancelareliminar;
     }
-
     public JButton getBtnconfirmareliminar() {
         return btnconfirmareliminar;
     }
-
     public void setBtnconfirmareliminar(JButton btnconfirmareliminar) {
         this.btnconfirmareliminar = btnconfirmareliminar;
     }
-
     public JTextField getTxteliminarid() {
         return txteliminarid;
     }
-
     public void setTxteliminarid(JTextField txteliminarid) {
         this.txteliminarid = txteliminarid;
     }
-
     public JTextField getTxteliminarnombre() {
         return txteliminarnombre;
     }
-
     public void setTxteliminarnombre(JTextField txteliminarnombre) {
         this.txteliminarnombre = txteliminarnombre;
     }
-
     public JDialog getDlgEliminar() {
         return DlgEliminar;
     }
-
     public void setDlgEliminar(JDialog DlgEliminar) {
         this.DlgEliminar = DlgEliminar;
     }
 
-    
-    
     public JDialog getDgAlumno() {
-        return DgAlumno;
+        return DgAlumnoinmod;
     }
-
     public void setDgAlumno(JDialog DgAlumno) {
-        this.DgAlumno = DgAlumno;
+        this.DgAlumnoinmod = DgAlumno;
     }
-
     public JButton getBtnCrearAlmn() {
         return BtnCrearAlmn;
     }
-
     public void setBtnCrearAlmn(JButton BtnCrearAlmn) {
         this.BtnCrearAlmn = BtnCrearAlmn;
     }
-
     public JButton getBtnCrearJFAlmn() {
         return BtnCrearJFAlmn;
     }
-
     public void setBtnCrearJFAlmn(JButton BtnCrearJFAlmn) {
         this.BtnCrearJFAlmn = BtnCrearJFAlmn;
     }
-
     public JButton getBtnEditarJFAlmn() {
         return BtnEditarJFAlmn;
     }
-
     public void setBtnEditarJFAlmn(JButton BtnEditarJFAlmn) {
         this.BtnEditarJFAlmn = BtnEditarJFAlmn;
     }
-
     public JButton getBtnEliminarJFAlmn() {
         return BtnEliminarJFAlmn;
     }
-
     public void setBtnEliminarJFAlmn(JButton BtnEliminarJFAlmn) {
         this.BtnEliminarJFAlmn = BtnEliminarJFAlmn;
     }
-
     public JButton getBtnGuardarAlmn() {
         return BtnGuardarAlmn;
     }
-
     public void setBtnGuardarAlmn(JButton BtnGuardarAlmn) {
         this.BtnGuardarAlmn = BtnGuardarAlmn;
     }
-
     public JButton getBtnListarJFAlmn() {
         return BtnListarJFAlmn;
     }
-
     public void setBtnListarJFAlmn(JButton BtnListarJFAlmn) {
         this.BtnListarJFAlmn = BtnListarJFAlmn;
     }
-
     public JComboBox<String> getCbxCategoriaAlmn() {
         return CbxCategoriaAlmn;
     }
-
     public void setCbxCategoriaAlmn(JComboBox<String> CbxCategoriaAlmn) {
         this.CbxCategoriaAlmn = CbxCategoriaAlmn;
     }
-
     public JDateChooser getDCAlumn() {
         return DCAlumn;
     }
-
     public void setDCAlumn(JDateChooser DCAlumn) {
         this.DCAlumn = DCAlumn;
     }
-
     public JTable getTbAlumno() {
         return TbAlumno;
     }
-
     public void setTbAlumno(JTable TbAlumno) {
         this.TbAlumno = TbAlumno;
     }
-
     public JTextField getTxtApeAlmn() {
         return TxtApeAlmn;
     }
-
     public void setTxtApeAlmn(JTextField TxtApeAlmn) {
         this.TxtApeAlmn = TxtApeAlmn;
     }
-
     public JTextField getTxtBuscarAlmn() {
         return TxtBuscarAlmn;
     }
-
     public void setTxtBuscarAlmn(JTextField TxtBuscarAlmn) {
         this.TxtBuscarAlmn = TxtBuscarAlmn;
     }
-
     public JTextField getTxtCedulaAlmn() {
         return TxtCedulaAlmn;
     }
-
     public void setTxtCedulaAlmn(JTextField TxtCedulaAlmn) {
         this.TxtCedulaAlmn = TxtCedulaAlmn;
     }
-
     public JTextField getTxtCelularAlmn() {
         return TxtCelularAlmn;
     }
-
     public void setTxtCelularAlmn(JTextField TxtCelularAlmn) {
         this.TxtCelularAlmn = TxtCelularAlmn;
     }
-
     public JTextField getTxtCodAlmn() {
         return TxtCodAlmn;
     }
-
     public void setTxtCodAlmn(JTextField TxtCodAlmn) {
         this.TxtCodAlmn = TxtCodAlmn;
     }
-
     public JTextField getTxtDireccionAlmn() {
         return TxtDireccionAlmn;
     }
-
     public void setTxtDireccionAlmn(JTextField TxtDireccionAlmn) {
         this.TxtDireccionAlmn = TxtDireccionAlmn;
     }
-
     public JTextField getTxtEmailAlmn() {
         return TxtEmailAlmn;
     }
-
     public void setTxtEmailAlmn(JTextField TxtEmailAlmn) {
         this.TxtEmailAlmn = TxtEmailAlmn;
     }
-
     public JTextField getTxtNombreAlumn() {
         return TxtNombreAlumn;
     }
-
     public void setTxtNombreAlumn(JTextField TxtNombreAlumn) {
         this.TxtNombreAlumn = TxtNombreAlumn;
     }
-
     public JTextField getTxtTelfAlmn() {
         return TxtTelfAlmn;
     }
-
     public void setTxtTelfAlmn(JTextField TxtTelfAlmn) {
         this.TxtTelfAlmn = TxtTelfAlmn;
     }
-
     public JDialog getjDialog1() {
-        return DgAlumno;
+        return DgAlumnoinmod;
     }
-
     public void setjDialog1(JDialog jDialog1) {
-        this.DgAlumno = jDialog1;
+        this.DgAlumnoinmod = jDialog1;
     }
     
-    
-//    /**
-//     * @param args the command line arguments
-//     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new VistaAlumno().setVisible(true);
-//            }
-//        });
-//    }
-
     public JComboBox<String> getCbxdisciplina() {
         return cbxdisciplina;
     }
-
     public void setCbxdisciplina(JComboBox<String> cbxdisciplina) {
         this.cbxdisciplina = cbxdisciplina;
     }
-
     public JComboBox<String> getCbxentrenamiento() {
         return cbxentrenamiento;
     }
-
     public void setCbxentrenamiento(JComboBox<String> cbxentrenamiento) {
         this.cbxentrenamiento = cbxentrenamiento;
     }
@@ -736,7 +643,7 @@ public class VistaAlumno extends javax.swing.JFrame {
     private javax.swing.JButton BtnListarJFAlmn;
     private javax.swing.JComboBox<String> CbxCategoriaAlmn;
     private com.toedter.calendar.JDateChooser DCAlumn;
-    private javax.swing.JDialog DgAlumno;
+    private javax.swing.JDialog DgAlumnoinmod;
     private javax.swing.JDialog DlgEliminar;
     private javax.swing.JPanel PNOA;
     private javax.swing.JPanel PNOA1;

@@ -6,11 +6,14 @@
 package Vista;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  *
  * @author HP
  */
+
 public class VistaPrincipal extends javax.swing.JFrame {
 
     /**
@@ -38,6 +41,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         BtnAdm = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         LblTitulo = new javax.swing.JLabel();
+        jbsalir = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,7 +57,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("ADMINISTRADOR");
+        jLabel1.setText("DIRECTOR");
 
         BtnProf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/User(2).png"))); // NOI18N
         BtnProf.addActionListener(new java.awt.event.ActionListener() {
@@ -77,18 +81,28 @@ public class VistaPrincipal extends javax.swing.JFrame {
         LblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblTitulo.setText("DOLPHIN ACADEMY SYSTEM");
 
+        jbsalir.setBackground(new java.awt.Color(255, 255, 255));
+        jbsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/OS » Mac OS X.png"))); // NOI18N
+        jbsalir.setToolTipText("salir");
+
         javax.swing.GroupLayout PnInicioLayout = new javax.swing.GroupLayout(PnInicio);
         PnInicio.setLayout(PnInicioLayout);
         PnInicioLayout.setHorizontalGroup(
             PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnInicioLayout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addGap(189, 189, 189)
+                .addComponent(LblTitulo)
+                .addGap(142, 142, 142)
+                .addComponent(jbsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnInicioLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnInicioLayout.createSequentialGroup()
                         .addComponent(BtnProf)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel3))
                     .addGroup(PnInicioLayout.createSequentialGroup()
                         .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -98,11 +112,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
                         .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel4))))
-                .addGap(49, 49, 49))
-            .addGroup(PnInicioLayout.createSequentialGroup()
-                .addGap(189, 189, 189)
-                .addComponent(LblTitulo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(32, 32, 32))
         );
         PnInicioLayout.setVerticalGroup(
             PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,17 +127,22 @@ public class VistaPrincipal extends javax.swing.JFrame {
                         .addComponent(BtnProf))
                     .addGroup(PnInicioLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(LblTitulo)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PnInicioLayout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(jLabel1)
-                        .addGap(93, 93, 93)
-                        .addComponent(jLabel4)
-                        .addGap(98, 98, 98)
-                        .addComponent(jLabel3)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                        .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jbsalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(LblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(PnInicioLayout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(PnInicioLayout.createSequentialGroup()
+                                .addGap(66, 66, 66)
+                                .addComponent(jLabel1)
+                                .addGap(95, 95, 95)
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel3)
+                                .addGap(77, 77, 77)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -152,25 +167,13 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnProfActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-        VistaMenu vm = new VistaMenu();
-        vm.setVisible(true);
+    
     }//GEN-LAST:event_BtnProfActionPerformed
 
     private void BtnAlumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAlumActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-        VistaMenu vm = new VistaMenu();
-        vm.setVisible(true);
     }//GEN-LAST:event_BtnAlumActionPerformed
 
     private void BtnAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAdmActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-        VistaMenu vm = new VistaMenu();
-        vm.setVisible(true);
-        
     }//GEN-LAST:event_BtnAdmActionPerformed
 
     //GETTERS Y SETTERS
@@ -192,6 +195,24 @@ public class VistaPrincipal extends javax.swing.JFrame {
     public void setBtnProf(JButton BtnProf) {
         this.BtnProf = BtnProf;
     }
+    public JLabel getLblTitulo() {
+        return LblTitulo;
+    }
+    public void setLblTitulo(JLabel LblTitulo) {
+        this.LblTitulo = LblTitulo;
+    }
+    public JPanel getPnInicio() {
+        return PnInicio;
+    }
+    public void setPnInicio(JPanel PnInicio) {
+        this.PnInicio = PnInicio;
+    }
+    public JButton getJbsalir() {
+        return jbsalir;
+    }
+    public void setJbsalir(JButton jbsalir) {
+        this.jbsalir = jbsalir;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnAdm;
@@ -204,5 +225,6 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton jbsalir;
     // End of variables declaration//GEN-END:variables
 }

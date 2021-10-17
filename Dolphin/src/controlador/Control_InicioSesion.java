@@ -26,7 +26,7 @@ public class Control_InicioSesion{
    private ModeloAlumno modal;
    private Modelo_Profesor modpro;
    private ModeloDirector moddir;
-   private Control_Principal cp;
+
    private VistaInicioSesion vista;
    private VistaPrincipal vp;
 
@@ -40,35 +40,42 @@ public class Control_InicioSesion{
         //INICIALIZAR ELEMENTOS.
         //vista.setTitle("Iniciar Sesion");
         vista.setVisible(true);
-        
-//        if(vp.getBtnAlum().isSelected()){
-//            vista.getJlbpass().setEnabled(false);
-//            vista.getJlbpass().setVisible(false);
-//            vista.getJlbuser().setText("Clave de Acceso");
-//            vista.getPwfcontraseña().setEnabled(false);
-//            vista.getPwfcontraseña().setVisible(false);
-//        }
+
     }
+
     public Control_InicioSesion(VistaInicioSesion vis) {
         this.vista=vis;
         vista.setVisible(true);
+        vista.setLocationRelativeTo(null);
+        String h=Control_Principal.boton;
+        if(h=="A"){
+            vista.getJlbpass().setEnabled(false);
+            vista.getJlbpass().setVisible(false);
+            vista.getJlbuser().setText("Clave de Acceso");
+            vista.getPwfcontraseña().setEnabled(false);
+            vista.getPwfcontraseña().setVisible(false);
+        }
     }
     
     //Controlar Eventos de la Vista IiciarSesion
     public void iniciaControl(){
         vista.getBtnIngresar().addActionListener(l->llamar_boton());
-        vista.getJbcancelar().addActionListener(l->vista.dispose());
+        vista.getJbcancelar().addActionListener(l->regresar());
+        VistaMenu vm;
+        Control_Menu menu=new Control_Menu();
+        menu.inicia_control();
      }
     
+    //Metodo para saber que boton fue presionado
     private void llamar_boton(){
-        if(vp.getBtnProf().isSelected()){
+         String h=Control_Principal.boton;
+        if(h=="P"){
             comp_pro();
-            
         }
-        if(vp.getBtnAdm().isSelected()){ 
+        if(h=="D"){ 
             comp_dir();
         }
-        if (vp.getBtnAlum().isSelected()){
+        if (h=="A"){
             comp_al();
         }
     }
@@ -118,21 +125,12 @@ public class Control_InicioSesion{
          }
     }
     
-    public void botonalumo() {
-        if (vp.getBtnAlum().isSelected()) {
-            vista.getJlbpass().setEnabled(false);
-            vista.getJlbpass().setVisible(false);
-            vista.getJlbuser().setText("Clave de Acceso");
-            vista.getPwfcontraseña().setEnabled(false);
-            vista.getPwfcontraseña().setVisible(false);
-        }
+    //Metodo para volver a la vista anterior
+    public void regresar(){
+        Control_Principal control = new Control_Principal(new VistaPrincipal());
+        control.inicia_control();
+        vista.dispose();
     }
     
  }
     
-    
-        
-     
-   
-   
-
