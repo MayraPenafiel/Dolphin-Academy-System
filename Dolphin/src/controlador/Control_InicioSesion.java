@@ -23,20 +23,19 @@ import javax.swing.JOptionPane;
  */
 
 public class Control_InicioSesion{
-   private ModeloAlumno modal;
-   private Modelo_Profesor modpro;
-   private ModeloDirector moddir;
+   
+    //Atributos
+    private ModeloAlumno modal;
+    private Modelo_Profesor modpro;
+    private ModeloDirector moddir;
+    private VistaInicioSesion vista;
 
-   private VistaInicioSesion vista;
-   private VistaPrincipal vp;
-
-   //Constructores
-    public Control_InicioSesion(ModeloAlumno modal, Modelo_Profesor modpro, ModeloDirector moddir, VistaInicioSesion vista, VistaPrincipal vp) {
+    //Constructores
+    public Control_InicioSesion(ModeloAlumno modal, Modelo_Profesor modpro, ModeloDirector moddir, VistaInicioSesion vista) {
         this.modal = modal;
         this.modpro = modpro;
         this.moddir = moddir;
         this.vista = vista;
-        this.vp=vp;
         //INICIALIZAR ELEMENTOS.
         //vista.setTitle("Iniciar Sesion");
         vista.setVisible(true);
@@ -61,8 +60,8 @@ public class Control_InicioSesion{
     public void iniciaControl(){
         vista.getBtnIngresar().addActionListener(l->llamar_boton());
         vista.getJbcancelar().addActionListener(l->regresar());
-        VistaMenu vm;
-        Control_Menu menu=new Control_Menu();
+        VistaMenu vm=new VistaMenu();
+        Control_Menu menu=new Control_Menu(vm);
         menu.inicia_control();
      }
     
@@ -85,6 +84,7 @@ public class Control_InicioSesion{
     //Profesor
     public void comp_pro(){
         String usuario=vista.getTxtNombreUser().getText();
+        modpro.listaProfesores("");
         List<Profesor> lpro=modpro.listaProfesores();
          for (int i = 0; i <lpro.size(); i++) {
             if(lpro.get(i).getId_Profesor()==usuario){
@@ -99,6 +99,7 @@ public class Control_InicioSesion{
     //Director
     public void comp_dir(){
         String usuario=vista.getTxtNombreUser().getText();
+        moddir.listaDirectores("");
         List<Director> ldir=moddir.listaDirectores();
          for (int i = 0; i <ldir.size(); i++) {
             if(ldir.get(i).getId_director()==usuario){
@@ -115,6 +116,7 @@ public class Control_InicioSesion{
     //Alumno
     public void comp_al(){
         String usuario=vista.getTxtNombreUser().getText();
+        modal.listaAlumno("");
         List<Alumno> lal=modal.listaAlumnos();
          for (int i = 0; i <lal.size(); i++) {
             if(lal.get(i).getId_alumno()==usuario){
@@ -127,7 +129,8 @@ public class Control_InicioSesion{
     
     //Metodo para volver a la vista anterior
     public void regresar(){
-        Control_Principal control = new Control_Principal(new VistaPrincipal());
+        VistaPrincipal vp = new VistaPrincipal();
+        Control_Principal control = new Control_Principal(vp);
         control.inicia_control();
         vista.dispose();
     }
