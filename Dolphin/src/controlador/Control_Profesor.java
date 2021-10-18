@@ -23,8 +23,8 @@ import conexion.ConexionPG;
 public class Control_Profesor{
     private Modelo_Profesor modelo;
     private VistaProfesor vista;
-     DefaultTableModel tabla = new  DefaultTableModel();
-     private ConexionPG con = new ConexionPG();
+    DefaultTableModel tabla = new  DefaultTableModel();
+    private ConexionPG con = new ConexionPG();
 
     public Control_Profesor(Modelo_Profesor modelo, VistaProfesor vista) {
         this.modelo = modelo;

@@ -25,28 +25,25 @@ public class Modelo_Profesor extends Profesor {
     }
     
     public java.util.List<Profesor> listaProfesores(){
-    
         try {
             String sql = "select * from profesor "; 
             ResultSet rs = con.consulta(sql);
             java.util.List<Profesor> listap = new ArrayList<Profesor>();
             while(rs.next()){
-             Profesor p = new Profesor();
-             
-             p.setId_Profesor(rs.getString("Id_Profesor"));
-             p.setCedula(rs.getString("Cedula"));
-             p.setNombre(rs.getString("Nombre"));
-             p.setApellido(rs.getString("Apellido"));
-             p.setDireccion(rs.getString("Direccion"));
-             p.setTelefono(rs.getString("Telefono"));
-             p.setCorreo(rs.getString("Correo"));
-             p.setFechanacimiento(rs.getDate("F_nacimiento"));
-             p.setCelular(rs.getString("Celular"));
-             p.setFormacion(rs.getString("Formacion"));
-             
-            listap.add(p);
+                Profesor p = new Profesor();
+                p.setId_Profesor(rs.getString("Id_Profesor"));
+                p.setCedula(rs.getString("Cedula"));
+                p.setNombre(rs.getString("Nombre"));
+                p.setApellido(rs.getString("Apellido"));
+                p.setDireccion(rs.getString("Direccion"));
+                p.setTelefono(rs.getString("Telefono"));
+                p.setCorreo(rs.getString("Correo"));
+                p.setFechanacimiento(rs.getDate("F_nacimiento"));
+                p.setCelular(rs.getString("Celular"));
+                p.setFormacion(rs.getString("formacion"));
+                p.setContraseña(rs.getString("contraseña"));
+                listap.add(p);
             }
-             
             rs.close();
             return listap;
         } catch (Exception e) {
@@ -54,7 +51,6 @@ public class Modelo_Profesor extends Profesor {
             return null;
         }
     }
-    
     
      public java.util.List<Profesor> listaProfesores(String aguja){
             String sql = "select * from prfesor WHERE ";
@@ -64,37 +60,34 @@ public class Modelo_Profesor extends Profesor {
             ResultSet rs = con.consulta(sql);
             java.util.List<Profesor> listap = new ArrayList<Profesor>();
             try {
-            while(rs.next()){
-            Profesor p = new Profesor();
-             p.setId_Profesor(rs.getString("Id_Profesor"));
-             p.setCedula(rs.getString("Cedula"));
-             p.setNombre(rs.getString("Nombre"));
-             p.setApellido(rs.getString("Apellido"));
-             p.setDireccion(rs.getString("Direccion"));
-             p.setTelefono(rs.getString("Telefono"));
-             p.setCorreo(rs.getString("Correo"));
-             p.setFechanacimiento(rs.getDate("F_nacimiento"));
-             p.setCelular(rs.getString("Celular"));
-             //a.setEdad(Integer.parseInt(rs.getString("Edad")));
-             p.setFormacion(rs.getString("Formacion"));
-            
-            listap.add(p);
-             }
-            rs.close();
-            return listap;
-        } catch (Exception e) {
-            Logger.getLogger(ModeloAlumno.class.getName()).log(Level.SEVERE, null, e);
-           return null;
-            
+                while(rs.next()){
+                    Profesor p = new Profesor();
+                    p.setId_Profesor(rs.getString("Id_Profesor"));
+                    p.setCedula(rs.getString("Cedula"));
+                    p.setNombre(rs.getString("Nombre"));
+                    p.setApellido(rs.getString("Apellido"));
+                    p.setDireccion(rs.getString("Direccion"));
+                    p.setTelefono(rs.getString("Telefono"));
+                    p.setCorreo(rs.getString("Correo"));
+                    p.setFechanacimiento(rs.getDate("F_nacimiento"));
+                    p.setCelular(rs.getString("Celular"));
+                    p.setFormacion(rs.getString("formacion"));
+                    p.setContraseña(rs.getString("contraseña"));
+                    listap.add(p);
+                }
+                rs.close();
+                return listap;
+            } catch (Exception e) {
+                Logger.getLogger(ModeloAlumno.class.getName()).log(Level.SEVERE, null, e);
+                return null;
+            }
         }
-        
-    }
      
       public boolean grabar(){
         String sql;
-        sql="INSERT INTO director(Id_Profesor,Cedula, Nombre,Apellido, Direccion, Telefono, Correo, F_Nacimiento,Celular,Formacion)";
+        sql="INSERT INTO director(Id_Profesor,Cedula, Nombre,Apellido, Direccion, Telefono, Correo, F_Nacimiento,Celular,formacion,contraseña)";
         sql+="VALUES('"+getId_Profesor()+"','"+getCedula()+"','"+getNombre()+"','"+getApellido()+"','"+getDireccion()+"','"+getTelefono()+"','"+getCorreo()+"','"
-                +getFechanacimiento()+"','"+getCelular()+"','"+getFormacion()+"',)";
+                +getFechanacimiento()+"','"+getCelular()+"','"+getFormacion()+"','"+getContraseña()+"')";
         return con.accion(sql);
         }  
         
@@ -111,8 +104,9 @@ public class Modelo_Profesor extends Profesor {
                 + ", F_Nacimiento = '" + getFechanacimiento()+ "'"
                 + ", Celular = '" + getCelular()+"'"
                 + ", Formacion = '" + getFormacion()+"'"
+                +", contraseña = '"+getContraseña()+"'"
                 ;
-        sql += " WHERE id= '" + getId_Profesor()+"' ";
+        sql += " WHERE Id_Profesor= '" + getId_Profesor()+"' ";
     return con.accion(sql);
     }
 

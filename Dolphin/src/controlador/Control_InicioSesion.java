@@ -15,7 +15,6 @@ import Vista.VistaInicioSesion;
 import Vista.VistaMenu;
 import Vista.VistaPrincipal;
 import java.util.List;
-import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -37,18 +36,16 @@ public class Control_InicioSesion{
         this.moddir = moddir;
         this.vista = vista;
         this.vp=vp;
-        //INICIALIZAR ELEMENTOS.
-        vista.setTitle("Iniciar Sesion");
+    }
+    public Control_InicioSesion(VistaInicioSesion vista) {
         vista.setVisible(true);
-        if(vp.getBtnAlum().isSelected()){
+        if(Control_Principal.boton=="A"){
             vista.getJlbpass().setEnabled(false);
             vista.getJlbpass().setVisible(false);
             vista.getJlbuser().setText("Clave de Acceso");
             vista.getPwfcontraseña().setEnabled(false);
             vista.getPwfcontraseña().setVisible(false);
         }
-    }
-    public Control_InicioSesion() {
     }
     
     //Controlar Eventos de la Vista IiciarSesion
@@ -57,13 +54,13 @@ public class Control_InicioSesion{
         vista.getJbcancelar().addActionListener(l->vista.dispose());
      }
     private void llamar_comp(){
-        if(vp.getBtnProf().isSelected()){
+        if(Control_Principal.boton=="P"){
            comp_pro();
         }
-        if(vp.getBtnAdm().isSelected()){ 
+        if(Control_Principal.boton=="D"){ 
             comp_dir();
         }
-        if (vp.getBtnAlum().isSelected()){
+        if (Control_Principal.boton=="A"){
             comp_al();
         }
     }
@@ -71,6 +68,7 @@ public class Control_InicioSesion{
     //Profesor
     public void comp_pro(){
         String usuario=vista.getTxtNombreUser().getText();
+        
         List<Profesor> lpro=modpro.listaProfesores();
          for (int i = 0; i <lpro.size(); i++) {
             if(vista.getTxtNombreUser().getText()==usuario){
@@ -111,6 +109,7 @@ public class Control_InicioSesion{
          }
     } 
     
+    //Cargar Profesor
  }
     
     
