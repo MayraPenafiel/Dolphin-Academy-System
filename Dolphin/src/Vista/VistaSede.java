@@ -307,13 +307,13 @@ public class VistaSede extends javax.swing.JFrame {
 
         TdSede.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Nombre", "Direccion", "Telefono", "Email", "Director"
+                "ID", "Nombre", "Direccion", "Telefono", "Email", "Director", "Id_OA", "Disciplina", "Capacidad"
             }
         ));
         jScrollPane1.setViewportView(TdSede);

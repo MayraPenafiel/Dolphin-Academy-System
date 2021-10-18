@@ -26,7 +26,7 @@ public class ControlOfertaAcademica {
         this.vista = vista;
 
         // solamente inicializar elementos
-        vista.setTitle("Sede");
+        vista.setTitle("Oferta Academica");
         //vista.getLblmensaje().setText("Bienvenido Sistema 1.0");
         vista.setVisible(true);
         cargaLista(""); //Crear metodo en esta clase
@@ -73,7 +73,7 @@ public class ControlOfertaAcademica {
         String id_sede = vista.getTxtDiscOA1().getText();
         String capacidad = vista.getTxtCapOA1().getText();
         
-         ModeloOfertaAcademica OA = new ModeloOfertaAcademica();
+        ModeloOfertaAcademica OA = new ModeloOfertaAcademica();
         OA.setId_disciplina(id_disciplina);
         OA.setId_sede(id_sede);
         OA.setCapacidad(0);

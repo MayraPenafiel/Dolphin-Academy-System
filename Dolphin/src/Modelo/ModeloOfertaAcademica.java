@@ -1,4 +1,3 @@
-
 package Modelo;
 
 import Modelo.clases_base.OfertaAcademica;
@@ -20,8 +19,8 @@ public class ModeloOfertaAcademica extends OfertaAcademica{
     public ModeloOfertaAcademica() {
     }
 
-    public ModeloOfertaAcademica(String id_disciplina, String id_sede, int capacidad) {
-        super(id_disciplina, id_sede, capacidad);
+    public ModeloOfertaAcademica(String id_disciplina, String id_sede, int capacidad, String id_OA) {
+        super(id_disciplina, id_sede, capacidad, id_OA);
     }
     
     

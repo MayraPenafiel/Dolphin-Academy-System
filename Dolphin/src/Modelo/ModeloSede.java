@@ -2,6 +2,7 @@
 package Modelo;
 
 import Modelo.clases_base.Sede;
+import Modelo.clases_base.OfertaAcademica;
 import conexion.ConexionPG;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -26,19 +27,22 @@ public class ModeloSede extends Sede{
     }
     
     
+    
     public java.util.List<Sede> listaSede(){
     
         try {
-            String sql = "select * from alumno "; 
+            
+            String sql = "select * from sede ";
             ResultSet rs = con.consulta(sql);
             java.util.List<Sede> lista = new ArrayList<Sede>();
             while(rs.next()){
              Sede sd = new Sede();
-             sd.setCod_sede(rs.getString("cod_sede"));
-             sd.setNombre_s(rs.getString("nomnbre_s"));
-             sd.setDireccion_s(rs.getString("direccion_s"));
-             sd.setCorreo_s(rs.getString("correo_s"));
-             sd.setTelefono_s(rs.getString("telefono_s"));
+             sd.setCod_sede(rs.getString("Cod_sede"));
+             sd.setNombre_s(rs.getString("Nomnbre_s"));
+             sd.setDireccion_s(rs.getString("Direccion_s"));
+             sd.setCorreo_s(rs.getString("Correo_s"));
+             sd.setTelefono_s(rs.getString("Telefono_s"));
+             
             lista.add(sd);
             }
              
@@ -55,19 +59,19 @@ public class ModeloSede extends Sede{
     public java.util.List<Sede> listaSede(String aguja){
     
         try {
-            String sql = "select * from sede WHERE ";
-            sql += "UPPER(cod_sede) like UPPER('%" +aguja+ "%') OR ";
-            sql += "UPPER(nombre_s) like UPPER('%" +aguja+ "%')";
+            String sql = "select * from sede";
+            sql += "UPPER(Cod_sede) like UPPER('%" +aguja+ "%') OR ";
+            sql += "UPPER(Nombre_s) like UPPER('%" +aguja+ "%')";
             ResultSet rs = con.consulta(sql);
             java.util.List<Sede> lista = new ArrayList<Sede>();
             
             while(rs.next()){
             Sede sd = new Sede();
             sd.setCod_sede(rs.getString("cod_sede"));
-             sd.setNombre_s(rs.getString("nomnbre_s"));
-             sd.setDireccion_s(rs.getString("direccion_s"));
-             sd.setCorreo_s(rs.getString("correo_s"));
-             sd.setTelefono_s(rs.getString("telefono_s"));
+            sd.setNombre_s(rs.getString("nomnbre_s"));
+            sd.setDireccion_s(rs.getString("direccion_s"));
+            sd.setCorreo_s(rs.getString("correo_s"));
+            sd.setTelefono_s(rs.getString("telefono_s"));
             lista.add(sd);
              }
             rs.close();
