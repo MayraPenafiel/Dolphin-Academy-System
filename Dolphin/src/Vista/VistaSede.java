@@ -210,12 +210,10 @@ public class VistaSede extends javax.swing.JInternalFrame {
 
         lbtitutolo1.setText("¿Seguro que desea Eliminar la Sede Seleccionada?");
 
-        jLabel16.setBackground(new java.awt.Color(204, 255, 255));
         jLabel16.setText("ID:");
 
         txteliminarcodSede.setEditable(false);
         txteliminarcodSede.setBackground(new java.awt.Color(255, 255, 255));
-        txteliminarcodSede.setForeground(new java.awt.Color(255, 255, 255));
         txteliminarcodSede.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txteliminarcodSede.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -227,7 +225,6 @@ public class VistaSede extends javax.swing.JInternalFrame {
         txteliminarnombre_s.setBackground(new java.awt.Color(255, 255, 255));
         txteliminarnombre_s.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jLabel17.setBackground(new java.awt.Color(204, 255, 255));
         jLabel17.setText("Nombre:");
 
         btnconfirmareliminar_s.setText("ACEPTAR");

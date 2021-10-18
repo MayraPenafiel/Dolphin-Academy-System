@@ -1,6 +1,8 @@
 package Modelo.clases_base;
 
 
+
+
 import java.sql.Date;
 
 public class Profesor extends Personal_administrativo{

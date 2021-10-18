@@ -53,7 +53,6 @@ public class VistaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setBackground(new java.awt.Color(153, 255, 204));
         jLabel1.setText("ADMINISTRADOR");
 
         BtnProf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/User(2).png"))); // NOI18N

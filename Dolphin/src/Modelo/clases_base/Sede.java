@@ -1,5 +1,6 @@
 package Modelo.clases_base;
 
+
 public class Sede {
     
     //Atributos
