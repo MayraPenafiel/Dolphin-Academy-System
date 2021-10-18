@@ -5,23 +5,20 @@
  */
 package controlador;
 
-import Modelo.ModeloAlumno;
-import Modelo.ModeloDirector;
-import Modelo.Modelo_Profesor;
 import Vista.VistaInicioSesion;
 import Vista.VistaPrincipal;
-import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author MayraPeñafiel
  */
 
-public class Control_Principal {
+public class Control_Principal { 
  
     //Atributos
     private VistaPrincipal vp;
-    private VistaInicioSesion vis;
+    public static String boton;
     
     //Constructores
     public Control_Principal() {
@@ -33,18 +30,27 @@ public class Control_Principal {
     
     //Controlar Eventos de la Vista PRincipal
     public void inicia_control() {
-        vp.getBtnAdm().addActionListener(l->Iniciar_sesion());
-        vp.getBtnAlum().addActionListener(l->Iniciar_sesion());
-        vp.getBtnProf().addActionListener(l->Iniciar_sesion());
+        vp.getBtnAdm().addActionListener(l -> Iniciar_sesion("D"));
+        vp.getBtnAlum().addActionListener(l->Iniciar_sesion("A"));
+        vp.getBtnProf().addActionListener(l->Iniciar_sesion("P"));
+        vp.getJbsalir().addActionListener(l->salidaPrograma());
     }
     
-    private void Iniciar_sesion(){
+    private void Iniciar_sesion(String g){
+        boton=g;
         vp.setVisible(true);
-        ModeloAlumno mal= new ModeloAlumno();
-        Modelo_Profesor mpro= new Modelo_Profesor();
-        ModeloDirector mdir = new ModeloDirector();
-        Control_InicioSesion c= new Control_InicioSesion(mal,mpro,mdir,vis,vp);
+        VistaInicioSesion vis =new VistaInicioSesion();
+        Control_InicioSesion c= new Control_InicioSesion (vis);
         c.iniciaControl();
+    }
+
+    public void salidaPrograma(){
+        int i=JOptionPane.showConfirmDialog(null, "Realmente desea salir de Dolphin?", "Confirmar salida",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
+        if(i==0){
+                System.exit(0);
+        }
     }
     
 }

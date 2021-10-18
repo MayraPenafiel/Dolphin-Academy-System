@@ -8,7 +8,9 @@ import javax.swing.table.DefaultTableModel;
 import Modelo.clases_base.Disciplina;
 import modelo.Modelo_Disciplina;
 import Vista.VistaDisciplina;
-
+import Vista.VistaMenu;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class Control_Disciplina {
     private Modelo_Disciplina modelo;
@@ -18,56 +20,52 @@ public class Control_Disciplina {
         this.modelo = modelo;
         this.vista = vista;
         vista.setTitle("CRUD DISCIPLINAS");
-        vista.setLocationRelativeTo(null);
         vista.setVisible(true);
-        //cargaLista();
+        cargaLista("");
     }
     
        public void iniciaControl(){
-//        KeyListener kl = new KeyListener(){
-//            @Override
-//            public void keyTyped(KeyEvent e) {
-//                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//            }
-//
-//            @Override
-//            public void keyPressed(KeyEvent e) {
-//                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//            }
-//
-//            @Override
-//            public void keyReleased(KeyEvent e) {
-//                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//                //cargaLista(vista.getTxtBuscar().getText());
-//                cargaLista(vista.getTxtBuscar().getText()); 
-//            }
-//            
-//        };
-//        
-//        
+        KeyListener kl = new KeyListener(){
+            @Override
+            public void keyTyped(KeyEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                //cargaLista(vista.getTxtBuscar().getText());
+                cargaLista(vista.getTxtbuscard().getText()); 
+            }
+        };
+        
     //Controlar los eventos de la vista
-    vista.getBtnlistar().addActionListener(l->cargaLista());
+    vista.getBtnlistar().addActionListener(l->cargaLista(""));
     vista.getBtncrear().addActionListener(l->cargarDialogo(1));
     vista.getBtneditar().addActionListener(l->cargarDialogo(2));
+    vista.getBtnaceptar().addActionListener(l->grabarDisciplina());
     vista.getBtneliminar().addActionListener(l->eliminarDisciplina());
+    vista.getBtncancelar().addActionListener(l->regresar());
+    vista.getBtnregresarmenu().addActionListener(l->regresarMenu());
     
-//    
-//    
-//    //controlador buscar
-//    vista.getTxtBuscar().addKeyListener(kl);
-//    
-//    
-//    
-//    
-   }
     
-       private void cargarDialogo(int origen){
+    
+    //controlador buscar
+    vista.getTxtbuscard().addKeyListener(kl);
+    }
+
+    private void cargarDialogo(int origen){
         vista.getDgDisciplina().setSize(600,500);
         vista.getDgDisciplina().setLocationRelativeTo(vista);
         if(origen==1){
             vista.getDgDisciplina().setTitle("Crear Disciplina");
             vista.getBtnaceptar().addActionListener(l->grabarDisciplina());
-             vista.getDgDisciplina().setVisible(true);
+            vista.getDgDisciplina().setVisible(true);
         }else{
              if(vista.getTbldisciplina().getSelectedRow()==-1){
             JOptionPane.showMessageDialog(vista,"Debe seleccionar una fila,Intente de nuevo");
@@ -77,19 +75,14 @@ public class Control_Disciplina {
                    cargarDatos();
                     vista.getDgDisciplina().setVisible(true);
              }
-   
         }
-       
     }
        
-       private void limpiar(){
-        vista.getTxtcodigo().setText("");
-        vista.getTxtnombred().setText("");
-        vista.getTxtdescripciond().setText("");
-        vista.getTxtobservacionesd().setText("");
-       
-                
-        
+    private void limpiar(){
+       vista.getTxtcodigo().setText("");
+       vista.getTxtnombred().setText("");
+       vista.getTxtdescripciond().setText("");
+       vista.getTxtobservacionesd().setText("");
     }
     
   private void cargaLista(){
@@ -116,46 +109,22 @@ public class Control_Disciplina {
         });
     }
     
-//    private void examinarFoto(){
-//        JFileChooser jfc = new JFileChooser();
-//        jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-//        int estado=jfc.showOpenDialog(null);
-//        if(estado==JFileChooser.APPROVE_OPTION){
-//            try {
-//                Image miImagen = ImageIO.read(jfc.getSelectedFile()).getScaledInstance(vista.getLblfoto().getWidth(),
-//                        vista.getLblfoto().getHeight(),
-//                        Image.SCALE_DEFAULT);
-//                Icon icon = new ImageIcon(miImagen);
-//                vista.getLblfoto().setIcon(icon);
-//                vista.getLblfoto().updateUI();
-//            } catch (IOException ex) {
-//                Logger.getLogger(ControlPersona.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//            
-//        }
-//    }
-    
-   
     private void grabarDisciplina(){
         String id_disciplina = vista.getTxtcodigo().getText();
         String nombre_d = vista.getTxtnombred().getText();
         String descripcion_d = vista.getTxtdescripciond().getText();
         String observaciones = vista.getTxtobservacionesd().getText();
-        
-        
-        
         Modelo_Disciplina disciplina = new Modelo_Disciplina();
-        disciplina.setId_disciplina(descripcion_d);
+        disciplina.setId_disciplina(id_disciplina);
         disciplina.setNombre_d(nombre_d);
         disciplina.setDescripcion_d(descripcion_d);
         disciplina.setObservaciones(observaciones);
         
-        
        if(disciplina.grabar()){
            JOptionPane.showMessageDialog(vista, "Disciplina Creada Satisfactoriamente");
            vista.getDgDisciplina().setVisible(false);
-            limpiar();
-            cargaLista();
+           limpiar();
+           cargaLista();
        }else{
            JOptionPane.showMessageDialog(vista, "Error");
        }
@@ -175,9 +144,6 @@ public class Control_Disciplina {
             }else{
                 JOptionPane.showMessageDialog(vista, "Error");
             }
-             
-             
-             
         }
     }
       
@@ -185,26 +151,19 @@ public class Control_Disciplina {
       private void cargarDatos(){
         AbstractTableModel tblmodel= (AbstractTableModel) this.vista.getTbldisciplina().getModel();
         JTable tabla=this.vista.getTbldisciplina();
-        
-       
         List<Disciplina> l1= modelo.listaDisciplinas(tblmodel.getValueAt(tabla.getSelectedRow(), 0)+"");
-        
         vista.getTxtcodigo().setText(l1.get(0).getId_disciplina());
         vista.getTxtnombred().setText(l1.get(0).getNombre_d());
         vista.getTxtdescripciond().setText(l1.get(0).getDescripcion_d());
         vista.getTxtobservacionesd().setText(l1.get(0).getObservaciones());
-
       }
       
     private void editarDisciplina(){
-
         Modelo_Disciplina disciplina = new Modelo_Disciplina();
         disciplina.setId_disciplina(vista.getTxtcodigo().getText()+"");
         disciplina.setNombre_d(vista.getTxtnombred().getText()+"");
         disciplina.setDescripcion_d(vista.getTxtdescripciond().getText()+"");
-      
         disciplina.setObservaciones(vista.getTxtobservacionesd().getText()+"");
-        
         if(disciplina.editarDisciplina()){
            JOptionPane.showMessageDialog(vista, "Disciplina Editada Satisfactoriamente");
              vista.getDgDisciplina().setVisible(false);
@@ -215,7 +174,17 @@ public class Control_Disciplina {
        }
     }
     
-    
-    
-    
+     public void regresar(){
+        Modelo_Disciplina mo=new Modelo_Disciplina();
+        VistaDisciplina vd = new VistaDisciplina();
+        Control_Disciplina control = new Control_Disciplina(mo,vd);
+        control.iniciaControl();
+        vista.dispose();
+    }
+     public void regresarMenu(){
+        VistaMenu vm = new VistaMenu();
+        Control_Menu control = new Control_Menu(vm);
+        control.inicia_control();
+        vista.dispose();
+    }
 }

@@ -13,47 +13,44 @@ import conexion.ConexionPG;
  *
  * @author THALY
  */
+
 public class ModeloDirector extends Director{
+    
+    //Atributos
     private ConexionPG con = new ConexionPG();
 
+    //Constructores
     public ModeloDirector() {
     }
-
-    public ModeloDirector(String id_director, String direccion_sede, String contrasenia, String formacion) {
-        super(id_director, direccion_sede, contrasenia, formacion);
+    public ModeloDirector(String id_director, String sede, String contrasenia, String formacion) {
+        super(id_director, sede, contrasenia, formacion);
     }
-
-    public ModeloDirector(String id_director, String direccion_sede, String formacion, String contraseña, String cedula, String nombre, String apellido, String telefono, String direccion, String correo, Date fechanacimiento, String celular, int edad, String tipo_p) {
-        super(id_director, direccion_sede, formacion, contraseña, cedula, nombre, apellido, telefono, direccion, correo, fechanacimiento, celular, edad, tipo_p);
+    public ModeloDirector(String id_director, String sede, String formacion, String contraseña, String cedula, String nombre, String apellido, String telefono, String direccion, String correo, Date fechanacimiento, String celular, int edad, String tipo_p) {
+        super(id_director, sede, formacion, contraseña, cedula, nombre, apellido, telefono, direccion, correo, fechanacimiento, celular, edad, tipo_p);
     }
     
-    
+    //Metodo Cargar/Listar/Actualizar
     public java.util.List<Director> listaDirectores(){
-    
         try {
             String sql = "select * from director "; 
             ResultSet rs = con.consulta(sql);
             java.util.List<Director> lista = new ArrayList<Director>();
             while(rs.next()){
-             Director d = new Director();
-             
-             d.setId_director(rs.getString("Id"));
-             d.setCedula(rs.getString("Cedula"));
-             d.setNombre(rs.getString("Nombre"));
-             d.setApellido(rs.getString("Apellido"));
-             d.setDireccion(rs.getString("Direccion"));
-             d.setTelefono(rs.getString("Telefono"));
-             d.setCorreo(rs.getString("Correo"));
-             d.setFechanacimiento(rs.getDate("F_nacimiento"));
-             d.setCelular(rs.getString("Celular"));
-             
-             //d.setContraseña(rs.getString("Contraseña"));
-             d.setFormacion(rs.getString("Formacion"));
-             d.setDireccion_sede(rs.getString("direccion_sede"));
-             
-            lista.add(d);
+                Director d = new Director();
+                 d.setId_director(rs.getString("Id_Director"));
+                 d.setCedula(rs.getString("Cedula"));
+                 d.setNombre(rs.getString("Nombre"));
+                 d.setApellido(rs.getString("Apellido"));
+                 d.setDireccion(rs.getString("Direccion"));
+                 d.setTelefono(rs.getString("Telefono"));
+                 d.setCorreo(rs.getString("Correo"));
+                 d.setFechanacimiento(rs.getDate("F_Nacimiento"));
+                 d.setCelular(rs.getString("Celular"));
+                 d.setContraseña(rs.getString("contraseña"));
+                 d.setFormacion(rs.getString("formacion"));
+                 d.setSede(rs.getString("COD_sede"));
+                 lista.add(d);
             }
-             
             rs.close();
             return lista;
         } catch (Exception e) {
@@ -62,74 +59,76 @@ public class ModeloDirector extends Director{
         }
     }
     
+    //Metodo Buscar
     public java.util.List<Director> listaDirectores(String aguja){
-            String sql = "select * from director WHERE ";
-            sql += "UPPER(iddirector) like UPPER('%" +aguja+ "%') OR ";
-            sql += "UPPER(nombre) like UPPER('%" +aguja+ "%') OR ";
-            sql += "UPPER(apellido) like UPPER('%" +aguja+ "%')";
-            ResultSet rs = con.consulta(sql);
-            java.util.List<Director> lista = new ArrayList<Director>();
-            try {
+        String sql = "select * from director WHERE ";
+            sql += "UPPER(Id_Director) like UPPER('%" +aguja+ "%') OR ";
+            sql += "UPPER(Nombre) like UPPER('%" +aguja+ "%') OR ";
+            sql += "UPPER(Apellido) like UPPER('%" +aguja+ "%') OR ";
+            sql += "UPPER(COD_sede) like UPPER('%" +aguja+ "%') ";
+        ResultSet rs = con.consulta(sql);
+        java.util.List<Director> lista = new ArrayList<Director>();
+        try {
             while(rs.next()){
-            Director d = new Director();
-            d.setId_director(rs.getString("Id"));
-             d.setCedula(rs.getString("Cedula"));
-             d.setNombre(rs.getString("Nombre"));
-             d.setApellido(rs.getString("Apellido"));
-             d.setDireccion(rs.getString("Direccion"));
-             d.setTelefono(rs.getString("Telefono"));
-             d.setCorreo(rs.getString("Correo"));
-             d.setFechanacimiento(rs.getDate("F_nacimiento"));
-             d.setCelular(rs.getString("Celular"));
-             //a.setEdad(Integer.parseInt(rs.getString("Edad")));
-             d.setFormacion(rs.getString("Formacion"));
-             d.setDireccion_sede(rs.getString("Nombre_sede"));
-            lista.add(d);
-             }
+                Director d = new Director();
+                d.setId_director(rs.getString("Id_Director"));
+                d.setCedula(rs.getString("Cedula"));
+                d.setNombre(rs.getString("Nombre"));
+                d.setApellido(rs.getString("Apellido"));
+                d.setDireccion(rs.getString("Direccion"));
+                d.setTelefono(rs.getString("Telefono"));
+                d.setCorreo(rs.getString("Correo"));
+                d.setFechanacimiento(rs.getDate("F_Nacimiento"));
+                d.setCelular(rs.getString("Celular"));
+                d.setContraseña(rs.getString("contraseña"));
+                d.setFormacion(rs.getString("formacion"));
+                d.setSede(rs.getString("COD_sede"));
+                lista.add(d);
+            }
             rs.close();
             return lista;
         } catch (Exception e) {
             Logger.getLogger(ModeloAlumno.class.getName()).log(Level.SEVERE, null, e);
            return null;
         }
-        
     }
-      
-       public boolean grabar(){
-        String sql;
-        sql="INSERT INTO director(id,cedula, nombre,apellido, direccion, telefono, correo, fecha_nacimiento,celular,contraseña,formacion,sede)";
-        sql+="VALUES('"+getId_director()+"','"+getCedula()+"','"+getNombre()+"','"+getApellido()+"','"+getDireccion()+"','"+getTelefono()+"','"+getCorreo()+"','"
-                +getFechanacimiento()+"','"+getCelular()+"','"+getContraseña()+"','"+getFormacion()+"','"+getDireccion_sede()+"',)";
-        return con.accion(sql);
-        }  
-        
-        public boolean modificar(){
-    String sql;
+     
+    // METODOS DE DE MANIPULACION DE DATOS
     
-    sql = "UPDATE director ";
-        sql += " SET nombre = '" + getNombre()+ "'"
-                + ", apellido = '" + getApellido() + "'"
-                + ", cedula = '" + getCedula()+ "'"
-                + ", direccion = '" + getDireccion()+ "'"
-                + ", telefono = '" + getTelefono()+"'"
-                + ", correo = '" + getCorreo()+"'"
-                + ", fechanacimiento = '" + getFechanacimiento()+ "'"
-                + ", celular = '" + getCelular()+"'"
-                + ", ccontraseña = '" + getContraseña()+"'"
+    //Metodo Grabar/Guardar
+    public boolean grabar(){
+        String sql;
+        sql="INSERT INTO director(Id_Director,Cedula, Nombre,Apellido, Direccion, Telefono, Correo, F_Nacimiento,Celular,contraseña,formacion,COD_sede)";
+        sql+="VALUES('"+getId_director()+"','"+getCedula()+"','"+getNombre()+"','"+getApellido()+"','"+getDireccion()+"','"+getTelefono()+"','"+getCorreo()+"','"
+                +getFechanacimiento()+"','"+getCelular()+"','"+getContraseña()+"','"+getFormacion()+"','"+getSede()+"',)";
+        return con.accion(sql);
+    }  
+        
+    //Metodo Modificar/Editar
+    public boolean modificar(){
+        String sql;
+        sql = "UPDATE director ";
+        sql += " SET Nombre = '" + getNombre()+ "'"
+                + ", Apellido = '" + getApellido() + "'"
+                + ", Cedula = '" + getCedula()+ "'"
+                + ", Direccion = '" + getDireccion()+ "'"
+                + ", Telefono = '" + getTelefono()+"'"
+                + ", Correo = '" + getCorreo()+"'"
+                + ", F_Nacimiento = '" + getFechanacimiento()+ "'"
+                + ", Celular = '" + getCelular()+"'"
+                + ", contraseña = '" + getContraseña()+"'"
                 + ", formacion = '" + getFormacion()+"'"
-                + ", direccion_sede = '" + getDireccion_sede()+"'"
-                
-                
+                + ", COD_sede = '" + getSede()+"'"
                 ;
-                
-        sql += " WHERE id= '" + getId_director()+"' ";
+        sql += " WHERE Id_Director= '" + getId_director()+"' ";
     return con.accion(sql);
     }
 
+    //Metodo Eliminar/Remover/Borrar
     public boolean eliminar() {
         String sql;
         sql = "DELETE FROM director ";
-        sql += " WHERE iddirector = '" + getId_director()+ "' ";
+        sql += " WHERE Id_Director = '" + getId_director()+ "' ";
         return con.accion(sql);
     }
         
