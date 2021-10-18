@@ -94,8 +94,6 @@ public class Control_Profesor{
     
     
     private void cargaLista(String aguja){
-        
-        DefaultTableCellRenderer r = new DefaultTableCellRenderer();
         DefaultTableModel tableModel;
         tableModel = (DefaultTableModel) vista.getTbProfesor().getModel();
         tableModel.setNumRows(0);
