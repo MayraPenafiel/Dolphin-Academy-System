@@ -16,9 +16,9 @@ public class ConexionPG {
     private ResultSet rs;
     //Datos de su conexion local:
   
-    private String cadenaConexion="jdbc:postgresql://localhost:5432/Dolphin";
+    private String cadenaConexion="jdbc:postgresql://localhost:5433/Dolphin";
     private String usuarioPG="postgres";
-    private String contrasPG="0511";
+    private String contrasPG="ISTA2020";
 
     public ConexionPG() {
         try {
@@ -67,7 +67,6 @@ public class ConexionPG {
     public void setCon(Connection con) {
         this.con = con;
     }
-    
     
     
 }

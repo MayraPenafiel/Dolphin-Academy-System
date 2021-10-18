@@ -77,7 +77,7 @@ public class ControlSede {
         String correo_s = vista.getTxtCorreoS1().getText();
         String telefono_s = vista.getTxtTelfSede1().getText();
         
-         ModeloSede sede = new ModeloSede();
+        ModeloSede sede = new ModeloSede();
         sede.setCod_sede(Cod_sede);
         sede.setNombre_s(nombre_s);
         sede.setDireccion_s(direccion_s);

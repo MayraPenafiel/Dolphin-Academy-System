@@ -9,6 +9,11 @@ public class Sede {
     private String direccion_s;
     private String correo_s;
     private String telefono_s;
+    //Atributos Oferta Academica
+    private String id_disciplina;
+    private String id_sede;
+    private int capacidad;
+    private String id_OA;
 
     //Constructores
     public Sede() {
