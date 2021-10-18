@@ -7,8 +7,9 @@ package Modelo;
 
 /**
  *
- * @author User
+ * @author MayraPeñafiel
  */
+
 public class Modelo_Realiza {
     
 }
