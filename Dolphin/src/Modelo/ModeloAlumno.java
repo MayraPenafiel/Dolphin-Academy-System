@@ -39,7 +39,7 @@ public class ModeloAlumno extends Alumno{
             java.util.List<Alumno> lista = new ArrayList<Alumno>();
             while(rs.next()){
              Alumno a = new Alumno();
-             a.setId_alumno(rs.getString("Id"));
+             a.setId_alumno(rs.getString("Id_Alumno"));
              a.setCategoria(rs.getString("Categoria"));
              a.setCedula(rs.getString("Cedula"));
              a.setNombre(rs.getString("Nombre"));
@@ -47,7 +47,7 @@ public class ModeloAlumno extends Alumno{
              a.setDireccion(rs.getString("Direccion"));
              a.setTelefono(rs.getString("Telefono"));
              a.setCorreo(rs.getString("Correo"));
-             a.setFechanacimiento(rs.getDate("F_nacimiento"));
+             a.setFechanacimiento(rs.getDate("F_Nacimiento"));
              a.setCelular(rs.getString("Celular"));
              //a.setEdad(Integer.parseInt(rs.getString("Edad")));
              a.setDisciplina(rs.getString("Disciplina"));
@@ -66,15 +66,15 @@ public class ModeloAlumno extends Alumno{
     
         try {
             String sql = "select * from alumno WHERE ";
-            sql += "UPPER(idalumno) like UPPER('%" +aguja+ "%') OR ";
-            sql += "UPPER(nombre) like UPPER('%" +aguja+ "%') OR ";
-            sql += "UPPER(apellido) like UPPER('%" +aguja+ "%')";
+            sql += "UPPER(Id_Alumno) like UPPER('%" +aguja+ "%') OR ";
+            sql += "UPPER(Nombre) like UPPER('%" +aguja+ "%') OR ";
+            sql += "UPPER(Apellido) like UPPER('%" +aguja+ "%')";
             ResultSet rs = con.consulta(sql);
             java.util.List<Alumno> lista = new ArrayList<Alumno>();
             
             while(rs.next()){
             Alumno a = new Alumno();
-            a.setId_alumno(rs.getString("Id"));
+            a.setId_alumno(rs.getString("Id_Alumno"));
             a.setCategoria(rs.getString("Categoria"));
              a.setCedula(rs.getString("Cedula"));
              a.setNombre(rs.getString("Nombre"));
@@ -82,7 +82,7 @@ public class ModeloAlumno extends Alumno{
              a.setDireccion(rs.getString("Direccion"));
              a.setTelefono(rs.getString("Telefono"));
              a.setCorreo(rs.getString("Correo"));
-             a.setFechanacimiento(rs.getDate("F_nacimiento"));
+             a.setFechanacimiento(rs.getDate("F_Nacimiento"));
              a.setCelular(rs.getString("Celular"));
              a.setEntrenamiento(rs.getString("Entrenamiento"));
              a.setDisciplina(rs.getString("Disciplina"));
@@ -99,8 +99,8 @@ public class ModeloAlumno extends Alumno{
     }
         public boolean grabar(){
         String sql;
-        sql="INSERT INTO alumno(idalumno,categoria,cedula, nombre,apellido, direccion, telefono, correo, fecha_nacimiento,celular,disciplina,entrenamiento)";
-        sql+="VALUES('"+getId_alumno()+"','"+getCategoria()+ "','"+getCategoria()+"','"+getCedula()+"','"+getNombre()+"','"+getApellido()+"','"+getDireccion()+"','"+getTelefono()+"','"+getCorreo()+"','"
+        sql="INSERT INTO alumno(Id_Alumno,Categoria,Cedula, Nombre,Apellido, Direccion, Telefono, Correo, F_Nacimiento,Celular,Disciplina,Entrenamiento)";
+        sql+="VALUES('"+getId_alumno()+"','"+getCategoria()+"','"+getCedula()+"','"+getNombre()+"','"+getApellido()+"','"+getDireccion()+"','"+getTelefono()+"','"+getCorreo()+"','"
                 +getFechanacimiento()+"','"+getCelular()+"','"+getDisciplina()+"','"+getEntrenamiento()+"')";
         return con.accion(sql);
         }
@@ -109,27 +109,27 @@ public class ModeloAlumno extends Alumno{
     String sql;
     
     sql = "UPDATE alumno ";
-        sql += " SET categoria = '" + getCategoria() + "'"
-                + "nombre = '" + getNombre() + "'"
-                + ", apellido = '" + getApellido() + "'"
-                + ", cedula = '" + getCedula()+ "'"
-                + ", direccion = '" + getDireccion()+ "'"
-                + ", telefono = '" + getTelefono()+"'"
-                + ", correo = '" + getCorreo()+"'"
-                + ", fechanacimiento = '" + getFechanacimiento()+ "'"
-                + ", celular = '" + getCelular()+"'"
-                + ", entrenamiento = '" + getEntrenamiento()+"'"
-                + ", disciplina = '" + getDisciplina()+"'"
+        sql += " SET C000ategoria = '" + getCategoria() + "'"
+                + "Nombre = '" + getNombre() + "'"
+                + ", Apellido = '" + getApellido() + "'"
+                + ", Cedula = '" + getCedula()+ "'"
+                + ", Direccion = '" + getDireccion()+ "'"
+                + ", Telefono = '" + getTelefono()+"'"
+                + ", Correo = '" + getCorreo()+"'"
+                + ", F_Nacimiento = '" + getFechanacimiento()+ "'"
+                + ", Celular = '" + getCelular()+"'"
+                + ", Entrenamiento = '" + getEntrenamiento()+"'"
+                + ", Disciplina = '" + getDisciplina()+"'"
                 ;
                 
-        sql += " WHERE id= '" + getId_alumno() +"' ";
+        sql += " WHERE Id_Alumno= '" + getId_alumno() +"' ";
     return con.accion(sql);
     }
     
     public boolean eliminar() {
         String sql;
         sql = "DELETE FROM alumno ";
-        sql += " WHERE idalumno = '" + getId_alumno()+ "' ";
+        sql += " WHERE Id_Alumno = '" + getId_alumno()+ "' ";
         return con.accion(sql);
     }
     

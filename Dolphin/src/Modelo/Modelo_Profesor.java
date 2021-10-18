@@ -40,7 +40,7 @@ public class Modelo_Profesor extends Profesor {
              p.setDireccion(rs.getString("Direccion"));
              p.setTelefono(rs.getString("Telefono"));
              p.setCorreo(rs.getString("Correo"));
-             p.setFechanacimiento(rs.getDate("F_nacimiento"));
+             p.setFechanacimiento(rs.getDate("F_Nacimiento"));
              p.setCelular(rs.getString("Celular"));
              p.setFormacion(rs.getString("Formacion"));
              
@@ -73,10 +73,10 @@ public class Modelo_Profesor extends Profesor {
              p.setDireccion(rs.getString("Direccion"));
              p.setTelefono(rs.getString("Telefono"));
              p.setCorreo(rs.getString("Correo"));
-             p.setFechanacimiento(rs.getDate("F_nacimiento"));
+             p.setFechanacimiento(rs.getDate("F_Nacimiento"));
              p.setCelular(rs.getString("Celular"));
              //a.setEdad(Integer.parseInt(rs.getString("Edad")));
-             p.setFormacion(rs.getString("Formacion"));
+             p.setFormacion(rs.getString("formacion"));
             
             listap.add(p);
              }
@@ -92,7 +92,7 @@ public class Modelo_Profesor extends Profesor {
      
       public boolean grabar(){
         String sql;
-        sql="INSERT INTO director(Id_Profesor,Cedula, Nombre,Apellido, Direccion, Telefono, Correo, F_Nacimiento,Celular,Formacion)";
+        sql="INSERT INTO director(Id_Profesor,Cedula, Nombre,Apellido, Direccion, Telefono, Correo, F_Nacimiento,Celular,formacion)";
         sql+="VALUES('"+getId_Profesor()+"','"+getCedula()+"','"+getNombre()+"','"+getApellido()+"','"+getDireccion()+"','"+getTelefono()+"','"+getCorreo()+"','"
                 +getFechanacimiento()+"','"+getCelular()+"','"+getFormacion()+"',)";
         return con.accion(sql);
@@ -110,9 +110,9 @@ public class Modelo_Profesor extends Profesor {
                 + ", Correo = '" + getCorreo()+"'"
                 + ", F_Nacimiento = '" + getFechanacimiento()+ "'"
                 + ", Celular = '" + getCelular()+"'"
-                + ", Formacion = '" + getFormacion()+"'"
+                + ", formacion = '" + getFormacion()+"'"
                 ;
-        sql += " WHERE id= '" + getId_Profesor()+"' ";
+        sql += " WHERE Id_Profesor= '" + getId_Profesor()+"' ";
     return con.accion(sql);
     }
 

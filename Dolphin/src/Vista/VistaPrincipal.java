@@ -6,23 +6,64 @@
 package Vista;
 
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
  *
- * @author HP
+ * @author THALY
  */
-
 public class VistaPrincipal extends javax.swing.JFrame {
 
     /**
-     * Creates new form Inicio
+     * Creates new form VistaPrincipal
      */
     public VistaPrincipal() {
         initComponents();
     }
 
+    public JButton getBtnAdm() {
+        return BtnAdm;
+    }
+
+    public void setBtnAdm(JButton BtnAdm) {
+        this.BtnAdm = BtnAdm;
+    }
+
+    public JButton getBtnAlum() {
+        return BtnAlum;
+    }
+
+    public void setBtnAlum(JButton BtnAlum) {
+        this.BtnAlum = BtnAlum;
+    }
+
+    public JButton getBtnProf() {
+        return BtnProf;
+    }
+
+    public void setBtnProf(JButton BtnProf) {
+        this.BtnProf = BtnProf;
+    }
+
+    public JPanel getPnInicio() {
+        return PnInicio;
+    }
+
+    public void setPnInicio(JPanel PnInicio) {
+        this.PnInicio = PnInicio;
+    }
+
+    public JButton getJbsalir() {
+        return jbsalir;
+    }
+
+    public void setJbsalir(JButton jbsalir) {
+        this.jbsalir = jbsalir;
+    }
+
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,8 +73,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel5 = new javax.swing.JLabel();
         PnInicio = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         BtnAlum = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         BtnProf = new javax.swing.JButton();
@@ -42,13 +83,14 @@ public class VistaPrincipal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         LblTitulo = new javax.swing.JLabel();
         jbsalir = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("BIENVENIDO AL SISTEMA, INICIE SESION EN UNA DE LAS 3 CUENTAS");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PnInicio.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/Logo(1).png"))); // NOI18N
 
         BtnAlum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/User(2).png"))); // NOI18N
         BtnAlum.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +126,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
         jbsalir.setBackground(new java.awt.Color(255, 255, 255));
         jbsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/OS » Mac OS X.png"))); // NOI18N
         jbsalir.setToolTipText("salir");
+        jbsalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbsalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PnInicioLayout = new javax.swing.GroupLayout(PnInicio);
         PnInicio.setLayout(PnInicioLayout);
@@ -92,13 +139,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
             .addGroup(PnInicioLayout.createSequentialGroup()
                 .addGap(189, 189, 189)
                 .addComponent(LblTitulo)
-                .addGap(142, 142, 142)
-                .addComponent(jbsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addGap(101, 101, 101)
+                .addComponent(jbsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnInicioLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnInicioLayout.createSequentialGroup()
                         .addComponent(BtnProf)
@@ -106,8 +151,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addGroup(PnInicioLayout.createSequentialGroup()
                         .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BtnAlum)
-                            .addComponent(BtnAdm))
+                            .addComponent(BtnAdm)
+                            .addComponent(BtnAlum))
                         .addGap(18, 18, 18)
                         .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -117,102 +162,113 @@ public class VistaPrincipal extends javax.swing.JFrame {
         PnInicioLayout.setVerticalGroup(
             PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnInicioLayout.createSequentialGroup()
-                .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PnInicioLayout.createSequentialGroup()
+                .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PnInicioLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LblTitulo)
+                            .addComponent(jbsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(51, 51, 51)
+                        .addComponent(jLabel1)
+                        .addGap(95, 95, 95)
+                        .addComponent(jLabel4))
+                    .addGroup(PnInicioLayout.createSequentialGroup()
                         .addGap(69, 69, 69)
                         .addComponent(BtnAdm)
                         .addGap(18, 18, 18)
-                        .addComponent(BtnAlum)
-                        .addGap(18, 18, 18)
-                        .addComponent(BtnProf))
+                        .addComponent(BtnAlum)))
+                .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnInicioLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jbsalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(LblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(PnInicioLayout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PnInicioLayout.createSequentialGroup()
-                                .addGap(66, 66, 66)
-                                .addComponent(jLabel1)
-                                .addGap(95, 95, 95)
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3)
-                                .addGap(77, 77, 77)))))
+                        .addGap(64, 64, 64)
+                        .addComponent(jLabel3))
+                    .addGroup(PnInicioLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(BtnProf)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("BIENVENIDO AL SISTEMA, INICIE SESION EN UNA DE LAS 3 CUENTAS");
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("BIENVENIDO AL SISTEMA, INICIE SESION EN UNA DE LAS 3 CUENTAS");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 657, Short.MAX_VALUE)
+                .addGap(30, 30, 30))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(PnInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(PnInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 398, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(PnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(20, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnProfActionPerformed
-    
-    }//GEN-LAST:event_BtnProfActionPerformed
-
     private void BtnAlumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAlumActionPerformed
+
     }//GEN-LAST:event_BtnAlumActionPerformed
 
+    private void BtnProfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnProfActionPerformed
+
+    }//GEN-LAST:event_BtnProfActionPerformed
+
     private void BtnAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAdmActionPerformed
+
     }//GEN-LAST:event_BtnAdmActionPerformed
 
-    //GETTERS Y SETTERS
-    public JButton getBtnAdm() {
-        return BtnAdm;
-    }
-    public void setBtnAdm(JButton BtnAdm) {
-        this.BtnAdm = BtnAdm;
-    }
-    public JButton getBtnAlum() {
-        return BtnAlum;
-    }
-    public void setBtnAlum(JButton BtnAlum) {
-        this.BtnAlum = BtnAlum;
-    }
-    public JButton getBtnProf() {
-        return BtnProf;
-    }
-    public void setBtnProf(JButton BtnProf) {
-        this.BtnProf = BtnProf;
-    }
-    public JLabel getLblTitulo() {
-        return LblTitulo;
-    }
-    public void setLblTitulo(JLabel LblTitulo) {
-        this.LblTitulo = LblTitulo;
-    }
-    public JPanel getPnInicio() {
-        return PnInicio;
-    }
-    public void setPnInicio(JPanel PnInicio) {
-        this.PnInicio = PnInicio;
-    }
-    public JButton getJbsalir() {
-        return jbsalir;
-    }
-    public void setJbsalir(JButton jbsalir) {
-        this.jbsalir = jbsalir;
-    }
+    private void jbsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbsalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbsalirActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(VistaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(VistaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(VistaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(VistaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new VistaPrincipal().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnAdm;
@@ -221,10 +277,10 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel LblTitulo;
     private javax.swing.JPanel PnInicio;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JButton jbsalir;
     // End of variables declaration//GEN-END:variables
 }
