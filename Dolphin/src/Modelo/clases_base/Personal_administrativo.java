@@ -1,7 +1,5 @@
 package Modelo.clases_base;
 
-
-
 import Modelo.clases_base.Persona;
 import java.sql.Date;
 import java.util.Objects;

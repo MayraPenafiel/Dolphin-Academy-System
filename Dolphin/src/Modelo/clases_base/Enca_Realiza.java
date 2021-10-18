@@ -1,8 +1,6 @@
 package Modelo.clases_base;
 
 
-
-
 public class Enca_Realiza {
     
     //Atributos
