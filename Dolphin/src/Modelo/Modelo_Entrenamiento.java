@@ -17,6 +17,8 @@ import java.util.logging.Logger;
  * @author MayraPenafiel
  */
 public class Modelo_Entrenamiento extends Entrenamiento{
+    
+    //Atributos
     private ConexionPG con=new ConexionPG();
 
     //Constructores
@@ -63,7 +65,7 @@ public class Modelo_Entrenamiento extends Entrenamiento{
        }
     }
     
-    //Metodo Buscar Personas
+    //Metodo Buscar 
     public List <Entrenamiento> listarEnt (String aguja){
        String sql = "select * from Entrenamiento WHERE ";
        sql+=" UPPER(Id_Entrenamiento) like UPPER('%"+aguja+"%') OR ";
@@ -123,7 +125,7 @@ public class Modelo_Entrenamiento extends Entrenamiento{
         sql+=" SET Id_Profesor = '"+getId_profesor()+"'"+", Id_Disciplina = '"+getId_disciplina()+"'"+
                 ", F_inicio = '"+getF_inicio()+"'"+", F_fin = '"+getF_fin()+"'"+", Descripcion = '"+getDescripcion()+"'"+
                 ", Observaciones = '"+getObservaciones()+"'";
-        sql+=" WHERE Id_Entrenamiennto = '"+getId_entrenamiento()+"' ";
+        sql+=" WHERE Id_Entrenamiento = '"+getId_entrenamiento()+"' ";
        return con.accion(sql);
     }
     
