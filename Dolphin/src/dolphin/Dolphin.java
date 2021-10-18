@@ -8,7 +8,6 @@ import controlador.Control_Principal;
  *
  * @author MayraPeñafiel
  */
-
 public class Dolphin {
 
     /**

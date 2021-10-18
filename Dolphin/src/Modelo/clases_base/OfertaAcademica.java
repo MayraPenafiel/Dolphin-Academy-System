@@ -6,7 +6,6 @@ package Modelo.clases_base;
 public class OfertaAcademica {
     
     //Atributos
-    private String id_OA;
     private String id_disciplina;
     private String id_sede;
     private int capacidad;
@@ -14,8 +13,7 @@ public class OfertaAcademica {
     //Constructores
     public OfertaAcademica() {
     }
-    public OfertaAcademica(String id_OA, String id_disciplina, String id_sede, int capacidad) {
-        this.id_OA = id_OA;
+    public OfertaAcademica(String id_disciplina, String id_sede, int capacidad) {
         this.id_disciplina = id_disciplina;
         this.id_sede = id_sede;
         this.capacidad = capacidad;
@@ -40,17 +38,11 @@ public class OfertaAcademica {
     public void setCapacidad(int capacidad) {
         this.capacidad = capacidad;
     }
-    public String getId_OA() {
-        return id_OA;
-    }
-    public void setId_OA(String id_OA) {
-        this.id_OA = id_OA;
-    }
 
     //Metodo toString
     @Override
     public String toString() {
-        return "OfertaAcademica{" + "id_OA=" + id_OA + ", id_disciplina=" + id_disciplina + ", id_sede=" + id_sede + ", capacidad=" + capacidad + '}';
+        return "OfertaAcademica{" + "id_disciplina=" + id_disciplina + ", id_sede=" + id_sede + ", capacidad=" + capacidad + '}';
     }
     
 }

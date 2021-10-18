@@ -81,25 +81,25 @@ public class Modelo_Entrenamiento extends Entrenamiento{
        List<Entrenamiento> lista=new ArrayList<Entrenamiento>();
        try {
            while(rs.next()){
-                Entrenamiento p= new Entrenamiento();
-                p.setId_entrenamiento(rs.getString("Id_Entrenamiento"));//campos de la BD
-                p.setId_profesor(rs.getString("Id_Profesor"));//campos de la BD
-                p.setId_disciplina(rs.getString("Id_Disciplina"));//campos de la BD
-                p.setDescripcion(rs.getString("Descripcion"));//campos de la BD
-                p.setObservaciones(rs.getString("Observaciones"));//campos de la BD
+             Entrenamiento p= new Entrenamiento();
+               p.setId_entrenamiento(rs.getString("Id_Entrenamiento"));//campos de la BD
+               p.setId_profesor(rs.getString("Id_Profesor"));//campos de la BD
+               p.setId_disciplina(rs.getString("Id_Disciplina"));//campos de la BD
+               p.setDescripcion(rs.getString("Descripcion"));//campos de la BD
+               p.setObservaciones(rs.getString("Observaciones"));//campos de la BD
              
-                //Extraer Fecha de Inicio
-                DateTimeFormatter date=DateTimeFormatter.ofPattern("yyyy-MM-dd");
-                LocalDate fecha_in=LocalDate.parse(rs.getDate("F_Inicio").toString(), date);
-                String f=""+fecha_in.getDayOfMonth()+ "-"+fecha_in.getMonth()+"-"+fecha_in.getYear();
-                Date in = Date.valueOf(fecha_in.toString());
-                p.setF_inicio(in);//campos de la BD
+               //Extraer Fecha de Inicio
+               DateTimeFormatter date=DateTimeFormatter.ofPattern("yyyy-MM-dd");
+               LocalDate fecha_in=LocalDate.parse(rs.getDate("F_Inicio").toString(), date);
+               String f=""+fecha_in.getDayOfMonth()+ "-"+fecha_in.getMonth()+"-"+fecha_in.getYear();
+               Date in = Date.valueOf(fecha_in.toString());
+               p.setF_inicio(in);//campos de la BD
 
-                //Extraer Fecha de Fin
-                LocalDate fecha_fn=LocalDate.parse(rs.getDate("F_Fin").toString(), date);
-                String fn=""+fecha_fn.getDayOfMonth()+ "-"+fecha_fn.getMonth()+"-"+fecha_fn.getYear();
-                Date fin= Date.valueOf(fecha_fn.toString());
-                p.setF_fin(fin);//campos de la BD
+               //Extraer Fecha de Fin
+               LocalDate fecha_fn=LocalDate.parse(rs.getDate("F_Fin").toString(), date);
+               String fn=""+fecha_fn.getDayOfMonth()+ "-"+fecha_fn.getMonth()+"-"+fecha_fn.getYear();
+               Date fin= Date.valueOf(fecha_fn.toString());
+               p.setF_fin(fin);//campos de la BD
 
                lista.add(p);
            }
@@ -110,8 +110,6 @@ public class Modelo_Entrenamiento extends Entrenamiento{
            return null;
        }
     }
-    
-    // METODOS DE DE MANIPULACION DE DATOS
     
      //Metodo para guardar
     public boolean grabar(){
@@ -143,3 +141,4 @@ public class Modelo_Entrenamiento extends Entrenamiento{
     }
     
 }
+

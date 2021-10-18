@@ -42,19 +42,12 @@ public class Control_Entrenamiento {
         this.vista = vista;
         this.m_dis=m_dis;
         this.m_pro=m_pro;
-        
-     }
-    public Control_Entrenamiento(Modelo_Entrenamiento modelo, VistaEntrenamiento vista) {
-        this.modelo = modelo;
-        this.vista = vista;
          
         //INICIALIZAR ELEMENTOS.
         vista.setTitle("Menu Entrenamiento");
         vista.setVisible(true);
         cargarLista("");
-    }
-    public Control_Entrenamiento() {
-    }
+     }
      
      public void iniciaControl(){
         KeyListener kl=new KeyListener() {
