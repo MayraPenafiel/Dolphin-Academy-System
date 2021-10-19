@@ -65,7 +65,7 @@ public class ControlSede {
         java.util.List<Sede> lista = modelo.listaSede(aguja);
         lista.stream().forEach(sd -> {
 
-            String[] sede = {sd.getCod_sede(), sd.getNombre_s(), sd.getDireccion_s(), sd.getCorreo_s(), sd.getTelefono_s()};
+            String[] sede = {sd.getCod_sede(), sd.getNombre_s(), sd.getDireccion_s(), sd.getCorreo_s(), sd.getTelefono_s(),};
 
         });
     }

@@ -1,7 +1,7 @@
 package Modelo.clases_base;
 
 
-public class Sede {
+public class Sede extends OfertaAcademica{
     
     //Atributos
     private String cod_sede;

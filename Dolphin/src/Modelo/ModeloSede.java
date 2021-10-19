@@ -32,7 +32,7 @@ public class ModeloSede extends Sede{
     
         try {
             
-            String sql = "select * from sede ";
+            String sql = "select * from sede, ofertaacademica where sede.Cod_sede=ofertaacademica.id_sede ";
             ResultSet rs = con.consulta(sql);
             java.util.List<Sede> lista = new ArrayList<Sede>();
             while(rs.next()){
@@ -42,7 +42,10 @@ public class ModeloSede extends Sede{
              sd.setDireccion_s(rs.getString("Direccion_s"));
              sd.setCorreo_s(rs.getString("Correo_s"));
              sd.setTelefono_s(rs.getString("Telefono_s"));
-             
+             //Datos de oferta academica
+             sd.setId_OA(rs.getString("id_OA"));
+             sd.setId_disciplina(rs.getString("Disciplina"));
+             sd.setCapacidad(rs.getInt("Capacidad"));
             lista.add(sd);
             }
              
@@ -72,6 +75,10 @@ public class ModeloSede extends Sede{
             sd.setDireccion_s(rs.getString("direccion_s"));
             sd.setCorreo_s(rs.getString("correo_s"));
             sd.setTelefono_s(rs.getString("telefono_s"));
+            // Datos de oferta Academica
+             sd.setId_OA(rs.getString("id_OA"));
+             sd.setId_disciplina(rs.getString("Disciplina"));
+             sd.setCapacidad(rs.getInt("Capacidad"));
             lista.add(sd);
              }
             rs.close();
@@ -102,7 +109,6 @@ public class ModeloSede extends Sede{
                 + ", direccion_s = '" + getDireccion_s() + "'"
                 + ", correo_s = '" + getCorreo_s() +"'"
                 + ", telefono_s = '" + getTelefono_s()+ "'"
-                
                 ;
                 
         sql += " WHERE id= '" + getCod_sede()+"' ";

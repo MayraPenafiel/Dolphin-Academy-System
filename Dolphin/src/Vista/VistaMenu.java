@@ -56,7 +56,6 @@ public class VistaMenu extends javax.swing.JFrame {
         MIDisciplina = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         MIEnt = new javax.swing.JMenuItem();
-        MIOA = new javax.swing.JMenuItem();
         MISede = new javax.swing.JMenuItem();
         MnMenu = new javax.swing.JMenu();
 
@@ -214,15 +213,6 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         MenuP.add(MIEnt);
 
-        MIOA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-venta-20.png"))); // NOI18N
-        MIOA.setText("Oferta Academica");
-        MIOA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MIOAActionPerformed(evt);
-            }
-        });
-        MenuP.add(MIOA);
-
         MISede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-embajada-20.png"))); // NOI18N
         MISede.setText("Sede");
         MISede.addActionListener(new java.awt.event.ActionListener() {
@@ -301,12 +291,6 @@ public class VistaMenu extends javax.swing.JFrame {
         new VistaEntrenamiento().setVisible(true);
     }//GEN-LAST:event_MIEntActionPerformed
 
-    private void MIOAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIOAActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-        new VistaOfertaAc().setVisible(true);
-    }//GEN-LAST:event_MIOAActionPerformed
-
     private void MISedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MISedeActionPerformed
         // TODO add your handling code here:
         setVisible(false);
@@ -342,14 +326,6 @@ public class VistaMenu extends javax.swing.JFrame {
 
     public void setMIEnt(JMenuItem MIEnt) {
         this.MIEnt = MIEnt;
-    }
-
-    public JMenuItem getMIOA() {
-        return MIOA;
-    }
-
-    public void setMIOA(JMenuItem MIOA) {
-        this.MIOA = MIOA;
     }
 
     public JMenuItem getMISede() {
@@ -448,7 +424,6 @@ public class VistaMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem MIDetRealiza;
     private javax.swing.JMenuItem MIDisciplina;
     private javax.swing.JMenuItem MIEnt;
-    private javax.swing.JMenuItem MIOA;
     private javax.swing.JMenuItem MIProfesor;
     private javax.swing.JMenuItem MISede;
     private javax.swing.JMenu MenuP;

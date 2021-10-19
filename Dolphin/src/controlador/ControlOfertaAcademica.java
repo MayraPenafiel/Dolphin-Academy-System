@@ -3,7 +3,7 @@ package controlador;
 
 import Modelo.ModeloOfertaAcademica;
 import Modelo.clases_base.OfertaAcademica;
-import Vista.VistaOfertaAc;
+import Vista.VistaOfertaAc; 
 import conexion.ConexionPG;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
