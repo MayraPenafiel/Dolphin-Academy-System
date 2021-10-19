@@ -31,7 +31,7 @@ public class Modelo_Profesor extends Profesor {
             java.util.List<Profesor> listap = new ArrayList<Profesor>();
             while(rs.next()){
                 Profesor p = new Profesor();
-                p.setId_Profesor(rs.getString("Id_Profesor"));
+                p.setId_Profesor(rs.getString("id_profesor"));
                 p.setCedula(rs.getString("Cedula"));
                 p.setNombre(rs.getString("Nombre"));
                 p.setApellido(rs.getString("Apellido"));
@@ -53,7 +53,7 @@ public class Modelo_Profesor extends Profesor {
     }
     
      public java.util.List<Profesor> listaProfesores(String aguja){
-            String sql = "select * from prfesor WHERE ";
+            String sql = "select * from profesor WHERE ";
             sql += "UPPER(Id_Profesor) like UPPER('%" +aguja+ "%') OR ";
             sql += "UPPER(Nombre) like UPPER('%" +aguja+ "%') OR ";
             sql += "UPPER(Apellido) like UPPER('%" +aguja+ "%')";
@@ -62,14 +62,14 @@ public class Modelo_Profesor extends Profesor {
             try {
                 while(rs.next()){
                     Profesor p = new Profesor();
-                    p.setId_Profesor(rs.getString("Id_Profesor"));
+                    p.setId_Profesor(rs.getString("id_profesor"));
                     p.setCedula(rs.getString("Cedula"));
                     p.setNombre(rs.getString("Nombre"));
                     p.setApellido(rs.getString("Apellido"));
                     p.setDireccion(rs.getString("Direccion"));
                     p.setTelefono(rs.getString("Telefono"));
                     p.setCorreo(rs.getString("Correo"));
-                    p.setFechanacimiento(rs.getDate("F_nacimiento"));
+                    p.setFechanacimiento(rs.getDate("F_Nacimiento"));
                     p.setCelular(rs.getString("Celular"));
                     p.setFormacion(rs.getString("formacion"));
                     p.setContraseña(rs.getString("contraseña"));
@@ -85,16 +85,15 @@ public class Modelo_Profesor extends Profesor {
      
       public boolean grabar(){
         String sql;
-        sql="INSERT INTO director(Id_Profesor,Cedula, Nombre,Apellido, Direccion, Telefono, Correo, F_Nacimiento,Celular,formacion,contraseña)";
+        sql="INSERT INTO profesor (id_profesor,Cedula, Nombre,Apellido, Direccion, Telefono, Correo, F_Nacimiento,Celular,formacion,contraseña)";
         sql+="VALUES('"+getId_Profesor()+"','"+getCedula()+"','"+getNombre()+"','"+getApellido()+"','"+getDireccion()+"','"+getTelefono()+"','"+getCorreo()+"','"
                 +getFechanacimiento()+"','"+getCelular()+"','"+getFormacion()+"','"+getContraseña()+"')";
         return con.accion(sql);
-        }  
-        
-        public boolean modificar(){
-    String sql;
-    
-    sql = "UPDATE profesor ";
+      }  
+ 
+      public boolean modificar(){
+        String sql;
+        sql = "UPDATE profesor ";
         sql += " SET Nombre = '" + getNombre()+ "'"
                 + ", Apellido = '" + getApellido() + "'"
                 + ", Cedula = '" + getCedula()+ "'"
@@ -103,17 +102,17 @@ public class Modelo_Profesor extends Profesor {
                 + ", Correo = '" + getCorreo()+"'"
                 + ", F_Nacimiento = '" + getFechanacimiento()+ "'"
                 + ", Celular = '" + getCelular()+"'"
-                + ", Formacion = '" + getFormacion()+"'"
+                + ", formacion = '" + getFormacion()+"'"
                 +", contraseña = '"+getContraseña()+"'"
                 ;
-        sql += " WHERE Id_Profesor= '" + getId_Profesor()+"' ";
+        sql += " WHERE id_profesor= '" + getId_Profesor()+"' ";
     return con.accion(sql);
     }
 
        public boolean eliminar() {
         String sql;
         sql = "DELETE FROM profesor ";
-        sql += " WHERE Id_Profesor = '" + getId_Profesor()+ "' ";
+        sql += " WHERE id_profesor = '" + getId_Profesor()+ "' ";
         return con.accion(sql);
     }
     

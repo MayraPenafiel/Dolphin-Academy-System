@@ -21,6 +21,7 @@ import java.util.logging.Logger;
  *
  * @author MayraPenafiel
  */
+
 public class Modelo_Entrenamiento extends Entrenamiento{
     
     //Atributos
