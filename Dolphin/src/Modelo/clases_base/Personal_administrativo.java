@@ -42,6 +42,7 @@ public class Personal_administrativo extends Persona{
     //Metodo toString
     @Override
     public String toString() {
-        return "Administradores{" + "formacion=" + formacion + ", contrase\u00f1a=" + contraseña + '}';
+        return "Administradores{" + "formacion=" + formacion + ", contraseña=" + contraseña + '}';
     }
 }
+//contrase\u00f1a

@@ -77,6 +77,7 @@ public class ConexionPG {
         ResultSet rs=this.consulta("Select*from profesor order by Id_Profesor");
         
         try {
+            //Bucle que introduce los datos de profesor mientras estos existan.
             while (rs.next()) {                
                 listaProfEnt.addElement(rs.getString("Id_Profesor"));
             }

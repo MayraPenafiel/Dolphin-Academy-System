@@ -46,6 +46,7 @@ public class Control_InicioSesion{
         vista.getJbcancelar().addActionListener(l->vista.dispose());
      }
     private void llamar_comp(){
+        
         if(Control_Principal.boton=="P"){
            comp_pro();
         }
@@ -53,7 +54,7 @@ public class Control_InicioSesion{
             comp_dir();
         }
         if (Control_Principal.boton=="A"){
-            comp_al();
+                comp_al();
         }
     }
     //metodos para comparar datos ingresados
@@ -109,6 +110,8 @@ public class Control_InicioSesion{
         control.inicia_control();
         vista.dispose();
     }
+    
+    
     
  }
 
