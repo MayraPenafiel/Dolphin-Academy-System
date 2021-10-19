@@ -23,7 +23,7 @@ public class Modelo_Disciplina extends Disciplina {
      public List<Disciplina> listaDisciplinas(){
     
         try {
-            String sql="select Id_Disciplina, Nombre_D,Descripcion_D, Observaciones from disciplina ";
+            String sql="select * from disciplina ";
             ResultSet rs=con.consulta(sql);
             List<Disciplina> ld= new ArrayList<Disciplina>();
             while(rs.next()){
@@ -32,8 +32,6 @@ public class Modelo_Disciplina extends Disciplina {
                 dis.setNombre_d(rs.getString("Nombre_D"));
                 dis.setDescripcion_d(rs.getString("Descripcion_D"));
                 dis.setObservaciones(rs.getString("Observaciones"));
-               
-               
                 ld.add(dis);
             }
           rs.close();
@@ -50,6 +48,7 @@ public class Modelo_Disciplina extends Disciplina {
             String sql="select * from disciplina WHERE ";
             sql+=" UPPER(Nombre_D) like UPPER('%"+aguja+"%') OR ";
             sql+=" UPPER(Id_Disciplina) like UPPER('%"+aguja+"%') OR ";
+            sql+=" UPPER(Descripcion_D) like UPPER('%"+aguja+"%') ";
             ResultSet rs=con.consulta(sql);
             List<Disciplina> ld= new ArrayList<Disciplina>();
             while(rs.next()){
@@ -58,8 +57,6 @@ public class Modelo_Disciplina extends Disciplina {
                 dis.setNombre_d(rs.getString("Nombre_D"));
                 dis.setDescripcion_d(rs.getString("Descripcion_D"));
                 dis.setObservaciones(rs.getString("Observaciones"));
-          
-               
                 ld.add(dis);
             }
           rs.close();
@@ -68,7 +65,7 @@ public class Modelo_Disciplina extends Disciplina {
             Logger.getLogger(Modelo_Disciplina.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
-}
+    }
     
     public boolean grabar() {
         String sql;
@@ -78,12 +75,12 @@ public class Modelo_Disciplina extends Disciplina {
     }
     
     public boolean editarDisciplina(){
-        String sql="UPDATE disciplina SET Nombre_D='"+this.getNombre_d()+"', Descripcion_D='"+this.getDescripcion_d()+"', Observaciones='"+this.getObservaciones()+"'";
+        String sql="UPDATE disciplina SET Nombre_D='"+getNombre_d()+"', Descripcion_D='"+getDescripcion_d()+"', Observaciones='"+getObservaciones()+"'";
         return con.accion(sql);
     }
    
     public boolean eliminarDisciplina(){
-        String sql="DELETE FROM disciplina WHERE Id_Disciplina='"+this.getId_disciplina()+"'";
+        String sql="DELETE FROM disciplina WHERE Id_Disciplina='"+getId_disciplina()+"'";
          return con.accion(sql);
     }
 

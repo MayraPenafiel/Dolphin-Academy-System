@@ -38,21 +38,18 @@ public class ModeloAlumno extends Alumno{
             ResultSet rs = con.consulta(sql);
             java.util.List<Alumno> lista = new ArrayList<Alumno>();
             while(rs.next()){
-             Alumno a = new Alumno();
-             a.setId_alumno(rs.getString("Id"));
-             a.setCategoria(rs.getString("Categoria"));
-             a.setCedula(rs.getString("Cedula"));
-             a.setNombre(rs.getString("Nombre"));
-             a.setApellido(rs.getString("Apellido"));
-             a.setDireccion(rs.getString("Direccion"));
-             a.setTelefono(rs.getString("Telefono"));
-             a.setCorreo(rs.getString("Correo"));
-             a.setFechanacimiento(rs.getDate("F_nacimiento"));
-             a.setCelular(rs.getString("Celular"));
-             //a.setEdad(Integer.parseInt(rs.getString("Edad")));
-             a.setDisciplina(rs.getString("Disciplina"));
-             a.setEntrenamiento(rs.getString("Entrenamiento"));
-            lista.add(a);
+                Alumno a = new Alumno();
+                a.setId_alumno(rs.getString("id_alumno"));
+                a.setCategoria(rs.getString("categoria"));
+                a.setCedula(rs.getString("Cedula"));
+                a.setNombre(rs.getString("Nombre"));
+                a.setApellido(rs.getString("Apellido"));
+                a.setDireccion(rs.getString("Direccion"));
+                a.setTelefono(rs.getString("Telefono"));
+                a.setCorreo(rs.getString("Correo"));
+                a.setFechanacimiento(rs.getDate("F_Nacimiento"));
+                a.setCelular(rs.getString("Celular"));
+                lista.add(a);
             }
             rs.close();
             return lista;
@@ -63,31 +60,27 @@ public class ModeloAlumno extends Alumno{
     }
     
     public java.util.List<Alumno> listaAlumno(String aguja){
-    
         try {
             String sql = "select * from alumno WHERE ";
-            sql += "UPPER(idalumno) like UPPER('%" +aguja+ "%') OR ";
-            sql += "UPPER(nombre) like UPPER('%" +aguja+ "%') OR ";
-            sql += "UPPER(apellido) like UPPER('%" +aguja+ "%')";
+            sql += "UPPER(id_alumno) like UPPER('%" +aguja+ "%') OR ";
+            sql += "UPPER(Nombre) like UPPER('%" +aguja+ "%') OR ";
+            sql += "UPPER(Apellido) like UPPER('%" +aguja+ "%') ";
             ResultSet rs = con.consulta(sql);
             java.util.List<Alumno> lista = new ArrayList<Alumno>();
-            
             while(rs.next()){
-            Alumno a = new Alumno();
-            a.setId_alumno(rs.getString("Id"));
-            a.setCategoria(rs.getString("Categoria"));
-             a.setCedula(rs.getString("Cedula"));
-             a.setNombre(rs.getString("Nombre"));
-             a.setApellido(rs.getString("Apellido"));
-             a.setDireccion(rs.getString("Direccion"));
-             a.setTelefono(rs.getString("Telefono"));
-             a.setCorreo(rs.getString("Correo"));
-             a.setFechanacimiento(rs.getDate("F_nacimiento"));
-             a.setCelular(rs.getString("Celular"));
-             a.setEntrenamiento(rs.getString("Entrenamiento"));
-             a.setDisciplina(rs.getString("Disciplina"));
-            lista.add(a);
-             }
+                Alumno a = new Alumno();
+                a.setId_alumno(rs.getString("id_alumno"));
+                a.setCategoria(rs.getString("categoria"));
+                a.setCedula(rs.getString("Cedula"));
+                a.setNombre(rs.getString("Nombre"));
+                a.setApellido(rs.getString("Apellido"));
+                a.setDireccion(rs.getString("Direccion"));
+                a.setTelefono(rs.getString("Telefono"));
+                a.setCorreo(rs.getString("Correo"));
+                a.setFechanacimiento(rs.getDate("F_Nacimiento"));
+                a.setCelular(rs.getString("Celular"));
+                lista.add(a);
+            }
             rs.close();
             return lista;
         } catch (Exception e) {
@@ -97,11 +90,12 @@ public class ModeloAlumno extends Alumno{
         }
         
     }
-        public boolean grabar(){
+    
+    public boolean grabar(){
         String sql;
-        sql="INSERT INTO alumno(idalumno,categoria,cedula, nombre,apellido, direccion, telefono, correo, fecha_nacimiento,celular,disciplina,entrenamiento)";
+        sql="INSERT INTO alumno(id_alumno,categoria,Cedula, Nombre,Apellido, Direccion, Telefono, Correo, F_Nacimiento,celular)";
         sql+="VALUES('"+getId_alumno()+"','"+getCategoria()+ "','"+getCategoria()+"','"+getCedula()+"','"+getNombre()+"','"+getApellido()+"','"+getDireccion()+"','"+getTelefono()+"','"+getCorreo()+"','"
-                +getFechanacimiento()+"','"+getCelular()+"','"+getDisciplina()+"','"+getEntrenamiento()+"')";
+                +getFechanacimiento()+"','"+getCelular()+"')";
         return con.accion(sql);
         }
     
@@ -110,26 +104,23 @@ public class ModeloAlumno extends Alumno{
     
     sql = "UPDATE alumno ";
         sql += " SET categoria = '" + getCategoria() + "'"
-                + "nombre = '" + getNombre() + "'"
-                + ", apellido = '" + getApellido() + "'"
-                + ", cedula = '" + getCedula()+ "'"
-                + ", direccion = '" + getDireccion()+ "'"
-                + ", telefono = '" + getTelefono()+"'"
-                + ", correo = '" + getCorreo()+"'"
-                + ", fechanacimiento = '" + getFechanacimiento()+ "'"
-                + ", celular = '" + getCelular()+"'"
-                + ", entrenamiento = '" + getEntrenamiento()+"'"
-                + ", disciplina = '" + getDisciplina()+"'"
+                + ", Nombre = '" + getNombre() + "'"
+                + ", Apellido = '" + getApellido() + "'"
+                + ", Cedula = '" + getCedula()+ "'"
+                + ", Direccion = '" + getDireccion()+ "'"
+                + ", Telefono = '" + getTelefono()+"'"
+                + ", Correo = '" + getCorreo()+"'"
+                + ", F_Nacimiento = '" + getFechanacimiento()+ "'"
+                + ", Celular = '" + getCelular()+"'"
                 ;
-                
-        sql += " WHERE id= '" + getId_alumno() +"' ";
+        sql += " WHERE id_alumno= '" + getId_alumno() +"' ";
     return con.accion(sql);
     }
     
     public boolean eliminar() {
         String sql;
         sql = "DELETE FROM alumno ";
-        sql += " WHERE idalumno = '" + getId_alumno()+ "' ";
+        sql += " WHERE id_alumno = '" + getId_alumno()+ "' ";
         return con.accion(sql);
     }
     

@@ -103,11 +103,8 @@ public class ControlDirector {
         tableModel.setNumRows(0);
         java.util.List<Director> lista = modelo.listaDirectores(aguja);
         lista.stream().forEach(d ->{
-        
             tableModel.addRow(new Object[]{ d.getId_director(),d.getCedula(),d.getNombre(),d.getApellido(),d.getDireccion(),d.getTelefono(),d.getCorreo(),
-            d.getFechanacimiento(),d.getCelular(),d.getFormacion(),d.getDireccion_sede()});
-                    
-        
+            d.getFechanacimiento(),d.getCelular(),d.getFormacion(),d.getSede()});
         });
     }
     
@@ -123,7 +120,7 @@ public class ControlDirector {
     String celular = vista.getTxtCelularDirec().getText();
     String contrasenia = vista.getTxtcontraseña().getText();
     String formacion = vista.getTxtformacion().getText();
-    String direccion_sede = vista.getTxtdireccion_sede().getText();
+    String sede = vista.getTxtdireccion_sede().getText();
    
     Instant instante = vista.getDCDirec().getDate().toInstant();
     ZoneId zi = ZoneId.of("America/Guayaquil");
@@ -140,6 +137,9 @@ public class ControlDirector {
     director.setCorreo(correo);
     director.setCelular(celular);
     director.setContraseña(contrasenia);
+    director.setSede(sede);
+    director.setFormacion(formacion);
+    director.setFechanacimiento(fecha);
     
         if (director.grabar()) {
             JOptionPane.showMessageDialog(vista, "director creado satisfactoriamente");
@@ -203,12 +203,11 @@ public class ControlDirector {
         ModeloDirector persona = new ModeloDirector();
         persona.setId_director(id);
         if (persona.eliminar()) {
-            JOptionPane.showMessageDialog(vista, "Eliminado");
+            JOptionPane.showMessageDialog(vista, "Eliminado Exitosamente");
             vista.getDlgEliminar().dispose();
             limpiar();
         }
     }
-    
     
     
      private void modificar(){
@@ -229,7 +228,7 @@ public class ControlDirector {
                     String cel=lista.get(i).getCelular()+"";
                     String con=lista.get(i).getContraseña()+"";
                     String fo = lista.get(i).getFormacion()+"";
-                    String sede = lista.get(i).getDireccion_sede()+"";
+                    String sede = lista.get(i).getSede()+"";
                     
                     vista.getTxtCodDirec().setText(id);
                     vista.getTxtCedulaDirec().setText(ce);
@@ -243,9 +242,6 @@ public class ControlDirector {
                     vista.getTxtcontraseña().setText(con);
                     vista.getTxtformacion().setText(fo);
                     vista.getTxtdireccion_sede().setText(sede);
-                    
-                    
-                    
                  }
             }
          }else{
@@ -253,7 +249,5 @@ public class ControlDirector {
             vista.getDgDirector().setVisible(false);
         }
     }
- 
-    
     
 }

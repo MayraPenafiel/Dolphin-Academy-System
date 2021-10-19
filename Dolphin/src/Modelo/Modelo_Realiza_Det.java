@@ -45,7 +45,7 @@ public class Modelo_Realiza_Det extends Deta_Realiza {
            while(rs.next()){
                Deta_Realiza p= new Deta_Realiza();
                p.setId_detalle(rs.getString("Id_detalle"));//campos de la BD
-               p.setId_enc(rs.getString("Id_Enc"));//campos de la BD
+               p.setId_enc(rs.getString("id_Enc"));//campos de la BD
                p.setP_avanze(rs.getInt("P_Avance"));
                p.setAsistencia(rs.getBoolean("Asistencia"));
                
@@ -70,7 +70,7 @@ public class Modelo_Realiza_Det extends Deta_Realiza {
     public List <Deta_Realiza> listarDR (String aguja){
        String sql = "select * from Deta_Realiza WHERE ";
        sql+=" UPPER(Id_detalle) like UPPER('%"+aguja+"%') OR ";
-       sql+=" UPPER(Id_Enc) like UPPER('%"+aguja+"%') OR ";
+       sql+=" UPPER(id_Enc) like UPPER('%"+aguja+"%') OR ";
        sql+=" UPPER(P_Avance) like UPPER('%"+aguja+"%') OR";
        sql+=" UPPER (F_Asistencia) like UPPER('%"+aguja+"%') ";
        ResultSet rs= con.consulta(sql);
@@ -79,7 +79,7 @@ public class Modelo_Realiza_Det extends Deta_Realiza {
            while(rs.next()){
                Deta_Realiza p= new Deta_Realiza();
                p.setId_detalle(rs.getString("Id_detalle"));//campos de la BD
-               p.setId_enc(rs.getString("Id_Enc"));//campos de la BD
+               p.setId_enc(rs.getString("id_Enc"));//campos de la BD
                p.setP_avanze(rs.getInt("P_Avance"));
                p.setAsistencia(rs.getBoolean("Asistencia"));
                
@@ -105,7 +105,7 @@ public class Modelo_Realiza_Det extends Deta_Realiza {
     //Metodo para guardar
     public boolean grabar(){
        String sql;
-           sql="INSERT INTO Deta_Realiza(Id_detalle,Id_Enc,F_Asistencia, Asistencia,P_Avance) ";
+           sql="INSERT INTO Deta_Realiza(Id_detalle,id_Enc,F_Asistencia, Asistencia,P_Avance) ";
            sql+=" VALUES ('"+getId_detalle()+"','"+getId_enc()+"','"+getF_asistencia()+"','"+isAsistencia()+"','"+getP_avanze()+"')";
        return con.accion(sql);
     }
@@ -114,7 +114,7 @@ public class Modelo_Realiza_Det extends Deta_Realiza {
     public boolean modificar(){
         String sql;
         sql="UPDATE Deta_Realiza ";
-        sql+=" SET Id_Enc = '"+getId_enc()+"'"+", F_Asistencia = '"+getF_asistencia()+"', Asistencia= '"+isAsistencia()+"', P_Avance="
+        sql+=" SET id_Enc = '"+getId_enc()+"'"+", F_Asistencia = '"+getF_asistencia()+"', Asistencia= '"+isAsistencia()+"', P_Avance="
                 +getP_avanze()+"' )";
         sql+=" WHERE Id_detalle = '"+getId_detalle()+"' ";
        return con.accion(sql);
