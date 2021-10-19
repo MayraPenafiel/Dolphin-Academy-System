@@ -32,14 +32,14 @@ public class Modelo_Profesor extends Profesor {
             while(rs.next()){
                 Profesor p = new Profesor();
                 p.setId_Profesor(rs.getString("id_profesor"));
-                p.setCedula(rs.getString("Cedula"));
-                p.setNombre(rs.getString("Nombre"));
-                p.setApellido(rs.getString("Apellido"));
-                p.setDireccion(rs.getString("Direccion"));
-                p.setTelefono(rs.getString("Telefono"));
-                p.setCorreo(rs.getString("Correo"));
-                p.setFechanacimiento(rs.getDate("F_nacimiento"));
-                p.setCelular(rs.getString("Celular"));
+                p.setCedula(rs.getString("cedula"));
+                p.setNombre(rs.getString("nombre"));
+                p.setApellido(rs.getString("apellido"));
+                p.setDireccion(rs.getString("direccion"));
+                p.setTelefono(rs.getString("telefono"));
+                p.setCorreo(rs.getString("correo"));
+                p.setFechanacimiento(rs.getDate("f_nacimiento"));
+                p.setCelular(rs.getString("celular"));
                 p.setFormacion(rs.getString("formacion"));
                 p.setContraseña(rs.getString("contraseña"));
                 listap.add(p);
@@ -54,23 +54,23 @@ public class Modelo_Profesor extends Profesor {
     
      public java.util.List<Profesor> listaProfesores(String aguja){
             String sql = "select * from profesor WHERE ";
-            sql += "UPPER(Id_Profesor) like UPPER('%" +aguja+ "%') OR ";
-            sql += "UPPER(Nombre) like UPPER('%" +aguja+ "%') OR ";
-            sql += "UPPER(Apellido) like UPPER('%" +aguja+ "%')";
+            sql += "UPPER(id_profesor) like UPPER('%" +aguja+ "%') OR ";
+            sql += "UPPER(nombre) like UPPER('%" +aguja+ "%') OR ";
+            sql += "UPPER(apellido) like UPPER('%" +aguja+ "%')";
             ResultSet rs = con.consulta(sql);
             java.util.List<Profesor> listap = new ArrayList<Profesor>();
             try {
                 while(rs.next()){
                     Profesor p = new Profesor();
                     p.setId_Profesor(rs.getString("id_profesor"));
-                    p.setCedula(rs.getString("Cedula"));
-                    p.setNombre(rs.getString("Nombre"));
-                    p.setApellido(rs.getString("Apellido"));
-                    p.setDireccion(rs.getString("Direccion"));
-                    p.setTelefono(rs.getString("Telefono"));
-                    p.setCorreo(rs.getString("Correo"));
-                    p.setFechanacimiento(rs.getDate("F_Nacimiento"));
-                    p.setCelular(rs.getString("Celular"));
+                    p.setCedula(rs.getString("cedula"));
+                    p.setNombre(rs.getString("nombre"));
+                    p.setApellido(rs.getString("apellido"));
+                    p.setDireccion(rs.getString("direccion"));
+                    p.setTelefono(rs.getString("telefono"));
+                    p.setCorreo(rs.getString("correo"));
+                    p.setFechanacimiento(rs.getDate("f_nacimiento"));
+                    p.setCelular(rs.getString("celular"));
                     p.setFormacion(rs.getString("formacion"));
                     p.setContraseña(rs.getString("contraseña"));
                     listap.add(p);
@@ -85,7 +85,7 @@ public class Modelo_Profesor extends Profesor {
      
       public boolean grabar(){
         String sql;
-        sql="INSERT INTO profesor (id_profesor,Cedula, Nombre,Apellido, Direccion, Telefono, Correo, F_Nacimiento,Celular,formacion,contraseña)";
+        sql="INSERT INTO profesor (id_profesor,cedula, nombre,apellido, direccion, telefono, correo, f_nacimiento,celular,formacion,contraseña)";
         sql+="VALUES('"+getId_Profesor()+"','"+getCedula()+"','"+getNombre()+"','"+getApellido()+"','"+getDireccion()+"','"+getTelefono()+"','"+getCorreo()+"','"
                 +getFechanacimiento()+"','"+getCelular()+"','"+getFormacion()+"','"+getContraseña()+"')";
         return con.accion(sql);
@@ -94,14 +94,14 @@ public class Modelo_Profesor extends Profesor {
       public boolean modificar(){
         String sql;
         sql = "UPDATE profesor ";
-        sql += " SET Nombre = '" + getNombre()+ "'"
-                + ", Apellido = '" + getApellido() + "'"
-                + ", Cedula = '" + getCedula()+ "'"
-                + ", Direccion = '" + getDireccion()+ "'"
-                + ", Telefono = '" + getTelefono()+"'"
-                + ", Correo = '" + getCorreo()+"'"
-                + ", F_Nacimiento = '" + getFechanacimiento()+ "'"
-                + ", Celular = '" + getCelular()+"'"
+        sql += " SET nombre = '" + getNombre()+ "'"
+                + ", apellido = '" + getApellido() + "'"
+                + ", cedula = '" + getCedula()+ "'"
+                + ", direccion = '" + getDireccion()+ "'"
+                + ", telefono = '" + getTelefono()+"'"
+                + ", correo = '" + getCorreo()+"'"
+                + ", f_nacimiento = '" + getFechanacimiento()+ "'"
+                + ", celular = '" + getCelular()+"'"
                 + ", formacion = '" + getFormacion()+"'"
                 +", contraseña = '"+getContraseña()+"'"
                 ;

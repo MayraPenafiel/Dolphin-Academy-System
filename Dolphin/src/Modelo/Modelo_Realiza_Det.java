@@ -44,14 +44,14 @@ public class Modelo_Realiza_Det extends Deta_Realiza {
        try {
            while(rs.next()){
                Deta_Realiza p= new Deta_Realiza();
-               p.setId_detalle(rs.getString("Id_detalle"));//campos de la BD
-               p.setId_enc(rs.getString("id_Enc"));//campos de la BD
-               p.setP_avanze(rs.getInt("P_Avance"));
-               p.setAsistencia(rs.getBoolean("Asistencia"));
+               p.setId_detalle(rs.getString("id_detalle"));//campos de la BD
+               p.setId_enc(rs.getString("id_enc"));//campos de la BD
+               p.setP_avanze(rs.getInt("p_avance"));
+               p.setAsistencia(rs.getBoolean("asistencia"));
                
                //Extraer fecha de asistencia
                DateTimeFormatter date=DateTimeFormatter.ofPattern("yyyy-MM-dd");
-               LocalDate fecha_in=LocalDate.parse(rs.getDate("F_Asistencia").toString(), date);
+               LocalDate fecha_in=LocalDate.parse(rs.getDate("f_asistencia").toString(), date);
                String f=""+fecha_in.getDayOfMonth()+ "-"+fecha_in.getMonth()+"-"+fecha_in.getYear();
                Date fa = Date.valueOf(fecha_in.toString());
                p.setF_asistencia(fa);//campos de la BD
@@ -69,23 +69,23 @@ public class Modelo_Realiza_Det extends Deta_Realiza {
     //Metodo Buscar 
     public List <Deta_Realiza> listarDR (String aguja){
        String sql = "select * from Deta_Realiza WHERE ";
-       sql+=" UPPER(Id_detalle) like UPPER('%"+aguja+"%') OR ";
-       sql+=" UPPER(id_Enc) like UPPER('%"+aguja+"%') OR ";
-       sql+=" UPPER(P_Avance) like UPPER('%"+aguja+"%') OR";
-       sql+=" UPPER (F_Asistencia) like UPPER('%"+aguja+"%') ";
+       sql+=" UPPER(id_detalle) like UPPER('%"+aguja+"%') OR ";
+       sql+=" UPPER(id_enc) like UPPER('%"+aguja+"%') OR ";
+       sql+=" UPPER(p_avance) like UPPER('%"+aguja+"%') OR";
+       sql+=" UPPER (f_asistencia) like UPPER('%"+aguja+"%') ";
        ResultSet rs= con.consulta(sql);
        List<Deta_Realiza> lista=new ArrayList<Deta_Realiza>();
        try {
            while(rs.next()){
                Deta_Realiza p= new Deta_Realiza();
-               p.setId_detalle(rs.getString("Id_detalle"));//campos de la BD
-               p.setId_enc(rs.getString("id_Enc"));//campos de la BD
-               p.setP_avanze(rs.getInt("P_Avance"));
-               p.setAsistencia(rs.getBoolean("Asistencia"));
+               p.setId_detalle(rs.getString("id_detalle"));//campos de la BD
+               p.setId_enc(rs.getString("id_enc"));//campos de la BD
+               p.setP_avanze(rs.getInt("p_avance"));
+               p.setAsistencia(rs.getBoolean("asistencia"));
                
                //Extraer fecha de asistencia
                DateTimeFormatter date=DateTimeFormatter.ofPattern("yyyy-MM-dd");
-               LocalDate fecha_in=LocalDate.parse(rs.getDate("F_Asistencia").toString(), date);
+               LocalDate fecha_in=LocalDate.parse(rs.getDate("f_asistencia").toString(), date);
                String f=""+fecha_in.getDayOfMonth()+ "-"+fecha_in.getMonth()+"-"+fecha_in.getYear();
                Date fa = Date.valueOf(fecha_in.toString());
                p.setF_asistencia(fa);//campos de la BD
@@ -105,7 +105,7 @@ public class Modelo_Realiza_Det extends Deta_Realiza {
     //Metodo para guardar
     public boolean grabar(){
        String sql;
-           sql="INSERT INTO Deta_Realiza(Id_detalle,id_Enc,F_Asistencia, Asistencia,P_Avance) ";
+           sql="INSERT INTO Deta_Realiza(id_detalle,id_enc,f_asistencia, asistencia,p_avance) ";
            sql+=" VALUES ('"+getId_detalle()+"','"+getId_enc()+"','"+getF_asistencia()+"','"+isAsistencia()+"','"+getP_avanze()+"')";
        return con.accion(sql);
     }
@@ -114,9 +114,9 @@ public class Modelo_Realiza_Det extends Deta_Realiza {
     public boolean modificar(){
         String sql;
         sql="UPDATE Deta_Realiza ";
-        sql+=" SET id_Enc = '"+getId_enc()+"'"+", F_Asistencia = '"+getF_asistencia()+"', Asistencia= '"+isAsistencia()+"', P_Avance="
+        sql+=" SET id_enc = '"+getId_enc()+"'"+", f_asistencia = '"+getF_asistencia()+"', asistencia= '"+isAsistencia()+"', p_avance="
                 +getP_avanze()+"' )";
-        sql+=" WHERE Id_detalle = '"+getId_detalle()+"' ";
+        sql+=" WHERE id_detalle = '"+getId_detalle()+"' ";
        return con.accion(sql);
     }
     
@@ -124,7 +124,7 @@ public class Modelo_Realiza_Det extends Deta_Realiza {
     public boolean eliminar(){
         String sql;
         sql= "DELETE FROM Deta_Realiza ";
-        sql+=" WHERE Id_detale = '"+getId_detalle()+"' ";
+        sql+=" WHERE id_detalle = '"+getId_detalle()+"' ";
         return con.accion(sql);
     }
     

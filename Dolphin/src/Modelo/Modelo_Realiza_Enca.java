@@ -42,9 +42,9 @@ public class Modelo_Realiza_Enca extends Enca_Realiza {
        try {
            while(rs.next()){
                Enca_Realiza p= new Enca_Realiza();
-               p.setId_encaR(rs.getString("Id_encaR"));//campos de la BD
-               p.setId_entren(rs.getString("Id_Entren"));//campos de la BD
-               p.setId_alum(rs.getString("Id_Alum"));//campos de la BD
+               p.setId_encaR(rs.getString("id_encaR"));//campos de la BD
+               p.setId_entren(rs.getString("id_entren"));//campos de la BD
+               p.setId_alum(rs.getString("id_alum"));//campos de la BD
                lista.add(p);
            }
            rs.close();
@@ -58,17 +58,17 @@ public class Modelo_Realiza_Enca extends Enca_Realiza {
      //Metodo buscar
      public List <Enca_Realiza> listarER (String aguja){
        String sql = "select * from Enca_Realiza WHERE ";
-       sql+=" UPPER(Id_encaR) like UPPER('%"+aguja+"%') OR ";
-       sql+=" UPPER(Id_Entren) like UPPER('%"+aguja+"%') OR ";
-       sql+=" UPPER(Id_Alum) like UPPER('%"+aguja+"%') ";
+       sql+=" UPPER(id_encaR) like UPPER('%"+aguja+"%') OR ";
+       sql+=" UPPER(id_entren) like UPPER('%"+aguja+"%') OR ";
+       sql+=" UPPER(id_alum) like UPPER('%"+aguja+"%') ";
        ResultSet rs= con.consulta(sql);
        List<Enca_Realiza> lista=new ArrayList<Enca_Realiza>();
        try {
            while(rs.next()){
                 Enca_Realiza p= new Enca_Realiza();
-                p.setId_encaR(rs.getString("Id_encaR"));//campos de la BD
-                p.setId_entren(rs.getString("Id_Entren"));//campos de la BD
-                p.setId_alum(rs.getString("Id_Alum"));//campos de la BD
+                p.setId_encaR(rs.getString("id_encaR"));//campos de la BD
+                p.setId_entren(rs.getString("id_entren"));//campos de la BD
+                p.setId_alum(rs.getString("id_alum"));//campos de la BD
                lista.add(p);
            }
            rs.close();
@@ -84,7 +84,7 @@ public class Modelo_Realiza_Enca extends Enca_Realiza {
     //Metodo para guardar
     public boolean grabar(){
        String sql;
-           sql="INSERT INTO Enca_Realiza(Id_encaR,Id_Entren,Id_Alum) ";
+           sql="INSERT INTO Enca_Realiza(id_encaR,id_entren,id_alum) ";
            sql+=" VALUES ('"+getId_encaR()+"','"+getId_entren()+"','"+getId_alum()+"')";
        return con.accion(sql);
     }
@@ -93,8 +93,8 @@ public class Modelo_Realiza_Enca extends Enca_Realiza {
     public boolean modificar(){
         String sql;
         sql="UPDATE Enca_Realiza ";
-        sql+=" SET Id_Entren = '"+getId_entren()+"'"+", Id_Alum = '"+getId_alum()+"'";
-        sql+=" WHERE Id_encaR = '"+getId_encaR()+"' ";
+        sql+=" SET id_entren = '"+getId_entren()+"'"+", id_alum = '"+getId_alum()+"'";
+        sql+=" WHERE id_encaR = '"+getId_encaR()+"' ";
        return con.accion(sql);
     }
     
@@ -102,7 +102,7 @@ public class Modelo_Realiza_Enca extends Enca_Realiza {
     public boolean eliminar(){
         String sql;
         sql= "DELETE FROM Enca_Realiza ";
-        sql+=" WHERE Id_encaR = '"+getId_encaR()+"' ";
+        sql+=" WHERE id_encaR = '"+getId_encaR()+"' ";
         return con.accion(sql);
     }
 }

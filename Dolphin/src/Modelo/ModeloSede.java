@@ -32,15 +32,15 @@ public class ModeloSede extends Sede{
             java.util.List<Sede> lista = new ArrayList<Sede>();
             while(rs.next()){
                 Sede sd = new Sede();
-                sd.setCod_sede(rs.getString("Cod_sede"));
-                sd.setNombre_s(rs.getString("Nombre_S"));
-                sd.setDireccion_s(rs.getString("Direccion_S"));
-                sd.setCorreo_s(rs.getString("Correo_S"));
-                sd.setTelefono_s(rs.getString("Telefono_S"));
+                sd.setCod_sede(rs.getString("cod_sede"));
+                sd.setNombre_s(rs.getString("nombre_s"));
+                sd.setDireccion_s(rs.getString("direccion_s"));
+                sd.setCorreo_s(rs.getString("correo_s"));
+                sd.setTelefono_s(rs.getString("telefono_s"));
                 //Datos de oferta academica
-                sd.setId_OA(rs.getString("id_OA"));
+                sd.setId_OA(rs.getString("id_oa"));
                 sd.setId_disciplina(rs.getString("id_disciplina"));
-                sd.setCapacidad(rs.getInt("Capacidad"));
+                sd.setCapacidad(rs.getInt("capacidad"));
                 lista.add(sd);
             }
             rs.close();
@@ -54,22 +54,22 @@ public class ModeloSede extends Sede{
     public java.util.List<Sede> listaSede(String aguja){
         try {
             String sql = "select * from sede";
-            sql += "UPPER(Cod_sede) like UPPER('%" +aguja+ "%') OR ";
-            sql += "UPPER(Nombre_S) like UPPER('%" +aguja+ "%') OR";
-            sql += "UPPER(Direccion_S) like UPPER('%" +aguja+ "%') OR";
-            sql += "UPPER(Correo_S) like UPPER('%" +aguja+ "%') OR";
-            sql += "UPPER(Telefono_S) like UPPER('%" +aguja+ "%') ";
+            sql += "UPPER(cod_sede) like UPPER('%" +aguja+ "%') OR ";
+            sql += "UPPER(nombre_s) like UPPER('%" +aguja+ "%') OR";
+            sql += "UPPER(direccion_s) like UPPER('%" +aguja+ "%') OR";
+            sql += "UPPER(correo_s) like UPPER('%" +aguja+ "%') OR";
+            sql += "UPPER(telefono_s) like UPPER('%" +aguja+ "%') ";
             ResultSet rs = con.consulta(sql);
             java.util.List<Sede> lista = new ArrayList<Sede>();
             while(rs.next()){
                 Sede sd = new Sede();
-                sd.setCod_sede(rs.getString("Cod_sede"));
-                sd.setNombre_s(rs.getString("Nombre_S"));
-                sd.setDireccion_s(rs.getString("Direccion_S"));
-                sd.setCorreo_s(rs.getString("Correo_S"));
-                sd.setTelefono_s(rs.getString("Telefono_S"));
+                sd.setCod_sede(rs.getString("cod_sede"));
+                sd.setNombre_s(rs.getString("nombre_s"));
+                sd.setDireccion_s(rs.getString("direccion_a"));
+                sd.setCorreo_s(rs.getString("correo_s"));
+                sd.setTelefono_s(rs.getString("telefono_s"));
                 // Datos de oferta Academica
-                sd.setId_OA(rs.getString("id_OA"));
+                sd.setId_OA(rs.getString("id_oa"));
                 sd.setId_disciplina(rs.getString("id_disciplina"));
                 sd.setCapacidad(rs.getInt("capacidad"));
                 lista.add(sd);
@@ -86,7 +86,7 @@ public class ModeloSede extends Sede{
     
     public boolean grabar(){
         String sql;
-        sql="INSERT INTO sede(Cod_sede,Nombre_S,Direccion_S,Correo_S,Telefono_s)";
+        sql="INSERT INTO sede(cod_sede,nombre_s,direccion_s,correo_s,telefono_s)";
         sql+="VALUES('"+getCod_sede()+"','"+getNombre_s()+ "','"+getDireccion_s()+"','"+getCorreo_s()+"','"+getTelefono_s()+"')";
         return con.accion(sql);
     }
@@ -95,12 +95,12 @@ public class ModeloSede extends Sede{
     public boolean modificar(){
         String sql;
         sql = "UPDATE sede ";
-        sql += " SET Nombre_S = '" + getNombre_s() + "'"
-                + ", Direccion_S = '" + getDireccion_s() + "'"
-                + ", Correo_S = '" + getCorreo_s() +"'"
-                + ", Telefono_S = '" + getTelefono_s()+ "'"
+        sql += " SET nombre_S = '" + getNombre_s() + "'"
+                + ", direccion_s = '" + getDireccion_s() + "'"
+                + ", correo_s = '" + getCorreo_s() +"'"
+                + ", telefono_s = '" + getTelefono_s()+ "'"
                 ;
-        sql += " WHERE Cod_sede = '" + getCod_sede()+"' ";
+        sql += " WHERE cod_sede = '" + getCod_sede()+"' ";
     return con.accion(sql);
     }
     

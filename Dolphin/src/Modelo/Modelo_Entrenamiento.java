@@ -42,21 +42,21 @@ public class Modelo_Entrenamiento extends Entrenamiento{
        try {
            while(rs.next()){
                Entrenamiento p= new Entrenamiento();
-               p.setId_entrenamiento(rs.getString("Id_Entrenamiento"));//campos de la BD
-               p.setId_profesor(rs.getString("Id_Profesor"));//campos de la BD
-               p.setId_disciplina(rs.getString("Id_Disciplina"));//campos de la BD
-               p.setDescripcion(rs.getString("Descripcion"));//campos de la BD
+               p.setId_entrenamiento(rs.getString("id_entrenamiento"));//campos de la BD
+               p.setId_profesor(rs.getString("id_profesor"));//campos de la BD
+               p.setId_disciplina(rs.getString("id_disciplina"));//campos de la BD
+               p.setDescripcion(rs.getString("descripcion"));//campos de la BD
                p.setObservaciones(rs.getString("Observaciones"));//campos de la BD
              
                //Extraer Fecha de Inicio
                DateTimeFormatter date=DateTimeFormatter.ofPattern("yyyy-MM-dd");
-               LocalDate fecha_in=LocalDate.parse(rs.getDate("F_Inicio").toString(), date);
+               LocalDate fecha_in=LocalDate.parse(rs.getDate("f_inicio").toString(), date);
                String f=""+fecha_in.getDayOfMonth()+ "-"+fecha_in.getMonth()+"-"+fecha_in.getYear();
                Date in = Date.valueOf(fecha_in.toString());
                p.setF_inicio(in);//campos de la BD
 
                //Extraer Fecha de Fin
-               LocalDate fecha_fn=LocalDate.parse(rs.getDate("F_Fin").toString(), date);
+               LocalDate fecha_fn=LocalDate.parse(rs.getDate("f_fin").toString(), date);
                String fn=""+fecha_fn.getDayOfMonth()+ "-"+fecha_fn.getMonth()+"-"+fecha_fn.getYear();
                Date fin= Date.valueOf(fecha_fn.toString());
                p.setF_fin(fin);//campos de la BD
@@ -74,30 +74,30 @@ public class Modelo_Entrenamiento extends Entrenamiento{
     //Metodo Buscar 
     public List <Entrenamiento> listarEnt (String aguja){
        String sql = "select * from Entrenamiento WHERE ";
-       sql+=" UPPER(Id_Entrenamiento) like UPPER('%"+aguja+"%') OR ";
-       sql+=" UPPER(Id_Profesor) like UPPER('%"+aguja+"%') OR ";
-       sql+=" UPPER(Id_Disciplina) like UPPER('%"+aguja+"%') OR";
-       sql+=" UPPER (Descripcion) like UPPER('%"+aguja+"%') ";
+       sql+=" UPPER(id_entrenamiento) like UPPER('%"+aguja+"%') OR ";
+       sql+=" UPPER(id_profesor) like UPPER('%"+aguja+"%') OR ";
+       sql+=" UPPER(id_disciplina) like UPPER('%"+aguja+"%') OR";
+       sql+=" UPPER (descripcion) like UPPER('%"+aguja+"%') ";
        ResultSet rs= con.consulta(sql);
        List<Entrenamiento> lista=new ArrayList<Entrenamiento>();
        try {
            while(rs.next()){
              Entrenamiento p= new Entrenamiento();
-               p.setId_entrenamiento(rs.getString("Id_Entrenamiento"));//campos de la BD
-               p.setId_profesor(rs.getString("Id_Profesor"));//campos de la BD
-               p.setId_disciplina(rs.getString("Id_Disciplina"));//campos de la BD
-               p.setDescripcion(rs.getString("Descripcion"));//campos de la BD
-               p.setObservaciones(rs.getString("Observaciones"));//campos de la BD
+               p.setId_entrenamiento(rs.getString("id_entrenamiento"));//campos de la BD
+               p.setId_profesor(rs.getString("id_profesor"));//campos de la BD
+               p.setId_disciplina(rs.getString("id_disciplina"));//campos de la BD
+               p.setDescripcion(rs.getString("descripcion"));//campos de la BD
+               p.setObservaciones(rs.getString("observaciones"));//campos de la BD
              
                //Extraer Fecha de Inicio
                DateTimeFormatter date=DateTimeFormatter.ofPattern("yyyy-MM-dd");
-               LocalDate fecha_in=LocalDate.parse(rs.getDate("F_Inicio").toString(), date);
+               LocalDate fecha_in=LocalDate.parse(rs.getDate("f_inicio").toString(), date);
                String f=""+fecha_in.getDayOfMonth()+ "-"+fecha_in.getMonth()+"-"+fecha_in.getYear();
                Date in = Date.valueOf(fecha_in.toString());
                p.setF_inicio(in);//campos de la BD
 
                //Extraer Fecha de Fin
-               LocalDate fecha_fn=LocalDate.parse(rs.getDate("F_Fin").toString(), date);
+               LocalDate fecha_fn=LocalDate.parse(rs.getDate("f_fin").toString(), date);
                String fn=""+fecha_fn.getDayOfMonth()+ "-"+fecha_fn.getMonth()+"-"+fecha_fn.getYear();
                Date fin= Date.valueOf(fecha_fn.toString());
                p.setF_fin(fin);//campos de la BD
@@ -115,8 +115,8 @@ public class Modelo_Entrenamiento extends Entrenamiento{
      //Metodo para guardar
     public boolean grabar(){
        String sql;
-           sql="INSERT INTO Entrenamiento(Id_Entrenamiento,Id_Profesor,Id_Disciplina,F_Inicio, F_fin,"
-                   + "Descripcion,Observaciones) ";
+           sql="INSERT INTO Entrenamiento(id_entrenamiento,id_profesor,id_disciplina,f_inicio, f_fin,"
+                   + "descripcion,observaciones) ";
            sql+=" VALUES ('"+getId_entrenamiento()+"','"+getId_profesor()+"','"+getId_disciplina()+"','"+
                    getF_inicio()+"','"+getF_fin()+"','"+getDescripcion()+"','"+getObservaciones()+"')";
        return con.accion(sql);
@@ -126,10 +126,10 @@ public class Modelo_Entrenamiento extends Entrenamiento{
     public boolean modificar(){
         String sql;
         sql="UPDATE Entrenamiento ";
-        sql+=" SET Id_Profesor = '"+getId_profesor()+"'"+", Id_Disciplina = '"+getId_disciplina()+"'"+
-                ", F_inicio = '"+getF_inicio()+"'"+", F_fin = '"+getF_fin()+"'"+", Descripcion = '"+getDescripcion()+"'"+
-                ", Observaciones = '"+getObservaciones()+"'";
-        sql+=" WHERE Id_Entrenamiento = '"+getId_entrenamiento()+"' ";
+        sql+=" SET id_profesor = '"+getId_profesor()+"'"+", id_disciplina = '"+getId_disciplina()+"'"+
+                ", f_inicio = '"+getF_inicio()+"'"+", f_fin = '"+getF_fin()+"'"+", descripcion = '"+getDescripcion()+"'"+
+                ", observaciones = '"+getObservaciones()+"'";
+        sql+=" WHERE id_entrenamiento = '"+getId_entrenamiento()+"' ";
        return con.accion(sql);
     }
     
@@ -137,7 +137,7 @@ public class Modelo_Entrenamiento extends Entrenamiento{
     public boolean eliminar(){
         String sql;
         sql= "DELETE FROM Entrenamiento ";
-        sql+=" WHERE Id_Entrenamiento = '"+getId_entrenamiento()+"' ";
+        sql+=" WHERE id_entrenamiento = '"+getId_entrenamiento()+"' ";
         return con.accion(sql);
     }
     
