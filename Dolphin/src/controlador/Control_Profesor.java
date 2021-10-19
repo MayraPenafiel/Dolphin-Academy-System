@@ -373,7 +373,6 @@ public class Control_Profesor{
                     String cel=lista.get(i).getCelular()+"";
                     String con=lista.get(i).getContraseña()+"";
                     String fo = lista.get(i).getFormacion()+"";
-
                     
                     vista.getTxtCodProf().setText(id);
                     vista.getTxtCedulaProf().setText(ce);

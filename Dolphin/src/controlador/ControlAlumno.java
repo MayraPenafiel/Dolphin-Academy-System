@@ -80,7 +80,7 @@ public class ControlAlumno {
                     Toolkit.getDefaultToolkit().beep();
                 }
 
-                if (vista.getTxtCodAlmn().getText().length() > 8) {
+                if (vista.getTxtCodAlmn().getText().length() >= 3) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }
@@ -99,7 +99,7 @@ public class ControlAlumno {
                     Toolkit.getDefaultToolkit().beep();
                 }
 
-                if (vista.getTxtNombreAlumn().getText().length() > 20) {
+                if (vista.getTxtNombreAlumn().getText().length() >= 20) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }
@@ -117,7 +117,7 @@ public class ControlAlumno {
                     Toolkit.getDefaultToolkit().beep();
                 }
 
-                if (vista.getTxtApeAlmn().getText().length() > 20) {
+                if (vista.getTxtApeAlmn().getText().length() >= 20) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }
@@ -135,7 +135,7 @@ public class ControlAlumno {
                     Toolkit.getDefaultToolkit().beep();
                 }
 
-                if (vista.getTxtTelfAlmn().getText().length() > 10) {
+                if (vista.getTxtTelfAlmn().getText().length() >= 10) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }
@@ -154,7 +154,7 @@ public class ControlAlumno {
                     Toolkit.getDefaultToolkit().beep();
                 }
 
-                if (vista.getTxtCelularAlmn().getText().length() > 10) {
+                if (vista.getTxtCelularAlmn().getText().length() >= 10) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }
@@ -173,7 +173,7 @@ public class ControlAlumno {
                     Toolkit.getDefaultToolkit().beep();
                 }
 
-                if (vista.getTxtDireccionAlmn().getText().length() > 50) {
+                if (vista.getTxtDireccionAlmn().getText().length() >= 50) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }
@@ -191,7 +191,7 @@ public class ControlAlumno {
                     Toolkit.getDefaultToolkit().beep();
                 }
 
-                if (vista.getTxtCedulaAlmn().getText().length() > 10) {
+                if (vista.getTxtCedulaAlmn().getText().length() <= 10) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }
@@ -199,15 +199,10 @@ public class ControlAlumno {
         };
 
         vista.getTxtCedulaAlmn().addKeyListener(c7);
-
         vista.getBtnListarJFAlmn().addActionListener(l -> cargaLista(""));
-        
-        
         vista.getBtnCrearAlmn().addActionListener(l->abrir_dialogo(1));
         vista.getBtnEditarJFAlmn().addActionListener(l->abrir_dialogo(2));
         vista.getBtnEliminarJFAlmn().addActionListener(l->abrir_dialogo(3));
-        
-        
         vista.getBtnGuardarAlmn().addActionListener(l->grabaAlumno());
         vista.getBtnCrearAlmn().addActionListener(l->vista.getDgAlumno().dispose());
         vista.getBtnconfirmareliminar().addActionListener(l-> confirmar());
@@ -227,7 +222,6 @@ public class ControlAlumno {
             JasperPrint jp=JasperFillManager.fillReport(jr, null,conp.getCon());
             JasperViewer jv=new JasperViewer(jp);
             jv.setVisible(true);
-            
         } catch (JRException ex) {
             Logger.getLogger(ControlAlumno.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -312,7 +306,6 @@ public class ControlAlumno {
 
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         String fecha = formato.format(F_Nacimiento);
-
         String fechanacimiento[] = fecha.split("/");
         int anio = Integer.parseInt(fechanacimiento[2]);
         int mes = Integer.parseInt(fechanacimiento[1]);
@@ -333,7 +326,6 @@ public class ControlAlumno {
         vista.getTxtDireccionAlmn().setText("");
         vista.getTxtTelfAlmn().setText("");
         vista.getTxtCelularAlmn().setText("");
-
     }
 
     private void eliminar() {

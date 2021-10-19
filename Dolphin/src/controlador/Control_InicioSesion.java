@@ -67,6 +67,7 @@ public class Control_InicioSesion{
     //Controlar Eventos de la Vista IiciarSesion
     public void iniciaControlAlumno(){
         String h=Control_Principal.boton;
+        h="A";
         if(h=="A"){
             vista.getBtnIngresar().addActionListener(l->comp_al());
             vista.getJbcancelar().addActionListener(l->regresar());
@@ -107,8 +108,9 @@ public class Control_InicioSesion{
                 String pass= new String(vista.getPwfcontraseña().getPassword());
                 if(pass.equalsIgnoreCase(p.getContraseña())){
                     JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
-                    vista.dispose();
                     VistaMenu menu=new VistaMenu();
+                    Control_Menu c= new Control_Menu(menu);
+                    c.iniciControl();
                     menu.setVisible(true);
                 }else{
                     System.out.println("No existe Pass P");
@@ -129,8 +131,9 @@ public class Control_InicioSesion{
                 String pass= new String(vista.getPwfcontraseña().getPassword());
                 if(pass==d.getContraseña()){
                     JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
-                    vista.dispose();
                     VistaMenu menu=new VistaMenu();
+                    Control_Menu c= new Control_Menu(menu);
+                    c.iniciControl();
                     menu.setVisible(true);
                 }else{
                     System.out.println("No existe Pass D");
@@ -147,13 +150,15 @@ public class Control_InicioSesion{
         String usuario=vista.getTxtNombreUser().getText();
         List<Alumno> lal=modal.listaAlumnos();
          lal.stream().forEach(a->{
-            if(a.getId_alumno().equalsIgnoreCase(usuario)){
+            if(usuario.equalsIgnoreCase(a.getId_alumno())){
+                System.out.println(a.getId_alumno());
                 JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
-                vista.dispose();
-                VistaMenu menu=new VistaMenu();
-                menu.setVisible(true);
+                    VistaMenu menu=new VistaMenu();
+                    Control_Menu c= new Control_Menu(menu);
+                    c.iniciControl();
+                    menu.setVisible(true);
             }else{
-                System.out.println("No existe Usuario A");
+                 JOptionPane.showMessageDialog(null, "Usuario no encontrado");
             }
          });
     } 

@@ -37,12 +37,29 @@ public class Control_Menu {
     //Constructores
     public Control_Menu(VistaMenu vm) {
         this.vm = vm;
+        vm.setLocationRelativeTo(null);
+        String h=Control_Principal.boton;
+        if(h=="A"){
+            System.out.println("A menu");
+            vm.getMIAlumno().setText("Mi Informacion");
+            vm.getMIAdm().setVisible(false);
+            vm.getMIAdm().setEnabled(false);
+            vm.getMIDisciplina().setVisible(false);
+            vm.getMIEnt().setVisible(false);
+            vm.getMISede().setVisible(false);
+            vm.getJbencar().setVisible(false);
+            vm.getMIDetRealiza().setText("Entrenamiento/Asistencia");
+            vm.getMIDisciplina().setEnabled(false);
+            vm.getMIEnt().setEnabled(false);
+            vm.getMISede().setEnabled(false);
+            vm.getJbencar().setEnabled(false);
+        }
     }
     public Control_Menu() {
     }
     
-    
     public void iniciControl(){
+        
         vm.getMIAlumno().addActionListener(l->abrir_ventana(1));
         vm.getMIProfesor().addActionListener(l->abrir_ventana(2));
         vm.getMIAdm().addActionListener(l->abrir_ventana(3));

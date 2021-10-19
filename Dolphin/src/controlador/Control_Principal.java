@@ -63,7 +63,6 @@ public class Control_Principal {
              boton=rol_entidad;
              c.iniciaControlProf();
         }
-       
     }
     
 }
