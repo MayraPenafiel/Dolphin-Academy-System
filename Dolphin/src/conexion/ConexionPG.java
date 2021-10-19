@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultComboBoxModel;
 
 
 public class ConexionPG {
@@ -68,5 +69,22 @@ public class ConexionPG {
         this.con = con;
     }
     
+    
+    //LLENAR LOS COMBO BOX CON DATOS DEL PROFESOR
+    public DefaultComboBoxModel CmbEntrenamiento(){
+        DefaultComboBoxModel listaProfEnt= new DefaultComboBoxModel();
+        listaProfEnt.addElement("Seleccione un profesor");
+        ResultSet rs=this.consulta("Select*from profesor order by Id_Profesor");
+        
+        try {
+            while (rs.next()) {                
+                listaProfEnt.addElement(rs.getString("Id_Profesor"));
+            }
+            rs.close();
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+        return listaProfEnt;
+    }
     
 }

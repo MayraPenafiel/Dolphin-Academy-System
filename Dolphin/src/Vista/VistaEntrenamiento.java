@@ -6,6 +6,7 @@
 package Vista;
 
 import com.toedter.calendar.JDateChooser;
+import conexion.ConexionPG;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
@@ -23,8 +24,10 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
     /**
      * Creates new form VistaEntrenamiento
      */
+    private ConexionPG con = new ConexionPG();
     public VistaEntrenamiento() {
         initComponents();
+        this.jcbproent.setModel(con.CmbEntrenamiento());
     }
 
     /**
