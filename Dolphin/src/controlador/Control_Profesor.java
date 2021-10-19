@@ -253,62 +253,57 @@ public class Control_Profesor{
         }
     }
     
-    
-    
     private void cargaLista(String aguja){
         DefaultTableModel tableModel;
         tableModel = (DefaultTableModel) vista.getTbProfesor().getModel();
         tableModel.setNumRows(0);
         java.util.List<Profesor> lista = modelo.listaProfesores(aguja);
         lista.stream().forEach(p ->{
-        
             tableModel.addRow(new Object[]{ p.getId_Profesor(),p.getCedula(),p.getNombre(),p.getApellido(),p.getDireccion(),p.getTelefono(),p.getCorreo(),
             p.getFechanacimiento(),p.getCelular(),p.getFormacion()});
         });
     }
     
     private void grabaProfesor(){
-    String idprofesor = vista.getTxtCodProf().getText();
-    String cedula = vista.getTxtCedulaProf().getText();
-    String nombre = vista.getTxtNombreProf().getText();
-    String apellido = vista.getTxtApeProf().getText();
-    String direccion = vista.getTxtDireccionProf().getText();
-    String telefono = vista.getTxtTelfProf().getText();
-    String correo = vista.getTxtEmailProf().getText();
-    //String fechanacimiento = vista.
-    String celular = vista.getTxtCelularProf().getText();
-    String formacion = vista.getTxtFormacionProf().getText();
-  
-    Instant instante = vista.getDCProf().getDate().toInstant();
-    ZoneId zi = ZoneId.of("America/Guayaquil");
-    ZonedDateTime zdt = ZonedDateTime.ofInstant(instante, zi);
-    java.sql.Date fecha = java.sql.Date.valueOf(zdt.toLocalDate());
+        String idprofesor = vista.getTxtCodProf().getText();
+        String cedula = vista.getTxtCedulaProf().getText();
+        String nombre = vista.getTxtNombreProf().getText();
+        String apellido = vista.getTxtApeProf().getText();
+        String direccion = vista.getTxtDireccionProf().getText();
+        String telefono = vista.getTxtTelfProf().getText();
+        String correo = vista.getTxtEmailProf().getText();
+        String pass= vista.getTxtContraseñaProf().getText();
+        String celular = vista.getTxtCelularProf().getText();
+        String formacion = vista.getTxtFormacionProf().getText();
 
-    Modelo_Profesor profesor = new Modelo_Profesor();
-    profesor.setId_Profesor(idprofesor);
-    profesor.setCedula(cedula);
-    profesor.setNombre(nombre);
-    profesor.setApellido(apellido);
-    profesor.setDireccion(direccion);
-    profesor.setTelefono(telefono);
-    profesor.setCorreo(correo);
-    profesor.setCelular(celular);
-    profesor.setContraseña("");
-    
+        Instant instante = vista.getDCProf().getDate().toInstant();
+        ZoneId zi = ZoneId.of("America/Guayaquil");
+        ZonedDateTime zdt = ZonedDateTime.ofInstant(instante, zi);
+        java.sql.Date fecha = java.sql.Date.valueOf(zdt.toLocalDate());
+
+        Modelo_Profesor profesor = new Modelo_Profesor();
+        profesor.setId_Profesor(idprofesor);
+        profesor.setCedula(cedula);
+        profesor.setNombre(nombre);
+        profesor.setApellido(apellido);
+        profesor.setDireccion(direccion);
+        profesor.setTelefono(telefono);
+        profesor.setCorreo(correo);
+        profesor.setCelular(celular);
+        profesor.setContraseña(pass);
+        profesor.setFormacion(formacion);
+        profesor.setFechanacimiento(fecha);
         if (profesor.grabar()) {
             JOptionPane.showMessageDialog(vista, "Profesor creado satisfactoriamente");
         } else {
             JOptionPane.showMessageDialog(vista, "ERROR");
         }
-    
     }
     
      
     public String Edad(java.util.Date F_Nacimiento) {
-
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         String fecha = formato.format(F_Nacimiento);
-
         String fechanacimiento[] = fecha.split("/");
         int anio = Integer.parseInt(fechanacimiento[2]);
         int mes = Integer.parseInt(fechanacimiento[1]);
@@ -320,18 +315,16 @@ public class Control_Profesor{
         return String.valueOf(edad);
     }
     
-    
     private void limpiar(){
-    vista.getTxtCodProf().setText("");
-    vista.getTxtCedulaProf().setText("");
-    vista.getTxtNombreProf().setText("");
-    vista.getTxtApeProf().setText("");
-    vista.getTxtDireccionProf().setText("");
-    vista.getTxtTelfProf().setText("");
-    vista.getTxtEmailProf().setText("");
-    vista.getTxtCelularProf().setText("");
-    vista.getTxtFormacionProf().setText("");
-
+        vista.getTxtCodProf().setText("");
+        vista.getTxtCedulaProf().setText("");
+        vista.getTxtNombreProf().setText("");
+        vista.getTxtApeProf().setText("");
+        vista.getTxtDireccionProf().setText("");
+        vista.getTxtTelfProf().setText("");
+        vista.getTxtEmailProf().setText("");
+        vista.getTxtCelularProf().setText("");
+        vista.getTxtFormacionProf().setText("");
     }
     
     private void eliminar() {
@@ -361,8 +354,6 @@ public class Control_Profesor{
             limpiar();
         }
     }
-    
-    
     
      private void modificar(){
         int se=vista.getTbProfesor().getSelectedRow();
@@ -395,9 +386,6 @@ public class Control_Profesor{
                     vista.getTxtCelularProf().setText(cel);
                     vista.getTxtContraseñaProf().setText(con);
                     vista.getTxtFormacionProf().setText(fo);
-                    
-                    
-                    
                  }
             }
          }else{
@@ -406,6 +394,4 @@ public class Control_Profesor{
         }
     }
  
-    
-    
 }
