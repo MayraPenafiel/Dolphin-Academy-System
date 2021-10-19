@@ -97,7 +97,6 @@ public class ControlDirector {
     
     
     private void cargaLista(String aguja){
-        
         DefaultTableCellRenderer r = new DefaultTableCellRenderer();
         DefaultTableModel tableModel;
         tableModel = (DefaultTableModel) vista.getTbDirector().getModel();
