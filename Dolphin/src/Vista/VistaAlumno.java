@@ -16,11 +16,12 @@ import javax.swing.JTextField;
  *
  * @author HP
  */
-public class VistaAlumno extends javax.swing.JFrame {
+public class VistaAlumno extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form VistaPersona
      */
+    
     public VistaAlumno() {
         initComponents();
     }
@@ -86,6 +87,7 @@ public class VistaAlumno extends javax.swing.JFrame {
         BtnListarJFAlmn = new javax.swing.JButton();
         BtnEliminarJFAlmn = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        btnimprimiralum = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -412,25 +414,25 @@ public class VistaAlumno extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TbAlumno);
 
-        PNOA.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 106, 920, 104));
+        PNOA.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 106, 910, 104));
 
         jLabel3.setText("BUSCAR");
         PNOA.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 69, -1, -1));
-        PNOA.add(TxtBuscarAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 66, 497, -1));
+        PNOA.add(TxtBuscarAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 66, 260, -1));
 
         BtnCrearJFAlmn.setText("Crear");
-        PNOA.add(BtnCrearJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(567, 65, -1, -1));
+        PNOA.add(BtnCrearJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, -1, -1));
 
         BtnEditarJFAlmn.setText("Editar");
-        PNOA.add(BtnEditarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(632, 65, -1, -1));
+        PNOA.add(BtnEditarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
 
         BtnListarJFAlmn.setText("Listar");
-        PNOA.add(BtnListarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(703, 65, -1, -1));
+        PNOA.add(BtnListarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 70, -1, -1));
 
         BtnEliminarJFAlmn.setText("Eliminar");
         BtnEliminarJFAlmn.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFAlmn.setMinimumSize(new java.awt.Dimension(59, 23));
-        PNOA.add(BtnEliminarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 65, -1, -1));
+        PNOA.add(BtnEliminarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 70, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -441,7 +443,10 @@ public class VistaAlumno extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        PNOA.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 230, -1, -1));
+        PNOA.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 230, -1, -1));
+
+        btnimprimiralum.setText("Imprimir");
+        PNOA.add(btnimprimiralum, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 70, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -466,10 +471,7 @@ public class VistaAlumno extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnCrearAlmnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-         this.dispose();
-        VistaMenu vm = new VistaMenu();
-        vm.setVisible(true);
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public JButton getBtncancelareliminar() {
@@ -673,44 +675,15 @@ public class VistaAlumno extends javax.swing.JFrame {
     public void setjDialog1(JDialog jDialog1) {
         this.DgAlumno = jDialog1;
     }
-    
-    
-//    /**
-//     * @param args the command line arguments
-//     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(VistaAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new VistaAlumno().setVisible(true);
-//            }
-//        });
-//    }
 
+    public JButton getBtnimprimiralum() {
+        return btnimprimiralum;
+    }
+
+    public void setBtnimprimiralum(JButton btnimprimiralum) {
+        this.btnimprimiralum = btnimprimiralum;
+    }
+    
     public JComboBox<String> getCbxdisciplina() {
         return cbxdisciplina;
     }
@@ -752,6 +725,7 @@ public class VistaAlumno extends javax.swing.JFrame {
     private javax.swing.JTextField TxtTelfAlmn;
     private javax.swing.JButton btncancelareliminar;
     private javax.swing.JButton btnconfirmareliminar;
+    private javax.swing.JButton btnimprimiralum;
     private javax.swing.JComboBox<String> cbxdisciplina;
     private javax.swing.JComboBox<String> cbxentrenamiento;
     private javax.swing.JButton jButton1;
