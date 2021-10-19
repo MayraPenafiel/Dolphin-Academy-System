@@ -12,6 +12,8 @@ import Modelo.clases_base.Entrenamiento;
 import Modelo.clases_base.Profesor;
 import Vista.VistaEntrenamiento;
 import conexion.ConexionPG;
+import java.awt.Toolkit;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.time.Instant;
@@ -67,6 +69,65 @@ public class Control_Entrenamiento {
                 cargarLista(vista.getTxtBuscarEnt().getText());
             }
         };
+        
+         KeyAdapter c1 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c) || Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtCodEnt().getText().length() > 8) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtCodEnt().addKeyListener(c1);
+
+        KeyAdapter c2 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtDescEnt().getText().length() > 20) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+        vista.getTxtDescEnt().addKeyListener(c2);
+
+        KeyAdapter c3 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtObsEnt().getText().length() > 20) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+        vista.getTxtObsEnt().addKeyListener(c3);
+
+   
+
+     
      
         //Controlar Eventos de la Vista Entrenamiento
         vista.getBtnListarJFEnt().addActionListener(l->cargarLista(""));

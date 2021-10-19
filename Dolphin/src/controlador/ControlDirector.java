@@ -18,6 +18,8 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import conexion.ConexionPG;
+import java.awt.Toolkit;
+import java.awt.event.KeyAdapter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import net.sf.jasperreports.engine.JRException;
@@ -65,6 +67,137 @@ public class ControlDirector {
                 cargaLista(vista.getTxtBuscarDirec().getText());
             }
         };
+        
+                KeyAdapter c1 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c) || Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtCodDirec().getText().length() > 8) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtCodDirec().addKeyListener(c1);
+
+        KeyAdapter c2 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtNombreDirec().getText().length() > 20) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+        vista.getTxtNombreDirec().addKeyListener(c2);
+
+        KeyAdapter c3 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtApeDirec().getText().length() > 20) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+        vista.getTxtApeDirec().addKeyListener(c3);
+
+        KeyAdapter c4 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtTelfDirec().getText().length() > 10) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtTelfDirec().addKeyListener(c4);
+
+        KeyAdapter c5 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtCelularDirec().getText().length() > 10) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtCelularDirec().addKeyListener(c5);
+
+        KeyAdapter c6 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtDireccionDirec().getText().length() > 50) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+        vista.getTxtDireccionDirec().addKeyListener(c6);
+
+        KeyAdapter c7 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtCedulaDirec().getText().length() > 10) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtCedulaDirec().addKeyListener(c7);
+        
         vista.getBtnListarJFDirec().addActionListener(l -> cargaLista(""));
          vista.getBtnCrearDirec().addActionListener(l->abrir_dialogo(1));
         vista.getBtnEditarJFDirec().addActionListener(l->abrir_dialogo(2));
