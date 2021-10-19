@@ -27,6 +27,7 @@ import net.sf.jasperreports.view.JasperViewer;
 public class Control_Disciplina {
     private ModeloDisciplina modelo;
     private VistaDisciplina vista;
+    DefaultTableModel tabla = new DefaultTableModel();
 
     public Control_Disciplina(ModeloDisciplina modelo, VistaDisciplina vista) {
         this.modelo = modelo;
@@ -57,81 +58,6 @@ public class Control_Disciplina {
 
         };
         
-//         KeyAdapter c1 = new KeyAdapter() {
-//            @Override
-//            public void keyTyped(KeyEvent e) {
-//                char c = e.getKeyChar();
-//                if (Character.isDigit(c) || Character.isLetter(c)) {
-//                } else {
-//                    e.consume();
-//                    Toolkit.getDefaultToolkit().beep();
-//                }
-//
-//                if (vista.getTxtcodigo().getText().length() > 8) {
-//                    Toolkit.getDefaultToolkit().beep();
-//                    e.consume();
-//                }
-//            }
-//        };
-//
-//        vista.getTxtcodigo().addKeyListener(c1);
-//
-//        KeyAdapter c2 = new KeyAdapter() {
-//            @Override
-//            public void keyTyped(KeyEvent e) {
-//                char c = e.getKeyChar();
-//                if (Character.isLetter(c)) {
-//                } else {
-//                    e.consume();
-//                    Toolkit.getDefaultToolkit().beep();
-//                }
-//
-//                if (vista.getTxtnombred().getText().length() > 20) {
-//                    Toolkit.getDefaultToolkit().beep();
-//                    e.consume();
-//                }
-//            }
-//        };
-//        vista.getTxtnombred().addKeyListener(c2);
-//
-//        KeyAdapter c3 = new KeyAdapter() {
-//            @Override
-//            public void keyTyped(KeyEvent e) {
-//                char c = e.getKeyChar();
-//                if (Character.isLetter(c)) {
-//                } else {
-//                    e.consume();
-//                    Toolkit.getDefaultToolkit().beep();
-//                }
-//
-//                if (vista.getTxtdescripciond().getText().length() > 20) {
-//                    Toolkit.getDefaultToolkit().beep();
-//                    e.consume();
-//                }
-//            }
-//        };
-//        vista.getTxtdescripciond().addKeyListener(c3);
-//
-//        KeyAdapter c4 = new KeyAdapter() {
-//            @Override
-//            public void keyTyped(KeyEvent e) {
-//                char c = e.getKeyChar();
-//                if (Character.isLetter(c)) {
-//                } else {
-//                    e.consume();
-//                    Toolkit.getDefaultToolkit().beep();
-//                }
-//
-//                if (vista.getTxtdescripciond().getText().length() > 10) {
-//                    Toolkit.getDefaultToolkit().beep();
-//                    e.consume();
-//                }
-//            }
-//        };
-
-        //vista.getTxtdescripciond().addKeyListener(c4);
-
-
         
         
         //Controlar los eventos de la vista
@@ -214,9 +140,9 @@ public class Control_Disciplina {
         tblModel=(DefaultTableModel)vista.getTbldisciplina().getModel();
         tblModel.setNumRows(0);
         List<Disciplina> lista=modelo.listaDisciplinas(aguja);
-        lista.stream().forEach(d->{
-        String[] disciplina={d.getId_disciplina(),d.getNombre_d(),d.getDescripcion_d(),d.getObservaciones()+""};
-        tblModel.addRow(disciplina);
+            lista.stream().forEach(d->{
+            String[] disciplina={d.getId_disciplina(),d.getNombre_d(),d.getDescripcion_d(),d.getObservaciones()+""};
+            tblModel.addRow(disciplina);
         });
     }
 
@@ -231,7 +157,7 @@ public class Control_Disciplina {
         
         
         ModeloDisciplina disciplina = new ModeloDisciplina();
-        disciplina.setId_disciplina(descripcion_d);
+        disciplina.setId_disciplina(id_disciplina);
         disciplina.setNombre_d(nombre_d);
         disciplina.setDescripcion_d(descripcion_d);
         disciplina.setObservaciones(observaciones);
@@ -263,7 +189,6 @@ public class Control_Disciplina {
             }
              
              
-             
         }
     }
       
@@ -271,10 +196,7 @@ public class Control_Disciplina {
       private void cargarDatos(){
         AbstractTableModel tblmodel= (AbstractTableModel) this.vista.getTbldisciplina().getModel();
         JTable tabla=this.vista.getTbldisciplina();
-        
-       
         List<Disciplina> l1= modelo.listaDisciplinas(tblmodel.getValueAt(tabla.getSelectedRow(), 0)+"");
-        
         vista.getTxtcodigo().setText(l1.get(0).getId_disciplina());
         vista.getTxtnombred().setText(l1.get(0).getNombre_d());
         vista.getTxtdescripciond().setText(l1.get(0).getDescripcion_d());

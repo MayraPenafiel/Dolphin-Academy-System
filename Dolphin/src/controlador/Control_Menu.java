@@ -33,7 +33,7 @@ public class Control_Menu {
     
     //Atributos
     private VistaMenu vm;
-    private VistaAlumno va;
+    
     private VistaProfesor vp;
     private VistaDirector vd;
     
@@ -79,20 +79,25 @@ public class Control_Menu {
     
     private void abrir_ventana(int op){
         if(op==1){
+           VistaAlumno va = new VistaAlumno();
            ModeloAlumno md= new ModeloAlumno();
+           vm.getDskMenu().add(va);
            ControlAlumno c=new ControlAlumno(md,va);
            c.iniciaControl();
+           
            va.setVisible(true);
         }
         if(op==2){ 
             VistaProfesor vt= new VistaProfesor();
             Modelo_Profesor md= new Modelo_Profesor();
+            vm.getDskMenu().add(vt);
             Control_Profesor c= new Control_Profesor(md, vt);
             c.iniciaControl();
         }
         if (op==3){
             VistaDirector vt= new VistaDirector();
             ModeloDirector md= new ModeloDirector();
+            vm.getDskMenu().add(vt);
             ControlDirector c= new ControlDirector(md, vt);
             c.iniciaControl();
         }
@@ -105,6 +110,7 @@ public class Control_Menu {
         if(op==5){
             VistaDisciplina vt= new VistaDisciplina();
             ModeloDisciplina md= new ModeloDisciplina();
+            vm.getDskMenu().add(vt);
             Control_Disciplina c= new Control_Disciplina(md, vt);
             c.iniciaControl();
         }
@@ -117,6 +123,7 @@ public class Control_Menu {
         if(op==7){
             VistaEntrenamiento vt= new VistaEntrenamiento();
             Modelo_Entrenamiento md= new Modelo_Entrenamiento();
+            vm.getDskMenu().add(vt);
             Control_Entrenamiento c = new Control_Entrenamiento(md,vt);
             c.iniciaControl();
         }

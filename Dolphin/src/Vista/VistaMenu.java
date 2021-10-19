@@ -12,15 +12,18 @@ import javax.swing.JDesktopPane;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
+
 /**
  *
  * @author HP
  */
+
 public class VistaMenu extends javax.swing.JFrame {
 
     /**
      * Creates new form Persona
      */
+    
     public VistaMenu() {
         initComponents();
     }
@@ -255,10 +258,7 @@ public class VistaMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_MIDetRealizaActionPerformed
 
     private void MIDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIDisciplinaActionPerformed
-        // TODO add your handling code here:
-        VistaDisciplina vista=new VistaDisciplina();
-        
-        vista.setVisible(true);
+      
     }//GEN-LAST:event_MIDisciplinaActionPerformed
 
     private void jbencarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbencarActionPerformed
