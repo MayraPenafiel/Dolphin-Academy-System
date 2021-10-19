@@ -155,7 +155,7 @@ public class VistaMenu extends javax.swing.JFrame {
         MenuP.add(MIProfesor);
 
         MIAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-director-de-escuela-20.png"))); // NOI18N
-        MIAdm.setText("Administradores");
+        MIAdm.setText("Directores");
         MIAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MIAdmActionPerformed(evt);

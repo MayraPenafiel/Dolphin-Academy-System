@@ -44,7 +44,7 @@ public class Control_InicioSesion{
     //Controlar Eventos de la Vista IiciarSesion
     public void iniciaControl(){
         vista.getBtnIngresar().addActionListener(l->llamar_comp());
-        vista.getJbcancelar().addActionListener(l->vista.dispose());
+        vista.getJbcancelar().addActionListener(l->regresar());
      }
     private void llamar_comp(){
         String h=Control_Principal.boton.toString();

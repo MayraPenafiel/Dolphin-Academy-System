@@ -36,7 +36,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Vista/iconos/icons8-director-de-escuela-20.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Administradores"/>
+                <Property name="text" type="java.lang.String" value="Directores"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MIAdmActionPerformed"/>

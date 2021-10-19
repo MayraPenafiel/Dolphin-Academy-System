@@ -5,6 +5,7 @@
  */
 package controlador;
 
+import Modelo.ModeloDisciplina;
 import Modelo.Modelo_Entrenamiento;
 import Modelo.Modelo_Profesor;
 import Modelo.clases_base.Disciplina;
@@ -24,7 +25,6 @@ import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import modelo.Modelo_Disciplina;
 
 /**
  *
@@ -33,13 +33,13 @@ import modelo.Modelo_Disciplina;
 
 public class Control_Entrenamiento {
     private Modelo_Entrenamiento modelo;
-    private Modelo_Disciplina m_dis;
+    private ModeloDisciplina m_dis;
     private Modelo_Profesor m_pro;
     private VistaEntrenamiento vista;
     DefaultTableModel tabla = new DefaultTableModel();
     private ConexionPG con=new ConexionPG();
     
-     public Control_Entrenamiento(Modelo_Entrenamiento modelo, VistaEntrenamiento vista, Modelo_Disciplina m_dis,Modelo_Profesor m_pro) {
+     public Control_Entrenamiento(Modelo_Entrenamiento modelo, VistaEntrenamiento vista, ModeloDisciplina m_dis,Modelo_Profesor m_pro) {
         this.modelo = modelo;
         this.vista = vista;
         this.m_dis=m_dis;
@@ -50,6 +50,12 @@ public class Control_Entrenamiento {
         vista.setVisible(true);
         cargarLista("");
      }
+
+    public Control_Entrenamiento(Modelo_Entrenamiento modelo, VistaEntrenamiento vista) {
+        this.modelo = modelo;
+        this.vista = vista;
+    }
+     
      
      public void iniciaControl(){
         KeyListener kl=new KeyListener() {
@@ -125,10 +131,6 @@ public class Control_Entrenamiento {
         };
         vista.getTxtObsEnt().addKeyListener(c3);
 
-   
-
-     
-     
         //Controlar Eventos de la Vista Entrenamiento
         vista.getBtnListarJFEnt().addActionListener(l->cargarLista(""));
         vista.getBtnCrearJFEnt().addActionListener(l->abrir_dialogo(1));
@@ -221,7 +223,7 @@ public class Control_Entrenamiento {
         Instant insta= vista.getDCFechaFinEnt().getDate().toInstant();
         ZoneId z= ZoneId.of("America/Guayaquil");
         ZonedDateTime zd=ZonedDateTime.ofInstant(insta, z);
-        java.sql.Date fn = java.sql.Date.valueOf(zdt.toLocalDate());
+        java.sql.Date fn = java.sql.Date.valueOf(zd.toLocalDate());
         
         //Obtener Datos desde un combobox
         
