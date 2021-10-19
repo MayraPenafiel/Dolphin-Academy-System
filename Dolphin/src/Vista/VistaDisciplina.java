@@ -66,6 +66,7 @@ public class VistaDisciplina extends javax.swing.JFrame {
         btnlistar = new javax.swing.JButton();
         btneliminar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        btnimprimirdisciplina = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -262,6 +263,8 @@ public class VistaDisciplina extends javax.swing.JFrame {
             }
         });
 
+        btnimprimirdisciplina.setText("Imprimir");
+
         javax.swing.GroupLayout PNOALayout = new javax.swing.GroupLayout(PNOA);
         PNOA.setLayout(PNOALayout);
         PNOALayout.setHorizontalGroup(
@@ -270,20 +273,21 @@ public class VistaDisciplina extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 643, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
                     .addGroup(PNOALayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtbuscard)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtbuscard, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)
                         .addComponent(btncrear, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(btneditar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnlistar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btneliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(89, 89, 89))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnimprimirdisciplina))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton1)))
@@ -301,7 +305,8 @@ public class VistaDisciplina extends javax.swing.JFrame {
                     .addComponent(txtbuscard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(btnlistar)
-                    .addComponent(btneliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btneliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnimprimirdisciplina))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -598,6 +603,16 @@ public class VistaDisciplina extends javax.swing.JFrame {
     public void setTxtobservacionesd(JTextArea txtobservacionesd) {
         this.txtobservacionesd = txtobservacionesd;
     }
+
+    public JButton getBtnimprimirdisciplina() {
+        return btnimprimirdisciplina;
+    }
+
+    public void setBtnimprimirdisciplina(JButton btnimprimirdisciplina) {
+        this.btnimprimirdisciplina = btnimprimirdisciplina;
+    }
+    
+    
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -609,6 +624,7 @@ public class VistaDisciplina extends javax.swing.JFrame {
     private javax.swing.JButton btncrear;
     private javax.swing.JButton btneditar;
     private javax.swing.JButton btneliminar;
+    private javax.swing.JButton btnimprimirdisciplina;
     private javax.swing.JButton btnlistar;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

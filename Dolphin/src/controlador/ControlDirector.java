@@ -18,6 +18,14 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import conexion.ConexionPG;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -69,6 +77,27 @@ public class ControlDirector {
         vista.getBtncancelareliminar().addActionListener(l-> vista.getDlgEliminar().dispose());
         
         vista.getTxtBuscarDirec().addKeyListener(kl);
+         //Imprimir
+        vista.getBtnimprimirdire().addActionListener(l -> imprimirReporte());
+    }
+    
+    //IMPRESION
+    private void imprimirReporte(){
+        
+        ConexionPG conp= new ConexionPG();
+        try {
+            
+            JasperReport jr=(JasperReport)JRLoader.loadObject(getClass().getResource("/reportes/Reporte_Directores.jasper"));
+
+            
+            JasperPrint jp=JasperFillManager.fillReport(jr, null,conp.getCon());
+            JasperViewer jv=new JasperViewer(jp);
+            
+            jv.setVisible(true);
+            
+        } catch (JRException ex) {
+            Logger.getLogger(ControlAlumno.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     private void abrir_dialogo(int origen){

@@ -9,6 +9,18 @@ import javax.swing.table.DefaultTableModel;
 import Modelo.clases_base.Disciplina;
 import modelo.Modelo_Disciplina;
 import Vista.VistaDisciplina;
+import Vista.VistaMenu;
+import conexion.ConexionPG;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 
 public class Control_Disciplina {
@@ -21,47 +33,68 @@ public class Control_Disciplina {
         vista.setTitle("CRUD DISCIPLINAS");
         vista.setLocationRelativeTo(null);
         vista.setVisible(true);
-        //cargaLista();
+        cargaLista();
     }
     
        public void iniciaControl(){
-//        KeyListener kl = new KeyListener(){
-//            @Override
-//            public void keyTyped(KeyEvent e) {
-//                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//            }
-//
-//            @Override
-//            public void keyPressed(KeyEvent e) {
-//                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//            }
-//
-//            @Override
-//            public void keyReleased(KeyEvent e) {
-//                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//                //cargaLista(vista.getTxtBuscar().getText());
-//                cargaLista(vista.getTxtBuscar().getText()); 
-//            }
-//            
-//        };
-//        
-//        
-    //Controlar los eventos de la vista
-    vista.getBtnlistar().addActionListener(l->cargaLista());
-    vista.getBtncrear().addActionListener(l->cargarDialogo(1));
-    vista.getBtneditar().addActionListener(l->cargarDialogo(2));
-    vista.getBtneliminar().addActionListener(l->eliminarDisciplina());
-    
+        KeyListener kl = new KeyListener(){
+            @Override
+            public void keyTyped(KeyEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                //cargaLista(vista.getTxtBuscar().getText());
+                cargaLista(vista.getTxtbuscard().getText()); 
+            }
+
+        };
+  
+        //Controlar los eventos de la vista
+        vista.getBtnlistar().addActionListener(l -> cargaLista(""));
+        vista.getBtncrear().addActionListener(l -> cargarDialogo(1));
+        vista.getBtneditar().addActionListener(l -> cargarDialogo(2));
+        vista.getBtnaceptar().addActionListener(l -> grabarDisciplina());
+        vista.getBtneliminar().addActionListener(l -> eliminarDisciplina());
+        vista.getBtncancelar().addActionListener(l -> regresar());
+        //vista.getBtnregresarmenu().addActionListener(l->regresarMenu());
 //    
 //    
-//    //controlador buscar
-//    vista.getTxtBuscar().addKeyListener(kl);
+        //controlador buscar
+        vista.getTxtbuscard().addKeyListener(kl);
+        //Imprimir
+        vista.getBtnimprimirdisciplina().addActionListener(l -> imprimirReporte());
 //    
 //    
 //    
 //    
-   }
-    
+    }
+       
+     //IMPRESION
+    private void imprimirReporte() {
+
+        ConexionPG conp = new ConexionPG();
+        try {
+
+            JasperReport jr = (JasperReport) JRLoader.loadObject(getClass().getResource("/reportes/Reporte_Disciplina.jasper"));
+
+            JasperPrint jp = JasperFillManager.fillReport(jr, null, conp.getCon());
+            JasperViewer jv = new JasperViewer(jp);
+
+            jv.setVisible(true);
+
+        } catch (JRException ex) {
+            Logger.getLogger(ControlAlumno.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
        private void cargarDialogo(int origen){
         vista.getDgDisciplina().setSize(600,500);
         vista.getDgDisciplina().setLocationRelativeTo(vista);
@@ -116,25 +149,7 @@ public class Control_Disciplina {
         tblModel.addRow(disciplina);
         });
     }
-    
-//    private void examinarFoto(){
-//        JFileChooser jfc = new JFileChooser();
-//        jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-//        int estado=jfc.showOpenDialog(null);
-//        if(estado==JFileChooser.APPROVE_OPTION){
-//            try {
-//                Image miImagen = ImageIO.read(jfc.getSelectedFile()).getScaledInstance(vista.getLblfoto().getWidth(),
-//                        vista.getLblfoto().getHeight(),
-//                        Image.SCALE_DEFAULT);
-//                Icon icon = new ImageIcon(miImagen);
-//                vista.getLblfoto().setIcon(icon);
-//                vista.getLblfoto().updateUI();
-//            } catch (IOException ex) {
-//                Logger.getLogger(ControlPersona.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//            
-//        }
-//    }
+
     
    
     private void grabarDisciplina(){
@@ -215,6 +230,20 @@ public class Control_Disciplina {
            JOptionPane.showMessageDialog(vista, "Error");
        }
     }
+    
+    public void regresar(){
+        Modelo_Disciplina mo=new Modelo_Disciplina();
+        VistaDisciplina vd = new VistaDisciplina();
+        Control_Disciplina control = new Control_Disciplina(mo,vd);
+        control.iniciaControl();
+        vista.dispose();
+    }
+//     public void regresarMenu(){
+//        VistaMenu vm = new VistaMenu();
+//        //Control_Menu control = new Control_Menu(vm);
+//        control.inicia_control();
+//        vista.dispose();
+//    }
     
     
     

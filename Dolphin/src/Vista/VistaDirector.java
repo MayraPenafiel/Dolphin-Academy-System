@@ -86,6 +86,7 @@ public class VistaDirector extends javax.swing.JFrame {
         BtnListarJFDirec = new javax.swing.JButton();
         BtnEliminarJFDirec = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        btnimprimirdire = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -436,6 +437,8 @@ public class VistaDirector extends javax.swing.JFrame {
             }
         });
 
+        btnimprimirdire.setText("Imprimir");
+
         javax.swing.GroupLayout PNOALayout = new javax.swing.GroupLayout(PNOA);
         PNOA.setLayout(PNOALayout);
         PNOALayout.setHorizontalGroup(
@@ -444,20 +447,21 @@ public class VistaDirector extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 707, Short.MAX_VALUE)
                     .addGroup(PNOALayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TxtBuscarDirec)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TxtBuscarDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BtnCrearJFDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(BtnEditarJFDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(BtnListarJFDirec)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(BtnEliminarJFDirec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(89, 89, 89)))
+                        .addGap(54, 54, 54)
+                        .addComponent(btnimprimirdire)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -476,7 +480,8 @@ public class VistaDirector extends javax.swing.JFrame {
                     .addComponent(TxtBuscarDirec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(BtnListarJFDirec)
-                    .addComponent(BtnEliminarJFDirec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BtnEliminarJFDirec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnimprimirdire))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -524,6 +529,15 @@ public class VistaDirector extends javax.swing.JFrame {
     public JTextField getTxtformacion() {
         return txtformacion;
     }
+
+    public JButton getBtnimprimirdire() {
+        return btnimprimirdire;
+    }
+
+    public void setBtnimprimirdire(JButton btnimprimirdire) {
+        this.btnimprimirdire = btnimprimirdire;
+    }
+    
 
 //    /**
 //     * @param args the command line arguments
@@ -786,6 +800,7 @@ public class VistaDirector extends javax.swing.JFrame {
     private javax.swing.JTextField TxtTelfDirec;
     private javax.swing.JButton btncancelareliminar;
     private javax.swing.JButton btnconfirmareliminar;
+    private javax.swing.JButton btnimprimirdire;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;

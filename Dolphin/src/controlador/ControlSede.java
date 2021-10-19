@@ -8,9 +8,17 @@ import conexion.ConexionPG;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -53,7 +61,28 @@ public class ControlSede {
                   cargaLista(vista.getTxtBuscarSede().getText());
             }
         };
-        vista.getBtnListarJFSede().addActionListener(l -> cargaLista(""));
+        vista.getBtnListarJFSede().addActionListener(l -> cargaLista(""));  
+         //Imprimir
+        vista.getBtnimprimirsede().addActionListener(l -> imprimirReporte());
+    }
+    
+     //IMPRESION
+    private void imprimirReporte(){
+        
+        ConexionPG conp= new ConexionPG();
+        try {
+            
+            JasperReport jr=(JasperReport)JRLoader.loadObject(getClass().getResource("/reportes/Reporte_Sede.jasper"));
+
+            
+            JasperPrint jp=JasperFillManager.fillReport(jr, null,conp.getCon());
+            JasperViewer jv=new JasperViewer(jp);
+            
+            jv.setVisible(true);
+            
+        } catch (JRException ex) {
+            Logger.getLogger(ControlAlumno.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
      private void cargaLista(String aguja) {

@@ -75,6 +75,7 @@ public class VistaSede extends javax.swing.JFrame {
         BtnListarJFSede = new javax.swing.JButton();
         BtnEliminarJFSede = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        btnimprimirsede = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -369,6 +370,8 @@ public class VistaSede extends javax.swing.JFrame {
             }
         });
 
+        btnimprimirsede.setText("Imprimir");
+
         javax.swing.GroupLayout PNOALayout = new javax.swing.GroupLayout(PNOA);
         PNOA.setLayout(PNOALayout);
         PNOALayout.setHorizontalGroup(
@@ -377,20 +380,21 @@ public class VistaSede extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 617, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addGroup(PNOALayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TxtBuscarSede)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TxtBuscarSede, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(BtnCrearJFSede, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BtnEditarJFSede, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(BtnEditarJFSede, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(BtnListarJFSede)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(BtnEliminarJFSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(89, 89, 89)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addComponent(btnimprimirsede)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -409,7 +413,8 @@ public class VistaSede extends javax.swing.JFrame {
                     .addComponent(TxtBuscarSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(BtnListarJFSede)
-                    .addComponent(BtnEliminarJFSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BtnEliminarJFSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnimprimirsede))
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -421,9 +426,7 @@ public class VistaSede extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(PNOA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -443,6 +446,14 @@ public class VistaSede extends javax.swing.JFrame {
         VistaMenu vm = new VistaMenu();
         vm.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    public JButton getBtnimprimirsede() {
+        return btnimprimirsede;
+    }
+
+    public void setBtnimprimirsede(JButton btnimprimirsede) {
+        this.btnimprimirsede = btnimprimirsede;
+    }
 
 //    /**
 //     * @param args the command line arguments
@@ -480,6 +491,8 @@ public class VistaSede extends javax.swing.JFrame {
 //    }
     
     //GETTERS Y SETTERS
+    
+    
     
     public JButton getBtnCrearJFSede() {
         return BtnCrearJFSede;
@@ -664,6 +677,7 @@ public class VistaSede extends javax.swing.JFrame {
     private javax.swing.JTextField TxtTelfSede1;
     private javax.swing.JButton btncancelareliminar_s;
     private javax.swing.JButton btnconfirmareliminar_s;
+    private javax.swing.JButton btnimprimirsede;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

@@ -23,7 +23,7 @@ public class Modelo_Disciplina extends Disciplina {
      public List<Disciplina> listaDisciplinas(){
     
         try {
-            String sql="select Id_Disciplina, Nombre_D,Descripcion_D, Observaciones from disciplina ";
+            String sql="select Id_Disciplina, Nombre_D, Descripcion_D, Observaciones from disciplina ";
             ResultSet rs=con.consulta(sql);
             List<Disciplina> ld= new ArrayList<Disciplina>();
             while(rs.next()){
@@ -49,7 +49,7 @@ public class Modelo_Disciplina extends Disciplina {
         try {
             String sql="select * from disciplina WHERE ";
             sql+=" UPPER(Nombre_D) like UPPER('%"+aguja+"%') OR ";
-            sql+=" UPPER(Id_Disciplina) like UPPER('%"+aguja+"%') OR ";
+            sql+=" UPPER(Id_Disciplina) like UPPER('%"+aguja+"%')";
             ResultSet rs=con.consulta(sql);
             List<Disciplina> ld= new ArrayList<Disciplina>();
             while(rs.next()){

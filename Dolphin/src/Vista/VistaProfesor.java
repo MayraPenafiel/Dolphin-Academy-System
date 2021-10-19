@@ -84,6 +84,7 @@ public class VistaProfesor extends javax.swing.JFrame {
         BtnListarJFProf = new javax.swing.JButton();
         BtnEliminarJFProf = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        btnimprimirprofe = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -395,7 +396,7 @@ public class VistaProfesor extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TbProfesor);
 
-        PNOA.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 600, 96));
+        PNOA.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 640, 96));
 
         jLabel3.setText("BUSCAR");
         PNOA.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 69, -1, -1));
@@ -426,11 +427,14 @@ public class VistaProfesor extends javax.swing.JFrame {
         });
         PNOA.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, -1, -1));
 
+        btnimprimirprofe.setText("Imprimir");
+        PNOA.add(btnimprimirprofe, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 60, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 657, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -716,6 +720,17 @@ public class VistaProfesor extends javax.swing.JFrame {
         this.jLabel18 = jLabel18;
     }
 
+    public JButton getBtnimprimirprofe() {
+        return btnimprimirprofe;
+    }
+
+    public void setBtnimprimirprofe(JButton btnimprimirprofe) {
+        this.btnimprimirprofe = btnimprimirprofe;
+    }
+    
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCrearJFProf;
     private javax.swing.JButton BtnCrearProf;
@@ -742,6 +757,7 @@ public class VistaProfesor extends javax.swing.JFrame {
     private javax.swing.JTextField TxtTelfProf;
     private javax.swing.JButton btncancelareliminar;
     private javax.swing.JButton btnconfirmareliminar;
+    private javax.swing.JButton btnimprimirprofe;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
