@@ -456,14 +456,14 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="TxtBuscarSede" min="-2" pref="190" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="BtnCrearJFSede" min="-2" pref="59" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="BtnEditarJFSede" min="-2" pref="61" max="-2" attributes="0"/>
+                          <Component id="BtnCrearJFSede" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="BtnEditarJFSede" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="BtnListarJFSede" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="BtnEliminarJFSede" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="32" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="btnimprimirsede" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -635,21 +635,45 @@
         </Component>
         <Component class="javax.swing.JButton" name="BtnCrearJFSede">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="10" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/imagenes/new-file_40454 (3).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Crear"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="BtnEditarJFSede">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="10" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/imagenes/document-edit_icon-icons.com_52428 (1).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Editar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="BtnListarJFSede">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="10" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/imagenes/list_notes_930.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Listar"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="BtnEliminarJFSede">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="10" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/imagenes/delete-file_40456 (1).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Eliminar"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[59, 23]"/>
@@ -676,6 +700,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnimprimirsede">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="10" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/imagenes/printer_print_22133.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Imprimir"/>
           </Properties>
         </Component>

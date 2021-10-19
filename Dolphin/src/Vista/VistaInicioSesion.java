@@ -81,7 +81,7 @@ public class VistaInicioSesion extends javax.swing.JFrame {
 
         BtnIngresar.setText("Ingresar");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         pwfcontraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,14 +132,14 @@ public class VistaInicioSesion extends javax.swing.JFrame {
             .addGroup(PnInicioSesionLayout.createSequentialGroup()
                 .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnInicioSesionLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel3))
+                    .addGroup(PnInicioSesionLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2))
-                    .addGroup(PnInicioSesionLayout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel3)))
-                .addGap(36, 36, 36)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel2)))
+                .addGap(69, 69, 69)
                 .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlbuser)
                     .addComponent(TxtNombreUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -147,7 +147,7 @@ public class VistaInicioSesion extends javax.swing.JFrame {
                 .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlbpass)
                     .addComponent(pwfcontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(PnInicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnIngresar)
                     .addComponent(jbcancelar))
@@ -168,13 +168,13 @@ public class VistaInicioSesion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TxtNombreUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtNombreUserActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TxtNombreUserActionPerformed
-
     private void pwfcontraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwfcontraseñaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pwfcontraseñaActionPerformed
+
+    private void TxtNombreUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtNombreUserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtNombreUserActionPerformed
 
     // GETTER Y SETTERS
     public JButton getBtnIngresar() {

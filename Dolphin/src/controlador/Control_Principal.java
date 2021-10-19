@@ -55,14 +55,17 @@ public class Control_Principal {
             Control_InicioSesion c= new Control_InicioSesion (vis,new ModeloDirector());
             boton=rol_entidad;
             c.iniciaControlDire();
+            vp.dispose();
         }else if(rol_entidad.equals("A")){
             Control_InicioSesion c= new Control_InicioSesion (vis,new ModeloAlumno());
             c.iniciaControlAlumno();
+            vp.dispose();
             boton=rol_entidad;
         }else if(rol_entidad.equals("P")){
              Control_InicioSesion c= new Control_InicioSesion (vis,new Modelo_Profesor());
              boton=rol_entidad;
              c.iniciaControlProf();
+             vp.dispose();
         }
     }
     

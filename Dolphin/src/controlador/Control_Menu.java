@@ -23,6 +23,7 @@ import Modelo.ModeloDisciplina;
 import Modelo.Modelo_Profesor;
 import Modelo.Modelo_Realiza_Det;
 import Modelo.Modelo_Realiza_Enca;
+import javax.swing.JFrame;
 
 /**
  *
@@ -41,6 +42,7 @@ public class Control_Menu {
     //Constructores
     public Control_Menu(VistaMenu vm) {
         this.vm = vm;
+        vm.setExtendedState(JFrame.MAXIMIZED_BOTH);
         vm.setLocationRelativeTo(null);
         String h=Control_Principal.boton;
         if(h=="A"){

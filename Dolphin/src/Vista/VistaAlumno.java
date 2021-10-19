@@ -369,7 +369,7 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         PNOA.setBackground(new java.awt.Color(204, 255, 255));
         PNOA.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -414,25 +414,33 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(TbAlumno);
 
-        PNOA.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 106, 910, 104));
+        PNOA.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 910, 104));
 
         jLabel3.setText("BUSCAR");
         PNOA.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 69, -1, -1));
         PNOA.add(TxtBuscarAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 66, 260, -1));
 
+        BtnCrearJFAlmn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnCrearJFAlmn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/new-file_40454 (3).png"))); // NOI18N
         BtnCrearJFAlmn.setText("Crear");
-        PNOA.add(BtnCrearJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, -1, -1));
+        PNOA.add(BtnCrearJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, -1, -1));
 
+        BtnEditarJFAlmn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnEditarJFAlmn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/document-edit_icon-icons.com_52428 (1).png"))); // NOI18N
         BtnEditarJFAlmn.setText("Editar");
-        PNOA.add(BtnEditarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
+        PNOA.add(BtnEditarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 60, -1, -1));
 
+        BtnListarJFAlmn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnListarJFAlmn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/list_notes_930.png"))); // NOI18N
         BtnListarJFAlmn.setText("Listar");
-        PNOA.add(BtnListarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 70, -1, -1));
+        PNOA.add(BtnListarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 60, -1, -1));
 
+        BtnEliminarJFAlmn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnEliminarJFAlmn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/delete-file_40456 (1).png"))); // NOI18N
         BtnEliminarJFAlmn.setText("Eliminar");
         BtnEliminarJFAlmn.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFAlmn.setMinimumSize(new java.awt.Dimension(59, 23));
-        PNOA.add(BtnEliminarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 70, -1, -1));
+        PNOA.add(BtnEliminarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 60, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -445,18 +453,20 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         });
         PNOA.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 230, -1, -1));
 
+        btnimprimiralum.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        btnimprimiralum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/printer_print_22133.png"))); // NOI18N
         btnimprimiralum.setText("Imprimir");
-        PNOA.add(btnimprimiralum, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 70, -1, -1));
+        PNOA.add(btnimprimiralum, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 60, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 971, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
+            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
         );
 
         pack();

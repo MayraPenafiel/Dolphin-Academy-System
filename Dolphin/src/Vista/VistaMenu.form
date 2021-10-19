@@ -12,7 +12,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="MIAlumno">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/icons8-classmates-standing-20.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/icons8-classmates-standing-20.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Alumno"/>
               </Properties>
@@ -23,7 +23,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="MIProfesor">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/icons8-profesor-20.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/icons8-profesor-20.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Profesor"/>
               </Properties>
@@ -34,7 +34,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="MIAdm">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/icons8-director-de-escuela-20.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/icons8-director-de-escuela-20.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Directores"/>
               </Properties>
@@ -45,7 +45,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="MIDetRealiza">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/icons8-lista-20.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/icons8-lista-20.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Det. Realiza"/>
               </Properties>
@@ -56,7 +56,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="MIDisciplina">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/icons8-boxeo-20.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/icons8-boxeo-20.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Disciplina"/>
               </Properties>
@@ -67,7 +67,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jbencar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/icons8-a&#xf1;adir-lista-20.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/icons8-a&#xf1;adir-lista-20.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Enc.Realiza"/>
               </Properties>
@@ -78,7 +78,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="MIEnt">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/icons8-coach-20.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/icons8-coach-20.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Entrenamiento"/>
               </Properties>
@@ -89,7 +89,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="MISede">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/icons8-embajada-20.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/icons8-embajada-20.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Sede"/>
               </Properties>
@@ -203,17 +203,20 @@
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/User.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/User.png"/>
                 </Property>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
                 <Property name="verticalTextPosition" type="int" value="3"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/Magnifying Glass.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/Magnifying Glass.png"/>
                 </Property>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -223,7 +226,7 @@
             <Component class="javax.swing.JButton" name="jButton3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/Download.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/Download.png"/>
                 </Property>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -235,7 +238,7 @@
             <Component class="javax.swing.JButton" name="jButton4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/Book.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/Book.png"/>
                 </Property>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -245,7 +248,7 @@
             <Component class="javax.swing.JButton" name="jButton5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/UI &#xbb; Window.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/UI &#xbb; Window.png"/>
                 </Property>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -257,14 +260,14 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/iconos/Logo(1).png"/>
+              <Image iconType="3" name="/Vista/imagenes/LogoCab.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jbregresar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/iconos/icons8-salida-48.png"/>
+              <Image iconType="3" name="/Vista/imagenes/icons8-salida-48.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>

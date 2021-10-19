@@ -347,12 +347,20 @@ public class VistaSede extends javax.swing.JInternalFrame {
 
         jLabel3.setText("BUSCAR");
 
+        BtnCrearJFSede.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnCrearJFSede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/new-file_40454 (3).png"))); // NOI18N
         BtnCrearJFSede.setText("Crear");
 
+        BtnEditarJFSede.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnEditarJFSede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/document-edit_icon-icons.com_52428 (1).png"))); // NOI18N
         BtnEditarJFSede.setText("Editar");
 
+        BtnListarJFSede.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnListarJFSede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/list_notes_930.png"))); // NOI18N
         BtnListarJFSede.setText("Listar");
 
+        BtnEliminarJFSede.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnEliminarJFSede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/delete-file_40456 (1).png"))); // NOI18N
         BtnEliminarJFSede.setText("Eliminar");
         BtnEliminarJFSede.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFSede.setMinimumSize(new java.awt.Dimension(59, 23));
@@ -367,6 +375,8 @@ public class VistaSede extends javax.swing.JInternalFrame {
             }
         });
 
+        btnimprimirsede.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        btnimprimirsede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/printer_print_22133.png"))); // NOI18N
         btnimprimirsede.setText("Imprimir");
 
         javax.swing.GroupLayout PNOALayout = new javax.swing.GroupLayout(PNOA);
@@ -383,14 +393,14 @@ public class VistaSede extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(TxtBuscarSede, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(BtnCrearJFSede, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnEditarJFSede, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnCrearJFSede)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(BtnEditarJFSede)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(BtnListarJFSede)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(BtnEliminarJFSede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnimprimirsede)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()

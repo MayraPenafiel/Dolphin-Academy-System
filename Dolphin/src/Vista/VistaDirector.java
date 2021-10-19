@@ -369,7 +369,7 @@ public class VistaDirector extends javax.swing.JInternalFrame {
                 .addContainerGap(65, Short.MAX_VALUE))
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         PNOA.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -413,12 +413,20 @@ public class VistaDirector extends javax.swing.JInternalFrame {
 
         jLabel3.setText("BUSCAR");
 
+        BtnCrearJFDirec.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnCrearJFDirec.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/new-file_40454 (3).png"))); // NOI18N
         BtnCrearJFDirec.setText("Crear");
 
+        BtnEditarJFDirec.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnEditarJFDirec.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/document-edit_icon-icons.com_52428 (1).png"))); // NOI18N
         BtnEditarJFDirec.setText("Editar");
 
+        BtnListarJFDirec.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnListarJFDirec.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/list_notes_930.png"))); // NOI18N
         BtnListarJFDirec.setText("Listar");
 
+        BtnEliminarJFDirec.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnEliminarJFDirec.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/delete-file_40456 (1).png"))); // NOI18N
         BtnEliminarJFDirec.setText("Eliminar");
         BtnEliminarJFDirec.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFDirec.setMinimumSize(new java.awt.Dimension(59, 23));
@@ -433,6 +441,8 @@ public class VistaDirector extends javax.swing.JInternalFrame {
             }
         });
 
+        btnimprimirdire.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        btnimprimirdire.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/printer_print_22133.png"))); // NOI18N
         btnimprimirdire.setText("Imprimir");
 
         javax.swing.GroupLayout PNOALayout = new javax.swing.GroupLayout(PNOA);
@@ -443,20 +453,20 @@ public class VistaDirector extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 707, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addGroup(PNOALayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(TxtBuscarDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BtnCrearJFDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnEditarJFDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(42, 42, 42)
+                        .addComponent(BtnCrearJFDirec)
+                        .addGap(18, 18, 18)
+                        .addComponent(BtnEditarJFDirec, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(BtnListarJFDirec)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(BtnEliminarJFDirec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(54, 54, 54)
+                        .addGap(42, 42, 42)
                         .addComponent(btnimprimirdire)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()

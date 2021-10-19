@@ -62,40 +62,45 @@ public class VistaMenu extends javax.swing.JFrame {
 
         jToolBar1.setRollover(true);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/User.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/User.png"))); // NOI18N
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jToolBar1.add(jButton1);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/Magnifying Glass.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Magnifying Glass.png"))); // NOI18N
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(jButton2);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/Download.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Download.png"))); // NOI18N
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(jButton3);
         jToolBar1.add(jSeparator1);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/Book.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Book.png"))); // NOI18N
         jButton4.setFocusable(false);
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(jButton4);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/UI » Window.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/UI » Window.png"))); // NOI18N
         jButton5.setFocusable(false);
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(jButton5);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/Logo(1).png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
-        jbregresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-salida-48.png"))); // NOI18N
+        jbregresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-salida-48.png"))); // NOI18N
         jbregresar.setBorder(null);
         jbregresar.setBorderPainted(false);
         jbregresar.setContentAreaFilled(false);
@@ -139,7 +144,7 @@ public class VistaMenu extends javax.swing.JFrame {
 
         MenuP.setText("Menu");
 
-        MIAlumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-classmates-standing-20.png"))); // NOI18N
+        MIAlumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-classmates-standing-20.png"))); // NOI18N
         MIAlumno.setText("Alumno");
         MIAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +153,7 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         MenuP.add(MIAlumno);
 
-        MIProfesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-profesor-20.png"))); // NOI18N
+        MIProfesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-profesor-20.png"))); // NOI18N
         MIProfesor.setText("Profesor");
         MIProfesor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,7 +162,7 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         MenuP.add(MIProfesor);
 
-        MIAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-director-de-escuela-20.png"))); // NOI18N
+        MIAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-director-de-escuela-20.png"))); // NOI18N
         MIAdm.setText("Directores");
         MIAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,7 +171,7 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         MenuP.add(MIAdm);
 
-        MIDetRealiza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-lista-20.png"))); // NOI18N
+        MIDetRealiza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-lista-20.png"))); // NOI18N
         MIDetRealiza.setText("Det. Realiza");
         MIDetRealiza.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,7 +180,7 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         MenuP.add(MIDetRealiza);
 
-        MIDisciplina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-boxeo-20.png"))); // NOI18N
+        MIDisciplina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-boxeo-20.png"))); // NOI18N
         MIDisciplina.setText("Disciplina");
         MIDisciplina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,7 +189,7 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         MenuP.add(MIDisciplina);
 
-        jbencar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-añadir-lista-20.png"))); // NOI18N
+        jbencar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-añadir-lista-20.png"))); // NOI18N
         jbencar.setText("Enc.Realiza");
         jbencar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,7 +198,7 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         MenuP.add(jbencar);
 
-        MIEnt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-coach-20.png"))); // NOI18N
+        MIEnt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-coach-20.png"))); // NOI18N
         MIEnt.setText("Entrenamiento");
         MIEnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,7 +207,7 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         MenuP.add(MIEnt);
 
-        MISede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-embajada-20.png"))); // NOI18N
+        MISede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-embajada-20.png"))); // NOI18N
         MISede.setText("Sede");
         MISede.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -279,6 +284,10 @@ public class VistaMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
   
     }//GEN-LAST:event_jbregresarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
         
     //GETTERS Y SETTERS
        

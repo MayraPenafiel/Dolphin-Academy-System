@@ -77,13 +77,9 @@ public class ControlAlumno {
             @Override
             public void keyTyped(KeyEvent e) {
                 char c = e.getKeyChar();
-                if (Character.isDigit(c) || Character.isLetter(c)) {
-                } else {
-                    e.consume();
-                    Toolkit.getDefaultToolkit().beep();
-                }
+                
 
-                if (vista.getTxtCodAlmn().getText().length() <=10) {
+                if (vista.getTxtCodAlmn().getText().length() >=10) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }
@@ -194,7 +190,7 @@ public class ControlAlumno {
                     Toolkit.getDefaultToolkit().beep();
                 }
 
-                if (vista.getTxtCedulaAlmn().getText().length() <= 10) {
+                if (vista.getTxtCedulaAlmn().getText().length() >= 10) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }

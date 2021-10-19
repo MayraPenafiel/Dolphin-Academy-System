@@ -169,7 +169,7 @@ public class VistaEncaRealiza extends javax.swing.JInternalFrame {
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         PNOA.setBackground(new java.awt.Color(204, 255, 255));
         PNOA.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -220,19 +220,27 @@ public class VistaEncaRealiza extends javax.swing.JInternalFrame {
         PNOA.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 69, -1, -1));
         PNOA.add(TxtBuscarEncRealiza, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 66, 123, -1));
 
+        BtnCrearJFER.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnCrearJFER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/new-file_40454 (3).png"))); // NOI18N
         BtnCrearJFER.setText("Crear");
         PNOA.add(BtnCrearJFER, new org.netbeans.lib.awtextra.AbsoluteConstraints(193, 65, -1, -1));
 
+        BtnEditarJFER.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnEditarJFER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/document-edit_icon-icons.com_52428 (1).png"))); // NOI18N
         BtnEditarJFER.setText("Editar");
-        PNOA.add(BtnEditarJFER, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 65, -1, -1));
+        PNOA.add(BtnEditarJFER, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, -1, -1));
 
+        BtnListarJFER.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnListarJFER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/list_notes_930.png"))); // NOI18N
         BtnListarJFER.setText("Listar");
-        PNOA.add(BtnListarJFER, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 65, -1, -1));
+        PNOA.add(BtnListarJFER, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, -1, -1));
 
+        BtnEliminarJFER.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnEliminarJFER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/delete-file_40456 (1).png"))); // NOI18N
         BtnEliminarJFER.setText("Eliminar");
         BtnEliminarJFER.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFER.setMinimumSize(new java.awt.Dimension(59, 23));
-        PNOA.add(BtnEliminarJFER, new org.netbeans.lib.awtextra.AbsoluteConstraints(398, 65, -1, -1));
+        PNOA.add(BtnEliminarJFER, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -249,7 +257,7 @@ public class VistaEncaRealiza extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 689, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
