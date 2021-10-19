@@ -91,13 +91,9 @@ public class ControlAlumno {
         
         ConexionPG conp= new ConexionPG();
         try {
-            
             JasperReport jr=(JasperReport)JRLoader.loadObject(getClass().getResource("/reportes/Reporte_Alumnos.jasper"));
-
-            
             JasperPrint jp=JasperFillManager.fillReport(jr, null,conp.getCon());
             JasperViewer jv=new JasperViewer(jp);
-            
             jv.setVisible(true);
             
         } catch (JRException ex) {
@@ -128,19 +124,15 @@ public class ControlAlumno {
         }
     }
     
-    
     private void cargaLista(String aguja) {
-
-        DefaultTableCellRenderer r = new DefaultTableCellRenderer();
+        //DefaultTableCellRenderer r = new DefaultTableCellRenderer();
         DefaultTableModel tableModel;
         tableModel = (DefaultTableModel) vista.getTbAlumno().getModel();
         tableModel.setNumRows(0);
         java.util.List<Alumno> lista = modelo.listaAlumno(aguja);
         lista.stream().forEach(a -> {
-
             String[] alumno = {a.getId_alumno(), a.getCedula(), a.getNombre(), a.getApellido(),
                 a.getDireccion(), a.getTelefono(), a.getCelular(), a.getCategoria(), a.getDisciplina(), a.getEntrenamiento()};
-
         });
     }
 
@@ -171,7 +163,7 @@ public class ControlAlumno {
         alumno.setDireccion(direccion);
         alumno.setTelefono(telefono);
         alumno.setCorreo(correo);
-        alumno.setFechanacimiento((java.sql.Date) fecha);
+        alumno.setFechanacimiento(fecha);
         alumno.setDisciplina(disciplina);
         alumno.setEntrenamiento(entrenamiento);
         alumno.setCategoria(categoria);

@@ -21,7 +21,6 @@ public class Control_Principal {
  
     //Atributos
     private VistaPrincipal vp;
-    private VistaInicioSesion vis;
     public static String boton;
     
     //Constructores

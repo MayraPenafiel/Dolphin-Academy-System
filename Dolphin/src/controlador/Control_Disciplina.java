@@ -31,7 +31,6 @@ public class Control_Disciplina {
         this.modelo = modelo;
         this.vista = vista;
         vista.setTitle("CRUD DISCIPLINAS");
-        vista.setLocationRelativeTo(null);
         vista.setVisible(true);
         cargaLista();
     }
