@@ -5,6 +5,7 @@ import Modelo.ModeloSede;
 import Modelo.clases_base.Sede;
 import Vista.VistaSede;
 import conexion.ConexionPG;
+import java.awt.Toolkit;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -61,6 +62,104 @@ public class ControlSede {
                   cargaLista(vista.getTxtBuscarSede().getText());
             }
         };
+        
+            KeyAdapter c1 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c) || Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtCodSede1().getText().length() > 8) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtCodSede1().addKeyListener(c1);
+
+        KeyAdapter c2 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtNombreSede1().getText().length() > 20) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+        vista.getTxtNombreSede1().addKeyListener(c2);
+
+        KeyAdapter c3 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtDirecSede1().getText().length() > 20) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+        vista.getTxtDirecSede1().addKeyListener(c3);
+
+        KeyAdapter c4 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtTelfSede1().getText().length() > 10) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtTelfSede1().addKeyListener(c4);
+
+        KeyAdapter c5 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c) || Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtCorreoS1().getText().length() > 10) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtCorreoS1().addKeyListener(c5);
+
+  
+        
+
+
         vista.getBtnListarJFSede().addActionListener(l -> cargaLista(""));  
          //Imprimir
         vista.getBtnimprimirsede().addActionListener(l -> imprimirReporte());

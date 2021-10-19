@@ -34,7 +34,8 @@ public class ModeloAlumno extends Alumno{
     public java.util.List<Alumno> listaAlumnos(){
     
         try {
-            String sql = "select * from alumno "; 
+            String sql = "select a.id_alumno,a.categoria, a.Cedula, a.Nombre,a.Apellido, a.Direccion, a.Telefono, a.Correo, a.F_Nacimiento, a.Celular from alumno a inner join enca_realiza e on e.id_alumno = a.id_alumno inner join entrenamiento n on n.id_Entren = e.id_Entren";
+            //String sql = "select * from alumno"; 
             ResultSet rs = con.consulta(sql);
             java.util.List<Alumno> lista = new ArrayList<Alumno>();
             while(rs.next()){

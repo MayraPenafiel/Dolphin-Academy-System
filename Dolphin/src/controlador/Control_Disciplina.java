@@ -1,16 +1,17 @@
 
 package controlador;
 
+import Modelo.ModeloDisciplina;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import Modelo.clases_base.Disciplina;
-import modelo.Modelo_Disciplina;
 import Vista.VistaDisciplina;
-import Vista.VistaMenu;
 import conexion.ConexionPG;
+import java.awt.Toolkit;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.logging.Level;
@@ -24,14 +25,13 @@ import net.sf.jasperreports.view.JasperViewer;
 
 
 public class Control_Disciplina {
-    private Modelo_Disciplina modelo;
+    private ModeloDisciplina modelo;
     private VistaDisciplina vista;
 
-    public Control_Disciplina(Modelo_Disciplina modelo, VistaDisciplina vista) {
+    public Control_Disciplina(ModeloDisciplina modelo, VistaDisciplina vista) {
         this.modelo = modelo;
         this.vista = vista;
         vista.setTitle("CRUD DISCIPLINAS");
-        vista.setLocationRelativeTo(null);
         vista.setVisible(true);
         cargaLista();
     }
@@ -56,7 +56,84 @@ public class Control_Disciplina {
             }
 
         };
-  
+        
+         KeyAdapter c1 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c) || Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtcodigo().getText().length() > 8) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtcodigo().addKeyListener(c1);
+
+        KeyAdapter c2 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtnombred().getText().length() > 20) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+        vista.getTxtnombred().addKeyListener(c2);
+
+        KeyAdapter c3 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtdescripciond().getText().length() > 20) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+        vista.getTxtdescripciond().addKeyListener(c3);
+
+        KeyAdapter c4 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtdescripciond().getText().length() > 10) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtdescripciond().addKeyListener(c4);
+
+
+        
+        
         //Controlar los eventos de la vista
         vista.getBtnlistar().addActionListener(l -> cargaLista(""));
         vista.getBtncrear().addActionListener(l -> cargarDialogo(1));
@@ -64,17 +141,10 @@ public class Control_Disciplina {
         vista.getBtnaceptar().addActionListener(l -> grabarDisciplina());
         vista.getBtneliminar().addActionListener(l -> eliminarDisciplina());
         vista.getBtncancelar().addActionListener(l -> regresar());
-        //vista.getBtnregresarmenu().addActionListener(l->regresarMenu());
-//    
-//    
         //controlador buscar
         vista.getTxtbuscard().addKeyListener(kl);
         //Imprimir
         vista.getBtnimprimirdisciplina().addActionListener(l -> imprimirReporte());
-//    
-//    
-//    
-//    
     }
        
      //IMPRESION
@@ -160,7 +230,7 @@ public class Control_Disciplina {
         
         
         
-        Modelo_Disciplina disciplina = new Modelo_Disciplina();
+        ModeloDisciplina disciplina = new ModeloDisciplina();
         disciplina.setId_disciplina(descripcion_d);
         disciplina.setNombre_d(nombre_d);
         disciplina.setDescripcion_d(descripcion_d);
@@ -184,7 +254,7 @@ public class Control_Disciplina {
             JOptionPane.showMessageDialog(vista.getTbldisciplina(),"Debe seleccionar una fila,Intente de nuevo");
             cargaLista();
         }else{
-             Modelo_Disciplina model1=new Modelo_Disciplina(tblmodel.getValueAt(tabla.getSelectedRow(),0)+"",null,null,null);
+             ModeloDisciplina model1=new ModeloDisciplina(tblmodel.getValueAt(tabla.getSelectedRow(),0)+"",null,null,null);
             if( model1.eliminarDisciplina()){
                  JOptionPane.showMessageDialog(vista, "Disciplina Eliminada Satisfactoriamente");
                  cargaLista();
@@ -214,7 +284,7 @@ public class Control_Disciplina {
       
     private void editarDisciplina(){
 
-        Modelo_Disciplina disciplina = new Modelo_Disciplina();
+        ModeloDisciplina disciplina = new ModeloDisciplina();
         disciplina.setId_disciplina(vista.getTxtcodigo().getText()+"");
         disciplina.setNombre_d(vista.getTxtnombred().getText()+"");
         disciplina.setDescripcion_d(vista.getTxtdescripciond().getText()+"");
@@ -232,20 +302,11 @@ public class Control_Disciplina {
     }
     
     public void regresar(){
-        Modelo_Disciplina mo=new Modelo_Disciplina();
+        ModeloDisciplina mo=new ModeloDisciplina();
         VistaDisciplina vd = new VistaDisciplina();
         Control_Disciplina control = new Control_Disciplina(mo,vd);
         control.iniciaControl();
         vista.dispose();
     }
-//     public void regresarMenu(){
-//        VistaMenu vm = new VistaMenu();
-//        //Control_Menu control = new Control_Menu(vm);
-//        control.inicia_control();
-//        vista.dispose();
-//    }
-    
-    
-    
     
 }
