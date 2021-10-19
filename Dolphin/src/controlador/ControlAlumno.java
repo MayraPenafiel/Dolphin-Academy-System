@@ -16,6 +16,8 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import conexion.ConexionPG;
+import java.awt.Toolkit;
+import java.awt.event.KeyAdapter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
@@ -67,6 +69,136 @@ public class ControlAlumno {
                 cargaLista(vista.getTxtBuscarAlmn().getText());
             }
         };
+        
+        KeyAdapter c1 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c) || Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtCodAlmn().getText().length() > 8) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtCodAlmn().addKeyListener(c1);
+
+        KeyAdapter c2 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtNombreAlumn().getText().length() > 20) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+        vista.getTxtNombreAlumn().addKeyListener(c2);
+
+        KeyAdapter c3 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtApeAlmn().getText().length() > 20) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+        vista.getTxtApeAlmn().addKeyListener(c3);
+
+        KeyAdapter c4 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtTelfAlmn().getText().length() > 10) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtTelfAlmn().addKeyListener(c4);
+
+        KeyAdapter c5 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtCelularAlmn().getText().length() > 10) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtCelularAlmn().addKeyListener(c5);
+
+        KeyAdapter c6 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isLetter(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtDireccionAlmn().getText().length() > 50) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+        vista.getTxtDireccionAlmn().addKeyListener(c6);
+
+        KeyAdapter c7 = new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (Character.isDigit(c)) {
+                } else {
+                    e.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+
+                if (vista.getTxtCedulaAlmn().getText().length() > 10) {
+                    Toolkit.getDefaultToolkit().beep();
+                    e.consume();
+                }
+            }
+        };
+
+        vista.getTxtCedulaAlmn().addKeyListener(c7);
 
         vista.getBtnListarJFAlmn().addActionListener(l -> cargaLista(""));
         

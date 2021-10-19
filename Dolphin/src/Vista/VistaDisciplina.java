@@ -465,4 +465,8 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
     private javax.swing.JTextArea txtobservacionesd;
     // End of variables declaration//GEN-END:variables
 
+    public void setLocationRelativeTo(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
