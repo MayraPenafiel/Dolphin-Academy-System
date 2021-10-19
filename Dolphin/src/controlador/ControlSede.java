@@ -160,9 +160,19 @@ public class ControlSede {
         
 
 
-        vista.getBtnListarJFSede().addActionListener(l -> cargaLista(""));  
+        vista.getBtnListarJFSede().addActionListener(l -> cargaLista(""));
+        vista.getBtnCrearJFSede().addActionListener(l->abrir_dialogo(1));
+        vista.getBtnEditarJFSede().addActionListener(l->abrir_dialogo(2));
+        vista.getBtnEliminarJFSede().addActionListener(l->abrir_dialogo(3));
+         //Controlar Eventos Dialogo Ingreso/modificar info
+        vista.getBtnGuardarSede1().addActionListener(l->grabarSede());
+        vista.getBtncancelareliminar_s().addActionListener(l->vista.getDgSede().dispose());
+        //Control eventos Dialogo Eliminar
+        vista.getBtnconfirmareliminar_s().addActionListener(l->confirmar());
+        vista.getBtncancelareliminar_s().addActionListener(l->vista.getDgEliminarSede().dispose());
          //Imprimir
         vista.getBtnimprimirsede().addActionListener(l -> imprimirReporte());
+        
     }
     
      //IMPRESION
@@ -181,6 +191,30 @@ public class ControlSede {
             
         } catch (JRException ex) {
             Logger.getLogger(ControlAlumno.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+         private void abrir_dialogo(int origen){
+        vista.getDgSede().setSize(600,400); 
+        vista.getDgSede().setLocationRelativeTo(vista); 
+        if(origen==1){
+           vista.getDgSede().setTitle("Nuevo Registro"); 
+           limpiar();
+           //cargar_combo_box();
+           vista.getDgSede().setVisible(true);
+        }
+        if(origen==2){ 
+            vista.getDgSede().setTitle("Editar Registro");
+            limpiar();
+            vista.getDgEliminarSede().setVisible(true);
+            modificar();
+        }
+        vista.getDgEliminarSede().setSize(450,300); 
+        vista.getDgSede().setLocationRelativeTo(vista); 
+        if (origen==3){
+            vista.getDgEliminarSede().setTitle("Eliminar Registro");
+            vista.getDgEliminarSede().setVisible(true);
+            eliminar();
         }
     }
     

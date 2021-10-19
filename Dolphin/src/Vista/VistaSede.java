@@ -274,13 +274,13 @@ public class VistaSede extends javax.swing.JInternalFrame {
                         .addComponent(btncancelareliminar_s))
                     .addComponent(lbtitutolo1)
                     .addGroup(DgEliminarSedeLayout.createSequentialGroup()
-                        .addComponent(jLabel17)
+                        .addGroup(DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel16))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txteliminarnombre_s))
-                    .addGroup(DgEliminarSedeLayout.createSequentialGroup()
-                        .addComponent(jLabel16)
-                        .addGap(18, 18, 18)
-                        .addComponent(txteliminarcodSede, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(DgEliminarSedeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txteliminarnombre_s)
+                            .addComponent(txteliminarcodSede))))
                 .addGap(93, 93, 93))
         );
         DgEliminarSedeLayout.setVerticalGroup(
@@ -303,7 +303,7 @@ public class VistaSede extends javax.swing.JInternalFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         PNOA.setBackground(new java.awt.Color(204, 255, 255));
 
