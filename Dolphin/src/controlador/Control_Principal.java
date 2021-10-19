@@ -49,12 +49,10 @@ public class Control_Principal {
     }
     
     private void Iniciar_sesion(String rol_entidad){
-        vp.setVisible(false);
-        VistaInicioSesion vis =new VistaInicioSesion();
-        
+           VistaInicioSesion vis =new VistaInicioSesion();
         if(rol_entidad.equals("D")){
-            boton=rol_entidad;
             Control_InicioSesion c= new Control_InicioSesion (vis,new ModeloDirector());
+            boton=rol_entidad;
             c.iniciaControlDire();
         }else if(rol_entidad.equals("A")){
             Control_InicioSesion c= new Control_InicioSesion (vis,new ModeloAlumno());
@@ -65,7 +63,6 @@ public class Control_Principal {
              boton=rol_entidad;
              c.iniciaControlProf();
         }
-        
        
     }
     

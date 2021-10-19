@@ -1,7 +1,6 @@
 
 package controlador;
 
-import Modelo.clases_base.Director;
 import Modelo.Modelo_Profesor;
 import Modelo.clases_base.Profesor;
 import Vista.VistaProfesor;
@@ -15,7 +14,6 @@ import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import conexion.ConexionPG;
 import java.awt.Toolkit;

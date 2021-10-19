@@ -24,12 +24,12 @@ import javax.swing.JOptionPane;
 
 public class Control_InicioSesion{
     private ModeloAlumno modal;
-   private Modelo_Profesor modpro;
-   private ModeloDirector moddir;
-   private Control_Principal cp;
-   private VistaInicioSesion vista;
-   private VistaPrincipal vp;
-
+    private Modelo_Profesor modpro;
+    private ModeloDirector moddir;
+    private Control_Principal cp;
+    private VistaInicioSesion vista;
+    private VistaPrincipal vp;
+   
    //Constructores
     public Control_InicioSesion(VistaInicioSesion vis,ModeloAlumno modal) {
         this.vista=vis;
@@ -37,7 +37,6 @@ public class Control_InicioSesion{
         vista.setLocationRelativeTo(null);
         this.modal = modal;
         //_________________
-       iniciaControlAlumno();
        //________________
         vista.getPwfcontraseña().setVisible(false);
         vista.getJlbpass().setVisible(false);
@@ -51,7 +50,6 @@ public class Control_InicioSesion{
          this.moddir = moddir;
         vista.setLocationRelativeTo(null);
         //_________________
-        iniciaControlDire();
         String h=Control_Principal.boton;
         System.out.println(h);
     }
@@ -62,25 +60,33 @@ public class Control_InicioSesion{
         vista.setVisible(true);
         vista.setLocationRelativeTo(null);
         //_________________
-        iniciaControlProf();
         String h=Control_Principal.boton;
         System.out.println(h);
     }
     
     //Controlar Eventos de la Vista IiciarSesion
     public void iniciaControlAlumno(){
-        vista.getBtnIngresar().addActionListener(l->comp_al());
-        vista.getJbcancelar().addActionListener(l->regresar());
+        String h=Control_Principal.boton;
+        if(h=="A"){
+            vista.getBtnIngresar().addActionListener(l->comp_al());
+            vista.getJbcancelar().addActionListener(l->regresar());
+        }
      }
     
      public void iniciaControlProf(){
-        vista.getBtnIngresar().addActionListener(l->comp_pro());
-        vista.getJbcancelar().addActionListener(l->regresar());
+        String h=Control_Principal.boton;
+         if(h=="P"){
+            vista.getBtnIngresar().addActionListener(l->comp_pro());
+            vista.getJbcancelar().addActionListener(l->regresar());
+        }
      }
     
      public void iniciaControlDire(){
-        vista.getBtnIngresar().addActionListener(l->comp_dir());
-        vista.getJbcancelar().addActionListener(l->regresar());
+       String h=Control_Principal.boton;
+       if(h=="D"){
+            vista.getBtnIngresar().addActionListener(l->comp_dir());
+            vista.getJbcancelar().addActionListener(l->regresar());
+       }
      }
      
     
@@ -96,14 +102,21 @@ public class Control_InicioSesion{
         Modelo_Profesor mdpro = new Modelo_Profesor();
         String usuario=vista.getTxtNombreUser().getText();
         java.util.List<Profesor> lpro = mdpro.listaProfesores();
-         for (int i = 0; i <lpro.size(); i++) {
-            if(vista.getTxtNombreUser().getText()==usuario){
-                char ty[]=lpro.get(i).getContraseña().toCharArray();;
-                if(vista.getPwfcontraseña().getPassword()==ty){
+         lpro.stream().forEach(p ->{
+            if(p.getId_Profesor().equalsIgnoreCase(usuario)){
+                String pass= new String(vista.getPwfcontraseña().getPassword());
+                if(pass.equalsIgnoreCase(p.getContraseña())){
                     JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
+                    vista.dispose();
+                    VistaMenu menu=new VistaMenu();
+                    menu.setVisible(true);
+                }else{
+                    System.out.println("No existe Pass P");
                 }
-            }
-        } 
+            }else{
+                    System.out.println("No existe Usuario P");
+             }
+        }); 
     }
     
     //Director
@@ -111,16 +124,21 @@ public class Control_InicioSesion{
         ModeloDirector moddir = new ModeloDirector();
         String usuario=vista.getTxtNombreUser().getText();
         List<Director> ldir= moddir.listaDirectores();
-         for (int i = 0; i <ldir.size(); i++) {
-            if(vista.getTxtNombreUser().getText()==usuario){
-                char ty[]=ldir.get(i).getContraseña().toCharArray();;
-                if(vista.getPwfcontraseña().getPassword()==ty){
+         ldir.stream().forEach(d ->{
+            if(d.getId_director().equalsIgnoreCase(usuario)){
+                String pass= new String(vista.getPwfcontraseña().getPassword());
+                if(pass==d.getContraseña()){
                     JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
+                    vista.dispose();
                     VistaMenu menu=new VistaMenu();
                     menu.setVisible(true);
+                }else{
+                    System.out.println("No existe Pass D");
                 }
+            }else{
+                    System.out.println("No existe Usuario D");
             }
-        } 
+        }); 
     }
     
     //Alumno
@@ -128,17 +146,17 @@ public class Control_InicioSesion{
         ModeloAlumno modal = new ModeloAlumno();
         String usuario=vista.getTxtNombreUser().getText();
         List<Alumno> lal=modal.listaAlumnos();
-         for (int i = 0; i <lal.size(); i++) {
-            if(vista.getTxtNombreUser().getText()==usuario){
-                    JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
-                    VistaMenu menu=new VistaMenu();
-                    menu.setVisible(true);
+         lal.stream().forEach(a->{
+            if(a.getId_alumno().equalsIgnoreCase(usuario)){
+                JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
+                vista.dispose();
+                VistaMenu menu=new VistaMenu();
+                menu.setVisible(true);
+            }else{
+                System.out.println("No existe Usuario A");
             }
-         }
+         });
     } 
-    
-    
-    
     
  }
 
