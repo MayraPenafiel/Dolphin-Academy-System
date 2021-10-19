@@ -10,8 +10,7 @@ import Modelo.ModeloDirector;
 import Modelo.Modelo_Profesor;
 import Vista.VistaInicioSesion;
 import Vista.VistaPrincipal;
-import java.awt.event.ActionListener;
-import controlador.Control_InicioSesion;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,13 +21,13 @@ public class Control_Principal {
  
     //Atributos
     private VistaPrincipal vp;
-    public static String boton;
-    
+    static String boton;
     //Constructores
     public Control_Principal() {
     }
     public Control_Principal(VistaPrincipal vp) {
         this.vp = vp;
+        vp.setLocationRelativeTo(null);
         vp.setVisible(true);
     }
     
@@ -37,14 +36,37 @@ public class Control_Principal {
         vp.getBtnAdm().addActionListener(l->Iniciar_sesion("D"));
         vp.getBtnAlum().addActionListener(l->Iniciar_sesion("A"));
         vp.getBtnProf().addActionListener(l->Iniciar_sesion("P"));
+        vp.getJbsalir().addActionListener(l->salidaPrograma());
     }
     
-    private void Iniciar_sesion(String g){
-        g=boton;
-        vp.setVisible(true);
-        VistaInicioSesion vis= new VistaInicioSesion();
-        Control_InicioSesion c= new Control_InicioSesion(vis);
-        c.iniciaControl();
+    public void salidaPrograma(){
+        int i=JOptionPane.showConfirmDialog(null, "Realmente desea salir de Dolphin?", "Confirmar salida",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
+        if(i==0){
+                System.exit(0);
+        }
+    }
+    
+    private void Iniciar_sesion(String rol_entidad){
+        vp.setVisible(false);
+        VistaInicioSesion vis =new VistaInicioSesion();
+        
+        if(rol_entidad.equals("D")){
+            boton=rol_entidad;
+            Control_InicioSesion c= new Control_InicioSesion (vis,new ModeloDirector());
+            c.iniciaControlDire();
+        }else if(rol_entidad.equals("A")){
+            Control_InicioSesion c= new Control_InicioSesion (vis,new ModeloAlumno());
+            c.iniciaControlAlumno();
+            boton=rol_entidad;
+        }else if(rol_entidad.equals("P")){
+             Control_InicioSesion c= new Control_InicioSesion (vis,new Modelo_Profesor());
+             boton=rol_entidad;
+             c.iniciaControlProf();
+        }
+        
+       
     }
     
 }

@@ -23,45 +23,78 @@ import javax.swing.JOptionPane;
  */
 
 public class Control_InicioSesion{
+    private ModeloAlumno modal;
+   private Modelo_Profesor modpro;
+   private ModeloDirector moddir;
+   private Control_Principal cp;
    private VistaInicioSesion vista;
+   private VistaPrincipal vp;
 
    //Constructores
-    public Control_InicioSesion() {
-    }
-    public Control_InicioSesion(VistaInicioSesion vista) {
+    public Control_InicioSesion(VistaInicioSesion vis,ModeloAlumno modal) {
+        this.vista=vis;
         vista.setVisible(true);
         vista.setLocationRelativeTo(null);
-        if(Control_Principal.boton=="A"){
-            vista.getJlbpass().setEnabled(false);
-            vista.getJlbpass().setVisible(false);
-            vista.getJlbuser().setText("Clave de Acceso");
-            vista.getPwfcontraseña().setEnabled(false);
-            vista.getPwfcontraseña().setVisible(false);
-        }
+        this.modal = modal;
+        //_________________
+       iniciaControlAlumno();
+       //________________
+        vista.getPwfcontraseña().setVisible(false);
+        vista.getJlbpass().setVisible(false);
+        String h=Control_Principal.boton;
+        System.out.println(h);
+    }
+    
+     public Control_InicioSesion(VistaInicioSesion vis,ModeloDirector moddir) {
+        this.vista=vis;
+        vista.setVisible(true);
+         this.moddir = moddir;
+        vista.setLocationRelativeTo(null);
+        //_________________
+        iniciaControlDire();
+        String h=Control_Principal.boton;
+        System.out.println(h);
+    }
+      
+     public Control_InicioSesion(VistaInicioSesion vis,Modelo_Profesor modpro) {
+        this.vista=vis;
+        this.modpro = modpro;
+        vista.setVisible(true);
+        vista.setLocationRelativeTo(null);
+        //_________________
+        iniciaControlProf();
+        String h=Control_Principal.boton;
+        System.out.println(h);
     }
     
     //Controlar Eventos de la Vista IiciarSesion
-    public void iniciaControl(){
-        vista.getBtnIngresar().addActionListener(l->llamar_comp());
-        vista.getJbcancelar().addActionListener(l->vista.dispose());
+    public void iniciaControlAlumno(){
+        vista.getBtnIngresar().addActionListener(l->comp_al());
+        vista.getJbcancelar().addActionListener(l->regresar());
      }
-    private void llamar_comp(){
-        
-        if(Control_Principal.boton=="P"){
-           comp_pro();
-        }
-        if(Control_Principal.boton=="D"){ 
-            comp_dir();
-        }
-        if (Control_Principal.boton=="A"){
-                comp_al();
-        }
+    
+     public void iniciaControlProf(){
+        vista.getBtnIngresar().addActionListener(l->comp_pro());
+        vista.getJbcancelar().addActionListener(l->regresar());
+     }
+    
+     public void iniciaControlDire(){
+        vista.getBtnIngresar().addActionListener(l->comp_dir());
+        vista.getJbcancelar().addActionListener(l->regresar());
+     }
+     
+    
+    public void regresar(){
+        Control_Principal control = new Control_Principal(new VistaPrincipal());
+        control.inicia_control();
+        vista.dispose();
     }
+    
     //metodos para comparar datos ingresados
     //Profesor
     public void comp_pro(){
+        Modelo_Profesor mdpro = new Modelo_Profesor();
         String usuario=vista.getTxtNombreUser().getText();
-        Modelo_Profesor mdpro=new Modelo_Profesor();
         java.util.List<Profesor> lpro = mdpro.listaProfesores();
          for (int i = 0; i <lpro.size(); i++) {
             if(vista.getTxtNombreUser().getText()==usuario){
@@ -75,8 +108,8 @@ public class Control_InicioSesion{
     
     //Director
     public void comp_dir(){
-        String usuario=vista.getTxtNombreUser().getText();
         ModeloDirector moddir = new ModeloDirector();
+        String usuario=vista.getTxtNombreUser().getText();
         List<Director> ldir= moddir.listaDirectores();
          for (int i = 0; i <ldir.size(); i++) {
             if(vista.getTxtNombreUser().getText()==usuario){
@@ -92,8 +125,8 @@ public class Control_InicioSesion{
     
     //Alumno
     public void comp_al(){
+        ModeloAlumno modal = new ModeloAlumno();
         String usuario=vista.getTxtNombreUser().getText();
-        ModeloAlumno modal= new ModeloAlumno();
         List<Alumno> lal=modal.listaAlumnos();
          for (int i = 0; i <lal.size(); i++) {
             if(vista.getTxtNombreUser().getText()==usuario){
@@ -104,12 +137,6 @@ public class Control_InicioSesion{
          }
     } 
     
-    //Metodo Regresar 
-    public void regresar(){
-        Control_Principal control = new Control_Principal(new VistaPrincipal());
-        control.inicia_control();
-        vista.dispose();
-    }
     
     
     

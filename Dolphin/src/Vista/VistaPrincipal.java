@@ -6,6 +6,8 @@
 package Vista;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  *
@@ -27,7 +29,6 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         PnInicio = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         BtnAlum = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         BtnProf = new javax.swing.JButton();
@@ -35,13 +36,13 @@ public class VistaPrincipal extends javax.swing.JFrame {
         BtnAdm = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         LblTitulo = new javax.swing.JLabel();
+        jbsalir = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PnInicio.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/Logo(1).png"))); // NOI18N
 
         BtnAlum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/User(2).png"))); // NOI18N
         BtnAlum.addActionListener(new java.awt.event.ActionListener() {
@@ -74,14 +75,16 @@ public class VistaPrincipal extends javax.swing.JFrame {
         LblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblTitulo.setText("DOLPHIN ACADEMY SYSTEM");
 
+        jbsalir.setText("Salir");
+
         javax.swing.GroupLayout PnInicioLayout = new javax.swing.GroupLayout(PnInicio);
         PnInicio.setLayout(PnInicioLayout);
         PnInicioLayout.setHorizontalGroup(
             PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnInicioLayout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(48, 48, 48)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnInicioLayout.createSequentialGroup()
                         .addComponent(BtnProf)
@@ -99,13 +102,15 @@ public class VistaPrincipal extends javax.swing.JFrame {
             .addGroup(PnInicioLayout.createSequentialGroup()
                 .addGap(189, 189, 189)
                 .addComponent(LblTitulo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbsalir)
+                .addGap(30, 30, 30))
         );
         PnInicioLayout.setVerticalGroup(
             PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnInicioLayout.createSequentialGroup()
-                .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PnInicioLayout.createSequentialGroup()
+                .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PnInicioLayout.createSequentialGroup()
                         .addGap(69, 69, 69)
                         .addComponent(BtnAdm)
                         .addGap(18, 18, 18)
@@ -114,17 +119,21 @@ public class VistaPrincipal extends javax.swing.JFrame {
                         .addComponent(BtnProf))
                     .addGroup(PnInicioLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(LblTitulo)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PnInicioLayout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(jLabel1)
-                        .addGap(93, 93, 93)
-                        .addComponent(jLabel4)
-                        .addGap(98, 98, 98)
-                        .addComponent(jLabel3)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                        .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(LblTitulo)
+                            .addComponent(jbsalir))
+                        .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PnInicioLayout.createSequentialGroup()
+                                .addGap(64, 64, 64)
+                                .addComponent(jLabel1)
+                                .addGap(89, 89, 89)
+                                .addComponent(jLabel4)
+                                .addGap(98, 98, 98)
+                                .addComponent(jLabel3))
+                            .addGroup(PnInicioLayout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -134,8 +143,10 @@ public class VistaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(PnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,6 +191,30 @@ public class VistaPrincipal extends javax.swing.JFrame {
         this.BtnProf = BtnProf;
     }
 
+    public JLabel getLblTitulo() {
+        return LblTitulo;
+    }
+
+    public void setLblTitulo(JLabel LblTitulo) {
+        this.LblTitulo = LblTitulo;
+    }
+
+    public JPanel getPnInicio() {
+        return PnInicio;
+    }
+
+    public void setPnInicio(JPanel PnInicio) {
+        this.PnInicio = PnInicio;
+    }
+
+    public JButton getJbsalir() {
+        return jbsalir;
+    }
+
+    public void setJbsalir(JButton jbsalir) {
+        this.jbsalir = jbsalir;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnAdm;
     private javax.swing.JButton BtnAlum;
@@ -191,5 +226,6 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton jbsalir;
     // End of variables declaration//GEN-END:variables
 }

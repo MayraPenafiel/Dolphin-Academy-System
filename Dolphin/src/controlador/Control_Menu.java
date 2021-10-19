@@ -13,11 +13,11 @@ import Vista.VistaDisciplina;
 import Vista.VistaEncaRealiza;
 import Vista.VistaEntrenamiento;
 import Vista.VistaProfesor;
+import Vista.VistaPrincipal;
 import Vista.VistaSede;
 import Modelo.ModeloAlumno;
 import Modelo.ModeloDirector;
 import Modelo.Modelo_Entrenamiento;
-import Modelo.ModeloOfertaAcademica;
 import Modelo.ModeloSede;
 import Modelo.ModeloDisciplina;
 import Modelo.Modelo_Profesor;
@@ -52,7 +52,7 @@ public class Control_Menu {
         vm.getMIEnt().addActionListener(l->abrir_ventana(7));
         vm.getMISede().addActionListener(l->abrir_ventana(8));
         vm.getJbsalir().addActionListener(l->abrir_ventana(9));
-        vm.getJbregresar().addActionListener(l-> crudPersonas());
+        vm.getJbregresar().addActionListener(l-> regresar());
     }
     
     private void abrir_ventana(int op){
@@ -105,8 +105,14 @@ public class Control_Menu {
             c.iniciarcontrol();
         }
         if(op==9){
-            vm.dispose();
+            System.exit(0);
         }
+    }
+    public void regresar(){
+        VistaPrincipal vp=new VistaPrincipal();
+        Control_Principal control = new Control_Principal(vp);
+        control.inicia_control();
+        vm.dispose();
     }
     
 }
