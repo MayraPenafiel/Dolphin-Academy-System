@@ -142,6 +142,8 @@ public class Control_InicioSesion{
                     System.out.println("No existe Usuario D");
             }
         }); 
+                vista.dispose();
+
     }
     
     //Alumno
@@ -158,9 +160,11 @@ public class Control_InicioSesion{
                     c.iniciControl();
                     menu.setVisible(true);
             }else{
-                 JOptionPane.showMessageDialog(null, "Usuario no encontrado");
+                 //JOptionPane.showMessageDialog(null, "Usuario no encontrado");
             }
          });
+                vista.dispose();
+
     } 
     
  }

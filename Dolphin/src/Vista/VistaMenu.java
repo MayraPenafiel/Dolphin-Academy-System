@@ -5,11 +5,11 @@
  */
 package Vista;
 
+import Modelo.ModeloDisciplina;
+import controlador.Control_Disciplina;
 import javax.swing.JButton;
-import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JDesktopPane;
 import javax.swing.JMenu;
-import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 /**
@@ -256,7 +256,9 @@ public class VistaMenu extends javax.swing.JFrame {
 
     private void MIDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIDisciplinaActionPerformed
         // TODO add your handling code here:
+        VistaDisciplina vista=new VistaDisciplina();
         
+        vista.setVisible(true);
     }//GEN-LAST:event_MIDisciplinaActionPerformed
 
     private void jbencarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbencarActionPerformed

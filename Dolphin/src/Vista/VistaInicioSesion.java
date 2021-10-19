@@ -83,6 +83,12 @@ public class VistaInicioSesion extends javax.swing.JFrame {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
 
+        pwfcontraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pwfcontraseñaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PnInicioSesionLayout = new javax.swing.GroupLayout(PnInicioSesion);
         PnInicioSesion.setLayout(PnInicioSesionLayout);
         PnInicioSesionLayout.setHorizontalGroup(
@@ -165,6 +171,10 @@ public class VistaInicioSesion extends javax.swing.JFrame {
     private void TxtNombreUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtNombreUserActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtNombreUserActionPerformed
+
+    private void pwfcontraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwfcontraseñaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwfcontraseñaActionPerformed
 
     // GETTER Y SETTERS
     public JButton getBtnIngresar() {

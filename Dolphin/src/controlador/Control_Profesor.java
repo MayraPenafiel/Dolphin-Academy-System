@@ -45,6 +45,17 @@ public class Control_Profesor{
     
     public void iniciaControl(){
     
+        String h=Control_Principal.boton;
+        if(h=="A"){
+            vista.getBtnCrearProf().setVisible(false);
+            vista.getBtnEditarJFProf().setVisible(false);
+            vista.getBtnEliminarJFProf().setVisible(false);
+            vista.getBtnimprimirprofe().addActionListener(l -> imprimirReporte());
+        }
+        if(h=="P"){
+            vista.getBtnEliminarJFProf().setVisible(false);
+            vista.getBtnCrearProf().setVisible(false);
+        }
         KeyListener kl = new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -193,15 +204,10 @@ public class Control_Profesor{
         };
 
         vista.getTxtCedulaProf().addKeyListener(c7);
-                                
-         
-
         vista.getBtnListarJFProf().addActionListener(l -> cargaLista(""));
         vista.getBtnCrearProf().addActionListener(l -> abrir_dialogo(1));
         vista.getBtnEditarJFProf().addActionListener(l -> abrir_dialogo(2));
         vista.getBtnEliminarJFProf().addActionListener(l -> abrir_dialogo(3));
-        
-        
         vista.getBtnGuardarProf().addActionListener(l->grabaProfesor());
         vista.getBtnCrearProf().addActionListener(l->vista.getDgProfesor().dispose());
         vista.getBtnconfirmareliminar().addActionListener(l-> confirmar());

@@ -3,74 +3,59 @@ package controlador;
 
 import Modelo.ModeloOfertaAcademica;
 import Modelo.clases_base.OfertaAcademica;
-//import Vista.VistaOfertaAc; 
+import Vista.VistaSede;
 import conexion.ConexionPG;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author HP
  */
+
 public class ControlOfertaAcademica {
+//    
 //    private Modelo.ModeloOfertaAcademica modelo;
-//    private VistaOfertaAc vista;
+//    private VistaSede vista;
+//    
 //    DefaultTableModel tabla = new  DefaultTableModel();
 //     private ConexionPG con = new ConexionPG();
 //     
-//    public ControlOfertaAcademica(Modelo.ModeloOfertaAcademica modelo, VistaOfertaAc vista) {
+//    public ControlOfertaAcademica(ModeloOfertaAcademica modelo, VistaSede sed) {
 //        this.modelo = modelo;
-//        this.vista = vista;
-//
-//        // solamente inicializar elementos
-//        vista.setTitle("Oferta Academica");
-//        //vista.getLblmensaje().setText("Bienvenido Sistema 1.0");
-//        vista.setVisible(true);
-//        cargaLista(""); //Crear metodo en esta clase
-//        
 //    }
 //    
 //    public void iniciarcontrol(){
 //        KeyListener kl= new KeyListener() {
 //            @Override
 //            public void keyTyped(KeyEvent e) {
-////                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //            }
 //
 //            @Override
 //            public void keyPressed(KeyEvent e) {
-////                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //            }
 //
 //            @Override
 //            public void keyReleased(KeyEvent e) {
-////                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//                cargaLista(vista.getTxtBuscarOA().getText());
+//                //cargaLista(vista.getTxtBuscarOA().getText());
 //            }
 //        };
-//        vista.getBtnListarJFOA().addActionListener(l -> cargaLista(""));
 //    }
 //    
 //    private void cargaLista(String aguja) {
-//
-//        DefaultTableCellRenderer r = new DefaultTableCellRenderer();
-//        DefaultTableModel tableModel;
-//        tableModel = (DefaultTableModel) vista.getTbOA().getModel();
-//        tableModel.setNumRows(0);
-//        java.util.List<OfertaAcademica> lista = modelo.listaOfertaAcademica(aguja);
+//        ModeloOfertaAcademica moa= new ModeloOfertaAcademica();
+//        java.util.List<OfertaAcademica> lista = moa.listaOfertaAcademica("");
 //        lista.stream().forEach(oa -> {
-//
 //            String[] Ofertaacademica = {oa.getId_disciplina(), oa.getId_sede(), oa.getCapacidad()+""};
 //
 //        });
 //    }
 //    
 //     private void grabarOfertaAcademica(){
-//        String id_disciplina = vista.getTxtDiscOA1().getText();
-//        String id_sede = vista.getTxtDiscOA1().getText();
+//        String id_disciplina = vista.getTxtCodSede1().getText();
+//        String id_sede = vista.getTxtCodSede1().getText();
 //        String capacidad = vista.getTxtCapOA1().getText();
 //        
 //        ModeloOfertaAcademica OA = new ModeloOfertaAcademica();
@@ -118,7 +103,9 @@ public class ControlOfertaAcademica {
 //            limpiar();
 //        }
 //    }
-//    
+//    private void Combobox(){
+//        
+//    }
 //     private void modificar(){
 //        int se=vista.getTbOA().getSelectedRow();
 //        if (se>=0){
@@ -142,5 +129,5 @@ public class ControlOfertaAcademica {
 //            vista.getDgOfertaAcd().setVisible(false);
 //        }
 //    }
-    
+//    
 }

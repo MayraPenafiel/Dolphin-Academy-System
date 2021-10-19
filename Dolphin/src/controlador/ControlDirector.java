@@ -49,7 +49,14 @@ public class ControlDirector {
     }
     
     public void iniciaControl(){
-    
+        String h=Control_Principal.boton;
+        if(h=="P"){
+            
+            vista.getBtnCrearDirec().setVisible(false);
+            vista.getBtnEditarJFDirec().setVisible(false);
+            vista.getBtnEliminarJFDirec().setVisible(false);
+            
+        }
         KeyListener kl = new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -221,8 +228,6 @@ public class ControlDirector {
         try {
             
             JasperReport jr=(JasperReport)JRLoader.loadObject(getClass().getResource("/reportes/Reporte_Directores.jasper"));
-
-            
             JasperPrint jp=JasperFillManager.fillReport(jr, null,conp.getCon());
             JasperViewer jv=new JasperViewer(jp);
             
@@ -257,7 +262,6 @@ public class ControlDirector {
     }
     
     
-    
     private void cargaLista(String aguja){
         DefaultTableCellRenderer r = new DefaultTableCellRenderer();
         DefaultTableModel tableModel;
@@ -271,37 +275,37 @@ public class ControlDirector {
     }
     
     private void grabaDirector(){
-    String iddirector = vista.getTxtCodDirec().getText();
-    String cedula = vista.getTxtCedulaDirec().getText();
-    String nombre = vista.getTxtNombreDirec().getText();
-    String apellido = vista.getTxtApeDirec().getText();
-    String direccion = vista.getTxtDireccionDirec().getText();
-    String telefono = vista.getTxtTelfDirec().getText();
-    String correo = vista.getTxtEmailDirec().getText();
-    //String fechanacimiento = vista.
-    String celular = vista.getTxtCelularDirec().getText();
-    String contrasenia = vista.getTxtcontraseña().getText();
-    String formacion = vista.getTxtformacion().getText();
-    String sede = vista.getTxtdireccion_sede().getText();
-   
-    Instant instante = vista.getDCDirec().getDate().toInstant();
-    ZoneId zi = ZoneId.of("America/Guayaquil");
-    ZonedDateTime zdt = ZonedDateTime.ofInstant(instante, zi);
-    java.sql.Date fecha = java.sql.Date.valueOf(zdt.toLocalDate());
+        String iddirector = vista.getTxtCodDirec().getText();
+        String cedula = vista.getTxtCedulaDirec().getText();
+        String nombre = vista.getTxtNombreDirec().getText();
+        String apellido = vista.getTxtApeDirec().getText();
+        String direccion = vista.getTxtDireccionDirec().getText();
+        String telefono = vista.getTxtTelfDirec().getText();
+        String correo = vista.getTxtEmailDirec().getText();
+        //String fechanacimiento = vista.
+        String celular = vista.getTxtCelularDirec().getText();
+        String contrasenia = vista.getTxtcontraseña().getText();
+        String formacion = vista.getTxtformacion().getText();
+        String sede = vista.getTxtdireccion_sede().getText();
 
-    ModeloDirector director = new ModeloDirector();
-    director.setId_director(iddirector);
-    director.setCedula(cedula);
-    director.setNombre(nombre);
-    director.setApellido(apellido);
-    director.setDireccion(direccion);
-    director.setTelefono(telefono);
-    director.setCorreo(correo);
-    director.setCelular(celular);
-    director.setContraseña(contrasenia);
-    director.setSede(sede);
-    director.setFormacion(formacion);
-    director.setFechanacimiento(fecha);
+        Instant instante = vista.getDCDirec().getDate().toInstant();
+        ZoneId zi = ZoneId.of("America/Guayaquil");
+        ZonedDateTime zdt = ZonedDateTime.ofInstant(instante, zi);
+        java.sql.Date fecha = java.sql.Date.valueOf(zdt.toLocalDate());
+
+        ModeloDirector director = new ModeloDirector();
+        director.setId_director(iddirector);
+        director.setCedula(cedula);
+        director.setNombre(nombre);
+        director.setApellido(apellido);
+        director.setDireccion(direccion);
+        director.setTelefono(telefono);
+        director.setCorreo(correo);
+        director.setCelular(celular);
+        director.setContraseña(contrasenia);
+        director.setSede(sede);
+        director.setFormacion(formacion);
+        director.setFechanacimiento(fecha);
     
         if (director.grabar()) {
             JOptionPane.showMessageDialog(vista, "director creado satisfactoriamente");
@@ -330,17 +334,17 @@ public class ControlDirector {
     
     
     private void limpiar(){
-    vista.getTxtCodDirec().setText("");
-    vista.getTxtCedulaDirec().setText("");
-    vista.getTxtNombreDirec().setText("");
-    vista.getTxtApeDirec().setText("");
-    vista.getTxtDireccionDirec().setText("");
-    vista.getTxtTelfDirec().setText("");
-    vista.getTxtEmailDirec().setText("");
-    vista.getTxtCelularDirec().setText("");
-    vista.getTxtcontraseña().setText("");
-    vista.getTxtformacion().setText("");
-    vista.getTxtdireccion_sede().setText("");
+        vista.getTxtCodDirec().setText("");
+        vista.getTxtCedulaDirec().setText("");
+        vista.getTxtNombreDirec().setText("");
+        vista.getTxtApeDirec().setText("");
+        vista.getTxtDireccionDirec().setText("");
+        vista.getTxtTelfDirec().setText("");
+        vista.getTxtEmailDirec().setText("");
+        vista.getTxtCelularDirec().setText("");
+        vista.getTxtcontraseña().setText("");
+        vista.getTxtformacion().setText("");
+        vista.getTxtdireccion_sede().setText("");
     }
     
     private void eliminar() {

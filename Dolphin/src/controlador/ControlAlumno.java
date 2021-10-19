@@ -43,15 +43,18 @@ public class ControlAlumno {
     public ControlAlumno(ModeloAlumno modelo, VistaAlumno vista) {
         this.modelo = modelo;
         this.vista = vista;
-
-        // solamente inicializar elementos
-        vista.setTitle("ALUMNO");
-        //vista.getLblmensaje().setText("Bienvenido Sistema 1.0");
         vista.setVisible(true);
-        cargaLista("");
+        String h=Control_Principal.boton;
+        if(h=="A"){
+            vista.getBtnCrearAlmn().setVisible(false);
+            vista.getBtnEditarJFAlmn().setVisible(false);
+            vista.getBtnEliminarJFAlmn().setVisible(false);
+            vista.getBtnimprimiralum().setVisible(false);
+        }
     }
 
     public void iniciaControl() {
+        
         KeyListener kl = new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -80,7 +83,7 @@ public class ControlAlumno {
                     Toolkit.getDefaultToolkit().beep();
                 }
 
-                if (vista.getTxtCodAlmn().getText().length() >= 3) {
+                if (vista.getTxtCodAlmn().getText().length() <=10) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }

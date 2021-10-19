@@ -57,79 +57,79 @@ public class Control_Disciplina {
 
         };
         
-         KeyAdapter c1 = new KeyAdapter() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                char c = e.getKeyChar();
-                if (Character.isDigit(c) || Character.isLetter(c)) {
-                } else {
-                    e.consume();
-                    Toolkit.getDefaultToolkit().beep();
-                }
+//         KeyAdapter c1 = new KeyAdapter() {
+//            @Override
+//            public void keyTyped(KeyEvent e) {
+//                char c = e.getKeyChar();
+//                if (Character.isDigit(c) || Character.isLetter(c)) {
+//                } else {
+//                    e.consume();
+//                    Toolkit.getDefaultToolkit().beep();
+//                }
+//
+//                if (vista.getTxtcodigo().getText().length() > 8) {
+//                    Toolkit.getDefaultToolkit().beep();
+//                    e.consume();
+//                }
+//            }
+//        };
+//
+//        vista.getTxtcodigo().addKeyListener(c1);
+//
+//        KeyAdapter c2 = new KeyAdapter() {
+//            @Override
+//            public void keyTyped(KeyEvent e) {
+//                char c = e.getKeyChar();
+//                if (Character.isLetter(c)) {
+//                } else {
+//                    e.consume();
+//                    Toolkit.getDefaultToolkit().beep();
+//                }
+//
+//                if (vista.getTxtnombred().getText().length() > 20) {
+//                    Toolkit.getDefaultToolkit().beep();
+//                    e.consume();
+//                }
+//            }
+//        };
+//        vista.getTxtnombred().addKeyListener(c2);
+//
+//        KeyAdapter c3 = new KeyAdapter() {
+//            @Override
+//            public void keyTyped(KeyEvent e) {
+//                char c = e.getKeyChar();
+//                if (Character.isLetter(c)) {
+//                } else {
+//                    e.consume();
+//                    Toolkit.getDefaultToolkit().beep();
+//                }
+//
+//                if (vista.getTxtdescripciond().getText().length() > 20) {
+//                    Toolkit.getDefaultToolkit().beep();
+//                    e.consume();
+//                }
+//            }
+//        };
+//        vista.getTxtdescripciond().addKeyListener(c3);
+//
+//        KeyAdapter c4 = new KeyAdapter() {
+//            @Override
+//            public void keyTyped(KeyEvent e) {
+//                char c = e.getKeyChar();
+//                if (Character.isLetter(c)) {
+//                } else {
+//                    e.consume();
+//                    Toolkit.getDefaultToolkit().beep();
+//                }
+//
+//                if (vista.getTxtdescripciond().getText().length() > 10) {
+//                    Toolkit.getDefaultToolkit().beep();
+//                    e.consume();
+//                }
+//            }
+//        };
 
-                if (vista.getTxtcodigo().getText().length() > 8) {
-                    Toolkit.getDefaultToolkit().beep();
-                    e.consume();
-                }
-            }
-        };
-
-        vista.getTxtcodigo().addKeyListener(c1);
-
-        KeyAdapter c2 = new KeyAdapter() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                char c = e.getKeyChar();
-                if (Character.isLetter(c)) {
-                } else {
-                    e.consume();
-                    Toolkit.getDefaultToolkit().beep();
-                }
-
-                if (vista.getTxtnombred().getText().length() > 20) {
-                    Toolkit.getDefaultToolkit().beep();
-                    e.consume();
-                }
-            }
-        };
-        vista.getTxtnombred().addKeyListener(c2);
-
-        KeyAdapter c3 = new KeyAdapter() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                char c = e.getKeyChar();
-                if (Character.isLetter(c)) {
-                } else {
-                    e.consume();
-                    Toolkit.getDefaultToolkit().beep();
-                }
-
-                if (vista.getTxtdescripciond().getText().length() > 20) {
-                    Toolkit.getDefaultToolkit().beep();
-                    e.consume();
-                }
-            }
-        };
-        vista.getTxtdescripciond().addKeyListener(c3);
-
-        KeyAdapter c4 = new KeyAdapter() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                char c = e.getKeyChar();
-                if (Character.isLetter(c)) {
-                } else {
-                    e.consume();
-                    Toolkit.getDefaultToolkit().beep();
-                }
-
-                if (vista.getTxtdescripciond().getText().length() > 10) {
-                    Toolkit.getDefaultToolkit().beep();
-                    e.consume();
-                }
-            }
-        };
-
-        vista.getTxtdescripciond().addKeyListener(c4);
+        //vista.getTxtdescripciond().addKeyListener(c4);
 
 
         

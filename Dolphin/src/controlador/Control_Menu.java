@@ -33,6 +33,10 @@ public class Control_Menu {
     
     //Atributos
     private VistaMenu vm;
+    private VistaAlumno va;
+    private VistaProfesor vp;
+    private VistaDirector vd;
+    
     
     //Constructores
     public Control_Menu(VistaMenu vm) {
@@ -44,28 +48,29 @@ public class Control_Menu {
             vm.getMIAlumno().setText("Mi Informacion");
             vm.getMIAdm().setVisible(false);
             vm.getMIAdm().setEnabled(false);
-            vm.getMIDisciplina().setVisible(false);
+            vm.getMIDisciplina().setVisible(true);
             vm.getMIEnt().setVisible(false);
             vm.getMISede().setVisible(false);
             vm.getJbencar().setVisible(false);
-            vm.getMIDetRealiza().setText("Entrenamiento/Asistencia");
-            vm.getMIDisciplina().setEnabled(false);
+            vm.getMIDetRealiza().setVisible(false);
+            //vm.getMIDisciplina().setEnabledfalse);
             vm.getMIEnt().setEnabled(false);
             vm.getMISede().setEnabled(false);
             vm.getJbencar().setEnabled(false);
         }
+        vm.getJbencar().setVisible(false);
+        vm.getMIDetRealiza().setVisible(false);
     }
     public Control_Menu() {
     }
     
     public void iniciControl(){
-        
         vm.getMIAlumno().addActionListener(l->abrir_ventana(1));
         vm.getMIProfesor().addActionListener(l->abrir_ventana(2));
         vm.getMIAdm().addActionListener(l->abrir_ventana(3));
-        vm.getMIDetRealiza().addActionListener(l->abrir_ventana(4));
+        //vm.getMIDetRealiza().addActionListener(l->abrir_ventana(4));
         vm.getMIDisciplina().addActionListener(l->abrir_ventana(5));
-        vm.getJbencar().addActionListener(l->abrir_ventana(6));
+        //vm.getJbencar().addActionListener(l->abrir_ventana(6));
         vm.getMIEnt().addActionListener(l->abrir_ventana(7));
         vm.getMISede().addActionListener(l->abrir_ventana(8));
         vm.getJbsalir().addActionListener(l->abrir_ventana(9));
@@ -74,10 +79,10 @@ public class Control_Menu {
     
     private void abrir_ventana(int op){
         if(op==1){
-           VistaAlumno vt= new VistaAlumno();
            ModeloAlumno md= new ModeloAlumno();
-           ControlAlumno c=new ControlAlumno(md,vt);
+           ControlAlumno c=new ControlAlumno(md,va);
            c.iniciaControl();
+           va.setVisible(true);
         }
         if(op==2){ 
             VistaProfesor vt= new VistaProfesor();
