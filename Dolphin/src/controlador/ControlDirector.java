@@ -51,7 +51,6 @@ public class ControlDirector {
     public void iniciaControl(){
         String h=Control_Principal.boton;
         if(h=="P"){
-            
             vista.getBtnCrearDirec().setVisible(false);
             vista.getBtnEditarJFDirec().setVisible(false);
             vista.getBtnEliminarJFDirec().setVisible(false);
@@ -209,7 +208,7 @@ public class ControlDirector {
          vista.getBtnCrearDirec().addActionListener(l->abrir_dialogo(1));
         vista.getBtnEditarJFDirec().addActionListener(l->abrir_dialogo(2));
         vista.getBtnEliminarJFDirec().addActionListener(l->abrir_dialogo(3));
-        
+        vista.getJbregresar().addActionListener(l->vista.dispose());
         
         vista.getBtnGuardarDirec().addActionListener(l->grabaDirector());
         vista.getBtnCrearDirec().addActionListener(l->vista.getDgDirector().dispose());

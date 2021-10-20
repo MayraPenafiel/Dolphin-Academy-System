@@ -25,6 +25,7 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  * @author HP
  */
+
 public class ControlSede {
     
     private ModeloSede modelo;

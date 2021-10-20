@@ -112,6 +112,7 @@ public class Control_InicioSesion{
                     Control_Menu c= new Control_Menu(menu);
                     c.iniciControl();
                     menu.setVisible(true);
+                    vista.dispose();
                 }else{
                     System.out.println("No existe Pass P");
                 }
@@ -119,6 +120,7 @@ public class Control_InicioSesion{
                     System.out.println("No existe Usuario P");
              }
         }); 
+         
     }
     
     //Director

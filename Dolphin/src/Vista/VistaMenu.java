@@ -40,7 +40,6 @@ public class VistaMenu extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JToolBar.Separator();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jbregresar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -98,8 +97,6 @@ public class VistaMenu extends javax.swing.JFrame {
         jButton5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(jButton5);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
-
         jbregresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-salida-48.png"))); // NOI18N
         jbregresar.setBorder(null);
         jbregresar.setBorderPainted(false);
@@ -111,18 +108,15 @@ public class VistaMenu extends javax.swing.JFrame {
         });
 
         DskMenu.setLayer(jToolBar1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        DskMenu.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         DskMenu.setLayer(jbregresar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout DskMenuLayout = new javax.swing.GroupLayout(DskMenu);
         DskMenu.setLayout(DskMenuLayout);
         DskMenuLayout.setHorizontalGroup(
             DskMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 725, Short.MAX_VALUE)
             .addGroup(DskMenuLayout.createSequentialGroup()
-                .addGap(173, 173, 173)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jbregresar)
                 .addGap(25, 25, 25))
         );
@@ -131,13 +125,8 @@ public class VistaMenu extends javax.swing.JFrame {
             .addGroup(DskMenuLayout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(DskMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DskMenuLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
-                        .addGap(16, 16, 16))
-                    .addGroup(DskMenuLayout.createSequentialGroup()
-                        .addComponent(jbregresar)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addComponent(jbregresar)
+                .addContainerGap(365, Short.MAX_VALUE))
         );
 
         jLabel1.setText("Dolphin Academy System");
@@ -412,7 +401,6 @@ public class VistaMenu extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar jToolBar1;

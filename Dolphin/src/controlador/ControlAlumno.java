@@ -13,13 +13,11 @@ import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import conexion.ConexionPG;
 import java.awt.Toolkit;
 import java.awt.event.KeyAdapter;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import net.sf.jasperreports.engine.JRException;
@@ -40,17 +38,20 @@ public class ControlAlumno {
     DefaultTableModel tabla = new  DefaultTableModel();
      private ConexionPG con = new ConexionPG();
      
+     
     public ControlAlumno(ModeloAlumno modelo, VistaAlumno vista) {
         this.modelo = modelo;
         this.vista = vista;
         vista.setVisible(true);
         String h=Control_Principal.boton;
+        cargaLista("");
         if(h=="A"){
             vista.getBtnCrearAlmn().setVisible(false);
             vista.getBtnEditarJFAlmn().setVisible(false);
             vista.getBtnEliminarJFAlmn().setVisible(false);
             vista.getBtnimprimiralum().setVisible(false);
         }
+        
     }
 
     public void iniciaControl() {
@@ -196,7 +197,7 @@ public class ControlAlumno {
                 }
             }
         };
-
+        vista.getJbregresar().addActionListener(l->vista.dispose());
         vista.getTxtCedulaAlmn().addKeyListener(c7);
         vista.getBtnListarJFAlmn().addActionListener(l -> cargaLista(""));
         vista.getBtnCrearAlmn().addActionListener(l->abrir_dialogo(1));
@@ -251,13 +252,14 @@ public class ControlAlumno {
     
     private void cargaLista(String aguja) {
         //DefaultTableCellRenderer r = new DefaultTableCellRenderer();
-        DefaultTableModel tableModel;
-        tableModel = (DefaultTableModel) vista.getTbAlumno().getModel();
-        tableModel.setNumRows(0);
-        java.util.List<Alumno> lista = modelo.listaAlumno(aguja);
+        DefaultTableModel tableM;
+        tableM = (DefaultTableModel) vista.getTbAlumno().getModel();
+        tableM.setNumRows(0);
+        List<Alumno> lista = modelo.listaAlumno(aguja);
         lista.stream().forEach(a -> {
-            String[] alumno = {a.getId_alumno(), a.getCedula(), a.getNombre(), a.getApellido(),
-                a.getDireccion(), a.getTelefono(), a.getCelular(), a.getCategoria(), a.getDisciplina(), a.getEntrenamiento()};
+            Object [] alumno = {a.getId_alumno(),a.getCategoria(),a.getCedula(), a.getNombre(), a.getApellido(),
+                a.getDireccion(), a.getTelefono(), a.getCorreo(), a.getFechanacimiento(), a.getCelular()};
+            tableM.addRow(alumno);
         });
     }
 
@@ -376,7 +378,7 @@ public class ControlAlumno {
                     String en=lista.get(i).getEntrenamiento()+"";
                     
                     vista.getTxtCodAlmn().setText(id);
-                    vista.getCbxCategoriaAlmn().setSelectedItem(ape);
+                    vista.getCbxCategoriaAlmn().setSelectedItem(ca);
                     vista.getTxtCedulaAlmn().setText(ce);
                     vista.getTxtNombreAlumn().setText(nom);
                     vista.getTxtApeAlmn().setText(ape);

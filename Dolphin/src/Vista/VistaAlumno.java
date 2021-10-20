@@ -9,6 +9,8 @@ import com.toedter.calendar.JDateChooser;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -78,6 +80,7 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jbregresar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TbAlumno = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
@@ -86,7 +89,6 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         BtnEditarJFAlmn = new javax.swing.JButton();
         BtnListarJFAlmn = new javax.swing.JButton();
         BtnEliminarJFAlmn = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         btnimprimiralum = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
@@ -94,7 +96,7 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -112,12 +114,14 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4)
-            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel14.setText("Codigo:");
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -138,7 +142,7 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel17.setText("Apellidos:");
 
-        BtnCrearAlmn.setText("Crear");
+        BtnCrearAlmn.setText("Cancelar");
         BtnCrearAlmn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnCrearAlmnActionPerformed(evt);
@@ -212,12 +216,10 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
                                     .addGroup(PNOA1Layout.createSequentialGroup()
                                         .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addComponent(DCAlumn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(BtnCrearAlmn)
                                             .addComponent(TxtNombreAlumn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(BtnGuardarAlmn)
                                             .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,7 +235,8 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
                             .addGroup(PNOA1Layout.createSequentialGroup()
                                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(TxtCelularAlmn, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cbxdisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cbxdisciplina, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(BtnGuardarAlmn, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PNOA1Layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
@@ -242,7 +245,9 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
                                         .addComponent(CbxCategoriaAlmn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(PNOA1Layout.createSequentialGroup()
                                         .addGap(36, 36, 36)
-                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(BtnCrearAlmn))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(cbxentrenamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(0, 52, Short.MAX_VALUE)))
@@ -332,7 +337,7 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         DlgEliminarLayout.setHorizontalGroup(
             DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DlgEliminarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(64, Short.MAX_VALUE)
                 .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(DlgEliminarLayout.createSequentialGroup()
                         .addComponent(btnconfirmareliminar)
@@ -347,12 +352,12 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txteliminarid, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(120, 120, 120))
+                .addGap(99, 99, 99))
         );
         DlgEliminarLayout.setVerticalGroup(
             DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DlgEliminarLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(34, 34, 34)
                 .addComponent(lbtitutolo1)
                 .addGap(18, 18, 18)
                 .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -362,11 +367,11 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
                 .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txteliminarnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13))
-                .addGap(58, 58, 58)
+                .addGap(52, 52, 52)
                 .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnconfirmareliminar)
                     .addComponent(btncancelareliminar))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -377,7 +382,7 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -401,15 +406,26 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
 
         PNOA.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 920, -1));
 
+        jbregresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-izquierda-círculo-36.png"))); // NOI18N
+        jbregresar.setBorder(null);
+        jbregresar.setBorderPainted(false);
+        jbregresar.setContentAreaFilled(false);
+        jbregresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbregresarActionPerformed(evt);
+            }
+        });
+        PNOA.add(jbregresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 290, -1, -1));
+
         TbAlumno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Categoria", "Cedula", "Nombres", "Apellido", "Direccion", "Telefono", "Correo", "Fecha Nac", "Celular", "Disciplina", "Entrenamiento"
+                "ID", "Categoria", "Cedula", "Nombres", "Apellido", "Direccion", "Telefono", "Correo", "Fecha Nac", "Celular"
             }
         ));
         jScrollPane1.setViewportView(TbAlumno);
@@ -433,25 +449,19 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         BtnListarJFAlmn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         BtnListarJFAlmn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/list_notes_930.png"))); // NOI18N
         BtnListarJFAlmn.setText("Listar");
+        BtnListarJFAlmn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnListarJFAlmnActionPerformed(evt);
+            }
+        });
         PNOA.add(BtnListarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 60, -1, -1));
 
         BtnEliminarJFAlmn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        BtnEliminarJFAlmn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/delete-file_40456 (1).png"))); // NOI18N
+        BtnEliminarJFAlmn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/delete-file-icon.png"))); // NOI18N
         BtnEliminarJFAlmn.setText("Eliminar");
         BtnEliminarJFAlmn.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFAlmn.setMinimumSize(new java.awt.Dimension(59, 23));
         PNOA.add(BtnEliminarJFAlmn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 60, -1, -1));
-
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        PNOA.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 230, -1, -1));
 
         btnimprimiralum.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnimprimiralum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/printer_print_22133.png"))); // NOI18N
@@ -466,7 +476,9 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(PNOA, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -480,9 +492,13 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnCrearAlmnActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jbregresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbregresarActionPerformed
+
+    }//GEN-LAST:event_jbregresarActionPerformed
+
+    private void BtnListarJFAlmnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnListarJFAlmnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnListarJFAlmnActionPerformed
 
     public JButton getBtncancelareliminar() {
         return btncancelareliminar;
@@ -524,8 +540,6 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         this.DlgEliminar = DlgEliminar;
     }
 
-    
-    
     public JDialog getDgAlumno() {
         return DgAlumno;
     }
@@ -710,6 +724,39 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
         this.cbxentrenamiento = cbxentrenamiento;
     }
 
+    public JPanel getPNOA() {
+        return PNOA;
+    }
+
+    public void setPNOA(JPanel PNOA) {
+        this.PNOA = PNOA;
+    }
+
+    public JPanel getPNOA1() {
+        return PNOA1;
+    }
+
+    public void setPNOA1(JPanel PNOA1) {
+        this.PNOA1 = PNOA1;
+    }
+
+    public JButton getJbregresar() {
+        return jbregresar;
+    }
+
+    public void setJbregresar(JButton jbregresar) {
+        this.jbregresar = jbregresar;
+    }
+
+    public JLabel getLbtitutolo1() {
+        return lbtitutolo1;
+    }
+
+    public void setLbtitutolo1(JLabel lbtitutolo1) {
+        this.lbtitutolo1 = lbtitutolo1;
+    }
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCrearAlmn;
     private javax.swing.JButton BtnCrearJFAlmn;
@@ -738,7 +785,6 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnimprimiralum;
     private javax.swing.JComboBox<String> cbxdisciplina;
     private javax.swing.JComboBox<String> cbxentrenamiento;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -761,6 +807,7 @@ public class VistaAlumno extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jbregresar;
     private javax.swing.JLabel lbtitutolo1;
     private javax.swing.JTextField txteliminarid;
     private javax.swing.JTextField txteliminarnombre;

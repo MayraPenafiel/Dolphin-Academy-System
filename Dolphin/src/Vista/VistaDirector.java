@@ -8,6 +8,8 @@ package Vista;
 import com.toedter.calendar.JDateChooser;
 import javax.swing.JButton;
 import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -81,7 +83,7 @@ public class VistaDirector extends javax.swing.JInternalFrame {
         BtnEditarJFDirec = new javax.swing.JButton();
         BtnListarJFDirec = new javax.swing.JButton();
         BtnEliminarJFDirec = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jbregresar = new javax.swing.JButton();
         btnimprimirdire = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
@@ -89,7 +91,7 @@ public class VistaDirector extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -119,7 +121,6 @@ public class VistaDirector extends javax.swing.JInternalFrame {
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel15.setText("Nombres:");
 
-        TxtCodDirec.setText("Generacion Aut.");
         TxtCodDirec.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtCodDirecActionPerformed(evt);
@@ -140,7 +141,7 @@ public class VistaDirector extends javax.swing.JInternalFrame {
             }
         });
 
-        BtnCrearDirec.setText("Crear");
+        BtnCrearDirec.setText("Cancelar");
 
         BtnGuardarDirec.setText("Guardar");
 
@@ -195,52 +196,52 @@ public class VistaDirector extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(PNOA1Layout.createSequentialGroup()
-                                .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(txtcontraseña, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TxtCelularDirec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtdireccion_sede, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PNOA1Layout.createSequentialGroup()
                                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(PNOA1Layout.createSequentialGroup()
                                         .addComponent(TxtTelfDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
+                                        .addGap(78, 78, 78)
                                         .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel8))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 5, Short.MAX_VALUE)
                                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(TxtEmailDirec, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtformacion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(TxtApeDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(PNOA1Layout.createSequentialGroup()
-                                    .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(PNOA1Layout.createSequentialGroup()
                                             .addComponent(TxtCodDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
+                                            .addGap(72, 72, 72)
                                             .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(PNOA1Layout.createSequentialGroup()
                                             .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(DCDirec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(TxtNombreDirec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(DCDirec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(TxtNombreDirec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(75, 75, 75)
                                             .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(PNOA1Layout.createSequentialGroup()
-                                            .addGap(77, 77, 77)
-                                            .addComponent(BtnCrearDirec)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(BtnGuardarDirec)))
+                                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(PNOA1Layout.createSequentialGroup()
-                                            .addGap(76, 76, 76)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(TxtCedulaDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOA1Layout.createSequentialGroup()
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(TxtDireccionDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
+                                            .addComponent(TxtDireccionDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(PNOA1Layout.createSequentialGroup()
+                                    .addComponent(BtnCrearDirec)
+                                    .addGap(147, 147, 147)))
+                            .addGroup(PNOA1Layout.createSequentialGroup()
+                                .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(BtnGuardarDirec)
+                                    .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtcontraseña, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(TxtCelularDirec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)))
+                                .addGap(69, 69, 69)
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtdireccion_sede, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
         PNOA1Layout.setVerticalGroup(
@@ -291,7 +292,7 @@ public class VistaDirector extends javax.swing.JInternalFrame {
                         .addComponent(jLabel6)
                         .addComponent(txtcontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel7)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnCrearDirec)
                     .addComponent(BtnGuardarDirec))
@@ -332,7 +333,7 @@ public class VistaDirector extends javax.swing.JInternalFrame {
         DlgEliminarLayout.setHorizontalGroup(
             DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DlgEliminarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(31, Short.MAX_VALUE)
                 .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(DlgEliminarLayout.createSequentialGroup()
                         .addComponent(btnconfirmareliminar)
@@ -347,12 +348,12 @@ public class VistaDirector extends javax.swing.JInternalFrame {
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txteliminarid, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(120, 120, 120))
+                .addGap(30, 30, 30))
         );
         DlgEliminarLayout.setVerticalGroup(
             DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DlgEliminarLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(28, 28, 28)
                 .addComponent(lbtitutolo1)
                 .addGap(18, 18, 18)
                 .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -366,7 +367,7 @@ public class VistaDirector extends javax.swing.JInternalFrame {
                 .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnconfirmareliminar)
                     .addComponent(btncancelareliminar))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -376,7 +377,7 @@ public class VistaDirector extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -431,13 +432,13 @@ public class VistaDirector extends javax.swing.JInternalFrame {
         BtnEliminarJFDirec.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFDirec.setMinimumSize(new java.awt.Dimension(59, 23));
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
-        jButton4.setBorder(null);
-        jButton4.setBorderPainted(false);
-        jButton4.setContentAreaFilled(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jbregresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-izquierda-círculo-36.png"))); // NOI18N
+        jbregresar.setBorder(null);
+        jbregresar.setBorderPainted(false);
+        jbregresar.setContentAreaFilled(false);
+        jbregresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jbregresarActionPerformed(evt);
             }
         });
 
@@ -471,7 +472,7 @@ public class VistaDirector extends javax.swing.JInternalFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4)
+                .addComponent(jbregresar)
                 .addGap(18, 18, 18))
         );
         PNOALayout.setVerticalGroup(
@@ -491,7 +492,7 @@ public class VistaDirector extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(jbregresar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -517,10 +518,10 @@ public class VistaDirector extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtApeDirecActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jbregresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbregresarActionPerformed
         // TODO add your handling code here:
       
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_jbregresarActionPerformed
     
     public JPasswordField getTxtcontraseña() {
         return txtcontraseña;
@@ -737,6 +738,39 @@ public class VistaDirector extends javax.swing.JInternalFrame {
     public void setTxtdireccion_sede(JTextField txtdireccion_sede) {
         this.txtdireccion_sede = txtdireccion_sede;
     }
+
+    public JPanel getPNOA() {
+        return PNOA;
+    }
+
+    public void setPNOA(JPanel PNOA) {
+        this.PNOA = PNOA;
+    }
+
+    public JPanel getPNOA1() {
+        return PNOA1;
+    }
+
+    public void setPNOA1(JPanel PNOA1) {
+        this.PNOA1 = PNOA1;
+    }
+
+    public JButton getJbregresar() {
+        return jbregresar;
+    }
+
+    public void setJbregresar(JButton jbregresar) {
+        this.jbregresar = jbregresar;
+    }
+
+    public JLabel getLbtitutolo1() {
+        return lbtitutolo1;
+    }
+
+    public void setLbtitutolo1(JLabel lbtitutolo1) {
+        this.lbtitutolo1 = lbtitutolo1;
+    }
+    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCrearDirec;
@@ -763,7 +797,6 @@ public class VistaDirector extends javax.swing.JInternalFrame {
     private javax.swing.JButton btncancelareliminar;
     private javax.swing.JButton btnconfirmareliminar;
     private javax.swing.JButton btnimprimirdire;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -786,6 +819,7 @@ public class VistaDirector extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jbregresar;
     private javax.swing.JLabel lbtitutolo1;
     private javax.swing.JPasswordField txtcontraseña;
     private javax.swing.JTextField txtdireccion_sede;

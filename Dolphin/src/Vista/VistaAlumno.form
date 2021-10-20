@@ -62,13 +62,11 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                                   <Component id="DCAlumn" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="BtnCrearAlmn" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   <Component id="TxtNombreAlumn" alignment="0" pref="130" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jLabel17" alignment="0" min="-2" pref="113" max="-2" attributes="0"/>
-                                                  <Component id="BtnGuardarAlmn" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel19" alignment="0" min="-2" pref="113" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -91,6 +89,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="TxtCelularAlmn" min="-2" pref="130" max="-2" attributes="0"/>
                                           <Component id="cbxdisciplina" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Component id="BtnGuardarAlmn" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
@@ -101,7 +100,10 @@
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                              <Component id="jLabel7" min="-2" pref="103" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel7" min="-2" pref="103" max="-2" attributes="0"/>
+                                                  <Component id="BtnCrearAlmn" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="cbxentrenamiento" min="-2" pref="46" max="-2" attributes="0"/>
                                           </Group>
@@ -196,8 +198,11 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel5" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel5" min="-2" pref="36" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -206,7 +211,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="11"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Vista/iconos/LogoCab.png"/>
+                      <Image iconType="3" name="/Vista/imagenes/LogoCab.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -229,7 +234,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
-                <Property name="horizontalAlignment" type="int" value="11"/>
+                <Property name="horizontalAlignment" type="int" value="4"/>
                 <Property name="text" type="java.lang.String" value="Codigo:"/>
               </Properties>
             </Component>
@@ -273,7 +278,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="BtnCrearAlmn">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Crear"/>
+                <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnCrearAlmnActionPerformed"/>
@@ -408,7 +413,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="64" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="btnconfirmareliminar" min="-2" max="-2" attributes="0"/>
@@ -427,14 +432,14 @@
                           <Component id="txteliminarid" min="-2" pref="161" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   <Component id="lbtitutolo1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -446,12 +451,12 @@
                       <Component id="txteliminarnombre" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnconfirmareliminar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btncancelareliminar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="27" max="32767" attributes="0"/>
+                  <EmptySpace pref="45" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -529,7 +534,10 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="PNOA" alignment="0" pref="310" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="PNOA" min="-2" pref="364" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -579,7 +587,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="11"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/LogoCab.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/LogoCab.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -597,6 +605,26 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JButton" name="jbregresar">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/imagenes/icons8-izquierda-c&#xed;rculo-36.png"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
+            <Property name="borderPainted" type="boolean" value="false"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbregresarActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="880" y="290" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -612,7 +640,7 @@
             <Component class="javax.swing.JTable" name="TbAlumno">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="12" rowCount="4">
+                  <Table columnCount="10" rowCount="4">
                     <Column editable="true" title="ID" type="java.lang.Object"/>
                     <Column editable="true" title="Categoria" type="java.lang.Object"/>
                     <Column editable="true" title="Cedula" type="java.lang.Object"/>
@@ -623,8 +651,6 @@
                     <Column editable="true" title="Correo" type="java.lang.Object"/>
                     <Column editable="true" title="Fecha Nac" type="java.lang.Object"/>
                     <Column editable="true" title="Celular" type="java.lang.Object"/>
-                    <Column editable="true" title="Disciplina" type="java.lang.Object"/>
-                    <Column editable="true" title="Entrenamiento" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -757,6 +783,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Listar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnListarJFAlmnActionPerformed"/>
+          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="580" y="60" width="-1" height="-1"/>
@@ -769,7 +798,7 @@
               <Font name="Tahoma" size="10" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/imagenes/delete-file_40456 (1).png"/>
+              <Image iconType="3" name="/Vista/imagenes/delete-file-icon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Eliminar"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -782,26 +811,6 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="690" y="60" width="-1" height="-1"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/iconos/icons8-izquierda-c&#xed;rculo-36.png"/>
-            </Property>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="null"/>
-            </Property>
-            <Property name="borderPainted" type="boolean" value="false"/>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-          </Events>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="880" y="230" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

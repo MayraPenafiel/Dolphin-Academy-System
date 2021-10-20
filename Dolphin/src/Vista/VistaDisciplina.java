@@ -50,6 +50,14 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
         txtdescripciond = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         txtobservacionesd = new javax.swing.JTextArea();
+        DlgEliminar = new javax.swing.JDialog();
+        jLabel13 = new javax.swing.JLabel();
+        lbtitutolo1 = new javax.swing.JLabel();
+        txteliminarnombre = new javax.swing.JTextField();
+        btnconfirmareliminar = new javax.swing.JButton();
+        btncancelareliminar = new javax.swing.JButton();
+        txteliminarid = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
         PNOA = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -62,7 +70,7 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
         btneditar = new javax.swing.JButton();
         btnlistar = new javax.swing.JButton();
         btneliminar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jbregresar = new javax.swing.JButton();
         btnimprimirdisciplina = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
@@ -70,7 +78,7 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -196,6 +204,66 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
             .addComponent(PNOA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jLabel13.setText("Nombre:");
+
+        lbtitutolo1.setText("¿Seguro que desea Eliminar la Disciplina Seleccionada?");
+
+        txteliminarnombre.setEditable(false);
+        txteliminarnombre.setBackground(new java.awt.Color(255, 255, 255));
+        txteliminarnombre.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        btnconfirmareliminar.setText("ACEPTAR");
+
+        btncancelareliminar.setText("CANCELAR");
+
+        txteliminarid.setEditable(false);
+        txteliminarid.setBackground(new java.awt.Color(255, 255, 255));
+        txteliminarid.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jLabel14.setText("ID:");
+
+        javax.swing.GroupLayout DlgEliminarLayout = new javax.swing.GroupLayout(DlgEliminar.getContentPane());
+        DlgEliminar.getContentPane().setLayout(DlgEliminarLayout);
+        DlgEliminarLayout.setHorizontalGroup(
+            DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DlgEliminarLayout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(DlgEliminarLayout.createSequentialGroup()
+                        .addComponent(btnconfirmareliminar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btncancelareliminar))
+                    .addComponent(lbtitutolo1)
+                    .addGroup(DlgEliminarLayout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txteliminarnombre))
+                    .addGroup(DlgEliminarLayout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txteliminarid, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(30, 30, 30))
+        );
+        DlgEliminarLayout.setVerticalGroup(
+            DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DlgEliminarLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(lbtitutolo1)
+                .addGap(39, 39, 39)
+                .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txteliminarid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14))
+                .addGap(26, 26, 26)
+                .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txteliminarnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13))
+                .addGap(40, 40, 40)
+                .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnconfirmareliminar)
+                    .addComponent(btncancelareliminar))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         PNOA.setBackground(new java.awt.Color(204, 255, 255));
@@ -203,7 +271,7 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -258,13 +326,13 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
         btneliminar.setMaximumSize(new java.awt.Dimension(59, 23));
         btneliminar.setMinimumSize(new java.awt.Dimension(59, 23));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbregresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-izquierda-círculo-36.png"))); // NOI18N
+        jbregresar.setBorder(null);
+        jbregresar.setBorderPainted(false);
+        jbregresar.setContentAreaFilled(false);
+        jbregresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbregresarActionPerformed(evt);
             }
         });
 
@@ -297,7 +365,7 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
                         .addComponent(btnimprimirdisciplina))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
+                        .addComponent(jbregresar)))
                 .addContainerGap())
         );
         PNOALayout.setVerticalGroup(
@@ -317,7 +385,7 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(jbregresar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -335,9 +403,9 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbregresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbregresarActionPerformed
   
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbregresarActionPerformed
 
     //GETTERS Y SETTERS
     public JDialog getDgDisciplina() {
@@ -438,25 +506,69 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
     public void setBtnimprimirdisciplina(JButton btnimprimirdisciplina) {
         this.btnimprimirdisciplina = btnimprimirdisciplina;
     }
+
+    public JDialog getDlgEliminar() {
+        return DlgEliminar;
+    }
+
+    public void setDlgEliminar(JDialog DlgEliminar) {
+        this.DlgEliminar = DlgEliminar;
+    }
+
+    public JButton getJbregresar() {
+        return jbregresar;
+    }
+
+    public void setJbregresar(JButton jbregresar) {
+        this.jbregresar = jbregresar;
+    }
+
+    public JLabel getLbtitutolo1() {
+        return lbtitutolo1;
+    }
+
+    public void setLbtitutolo1(JLabel lbtitutolo1) {
+        this.lbtitutolo1 = lbtitutolo1;
+    }
+
+    public JTextField getTxteliminarid() {
+        return txteliminarid;
+    }
+
+    public void setTxteliminarid(JTextField txteliminarid) {
+        this.txteliminarid = txteliminarid;
+    }
+
+    public JTextField getTxteliminarnombre() {
+        return txteliminarnombre;
+    }
+
+    public void setTxteliminarnombre(JTextField txteliminarnombre) {
+        this.txteliminarnombre = txteliminarnombre;
+    }
     
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog DgDisciplina;
+    private javax.swing.JDialog DlgEliminar;
     private javax.swing.JPanel PNOA;
     private javax.swing.JPanel PNOA1;
     private javax.swing.JButton btnaceptar;
     private javax.swing.JButton btncancelar;
+    private javax.swing.JButton btncancelareliminar;
+    private javax.swing.JButton btnconfirmareliminar;
     private javax.swing.JButton btncrear;
     private javax.swing.JButton btneditar;
     private javax.swing.JButton btneliminar;
     private javax.swing.JButton btnimprimirdisciplina;
     private javax.swing.JButton btnlistar;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -467,10 +579,14 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JButton jbregresar;
+    private javax.swing.JLabel lbtitutolo1;
     private javax.swing.JTable tbldisciplina;
     private javax.swing.JTextField txtbuscard;
     private javax.swing.JTextField txtcodigo;
     private javax.swing.JTextArea txtdescripciond;
+    private javax.swing.JTextField txteliminarid;
+    private javax.swing.JTextField txteliminarnombre;
     private javax.swing.JTextField txtnombred;
     private javax.swing.JTextArea txtobservacionesd;
     // End of variables declaration//GEN-END:variables

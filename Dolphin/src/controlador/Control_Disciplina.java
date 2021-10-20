@@ -55,10 +55,7 @@ public class Control_Disciplina {
                 //cargaLista(vista.getTxtBuscar().getText());
                 cargaLista(vista.getTxtbuscard().getText()); 
             }
-
         };
-        
-        
         
         //Controlar los eventos de la vista
         vista.getBtnlistar().addActionListener(l -> cargaLista(""));
@@ -66,7 +63,8 @@ public class Control_Disciplina {
         vista.getBtneditar().addActionListener(l -> cargarDialogo(2));
         vista.getBtnaceptar().addActionListener(l -> grabarDisciplina());
         vista.getBtneliminar().addActionListener(l -> eliminarDisciplina());
-        vista.getBtncancelar().addActionListener(l -> regresar());
+        vista.getBtncancelar().addActionListener(l -> vista.getDgDisciplina().dispose());
+        vista.getJbregresar().addActionListener(l->regresar());
         //controlador buscar
         vista.getTxtbuscard().addKeyListener(kl);
         //Imprimir
@@ -117,8 +115,6 @@ public class Control_Disciplina {
         vista.getTxtnombred().setText("");
         vista.getTxtdescripciond().setText("");
         vista.getTxtobservacionesd().setText("");
-       
-                
         
     }
     

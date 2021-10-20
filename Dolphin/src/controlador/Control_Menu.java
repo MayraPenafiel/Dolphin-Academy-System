@@ -34,7 +34,6 @@ public class Control_Menu {
     
     //Atributos
     private VistaMenu vm;
-    
     private VistaProfesor vp;
     private VistaDirector vd;
     
