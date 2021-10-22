@@ -63,7 +63,7 @@
                                   <Component id="txtnombred" pref="130" max="32767" attributes="0"/>
                                   <Component id="jScrollPane3" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -98,7 +98,7 @@
                               <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="56" max="32767" attributes="0"/>
+                      <EmptySpace pref="24" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnaceptar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btncancelar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -123,7 +123,7 @@
                           <Component id="jLabel4" min="-2" pref="59" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel5" min="-2" pref="559" max="-2" attributes="0"/>
-                          <EmptySpace pref="23" max="32767" attributes="0"/>
+                          <EmptySpace pref="41" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>

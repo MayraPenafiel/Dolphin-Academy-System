@@ -52,14 +52,11 @@ public class Control_Menu {
             vm.getMIDisciplina().setVisible(true);
             vm.getMIEnt().setVisible(false);
             vm.getMISede().setVisible(false);
-            vm.getJbencar().setVisible(false);
             vm.getMIDetRealiza().setVisible(false);
             //vm.getMIDisciplina().setEnabledfalse);
             vm.getMIEnt().setEnabled(false);
             vm.getMISede().setEnabled(false);
-            vm.getJbencar().setEnabled(false);
         }
-        vm.getJbencar().setVisible(false);
         vm.getMIDetRealiza().setVisible(false);
     }
     public Control_Menu() {

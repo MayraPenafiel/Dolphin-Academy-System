@@ -35,6 +35,14 @@ public class Control_Disciplina {
         vista.setTitle("CRUD DISCIPLINAS");
         vista.setVisible(true);
         cargaLista();
+        String h=Control_Principal.boton;
+        if(h=="A"){
+            vista.getBtncrear().setVisible(false);
+            vista.getBtneditar().setVisible(false);
+            vista.getBtnaceptar().setVisible(false);
+            vista.getBtneliminar().setVisible(false);
+            vista.getBtnimprimirdisciplina().setVisible(false);
+        }
     }
     
        public void iniciaControl(){
@@ -76,12 +84,9 @@ public class Control_Disciplina {
 
         ConexionPG conp = new ConexionPG();
         try {
-
             JasperReport jr = (JasperReport) JRLoader.loadObject(getClass().getResource("/reportes/Reporte_Disciplina.jasper"));
-
             JasperPrint jp = JasperFillManager.fillReport(jr, null, conp.getCon());
             JasperViewer jv = new JasperViewer(jp);
-
             jv.setVisible(true);
 
         } catch (JRException ex) {
@@ -89,7 +94,7 @@ public class Control_Disciplina {
         }
     }
 
-       private void cargarDialogo(int origen){
+    private void cargarDialogo(int origen){
         vista.getDgDisciplina().setSize(600,500);
         vista.getDgDisciplina().setLocationRelativeTo(vista);
         if(origen==1){
@@ -141,16 +146,12 @@ public class Control_Disciplina {
             tblModel.addRow(disciplina);
         });
     }
-
-    
    
     private void grabarDisciplina(){
         String id_disciplina = vista.getTxtcodigo().getText();
         String nombre_d = vista.getTxtnombred().getText();
         String descripcion_d = vista.getTxtdescripciond().getText();
         String observaciones = vista.getTxtobservacionesd().getText();
-        
-        
         
         ModeloDisciplina disciplina = new ModeloDisciplina();
         disciplina.setId_disciplina(id_disciplina);

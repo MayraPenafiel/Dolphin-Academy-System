@@ -85,7 +85,7 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
         BtnEditarJFProf = new javax.swing.JButton();
         BtnListarJFProf = new javax.swing.JButton();
         BtnEliminarJFProf = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jbregresar = new javax.swing.JButton();
         btnimprimirprofe = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
@@ -93,7 +93,7 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -123,7 +123,6 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel15.setText("Nombres:");
 
-        TxtCodProf.setText("Generacion Aut.");
         TxtCodProf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtCodProfActionPerformed(evt);
@@ -295,7 +294,7 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
 
         jLabel13.setText("Nombre:");
 
-        lbtitutolo1.setText("¿Seguro que desea Eliminar a la persona Seleccionada?");
+        lbtitutolo1.setText("¿Seguro/a que desea Eliminar al Profesor/a Seleccionada/o?");
 
         txteliminarnombre.setEditable(false);
         txteliminarnombre.setBackground(new java.awt.Color(255, 255, 255));
@@ -316,7 +315,7 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
         DlgEliminarLayout.setHorizontalGroup(
             DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DlgEliminarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(41, Short.MAX_VALUE)
                 .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(DlgEliminarLayout.createSequentialGroup()
                         .addComponent(btnconfirmareliminar)
@@ -331,12 +330,12 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
                         .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txteliminarid, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txteliminarnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(120, 120, 120))
+                .addGap(63, 63, 63))
         );
         DlgEliminarLayout.setVerticalGroup(
             DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DlgEliminarLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(22, 22, 22)
                 .addComponent(lbtitutolo1)
                 .addGap(18, 18, 18)
                 .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -346,11 +345,11 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
                 .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txteliminarnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13))
-                .addGap(58, 58, 58)
+                .addGap(46, 46, 46)
                 .addGroup(DlgEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnconfirmareliminar)
                     .addComponent(btncancelareliminar))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -361,7 +360,7 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -375,7 +374,7 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE))
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 733, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -398,7 +397,7 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(TbProfesor);
 
-        PNOA.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 106, 640, 96));
+        PNOA.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 810, 96));
 
         jLabel3.setText("BUSCAR");
         PNOA.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 69, -1, -1));
@@ -426,16 +425,17 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
         BtnEliminarJFProf.setMinimumSize(new java.awt.Dimension(59, 23));
         PNOA.add(BtnEliminarJFProf, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 60, -1, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbregresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-izquierda-círculo-36.png"))); // NOI18N
+        jbregresar.setToolTipText("regresar");
+        jbregresar.setBorder(null);
+        jbregresar.setBorderPainted(false);
+        jbregresar.setContentAreaFilled(false);
+        jbregresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbregresarActionPerformed(evt);
             }
         });
-        PNOA.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, -1, -1));
+        PNOA.add(jbregresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, -1, -1));
 
         btnimprimirprofe.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnimprimirprofe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/printer_print_22133.png"))); // NOI18N
@@ -446,11 +446,11 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 823, Short.MAX_VALUE)
+            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+            .addComponent(PNOA, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
         );
 
         pack();
@@ -460,9 +460,9 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtCodProfActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbregresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbregresarActionPerformed
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbregresarActionPerformed
 
     public JTextField getTxtFormacionProf() {
         return TxtFormacionProf;
@@ -723,7 +723,6 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
     private javax.swing.JButton btncancelareliminar;
     private javax.swing.JButton btnconfirmareliminar;
     private javax.swing.JButton btnimprimirprofe;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -745,6 +744,7 @@ public class VistaProfesor extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jbregresar;
     private javax.swing.JLabel lbtitutolo1;
     private javax.swing.JTextField txteliminarid;
     private javax.swing.JTextField txteliminarnombre;

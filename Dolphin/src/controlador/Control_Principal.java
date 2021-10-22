@@ -23,6 +23,7 @@ public class Control_Principal {
     private VistaPrincipal vp;
     static String boton;
     
+    
     //Constructores
     public Control_Principal() {
     }

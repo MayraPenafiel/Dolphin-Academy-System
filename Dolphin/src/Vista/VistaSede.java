@@ -71,7 +71,7 @@ public class VistaSede extends javax.swing.JInternalFrame {
         BtnEditarJFSede = new javax.swing.JButton();
         BtnListarJFSede = new javax.swing.JButton();
         BtnEliminarJFSede = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jbregresar = new javax.swing.JButton();
         btnimprimirsede = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
@@ -79,7 +79,7 @@ public class VistaSede extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -310,7 +310,7 @@ public class VistaSede extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -365,13 +365,13 @@ public class VistaSede extends javax.swing.JInternalFrame {
         BtnEliminarJFSede.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFSede.setMinimumSize(new java.awt.Dimension(59, 23));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbregresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-izquierda-círculo-36.png"))); // NOI18N
+        jbregresar.setBorder(null);
+        jbregresar.setBorderPainted(false);
+        jbregresar.setContentAreaFilled(false);
+        jbregresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbregresarActionPerformed(evt);
             }
         });
 
@@ -405,7 +405,7 @@ public class VistaSede extends javax.swing.JInternalFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(jbregresar)
                 .addGap(37, 37, 37))
         );
         PNOALayout.setVerticalGroup(
@@ -425,7 +425,7 @@ public class VistaSede extends javax.swing.JInternalFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(jbregresar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -447,9 +447,9 @@ public class VistaSede extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txteliminarcodSedeActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbregresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbregresarActionPerformed
       
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbregresarActionPerformed
 
     public JButton getBtnimprimirsede() {
         return btnimprimirsede;
@@ -641,7 +641,6 @@ public class VistaSede extends javax.swing.JInternalFrame {
     private javax.swing.JButton btncancelareliminar_s;
     private javax.swing.JButton btnconfirmareliminar_s;
     private javax.swing.JButton btnimprimirsede;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -660,6 +659,7 @@ public class VistaSede extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JButton jbregresar;
     private javax.swing.JLabel lbtitutolo1;
     private javax.swing.JTextField txteliminarcodSede;
     private javax.swing.JTextField txteliminarnombre_s;

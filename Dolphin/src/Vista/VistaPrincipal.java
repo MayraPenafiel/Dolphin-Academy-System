@@ -75,7 +75,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
         LblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblTitulo.setText("DOLPHIN ACADEMY SYSTEM");
 
-        jbsalir.setText("Salir");
+        jbsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/OS » Mac OS X.png"))); // NOI18N
+        jbsalir.setToolTipText("Salir");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Logo(1).png"))); // NOI18N
 
@@ -105,7 +106,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
                 .addGap(189, 189, 189)
                 .addComponent(LblTitulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbsalir)
+                .addComponent(jbsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
         PnInicioLayout.setVerticalGroup(
@@ -131,17 +132,17 @@ public class VistaPrincipal extends javax.swing.JFrame {
                             .addGroup(PnInicioLayout.createSequentialGroup()
                                 .addGap(60, 60, 60)
                                 .addComponent(jLabel4)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                         .addGroup(PnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PnInicioLayout.createSequentialGroup()
                                 .addGap(14, 14, 14)
                                 .addComponent(BtnProf)
-                                .addContainerGap(34, Short.MAX_VALUE))
+                                .addContainerGap(36, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnInicioLayout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addGap(81, 81, 81))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnInicioLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addGap(23, 23, 23))))
         );

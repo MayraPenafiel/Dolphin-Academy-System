@@ -29,6 +29,7 @@ public class Control_InicioSesion{
     private Control_Principal cp;
     private VistaInicioSesion vista;
     private VistaPrincipal vp;
+    static String user;
    
    //Constructores
     public Control_InicioSesion(VistaInicioSesion vis,ModeloAlumno modal) {
@@ -105,6 +106,7 @@ public class Control_InicioSesion{
         java.util.List<Profesor> lpro = mdpro.listaProfesores();
          lpro.stream().forEach(p ->{
             if(p.getId_Profesor().equalsIgnoreCase(usuario)){
+                user=p.getId_Profesor();
                 String pass= new String(vista.getPwfcontraseña().getPassword());
                 if(pass.equalsIgnoreCase(p.getContraseña())){
                     JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
@@ -118,7 +120,7 @@ public class Control_InicioSesion{
                 }
             }else{
                     System.out.println("No existe Usuario P");
-             }
+            }
         }); 
          
     }
@@ -130,6 +132,7 @@ public class Control_InicioSesion{
         List<Director> ldir= moddir.listaDirectores();
          ldir.stream().forEach(d ->{
             if(d.getId_director().equalsIgnoreCase(usuario)){
+                user=d.getId_director();
                 String pass= new String(vista.getPwfcontraseña().getPassword());
                 if(pass==d.getContraseña()){
                     JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
@@ -155,7 +158,7 @@ public class Control_InicioSesion{
         List<Alumno> lal=modal.listaAlumnos();
          lal.stream().forEach(a->{
             if(usuario.equalsIgnoreCase(a.getId_alumno())){
-                System.out.println(a.getId_alumno());
+                user=a.getId_alumno();
                 JOptionPane.showMessageDialog(null, "Inicio de sesion Exitoso");
                     VistaMenu menu=new VistaMenu();
                     Control_Menu c= new Control_Menu(menu);

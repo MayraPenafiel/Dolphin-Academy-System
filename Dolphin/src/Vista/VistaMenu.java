@@ -47,9 +47,8 @@ public class VistaMenu extends javax.swing.JFrame {
         MIAlumno = new javax.swing.JMenuItem();
         MIProfesor = new javax.swing.JMenuItem();
         MIAdm = new javax.swing.JMenuItem();
-        MIDetRealiza = new javax.swing.JMenuItem();
+        MIAsistencia = new javax.swing.JMenuItem();
         MIDisciplina = new javax.swing.JMenuItem();
-        jbencar = new javax.swing.JMenuItem();
         MIEnt = new javax.swing.JMenuItem();
         MISede = new javax.swing.JMenuItem();
         jbsalir = new javax.swing.JMenuItem();
@@ -160,14 +159,14 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         MenuP.add(MIAdm);
 
-        MIDetRealiza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-lista-20.png"))); // NOI18N
-        MIDetRealiza.setText("Det. Realiza");
-        MIDetRealiza.addActionListener(new java.awt.event.ActionListener() {
+        MIAsistencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-lista-20.png"))); // NOI18N
+        MIAsistencia.setText("Asistencia");
+        MIAsistencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MIDetRealizaActionPerformed(evt);
+                MIAsistenciaActionPerformed(evt);
             }
         });
-        MenuP.add(MIDetRealiza);
+        MenuP.add(MIAsistencia);
 
         MIDisciplina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-boxeo-20.png"))); // NOI18N
         MIDisciplina.setText("Disciplina");
@@ -177,15 +176,6 @@ public class VistaMenu extends javax.swing.JFrame {
             }
         });
         MenuP.add(MIDisciplina);
-
-        jbencar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-añadir-lista-20.png"))); // NOI18N
-        jbencar.setText("Enc.Realiza");
-        jbencar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbencarActionPerformed(evt);
-            }
-        });
-        MenuP.add(jbencar);
 
         MIEnt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-coach-20.png"))); // NOI18N
         MIEnt.setText("Entrenamiento");
@@ -247,18 +237,13 @@ public class VistaMenu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_MIProfesorActionPerformed
 
-    private void MIDetRealizaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIDetRealizaActionPerformed
+    private void MIAsistenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIAsistenciaActionPerformed
       
-    }//GEN-LAST:event_MIDetRealizaActionPerformed
+    }//GEN-LAST:event_MIAsistenciaActionPerformed
 
     private void MIDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIDisciplinaActionPerformed
       
     }//GEN-LAST:event_MIDisciplinaActionPerformed
-
-    private void jbencarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbencarActionPerformed
-        // TODO add your handling code here:
-       
-    }//GEN-LAST:event_jbencarActionPerformed
 
     private void MIEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIEntActionPerformed
         // TODO add your handling code here:
@@ -305,11 +290,11 @@ public class VistaMenu extends javax.swing.JFrame {
     }
 
     public JMenuItem getMIDetRealiza() {
-        return MIDetRealiza;
+        return MIAsistencia;
     }
 
     public void setMIDetRealiza(JMenuItem MIDetRealiza) {
-        this.MIDetRealiza = MIDetRealiza;
+        this.MIAsistencia = MIDetRealiza;
     }
 
     public JMenuItem getMIDisciplina() {
@@ -352,13 +337,6 @@ public class VistaMenu extends javax.swing.JFrame {
         this.MenuP = MenuP;
     }
 
-    public JMenuItem getJbencar() {
-        return jbencar;
-    }
-
-    public void setJbencar(JMenuItem jbencar) {
-        this.jbencar = jbencar;
-    }
 
     public JButton getJbregresar() {
         return jbregresar;
@@ -388,7 +366,7 @@ public class VistaMenu extends javax.swing.JFrame {
     private javax.swing.JDesktopPane DskMenu;
     private javax.swing.JMenuItem MIAdm;
     private javax.swing.JMenuItem MIAlumno;
-    private javax.swing.JMenuItem MIDetRealiza;
+    private javax.swing.JMenuItem MIAsistencia;
     private javax.swing.JMenuItem MIDisciplina;
     private javax.swing.JMenuItem MIEnt;
     private javax.swing.JMenuItem MIProfesor;
@@ -404,7 +382,6 @@ public class VistaMenu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar jToolBar1;
-    private javax.swing.JMenuItem jbencar;
     private javax.swing.JButton jbregresar;
     private javax.swing.JMenuItem jbsalir;
     // End of variables declaration//GEN-END:variables

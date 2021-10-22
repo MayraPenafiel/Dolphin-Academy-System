@@ -33,7 +33,6 @@ public class VistaInicioSesion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         PnInicioSesion = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -44,8 +43,6 @@ public class VistaInicioSesion extends javax.swing.JFrame {
         BtnIngresar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         pwfcontraseña = new javax.swing.JPasswordField();
-
-        jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -221,7 +218,6 @@ public class VistaInicioSesion extends javax.swing.JFrame {
     private javax.swing.JButton BtnIngresar;
     private javax.swing.JPanel PnInicioSesion;
     private javax.swing.JTextField TxtNombreUser;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;

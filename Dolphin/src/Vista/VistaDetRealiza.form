@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
   <NonVisualComponents>
     <Container class="javax.swing.JDialog" name="DgDetalleRealiza">
 
@@ -140,7 +140,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="11"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Vista/iconos/LogoCab.png"/>
+                      <Image iconType="3" name="/Vista/imagenes/LogoCab.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -246,7 +246,6 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -290,24 +289,29 @@
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="TxtBuscarDetR" pref="175" max="32767" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="BtnCrearJDetR" min="-2" pref="59" max="-2" attributes="0"/>
+                          <Component id="TxtBuscarDetR" min="-2" pref="213" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="BtnAddAsisJF" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="BtnEditAsisJF" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="BtnEditarJFDetR" min="-2" pref="61" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="BtnListarJFDetR" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="BtnEliminarJFDetR" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" pref="590" max="32767" attributes="0"/>
+                          <Component id="BtnActAsisJF" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="BtnCrearDelJF" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="BtnPrintAsisJF" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jbregresar" min="-2" pref="37" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -321,19 +325,24 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="BtnEditarJFDetR" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="BtnCrearJDetR" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="TxtBuscarDetR" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="BtnListarJFDetR" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="BtnEliminarJFDetR" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="TxtBuscarDetR" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                          <Component id="BtnAddAsisJF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="BtnEditAsisJF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="BtnActAsisJF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="BtnCrearDelJF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="BtnPrintAsisJF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="118" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="21" max="32767" attributes="0"/>
+                  <Component id="jbregresar" min="-2" pref="36" max="-2" attributes="0"/>
+                  <EmptySpace pref="25" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -368,7 +377,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="11"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/LogoCab.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/LogoCab.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -381,7 +390,7 @@
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Detalle-Realiza"/>
+                <Property name="text" type="java.lang.String" value="Asistencia"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -396,9 +405,8 @@
             <Component class="javax.swing.JTable" name="TbDetalleR">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="5" rowCount="4">
-                    <Column editable="true" title="ID" type="java.lang.Object"/>
-                    <Column editable="true" title="Encabezado" type="java.lang.Object"/>
+                  <Table columnCount="4" rowCount="5">
+                    <Column editable="true" title="Alumno" type="java.lang.Object"/>
                     <Column editable="true" title="Fecha Asistencia" type="java.lang.Object"/>
                     <Column editable="true" title="Asistencia" type="java.lang.Object"/>
                     <Column editable="true" title="Avanze" type="java.lang.Object"/>
@@ -447,46 +455,77 @@
         </Component>
         <Component class="javax.swing.JTextField" name="TxtBuscarDetR">
         </Component>
-        <Component class="javax.swing.JButton" name="BtnCrearJDetR">
+        <Component class="javax.swing.JButton" name="jbregresar">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Crear"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="ff" red="cc" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="cc" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/imagenes/icons8-izquierda-c&#xed;rculo-36.png"/>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Volver"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="BtnEditarJFDetR">
+        <Component class="javax.swing.JButton" name="BtnAddAsisJF">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="10" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/imagenes/new-file_40454 (3).png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="A&#xf1;adir"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="BtnEditAsisJF">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="10" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/imagenes/document-edit_icon-icons.com_52428 (1).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Editar"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="BtnListarJFDetR">
+        <Component class="javax.swing.JButton" name="BtnActAsisJF">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Listar"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="BtnEliminarJFDetR">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Eliminar"/>
-            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[59, 23]"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="10" style="1"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[59, 23]"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
-          <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/iconos/icons8-izquierda-c&#xed;rculo-36.png"/>
+              <Image iconType="3" name="/Vista/imagenes/list_notes_930.png"/>
             </Property>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="null"/>
-            </Property>
-            <Property name="borderPainted" type="boolean" value="false"/>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="Actualizar"/>
+            <Property name="toolTipText" type="java.lang.String" value="Actualizar"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
-          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="BtnCrearDelJF">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="10" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/imagenes/delete-file-icon.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Eliminar"/>
+            <Property name="toolTipText" type="java.lang.String" value="Actualizar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="BtnPrintAsisJF">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="10" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Vista/imagenes/printer_print_22133.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Imprimir"/>
+            <Property name="toolTipText" type="java.lang.String" value="Actualizar"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

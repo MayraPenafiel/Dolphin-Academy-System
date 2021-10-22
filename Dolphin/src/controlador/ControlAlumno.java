@@ -31,13 +31,13 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  * @author THALY
  */
+
 public class ControlAlumno {
 
     private ModeloAlumno modelo;
     private VistaAlumno vista;
     DefaultTableModel tabla = new  DefaultTableModel();
-     private ConexionPG con = new ConexionPG();
-     
+    private ConexionPG con = new ConexionPG();
      
     public ControlAlumno(ModeloAlumno modelo, VistaAlumno vista) {
         this.modelo = modelo;
@@ -46,49 +46,41 @@ public class ControlAlumno {
         String h=Control_Principal.boton;
         cargaLista("");
         if(h=="A"){
-            vista.getBtnCrearAlmn().setVisible(false);
+            cargaLista(Control_InicioSesion.user);
+            vista.getBtnCrearAlmnJF().setVisible(false);
             vista.getBtnEditarJFAlmn().setVisible(false);
             vista.getBtnEliminarJFAlmn().setVisible(false);
             vista.getBtnimprimiralum().setVisible(false);
         }
-        
     }
 
     public void iniciaControl() {
-        
         KeyListener kl = new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
                 //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
-
             @Override
             public void keyPressed(KeyEvent e) {
                 //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
-
             @Override
             public void keyReleased(KeyEvent e) {
                 //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
                 cargaLista(vista.getTxtBuscarAlmn().getText());
             }
         };
-        
         KeyAdapter c1 = new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
                 char c = e.getKeyChar();
-                
-
                 if (vista.getTxtCodAlmn().getText().length() >=10) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }
             }
         };
-
         vista.getTxtCodAlmn().addKeyListener(c1);
-
         KeyAdapter c2 = new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -98,7 +90,6 @@ public class ControlAlumno {
                     e.consume();
                     Toolkit.getDefaultToolkit().beep();
                 }
-
                 if (vista.getTxtNombreAlumn().getText().length() >= 20) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
@@ -106,7 +97,6 @@ public class ControlAlumno {
             }
         };
         vista.getTxtNombreAlumn().addKeyListener(c2);
-
         KeyAdapter c3 = new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -116,7 +106,6 @@ public class ControlAlumno {
                     e.consume();
                     Toolkit.getDefaultToolkit().beep();
                 }
-
                 if (vista.getTxtApeAlmn().getText().length() >= 20) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
@@ -124,7 +113,6 @@ public class ControlAlumno {
             }
         };
         vista.getTxtApeAlmn().addKeyListener(c3);
-
         KeyAdapter c4 = new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -134,16 +122,13 @@ public class ControlAlumno {
                     e.consume();
                     Toolkit.getDefaultToolkit().beep();
                 }
-
                 if (vista.getTxtTelfAlmn().getText().length() >= 10) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }
             }
         };
-
         vista.getTxtTelfAlmn().addKeyListener(c4);
-
         KeyAdapter c5 = new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -153,16 +138,13 @@ public class ControlAlumno {
                     e.consume();
                     Toolkit.getDefaultToolkit().beep();
                 }
-
                 if (vista.getTxtCelularAlmn().getText().length() >= 10) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();
                 }
             }
         };
-
         vista.getTxtCelularAlmn().addKeyListener(c5);
-
         KeyAdapter c6 = new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -180,7 +162,6 @@ public class ControlAlumno {
             }
         };
         vista.getTxtDireccionAlmn().addKeyListener(c6);
-
         KeyAdapter c7 = new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -200,7 +181,7 @@ public class ControlAlumno {
         vista.getJbregresar().addActionListener(l->vista.dispose());
         vista.getTxtCedulaAlmn().addKeyListener(c7);
         vista.getBtnListarJFAlmn().addActionListener(l -> cargaLista(""));
-        vista.getBtnCrearAlmn().addActionListener(l->abrir_dialogo(1));
+        vista.getBtnCrearAlmnJF().addActionListener(l->abrir_dialogo(1));
         vista.getBtnEditarJFAlmn().addActionListener(l->abrir_dialogo(2));
         vista.getBtnEliminarJFAlmn().addActionListener(l->abrir_dialogo(3));
         vista.getBtnGuardarAlmn().addActionListener(l->grabaAlumno());
@@ -215,7 +196,6 @@ public class ControlAlumno {
     
       //IMPRESION
     private void imprimirReporte(){
-        
         ConexionPG conp= new ConexionPG();
         try {
             JasperReport jr=(JasperReport)JRLoader.loadObject(getClass().getResource("/reportes/Reporte_Alumnos.jasper"));
@@ -231,8 +211,8 @@ public class ControlAlumno {
         vista.getDgAlumno().setSize(600,400); 
         vista.getDgAlumno().setLocationRelativeTo(vista); 
         if(origen==1){
+            limpiar();
            vista.getDgAlumno().setTitle("Nuevo Registro"); 
-           limpiar();
            vista.getDgAlumno().setVisible(true);
         }
         if(origen==2){ 
@@ -392,7 +372,7 @@ public class ControlAlumno {
                  }
             }
          }else{
-            JOptionPane.showMessageDialog(vista, "Seleccione");
+            JOptionPane.showMessageDialog(vista, "Seleccione un Estudiante a Modificar");
             vista.getDgAlumno().setVisible(false);
         }
     }

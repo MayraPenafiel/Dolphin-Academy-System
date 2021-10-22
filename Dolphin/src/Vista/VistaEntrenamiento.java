@@ -82,14 +82,14 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         BtnEditarJFEnt = new javax.swing.JButton();
         BtnListarJFEnt = new javax.swing.JButton();
         BtnEliminarJFEnt = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jbregresar = new javax.swing.JButton();
 
         PnEntrenamiento1.setBackground(new java.awt.Color(204, 255, 255));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         jLabel11.setBackground(new java.awt.Color(255, 255, 255));
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -340,7 +340,7 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/LogoCab.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/LogoCab.png"))); // NOI18N
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -395,13 +395,13 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         BtnEliminarJFEnt.setMaximumSize(new java.awt.Dimension(59, 23));
         BtnEliminarJFEnt.setMinimumSize(new java.awt.Dimension(59, 23));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/iconos/icons8-izquierda-círculo-36.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbregresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-izquierda-círculo-36.png"))); // NOI18N
+        jbregresar.setBorder(null);
+        jbregresar.setBorderPainted(false);
+        jbregresar.setContentAreaFilled(false);
+        jbregresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbregresarActionPerformed(evt);
             }
         });
 
@@ -412,11 +412,8 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
             .addGroup(PNOALayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PNOALayout.createSequentialGroup()
-                        .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 826, Short.MAX_VALUE))
-                        .addContainerGap())
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 838, Short.MAX_VALUE)
                     .addGroup(PNOALayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -425,13 +422,15 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
                         .addComponent(BtnCrearJFEnt, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(BtnEditarJFEnt)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(BtnListarJFEnt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BtnEliminarJFEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(BtnEliminarJFEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(jbregresar)
                 .addGap(20, 20, 20))
         );
         PNOALayout.setVerticalGroup(
@@ -450,7 +449,7 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(jbregresar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -468,12 +467,12 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbregresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbregresarActionPerformed
         // TODO add your handling code here:
         this.dispose();
         VistaMenu vm = new VistaMenu();
         vm.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbregresarActionPerformed
 
     // Metodos GETTERS Y SETTERS
     
@@ -646,7 +645,6 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
     private javax.swing.JTextField TxtObsEnt;
     private javax.swing.JTextField Txtidel2;
     private javax.swing.JDialog dgdelent2;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -668,6 +666,7 @@ public class VistaEntrenamiento extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JButton jbcancelardel;
     private javax.swing.JButton jbconfirmar2;
+    private javax.swing.JButton jbregresar;
     private javax.swing.JComboBox<String> jcbdiscent;
     private javax.swing.JComboBox<String> jcbproent;
     private javax.swing.JLabel lbtitutolo2;

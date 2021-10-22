@@ -147,7 +147,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="11"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Vista/iconos/LogoCab.png"/>
+                      <Image iconType="3" name="/Vista/imagenes/LogoCab.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -471,7 +471,7 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbregresar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -494,7 +494,7 @@
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="96" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbregresar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -530,7 +530,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="11"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Vista/iconos/LogoCab.png"/>
+                  <Image iconType="3" name="/Vista/imagenes/LogoCab.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -683,10 +683,10 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="jbregresar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/iconos/icons8-izquierda-c&#xed;rculo-36.png"/>
+              <Image iconType="3" name="/Vista/imagenes/icons8-izquierda-c&#xed;rculo-36.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -695,7 +695,7 @@
             <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbregresarActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnimprimirsede">
