@@ -44,12 +44,16 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         TxtAsisDetR = new javax.swing.JTextField();
-        BtnCrearDetR = new javax.swing.JButton();
+        BtncancelDetR = new javax.swing.JButton();
         BtnGuardarDetR = new javax.swing.JButton();
         CbxERenDetR = new javax.swing.JComboBox<>();
         DCFechaAsis = new com.toedter.calendar.JDateChooser();
         jLabel13 = new javax.swing.JLabel();
         TxtAvanzeDetR = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jscpverificar = new javax.swing.JScrollPane();
+        TbDisciplina1 = new javax.swing.JTable();
+        jButton3 = new javax.swing.JButton();
         PNOA = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -59,10 +63,8 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         TxtBuscarDetR = new javax.swing.JTextField();
         jbregresar = new javax.swing.JButton();
-        BtnAddAsisJF = new javax.swing.JButton();
-        BtnEditAsisJF = new javax.swing.JButton();
         BtnActAsisJF = new javax.swing.JButton();
-        BtnCrearDelJF = new javax.swing.JButton();
+        BtnDelJF = new javax.swing.JButton();
         BtnPrintAsisJF = new javax.swing.JButton();
 
         PNOA1.setBackground(new java.awt.Color(204, 255, 255));
@@ -75,7 +77,7 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Detalle-Realiza");
+        jLabel5.setText("Añadir Alumno");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -94,7 +96,7 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel7.setText("Codigo:");
+        jLabel7.setText("Codigo del Alumno:");
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -108,7 +110,12 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel12.setText("Asistencia:");
 
-        BtnCrearDetR.setText("Crear");
+        BtncancelDetR.setText("Cancelar");
+        BtncancelDetR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtncancelDetRActionPerformed(evt);
+            }
+        });
 
         BtnGuardarDetR.setText("Guardar");
 
@@ -117,6 +124,23 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel13.setText("Avanze:");
+
+        jButton2.setText("Verificar");
+
+        TbDisciplina1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "ID", "Entrenamiento", "Alumno"
+            }
+        ));
+        jscpverificar.setViewportView(TbDisciplina1);
+
+        jButton3.setText("jButton3");
 
         javax.swing.GroupLayout PNOA1Layout = new javax.swing.GroupLayout(PNOA1);
         PNOA1.setLayout(PNOA1Layout);
@@ -134,6 +158,12 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PNOA1Layout.createSequentialGroup()
+                                .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(TxtAvanzeDetR, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(BtnGuardarDetR))
+                                .addGap(28, 28, 28)
+                                .addComponent(BtncancelDetR))
+                            .addGroup(PNOA1Layout.createSequentialGroup()
                                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOA1Layout.createSequentialGroup()
                                         .addComponent(DCFechaAsis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -141,19 +171,17 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
                                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(PNOA1Layout.createSequentialGroup()
                                         .addComponent(TxtCodDetR, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(TxtAsisDetR, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addComponent(CbxERenDetR, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(PNOA1Layout.createSequentialGroup()
-                                .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(BtnCrearDetR)
-                                    .addComponent(TxtAvanzeDetR, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(BtnGuardarDetR)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addComponent(CbxERenDetR, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton3))))
+                    .addComponent(jscpverificar, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
         PNOA1Layout.setVerticalGroup(
@@ -166,7 +194,9 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
                     .addComponent(jLabel7)
                     .addComponent(TxtCodDetR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11)
-                    .addComponent(CbxERenDetR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CbxERenDetR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addGap(18, 18, 18)
                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -178,11 +208,13 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(TxtAvanzeDetR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(35, 35, 35)
                 .addGroup(PNOA1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnCrearDetR)
-                    .addComponent(BtnGuardarDetR))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(BtnGuardarDetR)
+                    .addComponent(BtncancelDetR))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jscpverificar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout DgDetalleRealizaLayout = new javax.swing.GroupLayout(DgDetalleRealiza.getContentPane());
@@ -193,7 +225,9 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
         );
         DgDetalleRealizaLayout.setVerticalGroup(
             DgDetalleRealizaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PNOA1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(DgDetalleRealizaLayout.createSequentialGroup()
+                .addComponent(PNOA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -227,14 +261,14 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
 
         TbDetalleR.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Alumno", "Fecha Asistencia", "Asistencia", "Avanze"
+                "ID enca", "Id deta", "Alumno", "Fecha Asistencia", "Asistencia", "Avanze"
             }
         ));
         jScrollPane1.setViewportView(TbDetalleR);
@@ -246,23 +280,20 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
         jbregresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/icons8-izquierda-círculo-36.png"))); // NOI18N
         jbregresar.setToolTipText("Volver");
 
-        BtnAddAsisJF.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        BtnAddAsisJF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/new-file_40454 (3).png"))); // NOI18N
-        BtnAddAsisJF.setText("Añadir");
-
-        BtnEditAsisJF.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        BtnEditAsisJF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/document-edit_icon-icons.com_52428 (1).png"))); // NOI18N
-        BtnEditAsisJF.setText("Editar");
-
         BtnActAsisJF.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         BtnActAsisJF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/list_notes_930.png"))); // NOI18N
         BtnActAsisJF.setText("Actualizar");
         BtnActAsisJF.setToolTipText("Actualizar");
+        BtnActAsisJF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnActAsisJFActionPerformed(evt);
+            }
+        });
 
-        BtnCrearDelJF.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        BtnCrearDelJF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/delete-file-icon.png"))); // NOI18N
-        BtnCrearDelJF.setText("Eliminar");
-        BtnCrearDelJF.setToolTipText("Actualizar");
+        BtnDelJF.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        BtnDelJF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/delete-file-icon.png"))); // NOI18N
+        BtnDelJF.setText("Eliminar");
+        BtnDelJF.setToolTipText("Actualizar");
 
         BtnPrintAsisJF.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         BtnPrintAsisJF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/printer_print_22133.png"))); // NOI18N
@@ -281,15 +312,11 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(TxtBuscarDetR, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(BtnAddAsisJF)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BtnEditAsisJF)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(28, 28, 28)
                         .addComponent(BtnActAsisJF)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BtnCrearDelJF)
-                        .addGap(45, 45, 45)
+                        .addGap(18, 18, 18)
+                        .addComponent(BtnDelJF)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 237, Short.MAX_VALUE)
                         .addComponent(BtnPrintAsisJF))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PNOALayout.createSequentialGroup()
                         .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -313,16 +340,14 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
                         .addComponent(TxtBuscarDetR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel3))
                     .addGroup(PNOALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(BtnAddAsisJF)
-                        .addComponent(BtnEditAsisJF)
                         .addComponent(BtnActAsisJF)
-                        .addComponent(BtnCrearDelJF)
+                        .addComponent(BtnDelJF)
                         .addComponent(BtnPrintAsisJF)))
                 .addGap(37, 37, 37)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jbregresar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -339,170 +364,35 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    //GETTER Y SETTERS
+    private void BtnActAsisJFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnActAsisJFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnActAsisJFActionPerformed
+
+    private void BtncancelDetRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtncancelDetRActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtncancelDetRActionPerformed
+
+//    //GETTER Y SETTERS
     
-    public JButton getBtnActAsisJF() {
-        return BtnActAsisJF;
-    }
-
-    public void setBtnActAsisJF(JButton BtnActAsisJF) {
-        this.BtnActAsisJF = BtnActAsisJF;
-    }
-
-    public JButton getBtnAddAsisJF() {
-        return BtnAddAsisJF;
-    }
-
-    public void setBtnAddAsisJF(JButton BtnAddAsisJF) {
-        this.BtnAddAsisJF = BtnAddAsisJF;
-    }
-
-    public JButton getBtnCrearDelJF() {
-        return BtnCrearDelJF;
-    }
-
-    public void setBtnCrearDelJF(JButton BtnCrearDelJF) {
-        this.BtnCrearDelJF = BtnCrearDelJF;
-    }
-
-    public JButton getBtnCrearDetR() {
-        return BtnCrearDetR;
-    }
-
-    public void setBtnCrearDetR(JButton BtnCrearDetR) {
-        this.BtnCrearDetR = BtnCrearDetR;
-    }
-
-    public JButton getBtnEditAsisJF() {
-        return BtnEditAsisJF;
-    }
-
-    public void setBtnEditAsisJF(JButton BtnEditAsisJF) {
-        this.BtnEditAsisJF = BtnEditAsisJF;
-    }
-
-    public JButton getBtnGuardarDetR() {
-        return BtnGuardarDetR;
-    }
-
-    public void setBtnGuardarDetR(JButton BtnGuardarDetR) {
-        this.BtnGuardarDetR = BtnGuardarDetR;
-    }
-
-    public JButton getBtnPrintAsisJF() {
-        return BtnPrintAsisJF;
-    }
-
-    public void setBtnPrintAsisJF(JButton BtnPrintAsisJF) {
-        this.BtnPrintAsisJF = BtnPrintAsisJF;
-    }
-
-    public JComboBox<String> getCbxERenDetR() {
-        return CbxERenDetR;
-    }
-
-    public void setCbxERenDetR(JComboBox<String> CbxERenDetR) {
-        this.CbxERenDetR = CbxERenDetR;
-    }
-
-    public JDateChooser getDCFechaAsis() {
-        return DCFechaAsis;
-    }
-
-    public void setDCFechaAsis(JDateChooser DCFechaAsis) {
-        this.DCFechaAsis = DCFechaAsis;
-    }
-
-    public JDialog getDgDetalleRealiza() {
-        return DgDetalleRealiza;
-    }
-
-    public void setDgDetalleRealiza(JDialog DgDetalleRealiza) {
-        this.DgDetalleRealiza = DgDetalleRealiza;
-    }
-
-    public JPanel getPNOA() {
-        return PNOA;
-    }
-
-    public void setPNOA(JPanel PNOA) {
-        this.PNOA = PNOA;
-    }
-
-    public JPanel getPNOA1() {
-        return PNOA1;
-    }
-
-    public void setPNOA1(JPanel PNOA1) {
-        this.PNOA1 = PNOA1;
-    }
-
-    public JTable getTbDetalleR() {
-        return TbDetalleR;
-    }
-
-    public void setTbDetalleR(JTable TbDetalleR) {
-        this.TbDetalleR = TbDetalleR;
-    }
-
-    public JTextField getTxtAsisDetR() {
-        return TxtAsisDetR;
-    }
-
-    public void setTxtAsisDetR(JTextField TxtAsisDetR) {
-        this.TxtAsisDetR = TxtAsisDetR;
-    }
-
-    public JTextField getTxtAvanzeDetR() {
-        return TxtAvanzeDetR;
-    }
-
-    public void setTxtAvanzeDetR(JTextField TxtAvanzeDetR) {
-        this.TxtAvanzeDetR = TxtAvanzeDetR;
-    }
-
-    public JTextField getTxtBuscarDetR() {
-        return TxtBuscarDetR;
-    }
-
-    public void setTxtBuscarDetR(JTextField TxtBuscarDetR) {
-        this.TxtBuscarDetR = TxtBuscarDetR;
-    }
-
-    public JTextField getTxtCodDetR() {
-        return TxtCodDetR;
-    }
-
-    public void setTxtCodDetR(JTextField TxtCodDetR) {
-        this.TxtCodDetR = TxtCodDetR;
-    }
-
-    public JButton getJbregresar() {
-        return jbregresar;
-    }
-
-    public void setJbregresar(JButton jbregresar) {
-        this.jbregresar = jbregresar;
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnActAsisJF;
-    private javax.swing.JButton BtnAddAsisJF;
-    private javax.swing.JButton BtnCrearDelJF;
-    private javax.swing.JButton BtnCrearDetR;
-    private javax.swing.JButton BtnEditAsisJF;
+    private javax.swing.JButton BtnDelJF;
     private javax.swing.JButton BtnGuardarDetR;
     private javax.swing.JButton BtnPrintAsisJF;
+    private javax.swing.JButton BtncancelDetR;
     private javax.swing.JComboBox<String> CbxERenDetR;
     private com.toedter.calendar.JDateChooser DCFechaAsis;
     private javax.swing.JDialog DgDetalleRealiza;
     private javax.swing.JPanel PNOA;
     private javax.swing.JPanel PNOA1;
     private javax.swing.JTable TbDetalleR;
+    private javax.swing.JTable TbDisciplina1;
     private javax.swing.JTextField TxtAsisDetR;
     private javax.swing.JTextField TxtAvanzeDetR;
     private javax.swing.JTextField TxtBuscarDetR;
     private javax.swing.JTextField TxtCodDetR;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -516,6 +406,9 @@ public class VistaDetRealiza extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JButton jbregresar;
+    private javax.swing.JScrollPane jscpverificar;
     // End of variables declaration//GEN-END:variables
+
 }

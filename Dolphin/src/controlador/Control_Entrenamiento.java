@@ -195,6 +195,7 @@ public class Control_Entrenamiento {
             String[] pdis={d.getFormacion()};
             if(vista.getJcbdiscent().getSelectedItem().toString()==pdis.toString()){
                 jbpro.addElement(profesor.toString());
+                vista.getJcbproent().setModel(jbpro);
             }
         });
         
@@ -204,6 +205,7 @@ public class Control_Entrenamiento {
             lista.stream().forEach(d->{
             String[] disciplina={d.getId_disciplina()+" ",d.getNombre_d()};
             jbdis.addElement(disciplina.toString());
+            vista.getJcbdiscent().setModel(jbdis);
         });
     }
     

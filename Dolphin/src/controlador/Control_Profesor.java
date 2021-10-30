@@ -47,14 +47,14 @@ public class Control_Profesor{
     
         String h=Control_Principal.boton;
         if(h=="A"){
-            vista.getBtnCrearProf().setVisible(false);
+            vista.getBtnCrearJFProf().setVisible(false);
             vista.getBtnEditarJFProf().setVisible(false);
             vista.getBtnEliminarJFProf().setVisible(false);
             vista.getBtnimprimirprofe().addActionListener(l -> imprimirReporte());
         }
         if(h=="P"){
             vista.getBtnEliminarJFProf().setVisible(false);
-            vista.getBtnCrearProf().setVisible(false);
+            vista.getBtnCrearJFProf().setVisible(false);
         }
         KeyListener kl = new KeyListener() {
             @Override
@@ -177,7 +177,6 @@ public class Control_Profesor{
                     e.consume();
                     Toolkit.getDefaultToolkit().beep();
                 }
-
                 if (vista.getTxtContraseñaProf().getText().length() > 10) {
                     Toolkit.getDefaultToolkit().beep();
                     e.consume();

@@ -498,56 +498,42 @@ public class VistaDisciplina extends javax.swing.JInternalFrame {
     public void setTxtobservacionesd(JTextArea txtobservacionesd) {
         this.txtobservacionesd = txtobservacionesd;
     }
-
     public JButton getBtnimprimirdisciplina() {
         return btnimprimirdisciplina;
     }
-
     public void setBtnimprimirdisciplina(JButton btnimprimirdisciplina) {
         this.btnimprimirdisciplina = btnimprimirdisciplina;
     }
-
     public JDialog getDlgEliminar() {
         return DlgEliminar;
     }
-
     public void setDlgEliminar(JDialog DlgEliminar) {
         this.DlgEliminar = DlgEliminar;
     }
-
     public JButton getJbregresar() {
         return jbregresar;
     }
-
     public void setJbregresar(JButton jbregresar) {
         this.jbregresar = jbregresar;
     }
-
     public JLabel getLbtitutolo1() {
         return lbtitutolo1;
     }
-
     public void setLbtitutolo1(JLabel lbtitutolo1) {
         this.lbtitutolo1 = lbtitutolo1;
     }
-
     public JTextField getTxteliminarid() {
         return txteliminarid;
     }
-
     public void setTxteliminarid(JTextField txteliminarid) {
         this.txteliminarid = txteliminarid;
     }
-
     public JTextField getTxteliminarnombre() {
         return txteliminarnombre;
     }
-
     public void setTxteliminarnombre(JTextField txteliminarnombre) {
         this.txteliminarnombre = txteliminarnombre;
     }
-    
-    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog DgDisciplina;
